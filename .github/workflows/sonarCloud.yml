@@ -26,7 +26,14 @@ jobs:
           with:
             fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
             submodules: true
-            lfs: true        
+            lfs: true
+        - name: Initialize and Update Submodules
+          run: |
+            git submodule init
+            git submodule update --recursive --remote
+        - name: Source CVMFS
+          run: |
+            source /cvmfs/sft.cern.ch/lcg/views/LCG_103/x86_64-centos9-gcc11-opt/setup.sh
         - name: Set up JDK 11
           uses: actions/setup-java@v1
           with:
