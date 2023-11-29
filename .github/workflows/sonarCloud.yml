@@ -22,14 +22,6 @@ jobs:
         SONAR_SERVER_URL: "https://sonarcloud.io"
         BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
       steps:
-        - uses: actions/checkout@v2
-        - name: Initialize and Update Submodules
-          run: |
-            git submodule init
-            git submodule update --recursive --remote
-        - name: Source CVMFS
-          run: |
-            source /cvmfs/sft.cern.ch/lcg/views/LCG_103/x86_64-centos9-gcc11-opt/setup.sh
         - uses: actions/checkout@v2 
           with:
             fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
