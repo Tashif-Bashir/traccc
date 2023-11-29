@@ -1,1 +1,3 @@
-
+[submodule "path_to_submodule"] 
+  path = /home/tbashir/traccc-build/_deps/actsvg-src 
+  url =  https://github.com/Tashif-Bashir/actsvg-src.git
