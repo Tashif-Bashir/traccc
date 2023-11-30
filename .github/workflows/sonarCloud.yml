@@ -100,7 +100,7 @@ jobs:
           # mkdir traccc-build && cd ./
           run: |
             cd ../
-            cd traccc-build
+            mkdir traccc-build && cd ./traccc-build
             cmake -S ../traccc 
             cd ../traccc
             build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../traccc-build --clean-first -j $(nproc)
