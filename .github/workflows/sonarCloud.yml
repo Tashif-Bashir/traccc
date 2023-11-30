@@ -99,7 +99,7 @@ jobs:
           # -B . -D ROOT_DIR=/home/runner/work/traccc/root/cmake -D Boost_DIR=/home/runner/work/traccc/boost_install/lib/cmake/Boost-1.80.0
           # mkdir traccc-build && cd ./
           run: |
-            #cd ../
+            cd ../
             mkdir traccc-build && cd ./traccc-build
             cmake -S ../traccc
             cd ../traccc
