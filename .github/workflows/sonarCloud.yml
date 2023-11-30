@@ -101,7 +101,7 @@ jobs:
           run: |
             cd ../
             mkdir traccc-build && cd ./traccc-build
-            cmake -S ../traccc
+            cmake -S ../traccc . -B build -D CUDAToolkit_BIN_DIR= /usr/local/cuda/bin -D CMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc
             cd ../traccc
             build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../traccc-build --clean-first -j $(nproc)
         - name: Run sonar-scanner
