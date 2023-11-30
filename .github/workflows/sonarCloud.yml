@@ -103,7 +103,7 @@ jobs:
             mkdir traccc-build && cd ./traccc-build
             cmake -S ../traccc/traccc 
             cd ../traccc/traccc
-            build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../traccc-build --clean-first -j $(nproc)
+            build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../../traccc-build --clean-first -j $(nproc)
         - name: Run sonar-scanner
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
