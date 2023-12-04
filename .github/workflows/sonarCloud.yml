@@ -107,7 +107,7 @@ jobs:
         - name: Build with Make
           run: |
             build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../traccc-build --clean-first
-            make -j10 $(nproc)
+            -j $(nproc)
 
         - name: Run sonar-scanner
           env:
