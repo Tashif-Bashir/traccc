@@ -1,0 +1,634 @@
+\hypertarget{classtraccc_1_1module__map}{}\doxysection{traccc\+::module\+\_\+map$<$ K, V $>$ Class Template Reference}
+\label{classtraccc_1_1module__map}\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+
+
+A fast and G\+P\+U-\/friendly map for consecutive module I\+Ds to values.  
+
+
+
+
+{\ttfamily \#include $<$module\+\_\+map.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::module\+\_\+map$<$ K, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{d5/d6d/classtraccc_1_1module__map__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1module__map_1_1module__map__node}{module\+\_\+map\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em The internal representation of nodes in our binary search tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1module__map_a75670023393cab7a116d5a318b79a058}{module\+\_\+map}} ()=default
+\item 
+\mbox{\hyperlink{classtraccc_1_1module__map_a7a81a61f071ef678701743d9fc9a1e2a}{module\+\_\+map}} (const std\+::map$<$ K, V $>$ \&input)
+\begin{DoxyCompactList}\small\item\em Construct a module map from one created by the {\ttfamily io} library. \end{DoxyCompactList}\item 
+const V \& \mbox{\hyperlink{classtraccc_1_1module__map_aa670ae1da8fc425f39fd981c34fb072f}{operator\mbox{[}$\,$\mbox{]}}} (const K \&i) const
+\begin{DoxyCompactList}\small\item\em Find a given key in the map. \end{DoxyCompactList}\item 
+const V \& \mbox{\hyperlink{classtraccc_1_1module__map_ae5cfaaa920a0403465af63837eb77374}{at}} (const K \&i) const
+\begin{DoxyCompactList}\small\item\em Find a given key in the map, with bounds checking. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtraccc_1_1module__map_a71ff91673b06f098ec14f4ec17678d23}{size}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the total number of modules in the module map. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraccc_1_1module__map_a145e719c079ef1a2a165b16227a23c5b}{contains}} (const K \&i) const
+\item 
+bool \mbox{\hyperlink{classtraccc_1_1module__map_a1a58fc85ebf692a6f61078412335e905}{empty}} (void) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtraccc_1_1module__map_a2ab33aebd942d9b299052d72f34bbb26}{create\+\_\+tree}} (const std\+::vector$<$ \mbox{\hyperlink{structtraccc_1_1module__map_1_1module__map__node}{module\+\_\+map\+\_\+node}} $>$ \&nodes)
+\begin{DoxyCompactList}\small\item\em Lay out a set of nodes in a binary tree format. \end{DoxyCompactList}\item 
+const V $\ast$ \mbox{\hyperlink{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}{at\+\_\+helper}} (const K \&i, std\+::size\+\_\+t n) const
+\begin{DoxyCompactList}\small\item\em Helper function to retrieve a value from the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::size\+\_\+t \mbox{\hyperlink{classtraccc_1_1module__map_a4a506d034413299b182636d3df788162}{round\+\_\+up}} (std\+::size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Special rounding function for binary trees. \end{DoxyCompactList}\item 
+static std\+::pair$<$ std\+::vector$<$ V $>$, std\+::vector$<$ \mbox{\hyperlink{structtraccc_1_1module__map_1_1module__map__node}{module\+\_\+map\+\_\+node}} $>$ $>$ \mbox{\hyperlink{classtraccc_1_1module__map_aaa6f2e084b95acbfce4afca76f39d329}{node\+\_\+list}} (const std\+::map$<$ K, V $>$ \&input)
+\begin{DoxyCompactList}\small\item\em Get a list of values and nodes from an existing std\+::map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtraccc_1_1module__map_1_1module__map__node}{module\+\_\+map\+\_\+node}} $>$ \mbox{\hyperlink{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}{m\+\_\+nodes}}
+\begin{DoxyCompactList}\small\item\em The internal storage of the nodes in our binary search tree. \end{DoxyCompactList}\item 
+std\+::vector$<$ V $>$ \mbox{\hyperlink{classtraccc_1_1module__map_a9a1e88f0307deeea4a133565d151d976}{m\+\_\+values}}
+\begin{DoxyCompactList}\small\item\em This vector stores the values in a contiguous manner. Our nodes keep indices in this array instead of pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K = geometry\+\_\+id, typename V = transform3$>$\newline
+class traccc\+::module\+\_\+map$<$ K, V $>$}
+
+A fast and G\+P\+U-\/friendly map for consecutive module I\+Ds to values. 
+
+Using std\+::map to model the relationship between geometry identifiers and transformation matrices works only on the C\+PU. std\+::map is not supported at all on C\+U\+DA, and either doesn\textquotesingle{}t work or is inefficient on other platforms.
+
+This class is a more efficient and more G\+P\+U-\/friendly implementation of the geometry ID to transformation mapping concept.
+
+The implementation of this class relies on the idea that module I\+Ds exist in contiguous sub-\/ranges, and we use this fact to get more efficient accesses. First, we reduce the range of module I\+Ds to a set of contiguous sub-\/ranges. In the Track\+ML detector, there are roughly 18,000 modules, but there are only 71 contiguous sub-\/arrays. Because we can index a contiguous range in constant time, this presents possible speed-\/up.
+
+Thus, the map is essentially two-\/layered. First, we determine which contigous sub-\/range a given value must fall in, and then we get the value from that sub-\/range in constant time.
+
+The first layer is implemented as a simple balanced binary search tree, which we implement in a G\+P\+U-\/friendly fashion. This means that the cost of finding the relevant sub-\/range is O(log\+\_\+2(n)), with n the number of sub-\/ranges. For the Track\+ML detector, this means we can find our value in only 7 steps!
+
+\begin{DoxyNote}{Note}
+In theory, this class can be used for any mapping of key to value, but it relies quite heavily (for performance) on the contiguous nature of the keys inserted into it.
+
+This map supports only construction. You can\textquotesingle{}t update it in any way. To build one, construct a std\+::map first, and then convert it. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1module__map_a75670023393cab7a116d5a318b79a058}\label{classtraccc_1_1module__map_a75670023393cab7a116d5a318b79a058}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!module\_map@{module\_map}}
+\index{module\_map@{module\_map}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{module\_map()}{module\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+\mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::\mbox{\hyperlink{classtraccc_1_1module__map}{module\+\_\+map}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a7a81a61f071ef678701743d9fc9a1e2a}\label{classtraccc_1_1module__map_a7a81a61f071ef678701743d9fc9a1e2a}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!module\_map@{module\_map}}
+\index{module\_map@{module\_map}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{module\_map()}{module\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+\mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::\mbox{\hyperlink{classtraccc_1_1module__map}{module\+\_\+map}} (\begin{DoxyParamCaption}\item[{const std\+::map$<$ K, V $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a module map from one created by the {\ttfamily io} library. 
+
+This method constructs a module map from an existing module map represented as a std\+::map.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & The existing module map to convert. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                           \{}
+\DoxyCodeLine{67         \textcolor{comment}{/*}}
+\DoxyCodeLine{68 \textcolor{comment}{         * First, construct a list of nodes and values, which are linked}}
+\DoxyCodeLine{69 \textcolor{comment}{         * together.}}
+\DoxyCodeLine{70 \textcolor{comment}{         */}}
+\DoxyCodeLine{71         std::vector<module\_map\_node> nodes;}
+\DoxyCodeLine{72         std::tie(\mbox{\hyperlink{classtraccc_1_1module__map_a9a1e88f0307deeea4a133565d151d976}{m\_values}}, nodes) = \mbox{\hyperlink{classtraccc_1_1module__map_aaa6f2e084b95acbfce4afca76f39d329}{node\_list}}(input);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         \textcolor{comment}{/*}}
+\DoxyCodeLine{75 \textcolor{comment}{         * Lay out the nodes in memory in an efficient way.}}
+\DoxyCodeLine{76 \textcolor{comment}{         */}}
+\DoxyCodeLine{77         \mbox{\hyperlink{classtraccc_1_1module__map_a2ab33aebd942d9b299052d72f34bbb26}{create\_tree}}(nodes);}
+\DoxyCodeLine{78     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::create\+\_\+tree(), traccc\+::module\+\_\+map$<$ K, V $>$\+::m\+\_\+values, and traccc\+::module\+\_\+map$<$ K, V $>$\+::node\+\_\+list().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1module__map_ae5cfaaa920a0403465af63837eb77374}\label{classtraccc_1_1module__map_ae5cfaaa920a0403465af63837eb77374}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!at@{at}}
+\index{at@{at}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+const V\& \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::at (\begin{DoxyParamCaption}\item[{const K \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find a given key in the map, with bounds checking. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The key to look-\/up.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the given key. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                   \{}
+\DoxyCodeLine{100         \textcolor{keyword}{const} V* r = \mbox{\hyperlink{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}{at\_helper}}(i, 0);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102         \textcolor{keywordflow}{if} (r == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{103             \textcolor{keywordflow}{throw} std::out\_of\_range(\textcolor{stringliteral}{"Index not found in module map!"});}
+\DoxyCodeLine{104         \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \textcolor{keywordflow}{return} *r;}
+\DoxyCodeLine{107     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::at\+\_\+helper().
+
+
+
+Referenced by T\+E\+S\+T().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}\label{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!at\_helper@{at\_helper}}
+\index{at\_helper@{at\_helper}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{at\_helper()}{at\_helper()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+const V$\ast$ \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::at\+\_\+helper (\begin{DoxyParamCaption}\item[{const K \&}]{i,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Helper function to retrieve a value from the map. 
+
+This function searches recursively for a value in a given sub-\/tree. Due to the formalism used for node indices, we can identify a subtree simply by the node index of its root node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The value to look for. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & The index of the subtree\textquotesingle{}s root node. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{334                                                       \{}
+\DoxyCodeLine{335         \textcolor{comment}{/*}}
+\DoxyCodeLine{336 \textcolor{comment}{         * For memory safety, if we are out of bounds we will exit.}}
+\DoxyCodeLine{337 \textcolor{comment}{         */}}
+\DoxyCodeLine{338         \textcolor{keywordflow}{if} (n >= \mbox{\hyperlink{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}{m\_nodes}}.size()) \{}
+\DoxyCodeLine{339             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{340         \}}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342         \textcolor{comment}{/*}}
+\DoxyCodeLine{343 \textcolor{comment}{         * Retrieve the current root node.}}
+\DoxyCodeLine{344 \textcolor{comment}{         */}}
+\DoxyCodeLine{345         \textcolor{keyword}{const} module\_map\_node\& node = \mbox{\hyperlink{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}{m\_nodes}}[n];}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{347         \textcolor{comment}{/*}}
+\DoxyCodeLine{348 \textcolor{comment}{         * If the size is zero, it is essentially an invalid node (i.e. the}}
+\DoxyCodeLine{349 \textcolor{comment}{         * node does not exist).}}
+\DoxyCodeLine{350 \textcolor{comment}{         */}}
+\DoxyCodeLine{351         \textcolor{keywordflow}{if} (node.size == 0) \{}
+\DoxyCodeLine{352             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{353         \}}
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355         \textcolor{comment}{/*}}
+\DoxyCodeLine{356 \textcolor{comment}{         * If the value we are looking for is past the start of the current}}
+\DoxyCodeLine{357 \textcolor{comment}{         * node, there are three possibilities. Firstly, the value might be in}}
+\DoxyCodeLine{358 \textcolor{comment}{         * the current node. Secondly, the value might be in the right child of}}
+\DoxyCodeLine{359 \textcolor{comment}{         * the current node. Thirdly, the value might not be in the map at all.}}
+\DoxyCodeLine{360 \textcolor{comment}{         */}}
+\DoxyCodeLine{361         \textcolor{keywordflow}{if} (i >= node.start) \{}
+\DoxyCodeLine{362             \textcolor{comment}{/*}}
+\DoxyCodeLine{363 \textcolor{comment}{             * Next, we check if the value is within the range represented by}}
+\DoxyCodeLine{364 \textcolor{comment}{             * the current node.}}
+\DoxyCodeLine{365 \textcolor{comment}{             */}}
+\DoxyCodeLine{366             \textcolor{keywordflow}{if} (i < node.start + node.size) \{}
+\DoxyCodeLine{367                 \textcolor{comment}{/*}}
+\DoxyCodeLine{368 \textcolor{comment}{                 * Found it! Return a pointer to the value within the}}
+\DoxyCodeLine{369 \textcolor{comment}{                 * contiguous range.}}
+\DoxyCodeLine{370 \textcolor{comment}{                 */}}
+\DoxyCodeLine{371                 \textcolor{keywordflow}{return} \&\mbox{\hyperlink{classtraccc_1_1module__map_a9a1e88f0307deeea4a133565d151d976}{m\_values}}[node.index + (i -\/ node.start)];}
+\DoxyCodeLine{372             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{373                 \textcolor{comment}{/*}}
+\DoxyCodeLine{374 \textcolor{comment}{                 * Two possibilties remain, we need to check the right subtree.}}
+\DoxyCodeLine{375 \textcolor{comment}{                 */}}
+\DoxyCodeLine{376                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}{at\_helper}}(i, 2 * n + 2);}
+\DoxyCodeLine{377             \}}
+\DoxyCodeLine{378         \}}
+\DoxyCodeLine{379         \textcolor{comment}{/*}}
+\DoxyCodeLine{380 \textcolor{comment}{         * If the value we want to find is less then the start of this node,}}
+\DoxyCodeLine{381 \textcolor{comment}{         * there are only two possibilities. Firstly, the value might be in the}}
+\DoxyCodeLine{382 \textcolor{comment}{         * left subtree, or the value might not be in the map at all.}}
+\DoxyCodeLine{383 \textcolor{comment}{         */}}
+\DoxyCodeLine{384         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{385             \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}{at\_helper}}(i, 2 * n + 1);}
+\DoxyCodeLine{386         \}}
+\DoxyCodeLine{387     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::module\+\_\+map\+\_\+node\+::index, traccc\+::module\+\_\+map$<$ K, V $>$\+::m\+\_\+nodes, traccc\+::module\+\_\+map$<$ K, V $>$\+::m\+\_\+values, traccc\+::module\+\_\+map$<$ K, V $>$\+::module\+\_\+map\+\_\+node\+::size, and traccc\+::module\+\_\+map$<$ K, V $>$\+::module\+\_\+map\+\_\+node\+::start.
+
+
+
+Referenced by traccc\+::module\+\_\+map$<$ K, V $>$\+::at(), traccc\+::module\+\_\+map$<$ K, V $>$\+::contains(), and traccc\+::module\+\_\+map$<$ K, V $>$\+::operator\mbox{[}$\,$\mbox{]}().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a145e719c079ef1a2a165b16227a23c5b}\label{classtraccc_1_1module__map_a145e719c079ef1a2a165b16227a23c5b}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!contains@{contains}}
+\index{contains@{contains}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+bool \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::contains (\begin{DoxyParamCaption}\item[{const K \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{126 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}{at\_helper}}(i, 0) != \textcolor{keyword}{nullptr}; \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::at\+\_\+helper().
+
+
+
+Referenced by T\+E\+S\+T().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a2ab33aebd942d9b299052d72f34bbb26}\label{classtraccc_1_1module__map_a2ab33aebd942d9b299052d72f34bbb26}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!create\_tree@{create\_tree}}
+\index{create\_tree@{create\_tree}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{create\_tree()}{create\_tree()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+void \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::create\+\_\+tree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structtraccc_1_1module__map_1_1module__map__node}{module\+\_\+map\+\_\+node}} $>$ \&}]{nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Lay out a set of nodes in a binary tree format. 
+
+This method updates the binary tree contained in this object in an in-\/place fashion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nodes} & The nodes to create a tree from. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{159                                                               \{}
+\DoxyCodeLine{160         \textcolor{comment}{/*}}
+\DoxyCodeLine{161 \textcolor{comment}{         * First, we resize the number of nodes in the tree to the number of}}
+\DoxyCodeLine{162 \textcolor{comment}{         * nodes in the input, but rounded up such that we have we end up with}}
+\DoxyCodeLine{163 \textcolor{comment}{         * 2\string^n -\/ 1 spaces, where n is the ceiling of log2 of the size of the}}
+\DoxyCodeLine{164 \textcolor{comment}{         * input, plus one.}}
+\DoxyCodeLine{165 \textcolor{comment}{         */}}
+\DoxyCodeLine{166         \mbox{\hyperlink{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}{m\_nodes}}.resize(\mbox{\hyperlink{classtraccc_1_1module__map_a4a506d034413299b182636d3df788162}{round\_up}}(nodes.size()));}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168         \textcolor{comment}{/*}}
+\DoxyCodeLine{169 \textcolor{comment}{         * This vector is our work queue for the pre-\/order insertion that we}}
+\DoxyCodeLine{170 \textcolor{comment}{         * will be doing. Each of these values contains a position where to}}
+\DoxyCodeLine{171 \textcolor{comment}{         * insert the next node, and the subset of nodes to insert in that}}
+\DoxyCodeLine{172 \textcolor{comment}{         * sub-\/tree.}}
+\DoxyCodeLine{173 \textcolor{comment}{         */}}
+\DoxyCodeLine{174         std::vector<std::tuple<std::size\_t, std::size\_t, std::size\_t>> z;}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176         \textcolor{comment}{/*}}
+\DoxyCodeLine{177 \textcolor{comment}{         * To kick-\/start the algorithm, we want to insert all nodes (from 0 to}}
+\DoxyCodeLine{178 \textcolor{comment}{         * the last one) at the first spot in the array.}}
+\DoxyCodeLine{179 \textcolor{comment}{         */}}
+\DoxyCodeLine{180         z.emplace\_back(0, 0, nodes.size());}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182         \textcolor{comment}{/*}}
+\DoxyCodeLine{183 \textcolor{comment}{         * We are done when the work queue is empty, but we will keep adding}}
+\DoxyCodeLine{184 \textcolor{comment}{         * things to it for a while at the start.}}
+\DoxyCodeLine{185 \textcolor{comment}{         */}}
+\DoxyCodeLine{186         \textcolor{keywordflow}{while} (!z.empty()) \{}
+\DoxyCodeLine{187             \textcolor{comment}{/*}}
+\DoxyCodeLine{188 \textcolor{comment}{             * Pop the current index and node range off the stack.}}
+\DoxyCodeLine{189 \textcolor{comment}{             */}}
+\DoxyCodeLine{190             std::size\_t i, s, e;}
+\DoxyCodeLine{191             std::tie(i, s, e) = z.back();}
+\DoxyCodeLine{192             z.pop\_back();}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194             \textcolor{comment}{/*}}
+\DoxyCodeLine{195 \textcolor{comment}{             * Pick a node roughly in the middle of the node range. This will}}
+\DoxyCodeLine{196 \textcolor{comment}{             * be our next child.}}
+\DoxyCodeLine{197 \textcolor{comment}{             */}}
+\DoxyCodeLine{198             std::size\_t m = (s + e) / 2;}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200             \textcolor{comment}{/*}}
+\DoxyCodeLine{201 \textcolor{comment}{             * Insert the node we selected as our center in the given position.}}
+\DoxyCodeLine{202 \textcolor{comment}{             */}}
+\DoxyCodeLine{203             \mbox{\hyperlink{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}{m\_nodes}}[i] = nodes[m];}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205             \textcolor{comment}{/*}}
+\DoxyCodeLine{206 \textcolor{comment}{             * If we have any nodes on the left side, we will put an element in}}
+\DoxyCodeLine{207 \textcolor{comment}{             * the work queue to place the left nodes at index 2i + 1.}}
+\DoxyCodeLine{208 \textcolor{comment}{             */}}
+\DoxyCodeLine{209             \textcolor{keywordflow}{if} (m -\/ s > 0) \{}
+\DoxyCodeLine{210                 z.emplace\_back(2 * i + 1, s, m);}
+\DoxyCodeLine{211             \}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213             \textcolor{comment}{/*}}
+\DoxyCodeLine{214 \textcolor{comment}{             * Same thing for the right side, but we insert the right side}}
+\DoxyCodeLine{215 \textcolor{comment}{             * starting at 2i + 2 instead.}}
+\DoxyCodeLine{216 \textcolor{comment}{             */}}
+\DoxyCodeLine{217             \textcolor{keywordflow}{if} (e -\/ (m + 1) > 0) \{}
+\DoxyCodeLine{218                 z.emplace\_back(2 * i + 2, m + 1, e);}
+\DoxyCodeLine{219             \}}
+\DoxyCodeLine{220         \}}
+\DoxyCodeLine{221     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::m\+\_\+nodes, and traccc\+::module\+\_\+map$<$ K, V $>$\+::round\+\_\+up().
+
+
+
+Referenced by traccc\+::module\+\_\+map$<$ K, V $>$\+::module\+\_\+map().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a1a58fc85ebf692a6f61078412335e905}\label{classtraccc_1_1module__map_a1a58fc85ebf692a6f61078412335e905}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!empty@{empty}}
+\index{empty@{empty}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+bool \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}{m\_nodes}}.empty(); \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::m\+\_\+nodes.
+
+
+
+Referenced by T\+E\+S\+T().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_aaa6f2e084b95acbfce4afca76f39d329}\label{classtraccc_1_1module__map_aaa6f2e084b95acbfce4afca76f39d329}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!node\_list@{node\_list}}
+\index{node\_list@{node\_list}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{node\_list()}{node\_list()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+static std\+::pair$<$std\+::vector$<$V$>$, std\+::vector$<$\mbox{\hyperlink{structtraccc_1_1module__map_1_1module__map__node}{module\+\_\+map\+\_\+node}}$>$ $>$ \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::node\+\_\+list (\begin{DoxyParamCaption}\item[{const std\+::map$<$ K, V $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Get a list of values and nodes from an existing std\+::map. 
+
+Given an existing map, this function will attempt to find all the nodes, that is to say contiguous sub-\/ranges. It will also put the values into one big, contiguous array.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & An existing std\+::map module map.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of vectors, one has the values, and the other has the nodes. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{265                                    \{}
+\DoxyCodeLine{266         \textcolor{comment}{/*}}
+\DoxyCodeLine{267 \textcolor{comment}{         * We start out by grabbing a list of all the keys in the map.}}
+\DoxyCodeLine{268 \textcolor{comment}{         */}}
+\DoxyCodeLine{269         std::vector<K> keys;}
+\DoxyCodeLine{270         keys.reserve(input.size());}
+\DoxyCodeLine{271         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} std::pair<const K, V>\& i : input) \{}
+\DoxyCodeLine{272             keys.push\_back(i.first);}
+\DoxyCodeLine{273         \}}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275         \textcolor{comment}{/*}}
+\DoxyCodeLine{276 \textcolor{comment}{         * Next, we declare a vector of values, which is one of the two things}}
+\DoxyCodeLine{277 \textcolor{comment}{         * that we will return in the end.}}
+\DoxyCodeLine{278 \textcolor{comment}{         */}}
+\DoxyCodeLine{279         std::vector<V> values;}
+\DoxyCodeLine{280         values.reserve(keys.size());}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{282         \textcolor{comment}{/*}}
+\DoxyCodeLine{283 \textcolor{comment}{         * To find contiguous sub-\/ranges, the keys must be sorted. In general,}}
+\DoxyCodeLine{284 \textcolor{comment}{         * it is likely that they will be pre-\/sorted.}}
+\DoxyCodeLine{285 \textcolor{comment}{         */}}
+\DoxyCodeLine{286         std::sort(keys.begin(), keys.end());}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288         \textcolor{comment}{/*}}
+\DoxyCodeLine{289 \textcolor{comment}{         * This vector will hold our nodes. We'll update it as we go, and we}}
+\DoxyCodeLine{290 \textcolor{comment}{         * start out with an incomplete first node, which represents the single}}
+\DoxyCodeLine{291 \textcolor{comment}{         * value at the start of the key vector. We will add to this later!}}
+\DoxyCodeLine{292 \textcolor{comment}{         */}}
+\DoxyCodeLine{293         std::vector<module\_map\_node> nodes;}
+\DoxyCodeLine{294         nodes.push\_back(module\_map\_node(keys.front(), 1, values.size()));}
+\DoxyCodeLine{295         values.push\_back(input.at(keys.front()));}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297         \textcolor{comment}{/*}}
+\DoxyCodeLine{298 \textcolor{comment}{         * Starting from the second key, we check if they are contiuous with}}
+\DoxyCodeLine{299 \textcolor{comment}{         * the last key, and store them if so.}}
+\DoxyCodeLine{300 \textcolor{comment}{         */}}
+\DoxyCodeLine{301         \textcolor{keywordflow}{for} (std::size\_t i = 1; i < keys.size(); ++i) \{}
+\DoxyCodeLine{302             \textcolor{comment}{/*}}
+\DoxyCodeLine{303 \textcolor{comment}{             * If the key is not adjacent to the last one, we push a new}}
+\DoxyCodeLine{304 \textcolor{comment}{             * partial node onto the node vector.}}
+\DoxyCodeLine{305 \textcolor{comment}{             */}}
+\DoxyCodeLine{306             \textcolor{keywordflow}{if} (keys.at(i) != keys.at(i -\/ 1) + 1) \{}
+\DoxyCodeLine{307                 nodes.push\_back(module\_map\_node(keys.at(i), 0, values.size()));}
+\DoxyCodeLine{308             \}}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310             \textcolor{comment}{/*}}
+\DoxyCodeLine{311 \textcolor{comment}{             * Push the current value into the value array, and register one}}
+\DoxyCodeLine{312 \textcolor{comment}{             * additional element in the current node.}}
+\DoxyCodeLine{313 \textcolor{comment}{             */}}
+\DoxyCodeLine{314             ++nodes.back().size;}
+\DoxyCodeLine{315             values.push\_back(input.at(keys.at(i)));}
+\DoxyCodeLine{316         \}}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318         \textcolor{comment}{/*}}
+\DoxyCodeLine{319 \textcolor{comment}{         * Return both the generated values.}}
+\DoxyCodeLine{320 \textcolor{comment}{         */}}
+\DoxyCodeLine{321         \textcolor{keywordflow}{return} \{values, nodes\};}
+\DoxyCodeLine{322     \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::module\+\_\+map$<$ K, V $>$\+::module\+\_\+map().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_aa670ae1da8fc425f39fd981c34fb072f}\label{classtraccc_1_1module__map_aa670ae1da8fc425f39fd981c34fb072f}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+const V\& \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const K \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find a given key in the map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The key to look-\/up.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the given key.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This method does no bounds checking, and will result in undefined behaviour if the key does not exist in the map. 
+\end{DoxyWarning}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90 \{ \textcolor{keywordflow}{return} *\mbox{\hyperlink{classtraccc_1_1module__map_a78912bf93a7b10bfac86cd487ef86172}{at\_helper}}(i, 0); \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::at\+\_\+helper().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a4a506d034413299b182636d3df788162}\label{classtraccc_1_1module__map_a4a506d034413299b182636d3df788162}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!round\_up@{round\_up}}
+\index{round\_up@{round\_up}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{round\_up()}{round\_up()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+static std\+::size\+\_\+t \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::round\+\_\+up (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Special rounding function for binary trees. 
+
+This function computes 2$^\wedge$n -\/ 1, where n is the ceiling of log2 of the input plus one.
+
+This sounds like an odd operation, but consider that a binary tree (when complete) of depth k, can contain at most 2$^\wedge$k -\/ 1 nodes. That is the number of spaces we need. However, our bottom level may have some empty slots, because it is rather unlikely that we will have exactly 2$^\wedge$k -\/ 1 nodes. Thus, we need to round up k from log2 of the input. However, we need to also keep in mind that 2$^\wedge$l (for some integer l) should be rounded up to 2$^\wedge$(l+1), not 2$^\wedge$l! Since we are computing l, this would mean we would be short one space in some edge cases.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The number to round up.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The specially rounded number. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{242                                            \{}
+\DoxyCodeLine{243         std::size\_t n = 1;}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245         \textcolor{keywordflow}{while} (n < i + 1) \{}
+\DoxyCodeLine{246             n *= 2;}
+\DoxyCodeLine{247         \}}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249         \textcolor{keywordflow}{return} n -\/ 1;}
+\DoxyCodeLine{250     \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::module\+\_\+map$<$ K, V $>$\+::create\+\_\+tree().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a71ff91673b06f098ec14f4ec17678d23}\label{classtraccc_1_1module__map_a71ff91673b06f098ec14f4ec17678d23}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!size@{size}}
+\index{size@{size}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the total number of modules in the module map. 
+
+This iterates over all of the nodes in the map and sums up their sizes.
+
+\begin{DoxyReturn}{Returns}
+The total number of modules in this module map. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116                                \{}
+\DoxyCodeLine{117         std::size\_t c = 0;}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} module\_map\_node\& n : \mbox{\hyperlink{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}{m\_nodes}}) \{}
+\DoxyCodeLine{120             c += n.size;}
+\DoxyCodeLine{121         \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123         \textcolor{keywordflow}{return} c;}
+\DoxyCodeLine{124     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::m\+\_\+nodes.
+
+
+
+Referenced by T\+E\+S\+T().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}\label{classtraccc_1_1module__map_a2d4df6c1da47966f65be2ae3174685d7}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!m\_nodes@{m\_nodes}}
+\index{m\_nodes@{m\_nodes}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{m\_nodes}{m\_nodes}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+std\+::vector$<$\mbox{\hyperlink{structtraccc_1_1module__map_1_1module__map__node}{module\+\_\+map\+\_\+node}}$>$ \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::m\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The internal storage of the nodes in our binary search tree. 
+
+This follows the well-\/known formalism where the root node resides at index 0, while for any node at position n, the left child is at index 2n
+\begin{DoxyItemize}
+\item 1, and the right child is at index 2n + 2. 
+\end{DoxyItemize}
+
+Referenced by traccc\+::module\+\_\+map$<$ K, V $>$\+::at\+\_\+helper(), traccc\+::module\+\_\+map$<$ K, V $>$\+::create\+\_\+tree(), traccc\+::module\+\_\+map$<$ K, V $>$\+::empty(), and traccc\+::module\+\_\+map$<$ K, V $>$\+::size().
+
+\mbox{\Hypertarget{classtraccc_1_1module__map_a9a1e88f0307deeea4a133565d151d976}\label{classtraccc_1_1module__map_a9a1e88f0307deeea4a133565d151d976}} 
+\index{traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}!m\_values@{m\_values}}
+\index{m\_values@{m\_values}!traccc::module\_map$<$ K, V $>$@{traccc::module\_map$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{m\_values}{m\_values}}
+{\footnotesize\ttfamily template$<$typename K  = geometry\+\_\+id, typename V  = transform3$>$ \\
+std\+::vector$<$V$>$ \mbox{\hyperlink{classtraccc_1_1module__map}{traccc\+::module\+\_\+map}}$<$ K, V $>$\+::m\+\_\+values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This vector stores the values in a contiguous manner. Our nodes keep indices in this array instead of pointers. 
+
+
+
+Referenced by traccc\+::module\+\_\+map$<$ K, V $>$\+::at\+\_\+helper(), and traccc\+::module\+\_\+map$<$ K, V $>$\+::module\+\_\+map().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/geometry/\mbox{\hyperlink{module__map_8hpp}{module\+\_\+map.\+hpp}}\end{DoxyCompactItemize}

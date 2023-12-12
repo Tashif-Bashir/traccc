@@ -1,0 +1,204 @@
+\hypertarget{classtraccc_1_1alpaka_1_1spacepoint__binning}{}\doxysection{traccc\+::alpaka\+::spacepoint\+\_\+binning Class Reference}
+\label{classtraccc_1_1alpaka_1_1spacepoint__binning}\index{traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}}
+
+
+Spacepoing binning executed on an Alpaka accelerator.  
+
+
+
+
+{\ttfamily \#include $<$spacepoint\+\_\+binning.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::alpaka\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{df/da5/classtraccc_1_1alpaka_1_1spacepoint__binning__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::alpaka\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d49/classtraccc_1_1alpaka_1_1spacepoint__binning__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ac641cde9a1f649be3967a059542bf115}{spacepoint\+\_\+binning}} (const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&config, const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&grid\+\_\+config, const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&mr, vecmem\+::copy \&copy)
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithm. \end{DoxyCompactList}\item 
+output\+\_\+type \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a82eabadb839b6d09894147c359ffd057}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&spacepoints\+\_\+view) const override
+\begin{DoxyCompactList}\small\item\em Function executing the algorithm with a view of spacepoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ae1972863480047900988ca3e496e3a8f}{m\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Member variables. \end{DoxyCompactList}\item 
+std\+::pair$<$ sp\+\_\+grid\+::axis\+\_\+p0\+\_\+type, sp\+\_\+grid\+::axis\+\_\+p1\+\_\+type $>$ \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\+\_\+axes}}
+\item 
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\+\_\+mr}}
+\item 
+vecmem\+::copy \& \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}{m\+\_\+copy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Spacepoing binning executed on an Alpaka accelerator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1alpaka_1_1spacepoint__binning_ac641cde9a1f649be3967a059542bf115}\label{classtraccc_1_1alpaka_1_1spacepoint__binning_ac641cde9a1f649be3967a059542bf115}} 
+\index{traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}!spacepoint\_binning@{spacepoint\_binning}}
+\index{spacepoint\_binning@{spacepoint\_binning}!traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{spacepoint\_binning()}{spacepoint\_binning()}}
+{\footnotesize\ttfamily traccc\+::alpaka\+::spacepoint\+\_\+binning\+::spacepoint\+\_\+binning (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&}]{grid\+\_\+config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&}]{mr,  }\item[{vecmem\+::copy \&}]{copy }\end{DoxyParamCaption})}
+
+
+
+Constructor for the algorithm. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23     : \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ae1972863480047900988ca3e496e3a8f}{m\_config}}(config),}
+\DoxyCodeLine{24       \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\_axes}}(\mbox{\hyperlink{namespacetraccc_aaca8347dbd25b3fdfd7c864a7f90368a}{get\_axes}}(grid\_config, (mr.\mbox{\hyperlink{structtraccc_1_1memory__resource_a3a7e6ce915149a10e37a9e9c6d73bf95}{host}} ? *(mr.\mbox{\hyperlink{structtraccc_1_1memory__resource_a3a7e6ce915149a10e37a9e9c6d73bf95}{host}}) : mr.\mbox{\hyperlink{structtraccc_1_1memory__resource_a9f1136a4fdab877dd1bbd1a2996e2149}{main}}))),}
+\DoxyCodeLine{25       \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\_mr}}(mr),}
+\DoxyCodeLine{26       \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}{m\_copy}}(copy) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1alpaka_1_1spacepoint__binning_a82eabadb839b6d09894147c359ffd057}\label{classtraccc_1_1alpaka_1_1spacepoint__binning_a82eabadb839b6d09894147c359ffd057}} 
+\index{traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily spacepoint\+\_\+binning\+::output\+\_\+type traccc\+::alpaka\+::spacepoint\+\_\+binning\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{spacepoints\+\_\+view }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Function executing the algorithm with a view of spacepoints. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                                                          \{}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{comment}{// Setup alpaka}}
+\DoxyCodeLine{89     \textcolor{keyword}{using} Acc = ::alpaka::ExampleDefaultAcc<Dim, Idx>;}
+\DoxyCodeLine{90     \textcolor{keyword}{using} Queue = ::alpaka::Queue<Acc, ::alpaka::Blocking>;}
+\DoxyCodeLine{91     \textcolor{keyword}{auto} devAcc = ::alpaka::getDevByIdx<Acc>(0u);}
+\DoxyCodeLine{92     \textcolor{keyword}{auto} queue = Queue\{devAcc\};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{comment}{// Get the spacepoint sizes from the view}}
+\DoxyCodeLine{95     \textcolor{keyword}{auto} sp\_size = \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}{m\_copy}}.get\_size(spacepoints\_view);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{comment}{// Set up the container that will be filled with the required capacities for}}
+\DoxyCodeLine{98     \textcolor{comment}{// the spacepoint grid.}}
+\DoxyCodeLine{99     \textcolor{keyword}{const} std::size\_t grid\_bins = \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\_axes}}.first.n\_bins * \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\_axes}}.second.n\_bins;}
+\DoxyCodeLine{100     vecmem::data::vector\_buffer<unsigned int> grid\_capacities\_buff(grid\_bins,}
+\DoxyCodeLine{101                                                                    \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\_mr}}.\mbox{\hyperlink{structtraccc_1_1memory__resource_a9f1136a4fdab877dd1bbd1a2996e2149}{main}});}
+\DoxyCodeLine{102     \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}{m\_copy}}.setup(grid\_capacities\_buff);}
+\DoxyCodeLine{103     \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}{m\_copy}}.memset(grid\_capacities\_buff, 0);}
+\DoxyCodeLine{104     vecmem::data::vector\_view<unsigned int> grid\_capacities\_view =}
+\DoxyCodeLine{105         grid\_capacities\_buff;}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107     \textcolor{comment}{// Now define the Alpaka Work division}}
+\DoxyCodeLine{108     \textcolor{keyword}{auto} \textcolor{keyword}{const} deviceProperties = ::alpaka::getAccDevProps<Acc>(devAcc);}
+\DoxyCodeLine{109     \textcolor{keyword}{auto} \textcolor{keyword}{const} maxThreadsPerBlock = deviceProperties.m\_blockThreadExtentMax[0];}
+\DoxyCodeLine{110     \textcolor{keyword}{auto} \textcolor{keyword}{const} threadsPerBlock = maxThreadsPerBlock;}
+\DoxyCodeLine{111     \textcolor{keyword}{auto} \textcolor{keyword}{const} blocksPerGrid =}
+\DoxyCodeLine{112         (sp\_size + threadsPerBlock -\/ 1) / threadsPerBlock;}
+\DoxyCodeLine{113     \textcolor{keyword}{auto} \textcolor{keyword}{const} elementsPerThread = 1u;}
+\DoxyCodeLine{114     \textcolor{keyword}{auto} workDiv = \mbox{\hyperlink{namespacetraccc_1_1alpaka_a725b9a6e2b71ce336e23e2690c9ef844}{WorkDiv}}\{blocksPerGrid, threadsPerBlock, elementsPerThread\};}
+\DoxyCodeLine{115     \textcolor{keyword}{auto} bufAcc = ::alpaka::allocBuf<float, uint32\_t>(devAcc, sp\_size);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     ::alpaka::exec<Acc>(queue, workDiv, CountGridCapacityKernel\{\}, \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ae1972863480047900988ca3e496e3a8f}{m\_config}},}
+\DoxyCodeLine{118                         \&\mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\_axes}}.first, \&\mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\_axes}}.second, spacepoints\_view,}
+\DoxyCodeLine{119                         \&grid\_capacities\_view);}
+\DoxyCodeLine{120     ::alpaka::wait(queue);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{comment}{// Copy grid capacities back to the host}}
+\DoxyCodeLine{123     vecmem::vector<unsigned int> grid\_capacities\_host(\mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\_mr}}.\mbox{\hyperlink{structtraccc_1_1memory__resource_a3a7e6ce915149a10e37a9e9c6d73bf95}{host}} ? \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\_mr}}.\mbox{\hyperlink{structtraccc_1_1memory__resource_a3a7e6ce915149a10e37a9e9c6d73bf95}{host}}}
+\DoxyCodeLine{124                                                                 : \&(\mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\_mr}}.\mbox{\hyperlink{structtraccc_1_1memory__resource_a9f1136a4fdab877dd1bbd1a2996e2149}{main}}));}
+\DoxyCodeLine{125     \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}{m\_copy}}(grid\_capacities\_buff, grid\_capacities\_host);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{comment}{// Create the grid buffer.}}
+\DoxyCodeLine{128     \mbox{\hyperlink{namespacetraccc_a6f3edb21be66a15213280ee97867bf8c}{sp\_grid\_buffer}} grid\_buffer(}
+\DoxyCodeLine{129         \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\_axes}}.first, \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}{m\_axes}}.second,}
+\DoxyCodeLine{130         std::vector<std::size\_t>(grid\_capacities\_host.begin(),}
+\DoxyCodeLine{131                                  grid\_capacities\_host.end()),}
+\DoxyCodeLine{132         \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\_mr}}.\mbox{\hyperlink{structtraccc_1_1memory__resource_a9f1136a4fdab877dd1bbd1a2996e2149}{main}}, \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}{m\_mr}}.\mbox{\hyperlink{structtraccc_1_1memory__resource_a3a7e6ce915149a10e37a9e9c6d73bf95}{host}}, vecmem::data::buffer\_type::resizable);}
+\DoxyCodeLine{133     \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}{m\_copy}}.setup(grid\_buffer.\_buffer);}
+\DoxyCodeLine{134     \mbox{\hyperlink{namespacetraccc_a5044143e89d8abc4a09e7829850cdfdc}{sp\_grid\_view}} grid\_view = grid\_buffer;}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     ::alpaka::exec<Acc>(queue, workDiv, PopulateGridKernel\{\}, \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning_ae1972863480047900988ca3e496e3a8f}{m\_config}},}
+\DoxyCodeLine{137                         spacepoints\_view, \&grid\_view);}
+\DoxyCodeLine{138     ::alpaka::wait(queue);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140     \textcolor{comment}{// Return the freshly filled buffer.}}
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} grid\_buffer;}
+\DoxyCodeLine{142 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::memory\+\_\+resource\+::host, m\+\_\+axes, m\+\_\+config, m\+\_\+copy, m\+\_\+mr, and traccc\+::memory\+\_\+resource\+::main.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}\label{classtraccc_1_1alpaka_1_1spacepoint__binning_af0e80ad8d12884792c11bdb28b66bfc7}} 
+\index{traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}!m\_axes@{m\_axes}}
+\index{m\_axes@{m\_axes}!traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_axes}{m\_axes}}
+{\footnotesize\ttfamily std\+::pair$<$sp\+\_\+grid\+::axis\+\_\+p0\+\_\+type, sp\+\_\+grid\+::axis\+\_\+p1\+\_\+type$>$ traccc\+::alpaka\+::spacepoint\+\_\+binning\+::m\+\_\+axes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1alpaka_1_1spacepoint__binning_ae1972863480047900988ca3e496e3a8f}\label{classtraccc_1_1alpaka_1_1spacepoint__binning_ae1972863480047900988ca3e496e3a8f}} 
+\index{traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_config}{m\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} traccc\+::alpaka\+::spacepoint\+\_\+binning\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Member variables. 
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}\label{classtraccc_1_1alpaka_1_1spacepoint__binning_ab2d6838e955ec329ae9b596596cfa59d}} 
+\index{traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}!m\_copy@{m\_copy}}
+\index{m\_copy@{m\_copy}!traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_copy}{m\_copy}}
+{\footnotesize\ttfamily vecmem\+::copy\& traccc\+::alpaka\+::spacepoint\+\_\+binning\+::m\+\_\+copy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}\label{classtraccc_1_1alpaka_1_1spacepoint__binning_a3076eb290ba777d6ba6755d3b969775b}} 
+\index{traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::alpaka::spacepoint\_binning@{traccc::alpaka::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} traccc\+::alpaka\+::spacepoint\+\_\+binning\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+device/alpaka/include/traccc/alpaka/seeding/\mbox{\hyperlink{device_2alpaka_2include_2traccc_2alpaka_2seeding_2spacepoint__binning_8hpp}{spacepoint\+\_\+binning.\+hpp}}\item 
+device/alpaka/src/seeding/\mbox{\hyperlink{device_2alpaka_2src_2seeding_2spacepoint__binning_8cpp}{spacepoint\+\_\+binning.\+cpp}}\end{DoxyCompactItemize}

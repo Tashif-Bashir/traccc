@@ -1,0 +1,46 @@
+\hypertarget{cpu_2test__cca_8cpp}{}\doxysection{tests/cpu/test\+\_\+cca.cpp File Reference}
+\label{cpu_2test__cca_8cpp}\index{tests/cpu/test\_cca.cpp@{tests/cpu/test\_cca.cpp}}
+{\ttfamily \#include \char`\"{}traccc/clusterization/clusterization\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/definitions/primitives.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/cell.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/cluster.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests/cca\+\_\+test.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+Include dependency graph for test\+\_\+cca.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d11/cpu_2test__cca_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cpu_2test__cca_8cpp_aac71dcade670a9767e5a52bb6d70caa0}{T\+E\+S\+T\+\_\+P}} (\mbox{\hyperlink{classConnectedComponentAnalysisTests}{Connected\+Component\+Analysis\+Tests}}, Run)
+\item 
+\mbox{\hyperlink{cpu_2test__cca_8cpp_a47040c9496e74517b75b213445fa559a}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Sparse\+Ccl\+Algorithm, \mbox{\hyperlink{classConnectedComponentAnalysisTests}{Connected\+Component\+Analysis\+Tests}}, \+::testing\+::\+Combine(\+::testing\+::\+Values(f), \+::testing\+::\+Values\+In(\mbox{\hyperlink{classConnectedComponentAnalysisTests_a880d8adf3c6967b25cffcdcf1e640adb}{Connected\+Component\+Analysis\+Tests\+::get\+\_\+test\+\_\+files}}())), \mbox{\hyperlink{classConnectedComponentAnalysisTests_a272df8838d18dec48fea8ac4556af650}{Connected\+Component\+Analysis\+Tests\+::get\+\_\+test\+\_\+name}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cpu_2test__cca_8cpp_a47040c9496e74517b75b213445fa559a}\label{cpu_2test__cca_8cpp_a47040c9496e74517b75b213445fa559a}} 
+\index{test\_cca.cpp@{test\_cca.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_cca.cpp@{test\_cca.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Sparse\+Ccl\+Algorithm}]{,  }\item[{\mbox{\hyperlink{classConnectedComponentAnalysisTests}{Connected\+Component\+Analysis\+Tests}}}]{,  }\item[{\+::testing\+::\+Combine(\+::testing\+::\+Values(f), \+::testing\+::\+Values\+In(\mbox{\hyperlink{classConnectedComponentAnalysisTests_a880d8adf3c6967b25cffcdcf1e640adb}{Connected\+Component\+Analysis\+Tests\+::get\+\_\+test\+\_\+files}}()))}]{,  }\item[{\mbox{\hyperlink{classConnectedComponentAnalysisTests_a272df8838d18dec48fea8ac4556af650}{Connected\+Component\+Analysis\+Tests\+::get\+\_\+test\+\_\+name}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cpu_2test__cca_8cpp_aac71dcade670a9767e5a52bb6d70caa0}\label{cpu_2test__cca_8cpp_aac71dcade670a9767e5a52bb6d70caa0}} 
+\index{test\_cca.cpp@{test\_cca.cpp}!TEST\_P@{TEST\_P}}
+\index{TEST\_P@{TEST\_P}!test\_cca.cpp@{test\_cca.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_P()}{TEST\_P()}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+P (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classConnectedComponentAnalysisTests}{Connected\+Component\+Analysis\+Tests}}}]{,  }\item[{Run}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                              \{}
+\DoxyCodeLine{46     test\_connected\_component\_analysis(GetParam());}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}

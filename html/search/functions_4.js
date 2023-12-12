@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['data_5fdirectory_2100',['data_directory',['../d6/d21/namespacetraccc_1_1io.html#adc4b3b42d06cb8ec657cdc35dec6a58f',1,'traccc::io']]],
+  ['detector_5finput_5foptions_2101',['detector_input_options',['../d5/d19/structtraccc_1_1detector__input__options.html#aa6f608ce4362496df0a05da4905afb24',1,'traccc::detector_input_options']]],
+  ['device_2102',['device',['../d1/d9c/classtraccc_1_1cuda_1_1details_1_1select__device.html#a113fabf401e551d1355462584c64b8c8',1,'traccc::cuda::details::select_device']]],
+  ['device_5fcontainer_2103',['device_container',['../d4/d1a/classtraccc_1_1device__container.html#a5f4f3f5d9b7a79cd990a7d612ca5b66b',1,'traccc::device_container']]],
+  ['dfe_5fnamedtuple_2104',['DFE_NAMEDTUPLE',['../d8/d86/structtraccc_1_1io_1_1csv_1_1cell.html#a1755708d81de294e0685fbaf60dcaeed',1,'traccc::io::csv::cell::DFE_NAMEDTUPLE()'],['../d9/de5/structtraccc_1_1io_1_1csv_1_1hit.html#ab0d89e4eda78e0395a36b154a486afee',1,'traccc::io::csv::hit::DFE_NAMEDTUPLE()'],['../d1/db4/structtraccc_1_1io_1_1csv_1_1measurement.html#a1961072bb9e5c1265cde7d3cd4a748f4',1,'traccc::io::csv::measurement::DFE_NAMEDTUPLE()'],['../d8/d7f/structtraccc_1_1io_1_1csv_1_1measurement__hit__id.html#a2691ea41a5c2db2882dd373ca4b6baac',1,'traccc::io::csv::measurement_hit_id::DFE_NAMEDTUPLE()'],['../df/db1/structtraccc_1_1io_1_1csv_1_1particle.html#a7e3a5ef4fa73094d330f1637ee89da19',1,'traccc::io::csv::particle::DFE_NAMEDTUPLE()'],['../dd/d2f/structtraccc_1_1io_1_1csv_1_1surface.html#a7fef1af19cf18e92c366e04e07ef2702',1,'traccc::io::csv::surface::DFE_NAMEDTUPLE()'],['../db/dd1/structConnectedComponentAnalysisTests_1_1cca__truth__hit.html#a64891dacdda4c12fba7b71d59d0f786b',1,'ConnectedComponentAnalysisTests::cca_truth_hit::DFE_NAMEDTUPLE()']]],
+  ['doublet_5ffinding_2105',['doublet_finding',['../d1/d36/structtraccc_1_1doublet__finding.html#ac5cc1218309cccb3282aa428a0ba5a24',1,'traccc::doublet_finding']]],
+  ['drawmaxthroughputplot_2106',['drawMaxThroughputPlot',['../d3/dcc/namespacetraccc__throughput__mt__plotter.html#a97ac1a4f40ab653243bc90e5c150bc42',1,'traccc_throughput_mt_plotter']]],
+  ['drawpermusampleplots_2107',['drawPerMuSamplePlots',['../d3/dcc/namespacetraccc__throughput__mt__plotter.html#af13ba86a232a406deaa4418b00b612e0',1,'traccc_throughput_mt_plotter']]],
+  ['duplication_5fplot_5ftool_2108',['duplication_plot_tool',['../d0/d31/classtraccc_1_1duplication__plot__tool.html#a675c9627e9bd52f098b35f7ea16c3d65',1,'traccc::duplication_plot_tool']]]
+];

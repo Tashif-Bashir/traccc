@@ -1,0 +1,29 @@
+<map id="examples/options/include/traccc/options/handle_argument_errors.hpp" name="examples/options/include/traccc/options/handle_argument_errors.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="1729,5,1919,61"/>
+<area shape="rect" id="node2" href="$d6/d01/create__binaries_8cpp.html" title=" " alt="" coords="5,117,152,158"/>
+<area shape="rect" id="node3" href="$d9/d60/handle__argument__errors_8cpp.html" title=" " alt="" coords="176,109,368,165"/>
+<area shape="rect" id="node4" href="$d5/d78/seeding__example__alpaka_8cpp.html" title=" " alt="" coords="392,117,611,158"/>
+<area shape="rect" id="node5" href="$d9/ddd/throughput__mt_8ipp.html" title=" " alt="" coords="635,117,807,158"/>
+<area shape="rect" id="node10" href="$d9/d60/throughput__st_8ipp.html" title=" " alt="" coords="831,117,1003,158"/>
+<area shape="rect" id="node15" href="$d6/d1f/seeding__example_8cpp.html" title=" " alt="" coords="1027,117,1221,158"/>
+<area shape="rect" id="node16" href="$d9/d26/seq__example_8cpp.html" title=" " alt="" coords="1245,117,1411,158"/>
+<area shape="rect" id="node17" href="$d2/dbe/truth__finding__example_8cpp.html" title=" " alt="" coords="1435,117,1608,158"/>
+<area shape="rect" id="node18" href="$de/d43/truth__fitting__example_8cpp.html" title=" " alt="" coords="1632,117,1805,158"/>
+<area shape="rect" id="node19" href="$de/d56/seeding__example__cuda_8cpp.html" title=" " alt="" coords="1830,117,2031,158"/>
+<area shape="rect" id="node20" href="$d6/dcf/seq__example__cuda_8cpp.html" title=" " alt="" coords="2056,117,2229,158"/>
+<area shape="rect" id="node21" href="$d8/df4/truth__finding__example__cuda_8cpp.html" title=" " alt="" coords="2253,117,2456,158"/>
+<area shape="rect" id="node22" href="$d6/d89/truth__fitting__example__cuda_8cpp.html" title=" " alt="" coords="2481,117,2677,158"/>
+<area shape="rect" id="node23" href="$d2/d7f/seeding__example__kokkos_8cpp.html" title=" " alt="" coords="2701,117,2923,158"/>
+<area shape="rect" id="node24" href="$de/d8c/simulate_8cpp.html" title=" " alt="" coords="2947,117,3106,158"/>
+<area shape="rect" id="node25" href="$da/d81/simulate__telescope_8cpp.html" title=" " alt="" coords="3130,117,3310,158"/>
+<area shape="rect" id="node26" href="$df/dc1/simulate__toy__detector_8cpp.html" title=" " alt="" coords="3334,117,3533,158"/>
+<area shape="rect" id="node27" href="$d1/d1f/simulate__wire__chamber_8cpp.html" title=" " alt="" coords="3557,117,3765,158"/>
+<area shape="rect" id="node6" href="$d7/ddb/throughput__mt_8hpp.html" title=" " alt="" coords="433,213,605,255"/>
+<area shape="rect" id="node7" href="$d4/d4a/cpu_2throughput__mt_8cpp.html" title=" " alt="" coords="49,303,263,344"/>
+<area shape="rect" id="node8" href="$d2/def/cuda_2throughput__mt_8cpp.html" title=" " alt="" coords="287,303,508,344"/>
+<area shape="rect" id="node9" href="$d1/d7f/sycl_2throughput__mt_8cpp.html" title=" " alt="" coords="532,303,748,344"/>
+<area shape="rect" id="node11" href="$d0/dcd/throughput__st_8hpp.html" title=" " alt="" coords="913,213,1085,255"/>
+<area shape="rect" id="node12" href="$db/dd9/cpu_2throughput__st_8cpp.html" title=" " alt="" coords="772,303,985,344"/>
+<area shape="rect" id="node13" href="$da/d78/cuda_2throughput__st_8cpp.html" title=" " alt="" coords="1009,303,1231,344"/>
+<area shape="rect" id="node14" href="$d5/d39/sycl_2throughput__st_8cpp.html" title=" " alt="" coords="1255,303,1471,344"/>
+</map>

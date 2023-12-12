@@ -1,0 +1,116 @@
+\hypertarget{structtraccc_1_1performance_1_1throughput}{}\doxysection{traccc\+::performance\+::throughput Struct Reference}
+\label{structtraccc_1_1performance_1_1throughput}\index{traccc::performance::throughput@{traccc::performance::throughput}}
+
+
+Convenience type for printing throughput information.  
+
+
+
+
+{\ttfamily \#include $<$throughput.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::performance\+::throughput\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{d9/d9c/structtraccc_1_1performance_1_1throughput__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_a261fe3c1f4bb67bba99d38a4475ab6ab}{throughput}} (std\+::size\+\_\+t events, const \mbox{\hyperlink{structtraccc_1_1performance_1_1timing__info}{timing\+\_\+info}} \&ti, std\+::string\+\_\+view timer\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor with a \char`\"{}timer name\char`\"{} and event processing time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_abe2a8ac8158b08dcd06cc805bdbac0f8}{m\+\_\+timer\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em The timer name. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_a689bae58759fdcee3eee93f4150021e1}{m\+\_\+per\+Event}}
+\begin{DoxyCompactList}\small\item\em The milliseconds per event value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_a909618cbe9d8bc2bbf7c2c52ca838e65}{m\+\_\+per\+Second}}
+\begin{DoxyCompactList}\small\item\em The events per second value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Convenience type for printing throughput information. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1performance_1_1throughput_a261fe3c1f4bb67bba99d38a4475ab6ab}\label{structtraccc_1_1performance_1_1throughput_a261fe3c1f4bb67bba99d38a4475ab6ab}} 
+\index{traccc::performance::throughput@{traccc::performance::throughput}!throughput@{throughput}}
+\index{throughput@{throughput}!traccc::performance::throughput@{traccc::performance::throughput}}
+\doxysubsubsection{\texorpdfstring{throughput()}{throughput()}}
+{\footnotesize\ttfamily traccc\+::performance\+::throughput\+::throughput (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{events,  }\item[{const \mbox{\hyperlink{structtraccc_1_1performance_1_1timing__info}{timing\+\_\+info}} \&}]{ti,  }\item[{std\+::string\+\_\+view}]{timer\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Constructor with a \char`\"{}timer name\char`\"{} and event processing time. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20     : \mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_abe2a8ac8158b08dcd06cc805bdbac0f8}{m\_timer\_name}}(timer\_name) \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keyword}{auto} totalTime = ti.get\_time(timer\_name);}
+\DoxyCodeLine{23     \mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_a689bae58759fdcee3eee93f4150021e1}{m\_perEvent}} = (totalTime / \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(events)).count() * 1e-\/6;}
+\DoxyCodeLine{24     \mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_a909618cbe9d8bc2bbf7c2c52ca838e65}{m\_perSecond}} = 1000. / \mbox{\hyperlink{structtraccc_1_1performance_1_1throughput_a689bae58759fdcee3eee93f4150021e1}{m\_perEvent}};}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::performance\+::timing\+\_\+info\+::get\+\_\+time(), m\+\_\+per\+Event, and m\+\_\+per\+Second.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1performance_1_1throughput_a689bae58759fdcee3eee93f4150021e1}\label{structtraccc_1_1performance_1_1throughput_a689bae58759fdcee3eee93f4150021e1}} 
+\index{traccc::performance::throughput@{traccc::performance::throughput}!m\_perEvent@{m\_perEvent}}
+\index{m\_perEvent@{m\_perEvent}!traccc::performance::throughput@{traccc::performance::throughput}}
+\doxysubsubsection{\texorpdfstring{m\_perEvent}{m\_perEvent}}
+{\footnotesize\ttfamily double traccc\+::performance\+::throughput\+::m\+\_\+per\+Event}
+
+
+
+The milliseconds per event value. 
+
+
+
+Referenced by traccc\+::performance\+::operator$<$$<$(), and throughput().
+
+\mbox{\Hypertarget{structtraccc_1_1performance_1_1throughput_a909618cbe9d8bc2bbf7c2c52ca838e65}\label{structtraccc_1_1performance_1_1throughput_a909618cbe9d8bc2bbf7c2c52ca838e65}} 
+\index{traccc::performance::throughput@{traccc::performance::throughput}!m\_perSecond@{m\_perSecond}}
+\index{m\_perSecond@{m\_perSecond}!traccc::performance::throughput@{traccc::performance::throughput}}
+\doxysubsubsection{\texorpdfstring{m\_perSecond}{m\_perSecond}}
+{\footnotesize\ttfamily double traccc\+::performance\+::throughput\+::m\+\_\+per\+Second}
+
+
+
+The events per second value. 
+
+
+
+Referenced by traccc\+::performance\+::operator$<$$<$(), and throughput().
+
+\mbox{\Hypertarget{structtraccc_1_1performance_1_1throughput_abe2a8ac8158b08dcd06cc805bdbac0f8}\label{structtraccc_1_1performance_1_1throughput_abe2a8ac8158b08dcd06cc805bdbac0f8}} 
+\index{traccc::performance::throughput@{traccc::performance::throughput}!m\_timer\_name@{m\_timer\_name}}
+\index{m\_timer\_name@{m\_timer\_name}!traccc::performance::throughput@{traccc::performance::throughput}}
+\doxysubsubsection{\texorpdfstring{m\_timer\_name}{m\_timer\_name}}
+{\footnotesize\ttfamily std\+::string traccc\+::performance\+::throughput\+::m\+\_\+timer\+\_\+name}
+
+
+
+The timer name. 
+
+
+
+Referenced by traccc\+::performance\+::operator$<$$<$().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/performance/\mbox{\hyperlink{throughput_8hpp}{throughput.\+hpp}}\item 
+performance/src/performance/\mbox{\hyperlink{throughput_8cpp}{throughput.\+cpp}}\end{DoxyCompactItemize}

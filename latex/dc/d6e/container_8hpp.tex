@@ -1,0 +1,63 @@
+\hypertarget{container_8hpp}{}\doxysection{core/include/traccc/edm/container.hpp File Reference}
+\label{container_8hpp}\index{core/include/traccc/edm/container.hpp@{core/include/traccc/edm/container.hpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/qualifiers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/details/device\+\_\+container.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/details/host\+\_\+container.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/utils/type\+\_\+traits.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/containers/data/jagged\+\_\+vector\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/containers/data/jagged\+\_\+vector\+\_\+data.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/containers/data/jagged\+\_\+vector\+\_\+view.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/containers/data/vector\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/containers/data/vector\+\_\+view.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/containers/device\+\_\+vector.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/containers/vector.\+hpp$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for container.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd5/container_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dae/container_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1container__data}{traccc\+::container\+\_\+data$<$ header\+\_\+t, item\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Structure holding (some of the) data about the container in host code. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtraccc_1_1container__buffer}{traccc\+::container\+\_\+buffer$<$ header\+\_\+t, item\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Structure holding (all of the) data about the container in host code. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view$<$ header\+\_\+t, item\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1collection__types}{traccc\+::collection\+\_\+types$<$ item\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Type trait defining all \char`\"{}collection types\char`\"{} for an E\+DM class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types$<$ header\+\_\+t, item\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Type trait defining all \char`\"{}container types\char`\"{} for an E\+DM class pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{Indent}\textbf{ Types used to send data back and forth between host and device code}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename header\+\_\+t , typename item\+\_\+t $>$ }\\container\+\_\+data$<$ header\+\_\+t, item\+\_\+t $>$ \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{traccc\+::get\+\_\+data}} (host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$ \&cc, vecmem\+::memory\+\_\+resource $\ast$resource=nullptr)
+\item 
+{\footnotesize template$<$typename header\+\_\+t , typename item\+\_\+t $>$ }\\container\+\_\+data$<$ const header\+\_\+t, const item\+\_\+t $>$ \mbox{\hyperlink{namespacetraccc_a6c95e3d166a47080bce13e4e1fc856e8}{traccc\+::get\+\_\+data}} (const host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$ \&cc, vecmem\+::memory\+\_\+resource $\ast$resource=nullptr)
+\begin{DoxyCompactList}\small\item\em Helper function for making a \char`\"{}simple\char`\"{} object out of the container (const) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Types used to send data back and forth between host and device code}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename header\+\_\+t , typename item\+\_\+t $>$ }\\container\+\_\+data$<$ header\+\_\+t, item\+\_\+t $>$ \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{traccc\+::get\+\_\+data}} (host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$ \&cc, vecmem\+::memory\+\_\+resource $\ast$resource=nullptr)
+\item 
+{\footnotesize template$<$typename header\+\_\+t , typename item\+\_\+t $>$ }\\container\+\_\+data$<$ const header\+\_\+t, const item\+\_\+t $>$ \mbox{\hyperlink{namespacetraccc_a6c95e3d166a47080bce13e4e1fc856e8}{traccc\+::get\+\_\+data}} (const host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$ \&cc, vecmem\+::memory\+\_\+resource $\ast$resource=nullptr)
+\begin{DoxyCompactList}\small\item\em Helper function for making a \char`\"{}simple\char`\"{} object out of the container (const) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}

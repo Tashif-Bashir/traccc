@@ -1,0 +1,145 @@
+\hypertarget{classtraccc_1_1track__params__estimation}{}\doxysection{traccc\+::track\+\_\+params\+\_\+estimation Class Reference}
+\label{classtraccc_1_1track__params__estimation}\index{traccc::track\_params\_estimation@{traccc::track\_params\_estimation}}
+
+
+{\ttfamily \#include $<$track\+\_\+params\+\_\+estimation.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::track\+\_\+params\+\_\+estimation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{df/d57/classtraccc_1_1track__params__estimation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::track\+\_\+params\+\_\+estimation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{d0/d5a/classtraccc_1_1track__params__estimation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1track__params__estimation_a944319901001b9cf360b592248b42cec}{track\+\_\+params\+\_\+estimation}} (vecmem\+::memory\+\_\+resource \&mr)
+\item 
+output\+\_\+type \mbox{\hyperlink{classtraccc_1_1track__params__estimation_ac817d04016ac1be753e082e2d1758f03}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&spacepoints, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{seed\+\_\+collection\+\_\+types\+::host}} \&seeds, const \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} \&bfield, const std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{traccc\+::e\+\_\+bound\+\_\+size}} $>$ \&stddev=\{ 0.\+02 $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::mm, 0.\+03 $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::mm, 1. $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::degree, 1. $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::degree, 0.\+01/detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::GeV, 1 $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::ns\}) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::reference\+\_\+wrapper$<$ vecmem\+::memory\+\_\+resource $>$ \mbox{\hyperlink{classtraccc_1_1track__params__estimation_aa3a9ec13f9176186f4944cc8f07de901}{m\+\_\+mr}}
+\begin{DoxyCompactList}\small\item\em The memory resource to use in the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Track parameter estimation algorithm
+
+Transcribed from Acts/\+Seeding/\+Estimate\+Track\+Params\+From\+Seed.\+hpp. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1track__params__estimation_a944319901001b9cf360b592248b42cec}\label{classtraccc_1_1track__params__estimation_a944319901001b9cf360b592248b42cec}} 
+\index{traccc::track\_params\_estimation@{traccc::track\_params\_estimation}!track\_params\_estimation@{track\_params\_estimation}}
+\index{track\_params\_estimation@{track\_params\_estimation}!traccc::track\_params\_estimation@{traccc::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{track\_params\_estimation()}{track\_params\_estimation()}}
+{\footnotesize\ttfamily traccc\+::track\+\_\+params\+\_\+estimation\+::track\+\_\+params\+\_\+estimation (\begin{DoxyParamCaption}\item[{vecmem\+::memory\+\_\+resource \&}]{mr }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{classtraccc_1_1track__params__estimation}{track\+\_\+params\+\_\+estimation}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & is the memory resource \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17     : \mbox{\hyperlink{classtraccc_1_1track__params__estimation_aa3a9ec13f9176186f4944cc8f07de901}{m\_mr}}(mr) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1track__params__estimation_ac817d04016ac1be753e082e2d1758f03}\label{classtraccc_1_1track__params__estimation_ac817d04016ac1be753e082e2d1758f03}} 
+\index{traccc::track\_params\_estimation@{traccc::track\_params\_estimation}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::track\_params\_estimation@{traccc::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily track\+\_\+params\+\_\+estimation\+::output\+\_\+type traccc\+::track\+\_\+params\+\_\+estimation\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&}]{spacepoints,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{seed\+\_\+collection\+\_\+types\+::host}} \&}]{seeds,  }\item[{const \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} \&}]{bfield,  }\item[{const std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{traccc\+::e\+\_\+bound\+\_\+size}} $>$ \&}]{stddev = {\ttfamily \{~0.02~$\ast$~detray\+:\+:unit$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}$>$\+:\+:mm,~0.03~$\ast$~detray\+:\+:unit$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}$>$\+:\+:mm,~1.~$\ast$~detray\+:\+:unit$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}$>$\+:\+:degree,~1.~$\ast$~detray\+:\+:unit$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}$>$\+:\+:degree,~0.01~/~detray\+:\+:unit$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}$>$\+:\+:GeV,~1~$\ast$~detray\+:\+:unit$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}$>$\+:\+:ns\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Callable operator for track\+\_\+params\+\_\+esitmation
+
+
+\begin{DoxyParams}{Parameters}
+{\em spacepoints} & All spacepoints of the event \\
+\hline
+{\em seeds} & The reconstructed track seeds of the event \\
+\hline
+{\em bfield} & (Temporary) Magnetic field vector \\
+\hline
+{\em stddev} & standard deviation for setting the covariance (Default value from ar\+Xiv\+:2112.\+09470v1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of bound track parameters 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                                                     \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num\_seeds = seeds.size();}
+\DoxyCodeLine{25     output\_type result(num\_seeds, \&\mbox{\hyperlink{classtraccc_1_1track__params__estimation_aa3a9ec13f9176186f4944cc8f07de901}{m\_mr}}.get());}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < num\_seeds; ++i) \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\_track\_parameters}} track\_params;}
+\DoxyCodeLine{29         track\_params.set\_vector(}
+\DoxyCodeLine{30             \mbox{\hyperlink{namespacetraccc_a88606a40b404017f29254d1316716919}{seed\_to\_bound\_vector}}(spacepoints, seeds[i], bfield, \mbox{\hyperlink{namespacetraccc_a6cf70f42326684dce8af8f18664292af}{PION\_MASS\_MEV}}));}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{comment}{// Set Covariance}}
+\DoxyCodeLine{33         \textcolor{keywordflow}{for} (std::size\_t j = 0; j < \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{e\_bound\_size}}; ++j) \{}
+\DoxyCodeLine{34             getter::element(track\_params.covariance(), j, j) =}
+\DoxyCodeLine{35                 stddev[j] * stddev[j];}
+\DoxyCodeLine{36         \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// Get geometry ID for bottom spacepoint}}
+\DoxyCodeLine{39         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spB = spacepoints.at(seeds[i].spB\_link);}
+\DoxyCodeLine{40         track\_params.set\_surface\_link(spB.meas.surface\_link);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         result[i] = track\_params;}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::e\+\_\+bound\+\_\+size, m\+\_\+mr, traccc\+::\+P\+I\+O\+N\+\_\+\+M\+A\+S\+S\+\_\+\+M\+EV, and traccc\+::seed\+\_\+to\+\_\+bound\+\_\+vector().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1track__params__estimation_aa3a9ec13f9176186f4944cc8f07de901}\label{classtraccc_1_1track__params__estimation_aa3a9ec13f9176186f4944cc8f07de901}} 
+\index{traccc::track\_params\_estimation@{traccc::track\_params\_estimation}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::track\_params\_estimation@{traccc::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily std\+::reference\+\_\+wrapper$<$vecmem\+::memory\+\_\+resource$>$ traccc\+::track\+\_\+params\+\_\+estimation\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The memory resource to use in the algorithm. 
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/\mbox{\hyperlink{core_2include_2traccc_2seeding_2track__params__estimation_8hpp}{track\+\_\+params\+\_\+estimation.\+hpp}}\item 
+core/src/seeding/\mbox{\hyperlink{track__params__estimation_8cpp}{track\+\_\+params\+\_\+estimation.\+cpp}}\end{DoxyCompactItemize}

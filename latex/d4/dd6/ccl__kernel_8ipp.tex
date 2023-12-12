@@ -1,0 +1,32 @@
+\hypertarget{ccl__kernel_8ipp}{}\doxysection{device/common/include/traccc/clusterization/device/impl/ccl\+\_\+kernel.ipp File Reference}
+\label{ccl__kernel_8ipp}\index{device/common/include/traccc/clusterization/device/impl/ccl\_kernel.ipp@{device/common/include/traccc/clusterization/device/impl/ccl\_kernel.ipp}}
+{\ttfamily \#include \char`\"{}traccc/clusterization/device/aggregate\+\_\+cluster.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/clusterization/device/reduce\+\_\+problem\+\_\+cell.\+hpp\char`\"{}}\newline
+Include dependency graph for ccl\+\_\+kernel.\+ipp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d98/ccl__kernel_8ipp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{d6/d58/ccl__kernel_8ipp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1device}{traccc\+::device}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename barrier\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a95e1c711b776a8c1d0ece5b492f5a5e6}{T\+R\+A\+C\+C\+C\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{namespacetraccc_1_1device_a2fc626e715c5d48a0d3261d70d479dd5}{traccc\+::device\+::fast\+\_\+sv\+\_\+1}} (index\+\_\+t $\ast$f, index\+\_\+t $\ast$gf, unsigned char adjc\mbox{[}M\+A\+X\+\_\+\+C\+E\+L\+L\+S\+\_\+\+P\+E\+R\+\_\+\+T\+H\+R\+E\+AD\mbox{]}, index\+\_\+t adjv\mbox{[}M\+A\+X\+\_\+\+C\+E\+L\+L\+S\+\_\+\+P\+E\+R\+\_\+\+T\+H\+R\+E\+AD\mbox{]}\mbox{[}8\mbox{]}, const index\+\_\+t tid, const index\+\_\+t blck\+Dim, barrier\+\_\+t \&barrier)
+\item 
+{\footnotesize template$<$typename barrier\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a95e1c711b776a8c1d0ece5b492f5a5e6}{T\+R\+A\+C\+C\+C\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{namespacetraccc_1_1device_a581cd4e1e686b1e742185eac2da41369}{traccc\+::device\+::ccl\+\_\+kernel}} (const index\+\_\+t thread\+Id, const index\+\_\+t blck\+Dim, const unsigned int block\+Id, const cell\+\_\+collection\+\_\+types\+::const\+\_\+view cells\+\_\+view, const cell\+\_\+module\+\_\+collection\+\_\+types\+::const\+\_\+view modules\+\_\+view, const index\+\_\+t max\+\_\+cells\+\_\+per\+\_\+partition, const index\+\_\+t target\+\_\+cells\+\_\+per\+\_\+partition, unsigned int \&partition\+\_\+start, unsigned int \&partition\+\_\+end, unsigned int \&outi, index\+\_\+t $\ast$f, index\+\_\+t $\ast$gf, barrier\+\_\+t \&barrier, measurement\+\_\+collection\+\_\+types\+::view measurements\+\_\+view, unsigned int \&measurement\+\_\+count, vecmem\+::data\+::vector\+\_\+view$<$ unsigned int $>$ cell\+\_\+links)
+\end{DoxyCompactItemize}

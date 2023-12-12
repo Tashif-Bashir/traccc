@@ -1,0 +1,61 @@
+\hypertarget{structtraccc_1_1stat__plot__tool__config}{}\doxysection{traccc\+::stat\+\_\+plot\+\_\+tool\+\_\+config Struct Reference}
+\label{structtraccc_1_1stat__plot__tool__config}\index{traccc::stat\_plot\_tool\_config@{traccc::stat\_plot\_tool\_config}}
+
+
+Configuration structure for {\ttfamily \mbox{\hyperlink{classtraccc_1_1stat__plot__tool}{traccc\+::stat\+\_\+plot\+\_\+tool}}}.  
+
+
+
+
+{\ttfamily \#include $<$stat\+\_\+plot\+\_\+tool\+\_\+config.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::stat\+\_\+plot\+\_\+tool\+\_\+config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d7/d11/structtraccc_1_1stat__plot__tool__config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{structtraccc_1_1plot__helpers_1_1binning}{plot\+\_\+helpers\+::binning}} $>$ \mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}{var\+\_\+binning}}
+\begin{DoxyCompactList}\small\item\em Binning setups. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configuration structure for {\ttfamily \mbox{\hyperlink{classtraccc_1_1stat__plot__tool}{traccc\+::stat\+\_\+plot\+\_\+tool}}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}\label{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}} 
+\index{traccc::stat\_plot\_tool\_config@{traccc::stat\_plot\_tool\_config}!var\_binning@{var\_binning}}
+\index{var\_binning@{var\_binning}!traccc::stat\_plot\_tool\_config@{traccc::stat\_plot\_tool\_config}}
+\doxysubsubsection{\texorpdfstring{var\_binning}{var\_binning}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{structtraccc_1_1plot__helpers_1_1binning}{plot\+\_\+helpers\+::binning}}$>$ traccc\+::stat\+\_\+plot\+\_\+tool\+\_\+config\+::var\+\_\+binning}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"ndf"}, plot\_helpers::binning(\textcolor{stringliteral}{"ndf"}, 35, -\/5., 30.)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"chi2"}, plot\_helpers::binning(\textcolor{stringliteral}{"chi2"}, 100, 0., 50.)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"reduced\_chi2"}, plot\_helpers::binning(\textcolor{stringliteral}{"chi2/ndf"}, 100, 0., 10.)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"pval"}, plot\_helpers::binning(\textcolor{stringliteral}{"pval"}, 100, 0., 1.)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"chi2\_local"}, plot\_helpers::binning(\textcolor{stringliteral}{"chi2"}, 100, 0., 10.)\}\}}
+
+\end{DoxyCode}
+
+
+Binning setups. 
+
+
+
+Referenced by traccc\+::stat\+\_\+plot\+\_\+tool\+::book().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/resolution/\mbox{\hyperlink{stat__plot__tool__config_8hpp}{stat\+\_\+plot\+\_\+tool\+\_\+config.\+hpp}}\end{DoxyCompactItemize}

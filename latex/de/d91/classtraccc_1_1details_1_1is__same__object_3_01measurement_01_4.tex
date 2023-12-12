@@ -1,0 +1,112 @@
+\hypertarget{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4}{}\doxysection{traccc\+::details\+::is\+\_\+same\+\_\+object$<$ measurement $>$ Class Reference}
+\label{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4}\index{traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}}
+
+
+{\ttfamily traccc\+::is\+\_\+same\+\_\+object} specialisation for {\ttfamily \mbox{\hyperlink{structtraccc_1_1measurement}{traccc\+::measurement}}}  
+
+
+
+
+Collaboration diagram for traccc\+::details\+::is\+\_\+same\+\_\+object$<$ measurement $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{db/d62/classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Implementation for @c traccc\+::details\+::is\+\_\+same\+\_\+object$<$measurement$>$}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_adb05f2685b67f736c681a808470a3c30}{is\+\_\+same\+\_\+object}} (const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&ref, \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} unc=\mbox{\hyperlink{namespacetraccc_aefb61e3b4bb1e5f447092f00790f5bec}{float\+\_\+epsilon}})
+\begin{DoxyCompactList}\small\item\em Constructor with a reference object, and an allowed uncertainty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_ab9e89b6b224fcfbd803a1f5a7cfe30c4}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&obj) const
+\begin{DoxyCompactList}\small\item\em Specialised implementation for {\ttfamily \mbox{\hyperlink{structtraccc_1_1measurement}{traccc\+::measurement}}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::reference\+\_\+wrapper$<$ const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} $>$ \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}{m\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em The reference object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}{m\+\_\+unc}}
+\begin{DoxyCompactList}\small\item\em The uncertainty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+{\ttfamily traccc\+::is\+\_\+same\+\_\+object} specialisation for {\ttfamily \mbox{\hyperlink{structtraccc_1_1measurement}{traccc\+::measurement}}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_adb05f2685b67f736c681a808470a3c30}\label{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_adb05f2685b67f736c681a808470a3c30}} 
+\index{traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}!is\_same\_object@{is\_same\_object}}
+\index{is\_same\_object@{is\_same\_object}!traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}}
+\doxysubsubsection{\texorpdfstring{is\_same\_object()}{is\_same\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object}{traccc\+::details\+::is\+\_\+same\+\_\+object}}$<$ \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} $>$\+::\mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object}{is\+\_\+same\+\_\+object}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&}]{ref,  }\item[{\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}}]{unc = {\ttfamily \mbox{\hyperlink{namespacetraccc_aefb61e3b4bb1e5f447092f00790f5bec}{float\+\_\+epsilon}}} }\end{DoxyParamCaption})}
+
+
+
+Constructor with a reference object, and an allowed uncertainty. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20     : \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}{m\_ref}}(ref), \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}{m\_unc}}(unc) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_ab9e89b6b224fcfbd803a1f5a7cfe30c4}\label{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_ab9e89b6b224fcfbd803a1f5a7cfe30c4}} 
+\index{traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object}{traccc\+::details\+::is\+\_\+same\+\_\+object}}$<$ \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&}]{obj }\end{DoxyParamCaption}) const}
+
+
+
+Specialised implementation for {\ttfamily \mbox{\hyperlink{structtraccc_1_1measurement}{traccc\+::measurement}}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                                                          \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} (\mbox{\hyperlink{namespacetraccc_1_1details_a9e2d3c2a94449bf54b90522ca4d43879}{is\_same\_scalar}}(obj.local[0], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}{m\_ref}}.get().local[0], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}{m\_unc}}) \&\&}
+\DoxyCodeLine{25             \mbox{\hyperlink{namespacetraccc_1_1details_a9e2d3c2a94449bf54b90522ca4d43879}{is\_same\_scalar}}(obj.local[1], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}{m\_ref}}.get().local[1], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}{m\_unc}}) \&\&}
+\DoxyCodeLine{26             \mbox{\hyperlink{namespacetraccc_1_1details_a9e2d3c2a94449bf54b90522ca4d43879}{is\_same\_scalar}}(obj.variance[0], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}{m\_ref}}.get().variance[0], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}{m\_unc}}) \&\&}
+\DoxyCodeLine{27             \mbox{\hyperlink{namespacetraccc_1_1details_a9e2d3c2a94449bf54b90522ca4d43879}{is\_same\_scalar}}(obj.variance[1], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}{m\_ref}}.get().variance[1], \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}{m\_unc}}) \&\&}
+\DoxyCodeLine{28             obj.module\_link == \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}{m\_ref}}.get().module\_link);}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::details\+::is\+\_\+same\+\_\+scalar(), traccc\+::measurement\+::local, traccc\+::details\+::is\+\_\+same\+\_\+object$<$ T $>$\+::m\+\_\+ref, traccc\+::measurement\+::module\+\_\+link, and traccc\+::measurement\+::variance.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}\label{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_aaf61b6129f3e38a32be0930fe369cda6}} 
+\index{traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}!m\_ref@{m\_ref}}
+\index{m\_ref@{m\_ref}!traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}}
+\doxysubsubsection{\texorpdfstring{m\_ref}{m\_ref}}
+{\footnotesize\ttfamily std\+::reference\+\_\+wrapper$<$const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}}$>$ \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object}{traccc\+::details\+::is\+\_\+same\+\_\+object}}$<$ \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} $>$\+::m\+\_\+ref\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The reference object. 
+
+\mbox{\Hypertarget{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}\label{classtraccc_1_1details_1_1is__same__object_3_01measurement_01_4_a56b3621e1dfe7c5dcc54737dc6358e69}} 
+\index{traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}!m\_unc@{m\_unc}}
+\index{m\_unc@{m\_unc}!traccc::details::is\_same\_object$<$ measurement $>$@{traccc::details::is\_same\_object$<$ measurement $>$}}
+\doxysubsubsection{\texorpdfstring{m\_unc}{m\_unc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object}{traccc\+::details\+::is\+\_\+same\+\_\+object}}$<$ \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} $>$\+::m\+\_\+unc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The uncertainty. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/performance/impl/\mbox{\hyperlink{is__same__measurement_8ipp}{is\+\_\+same\+\_\+measurement.\+ipp}}\item 
+performance/src/performance/details/\mbox{\hyperlink{is__same__object_8cpp}{is\+\_\+same\+\_\+object.\+cpp}}\end{DoxyCompactItemize}

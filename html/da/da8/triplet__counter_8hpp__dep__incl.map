@@ -1,0 +1,9 @@
+<map id="device/common/include/traccc/edm/device/triplet_counter.hpp" name="device/common/include/traccc/edm/device/triplet_counter.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="343,5,531,61"/>
+<area shape="rect" id="node2" href="$d7/df3/device__triplet_8hpp.html" title=" " alt="" coords="182,109,374,165"/>
+<area shape="rect" id="node3" href="$dc/dbd/find__triplets_8hpp.html" title=" " alt="" coords="5,213,183,269"/>
+<area shape="rect" id="node4" href="$db/d5a/select__seeds_8hpp.html" title=" " alt="" coords="207,213,384,269"/>
+<area shape="rect" id="node5" href="$d3/d9a/update__triplet__weights_8hpp.html" title=" " alt="" coords="409,213,611,269"/>
+<area shape="rect" id="node6" href="$d7/d01/count__triplets_8hpp.html" title=" " alt="" coords="500,109,677,165"/>
+<area shape="rect" id="node7" href="$d1/d74/reduce__triplet__counts_8hpp.html" title=" " alt="" coords="702,109,897,165"/>
+</map>

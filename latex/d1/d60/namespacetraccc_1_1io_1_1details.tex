@@ -1,0 +1,280 @@
+\hypertarget{namespacetraccc_1_1io_1_1details}{}\doxysection{traccc\+::io\+::details Namespace Reference}
+\label{namespacetraccc_1_1io_1_1details}\index{traccc::io::details@{traccc::io::details}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespacetraccc_a394d22a5b5acbd46fadc0da0491c6913}{geometry\+\_\+id}}, \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a0a0bd7ed4c0a9dec6a1975ab2632980a}{read\+\_\+surfaces}} (std\+::string\+\_\+view filename, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv)
+\item 
+{\footnotesize template$<$typename container\+\_\+t $>$ }\\container\+\_\+t \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a0eea6feb15a7691797be0f7a6f128d4b}{read\+\_\+binary\+\_\+container}} (std\+::string\+\_\+view filename, vecmem\+::memory\+\_\+resource $\ast$mr=nullptr)
+\item 
+{\footnotesize template$<$typename collection\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a5eeb4a6cbbec1fcac29782dcc6d288c8}{read\+\_\+binary\+\_\+collection}} (collection\+\_\+t \&\mbox{\hyperlink{structtraccc_1_1result}{result}}, std\+::string\+\_\+view filename)
+\item 
+{\footnotesize template$<$typename container\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_acdc206e29eeaa12169335872ac6221b1}{write\+\_\+binary\+\_\+container}} (std\+::string\+\_\+view filename, const container\+\_\+t \&container)
+\item 
+{\footnotesize template$<$typename collection\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a8ea47a248eca15083f492748bebab0aa}{write\+\_\+binary\+\_\+collection}} (std\+::string\+\_\+view filename, const collection\+\_\+t \&collection)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetraccc_1_1io_1_1details_a5eeb4a6cbbec1fcac29782dcc6d288c8}\label{namespacetraccc_1_1io_1_1details_a5eeb4a6cbbec1fcac29782dcc6d288c8}} 
+\index{traccc::io::details@{traccc::io::details}!read\_binary\_collection@{read\_binary\_collection}}
+\index{read\_binary\_collection@{read\_binary\_collection}!traccc::io::details@{traccc::io::details}}
+\doxysubsubsection{\texorpdfstring{read\_binary\_collection()}{read\_binary\_collection()}}
+{\footnotesize\ttfamily template$<$typename collection\+\_\+t $>$ \\
+void traccc\+::io\+::details\+::read\+\_\+binary\+\_\+collection (\begin{DoxyParamCaption}\item[{collection\+\_\+t \&}]{result,  }\item[{std\+::string\+\_\+view}]{filename }\end{DoxyParamCaption})}
+
+Function for reading a collection from a binary file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The full input filename \\
+\hline
+{\em mr} & Is the memory resource to create the result collection with \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                                                                            \{}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{comment}{// Make sure that the chosen types work.}}
+\DoxyCodeLine{79     static\_assert(std::is\_standard\_layout\_v<typename collection\_t::value\_type>,}
+\DoxyCodeLine{80                   \textcolor{stringliteral}{"Collection item type must be standard layout."});}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{comment}{// Open the input file.}}
+\DoxyCodeLine{83     std::ifstream in\_file(filename.data(), \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{std::ios::binary}});}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{// Read the size of the header vector.}}
+\DoxyCodeLine{86     std::size\_t size;}
+\DoxyCodeLine{87     in\_file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size), \textcolor{keyword}{sizeof}(std::size\_t));}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{comment}{// Set result to the correct size.}}
+\DoxyCodeLine{90     result.resize(size);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{comment}{// Read the items into memory.}}
+\DoxyCodeLine{93     in\_file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(result.data()),}
+\DoxyCodeLine{94                  size * \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} collection\_t::value\_type));}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary.
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_1_1details_a0eea6feb15a7691797be0f7a6f128d4b}\label{namespacetraccc_1_1io_1_1details_a0eea6feb15a7691797be0f7a6f128d4b}} 
+\index{traccc::io::details@{traccc::io::details}!read\_binary\_container@{read\_binary\_container}}
+\index{read\_binary\_container@{read\_binary\_container}!traccc::io::details@{traccc::io::details}}
+\doxysubsubsection{\texorpdfstring{read\_binary\_container()}{read\_binary\_container()}}
+{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
+container\+\_\+t traccc\+::io\+::details\+::read\+\_\+binary\+\_\+container (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename,  }\item[{vecmem\+::memory\+\_\+resource $\ast$}]{mr = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Function for reading a container from a binary file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The full input filename \\
+\hline
+{\em mr} & Is the memory resource to create the result container with\\
+\hline
+\end{DoxyParams}
+T\+O\+DO\+: Change container reading to not own its result object 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                                                        \{}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{comment}{// Make sure that the chosen types work.}}
+\DoxyCodeLine{33     static\_assert(std::is\_standard\_layout\_v<typename container\_t::header\_type>,}
+\DoxyCodeLine{34                   \textcolor{stringliteral}{"Container header type must be standard layout."});}
+\DoxyCodeLine{35     static\_assert(std::is\_standard\_layout\_v<typename container\_t::item\_type>,}
+\DoxyCodeLine{36                   \textcolor{stringliteral}{"Container item type must be standard layout."});}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{// Open the input file.}}
+\DoxyCodeLine{39     std::ifstream in\_file(filename.data(), \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{std::ios::binary}});}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Read the size of the header vector.}}
+\DoxyCodeLine{42     std::size\_t headers\_size;}
+\DoxyCodeLine{43     in\_file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&headers\_size), \textcolor{keyword}{sizeof}(std::size\_t));}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// Read the sizes of the item vector.}}
+\DoxyCodeLine{46     std::vector<std::size\_t> items\_size(headers\_size);}
+\DoxyCodeLine{47     in\_file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(items\_size.data()),}
+\DoxyCodeLine{48                  headers\_size * \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} std::size\_t));}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Create the result container, and set it to the correct (outer) size right}}
+\DoxyCodeLine{51     \textcolor{comment}{// away.}}
+\DoxyCodeLine{52     container\_t result(headers\_size, mr);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{// Read the header payload into memory.}}
+\DoxyCodeLine{55     in\_file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(result.get\_headers().data()),}
+\DoxyCodeLine{56                  headers\_size * \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} container\_t::header\_type));}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{comment}{// Read the items in multiple steps.}}
+\DoxyCodeLine{59     \textcolor{keywordflow}{for} (std::size\_t i = 0; i < headers\_size; ++i) \{}
+\DoxyCodeLine{60         result.get\_items().at(i).resize(items\_size.at(i));}
+\DoxyCodeLine{61         in\_file.read(}
+\DoxyCodeLine{62             \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(result.get\_items().at(i).data()),}
+\DoxyCodeLine{63             items\_size.at(i) * \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} container\_t::item\_type));}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{comment}{// Return the newly created container.}}
+\DoxyCodeLine{67     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{68 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary.
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_1_1details_a0a0bd7ed4c0a9dec6a1975ab2632980a}\label{namespacetraccc_1_1io_1_1details_a0a0bd7ed4c0a9dec6a1975ab2632980a}} 
+\index{traccc::io::details@{traccc::io::details}!read\_surfaces@{read\_surfaces}}
+\index{read\_surfaces@{read\_surfaces}!traccc::io::details@{traccc::io::details}}
+\doxysubsubsection{\texorpdfstring{read\_surfaces()}{read\_surfaces()}}
+{\footnotesize\ttfamily std\+::map$<$ \mbox{\hyperlink{namespacetraccc_a394d22a5b5acbd46fadc0da0491c6913}{geometry\+\_\+id}}, \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ traccc\+::io\+::details\+::read\+\_\+surfaces (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv} }\end{DoxyParamCaption})}
+
+Read the geometry information for the modules into a map
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The file to read the information from \\
+\hline
+{\em format} & The format of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map of transformations for each geometry ID 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                                                     \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{comment}{// Decide how to read the file.}}
+\DoxyCodeLine{19     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}:}
+\DoxyCodeLine{21             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a2c02c2a3e24fd0bdeaba820a353b347d}{csv::read\_surfaces}}(filename);}
+\DoxyCodeLine{22         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{23             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, and traccc\+::io\+::csv\+::read\+\_\+surfaces().
+
+
+
+Referenced by traccc\+::io\+::read\+\_\+geometry(), T\+E\+S\+T(), and T\+E\+S\+T\+\_\+\+F().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_1_1details_a8ea47a248eca15083f492748bebab0aa}\label{namespacetraccc_1_1io_1_1details_a8ea47a248eca15083f492748bebab0aa}} 
+\index{traccc::io::details@{traccc::io::details}!write\_binary\_collection@{write\_binary\_collection}}
+\index{write\_binary\_collection@{write\_binary\_collection}!traccc::io::details@{traccc::io::details}}
+\doxysubsubsection{\texorpdfstring{write\_binary\_collection()}{write\_binary\_collection()}}
+{\footnotesize\ttfamily template$<$typename collection\+\_\+t $>$ \\
+void traccc\+::io\+::details\+::write\+\_\+binary\+\_\+collection (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename,  }\item[{const collection\+\_\+t \&}]{collection }\end{DoxyParamCaption})}
+
+Function for writing a collection into a binary file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & is the output filename which includes the path \\
+\hline
+{\em collection} & is the traccc collection to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                                              \{}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{comment}{// Make sure that the chosen types work.}}
+\DoxyCodeLine{75     static\_assert(std::is\_standard\_layout\_v<typename collection\_t::value\_type>,}
+\DoxyCodeLine{76                   \textcolor{stringliteral}{"Collection item type must have standard layout."});}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{comment}{// Open the output file.}}
+\DoxyCodeLine{79     std::ofstream out\_file(filename.data(), \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{std::ios::binary}});}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{comment}{// Write the size of the vector.}}
+\DoxyCodeLine{82     \textcolor{keyword}{const} std::size\_t size = collection.size();}
+\DoxyCodeLine{83     out\_file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&size), \textcolor{keyword}{sizeof}(std::size\_t));}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{// Write the items.}}
+\DoxyCodeLine{86     out\_file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(collection.data()),}
+\DoxyCodeLine{87                    size * \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} collection\_t::value\_type));}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary.
+
+
+
+Referenced by traccc\+::io\+::write().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_1_1details_acdc206e29eeaa12169335872ac6221b1}\label{namespacetraccc_1_1io_1_1details_acdc206e29eeaa12169335872ac6221b1}} 
+\index{traccc::io::details@{traccc::io::details}!write\_binary\_container@{write\_binary\_container}}
+\index{write\_binary\_container@{write\_binary\_container}!traccc::io::details@{traccc::io::details}}
+\doxysubsubsection{\texorpdfstring{write\_binary\_container()}{write\_binary\_container()}}
+{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
+void traccc\+::io\+::details\+::write\+\_\+binary\+\_\+container (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename,  }\item[{const container\+\_\+t \&}]{container }\end{DoxyParamCaption})}
+
+Function for writing a container into a binary file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & is the output filename which includes the path \\
+\hline
+{\em container} & is the traccc container to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                                           \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Make sure that the chosen types work.}}
+\DoxyCodeLine{28     static\_assert(std::is\_standard\_layout\_v<typename container\_t::header\_type>,}
+\DoxyCodeLine{29                   \textcolor{stringliteral}{"Container header type must have standard layout."});}
+\DoxyCodeLine{30     static\_assert(std::is\_standard\_layout\_v<typename container\_t::item\_type>,}
+\DoxyCodeLine{31                   \textcolor{stringliteral}{"Container item type must have standard layout."});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Open the output file.}}
+\DoxyCodeLine{34     std::ofstream out\_file(filename.data(), \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{std::ios::binary}});}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{comment}{// Write the size of the header vector.}}
+\DoxyCodeLine{37     \textcolor{keyword}{const} std::size\_t headers\_size = container.size();}
+\DoxyCodeLine{38     out\_file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&headers\_size),}
+\DoxyCodeLine{39                    \textcolor{keyword}{sizeof}(std::size\_t));}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Write the sizes of the item vectors.}}
+\DoxyCodeLine{42     std::vector<std::size\_t> item\_sizes;}
+\DoxyCodeLine{43     item\_sizes.reserve(headers\_size);}
+\DoxyCodeLine{44     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{typename} container\_t::item\_vector::value\_type\& i :}
+\DoxyCodeLine{45          container.get\_items()) \{}
+\DoxyCodeLine{46         item\_sizes.push\_back(i.size());}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48     out\_file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(item\_sizes.data()),}
+\DoxyCodeLine{49                    headers\_size * \textcolor{keyword}{sizeof}(std::size\_t));}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// Write header elements.}}
+\DoxyCodeLine{52     out\_file.write(}
+\DoxyCodeLine{53         \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(container.get\_headers().data()),}
+\DoxyCodeLine{54         container.get\_headers().size() *}
+\DoxyCodeLine{55             \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} container\_t::header\_type));}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{// Write the items.}}
+\DoxyCodeLine{58     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{typename} container\_t::item\_vector::value\_type\& i :}
+\DoxyCodeLine{59          container.get\_items()) \{}
+\DoxyCodeLine{60         out\_file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(i.data()),}
+\DoxyCodeLine{61                        i.size() * \textcolor{keyword}{sizeof}(\textcolor{keyword}{typename} container\_t::item\_type));}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary.
+

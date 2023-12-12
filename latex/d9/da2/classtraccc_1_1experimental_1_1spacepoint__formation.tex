@@ -1,0 +1,139 @@
+\hypertarget{classtraccc_1_1experimental_1_1spacepoint__formation}{}\doxysection{traccc\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$ Class Template Reference}
+\label{classtraccc_1_1experimental_1_1spacepoint__formation}\index{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+
+
+{\ttfamily \#include $<$spacepoint\+\_\+formation.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{d6/d05/classtraccc_1_1experimental_1_1spacepoint__formation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{d1/db7/classtraccc_1_1experimental_1_1spacepoint__formation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation_a36907f35e2906633d2393c75d7e1ba7d}{spacepoint\+\_\+formation}} (vecmem\+::memory\+\_\+resource \&mr)
+\item 
+\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation_a6b106827ce18f7f4f5a0efcf06b5d74e}{operator()}} (const detector\+\_\+t \&det, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{measurement\+\_\+collection\+\_\+types\+::host}} \&measurements) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::reference\+\_\+wrapper$<$ vecmem\+::memory\+\_\+resource $>$ \mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation_aa489e134a6972453f8b83ea069457c6f}{m\+\_\+mr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename detector\+\_\+t$>$\newline
+class traccc\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$}
+
+Algorithm forming space points out of measurements
+
+This algorithm performs the local-\/to-\/global transformation of the 2D measurements made on every detector module, into 3D spacepoint coordinates. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1experimental_1_1spacepoint__formation_a36907f35e2906633d2393c75d7e1ba7d}\label{classtraccc_1_1experimental_1_1spacepoint__formation_a36907f35e2906633d2393c75d7e1ba7d}} 
+\index{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$}!spacepoint\_formation@{spacepoint\_formation}}
+\index{spacepoint\_formation@{spacepoint\_formation}!traccc::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{spacepoint\_formation()}{spacepoint\_formation()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation}{traccc\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation}{spacepoint\+\_\+formation}} (\begin{DoxyParamCaption}\item[{vecmem\+::memory\+\_\+resource \&}]{mr }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation}{spacepoint\+\_\+formation}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & is the memory resource \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     : \mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation_aa489e134a6972453f8b83ea069457c6f}{m\_mr}}(mr) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1experimental_1_1spacepoint__formation_a6b106827ce18f7f4f5a0efcf06b5d74e}\label{classtraccc_1_1experimental_1_1spacepoint__formation_a6b106827ce18f7f4f5a0efcf06b5d74e}} 
+\index{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation}{traccc\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const detector\+\_\+t \&}]{det,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{measurement\+\_\+collection\+\_\+types\+::host}} \&}]{measurements }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Callable operator for the space point formation, based on one single module
+
+
+\begin{DoxyParams}{Parameters}
+{\em det} & Detector object \\
+\hline
+{\em measurements} & A collection of measurements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A spacepoint container, with one spacepoint for every measurement 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                                                 \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Create the result container.}}
+\DoxyCodeLine{24     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\_collection\_types::host}} result(\&(\mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation_aa489e134a6972453f8b83ea069457c6f}{m\_mr}}.get()));}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Iterate over the measurements.}}
+\DoxyCodeLine{27     \textcolor{keywordflow}{for} (std::size\_t i = 0; i < measurements.size(); ++i) \{}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \textcolor{comment}{// Access the measurements of the current module.}}
+\DoxyCodeLine{30         \textcolor{keyword}{const} measurement\& ms = measurements.at(i);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{keyword}{const} detray::surface<detector\_t> sf\{det, ms.surface\_link\};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{comment}{// This local to global transformation only works for 2D planar}}
+\DoxyCodeLine{35         \textcolor{comment}{// measurement}}
+\DoxyCodeLine{36         \textcolor{comment}{// (e.g. barrel pixel and endcap pixel detector)}}
+\DoxyCodeLine{37         \textcolor{keyword}{const} \textcolor{keyword}{auto} global = sf.bound\_to\_global(\{\}, ms.local, \{\});}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{comment}{// Fill result with this spacepoint}}
+\DoxyCodeLine{40         result.push\_back(\{global, ms\});}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{// Return the created container.}}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::measurement\+::local, and traccc\+::measurement\+::surface\+\_\+link.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1experimental_1_1spacepoint__formation_aa489e134a6972453f8b83ea069457c6f}\label{classtraccc_1_1experimental_1_1spacepoint__formation_aa489e134a6972453f8b83ea069457c6f}} 
+\index{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+std\+::reference\+\_\+wrapper$<$vecmem\+::memory\+\_\+resource$>$ \mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation}{traccc\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/experimental/\mbox{\hyperlink{core_2include_2traccc_2seeding_2experimental_2spacepoint__formation_8hpp}{spacepoint\+\_\+formation.\+hpp}}\item 
+core/include/traccc/seeding/experimental/\mbox{\hyperlink{spacepoint__formation_8ipp}{spacepoint\+\_\+formation.\+ipp}}\end{DoxyCompactItemize}

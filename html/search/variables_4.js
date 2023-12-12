@@ -1,0 +1,16 @@
+var searchData=
+[
+  ['data_2433',['data',['../d1/de9/structtraccc_1_1array__wrapper_1_1owner.html#a1cd1d8919e903715c968191dfea0cf4a',1,'traccc::array_wrapper::owner::data()'],['../d0/d63/structtraccc_1_1array__wrapper_1_1handle.html#a394b4d78ac902aa5475752276923e066',1,'traccc::array_wrapper::handle::data()'],['../d9/de3/structtraccc_1_1performance_1_1timing__info.html#a4d725344658383dfa401a82a9fafd500',1,'traccc::performance::timing_info::data()']]],
+  ['data_5fdirectory_2434',['data_directory',['../d0/d86/classtraccc_1_1tests_1_1data__test.html#af6b7f5d32e3d14efb3d61b8489ca822d',1,'traccc::tests::data_test']]],
+  ['default_2435',['default',['../de/dd4/namespaceccl__generator.html#af03a71dc24f6c86cc6d43d6e5677630e',1,'ccl_generator']]],
+  ['deltae_2436',['deltae',['../d9/de5/structtraccc_1_1io_1_1csv_1_1hit.html#af4e568dcdadd9ae703f2bd7f335a8668',1,'traccc::io::csv::hit']]],
+  ['deltainvhelixdiameter_2437',['deltaInvHelixDiameter',['../d5/d73/structtraccc_1_1seedfilter__config.html#a341ed687873146db8dde11ab339bdb69',1,'traccc::seedfilter_config']]],
+  ['deltapx_2438',['deltapx',['../d9/de5/structtraccc_1_1io_1_1csv_1_1hit.html#a335b03e86008129457d5dc0401ae08e3',1,'traccc::io::csv::hit']]],
+  ['deltapy_2439',['deltapy',['../d9/de5/structtraccc_1_1io_1_1csv_1_1hit.html#a93a4649d2f5e07973227913750fd52ac',1,'traccc::io::csv::hit']]],
+  ['deltapz_2440',['deltapz',['../d9/de5/structtraccc_1_1io_1_1csv_1_1hit.html#ab2c4765fc26c34af0079d6ac73e2e9f1',1,'traccc::io::csv::hit']]],
+  ['deltarmax_2441',['deltaRMax',['../d8/dda/structtraccc_1_1seedfinder__config.html#aa9e8949c92ef98aaa6e909bde5f8a5a1',1,'traccc::seedfinder_config::deltaRMax()'],['../d1/d67/structtraccc_1_1spacepoint__grid__config.html#a8bbc03124ac71c7ffc57857c268cc299',1,'traccc::spacepoint_grid_config::deltaRMax()']]],
+  ['deltarmin_2442',['deltaRMin',['../d8/dda/structtraccc_1_1seedfinder__config.html#a3912be37d553351d00b1e746ace137d1',1,'traccc::seedfinder_config::deltaRMin()'],['../d5/d73/structtraccc_1_1seedfilter__config.html#ac8b1982ea2bc8196449d64dd739fc533',1,'traccc::seedfilter_config::deltaRMin()']]],
+  ['detector_5ffile_2443',['detector_file',['../d5/d19/structtraccc_1_1detector__input__options.html#a1121f57fa16a57c9d2cef56f94390bcb',1,'traccc::detector_input_options::detector_file()'],['../db/df4/structtraccc_1_1full__tracking__input__config.html#ab4724a02497953f3523794b7644de09f',1,'traccc::full_tracking_input_config::detector_file()'],['../dc/def/structtraccc_1_1throughput__options.html#a82f351da444d14559a49078fd379bedb',1,'traccc::throughput_options::detector_file()'],['../df/d35/test__mapper_8cpp.html#a902d72422a60bd9a079e899a54f552c1',1,'detector_file():&#160;test_mapper.cpp']]],
+  ['digi_5fconfig_5ffile_2444',['digi_config_file',['../df/d35/test__mapper_8cpp.html#a5a453e9bf94f17c28f4cd86724b542a3',1,'test_mapper.cpp']]],
+  ['digitization_5fconfig_5ffile_2445',['digitization_config_file',['../db/df4/structtraccc_1_1full__tracking__input__config.html#a9d09f5ae4422abd2074ffbdcd1de81f4',1,'traccc::full_tracking_input_config::digitization_config_file()'],['../dc/def/structtraccc_1_1throughput__options.html#af53e29cf945fcc315ec7d895e18389b2',1,'traccc::throughput_options::digitization_config_file()']]]
+];

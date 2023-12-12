@@ -1,0 +1,229 @@
+\hypertarget{classtraccc_1_1cuda_1_1stream}{}\doxysection{traccc\+::cuda\+::stream Class Reference}
+\label{classtraccc_1_1cuda_1_1stream}\index{traccc::cuda::stream@{traccc::cuda::stream}}
+
+
+{\ttfamily \#include $<$stream.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::cuda\+::stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{d1/d80/classtraccc_1_1cuda_1_1stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_af5157d857649e9a94cffdce1d1f56ddf}{stream}} (int device=\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a409db4103629bc988bae0222f1a2fb23}{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}})
+\begin{DoxyCompactList}\small\item\em Construct a new stream (possibly for a specified device) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_ac16b7326ec3515f9b9c1ffbb54808957}{stream}} (\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&\&parent)
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a470224c86ca40edf27523d05dc3e1397}{$\sim$stream}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a10f92a7f556f2919905214c3c582d7cb}{operator=}} (\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&\&rhs)
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_ad8224b3cebfca8079e035a10a9b1e20f}{cuda\+Stream}} () const
+\begin{DoxyCompactList}\small\item\em Access a typeless pointer to the managed {\ttfamily cuda\+Stream\+\_\+t} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a02822504e0827a6176095e1800d174ad}{synchronize}} () const
+\begin{DoxyCompactList}\small\item\em Wait for all queued tasks from the stream to complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a409db4103629bc988bae0222f1a2fb23}{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}} = -\/1
+\begin{DoxyCompactList}\small\item\em Invalid/default device identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream}{details\+::opaque\+\_\+stream}} $>$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}{m\+\_\+stream}}
+\begin{DoxyCompactList}\small\item\em Smart pointer to the managed {\ttfamily cuda\+Stream\+\_\+t} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Owning wrapper class around {\ttfamily cuda\+Stream\+\_\+t} 
+
+It is necessary for passing around C\+U\+DA stream objects in code that should not be directly exposed to the C\+U\+DA header(s). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_af5157d857649e9a94cffdce1d1f56ddf}\label{classtraccc_1_1cuda_1_1stream_af5157d857649e9a94cffdce1d1f56ddf}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!stream@{stream}}
+\index{stream@{stream}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{stream()}{stream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily traccc\+::cuda\+::stream\+::stream (\begin{DoxyParamCaption}\item[{int}]{device = {\ttfamily \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a409db4103629bc988bae0222f1a2fb23}{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE}}} }\end{DoxyParamCaption})}
+
+
+
+Construct a new stream (possibly for a specified device) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                          \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// Make sure that the stream is constructed on the correct device.}}
+\DoxyCodeLine{23     details::select\_device dev\_selector\{}
+\DoxyCodeLine{24         device == \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a409db4103629bc988bae0222f1a2fb23}{INVALID\_DEVICE}} ? \mbox{\hyperlink{namespacetraccc_1_1cuda_1_1details_ada5e26a25ce5fb4444f3f3d3b3cd549b}{details::get\_device}}() : device\};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Construct the stream.}}
+\DoxyCodeLine{27     \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}{m\_stream}} = std::make\_unique<details::opaque\_stream>();}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::cuda\+::details\+::get\+\_\+device(), I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE, and m\+\_\+stream.
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_ac16b7326ec3515f9b9c1ffbb54808957}\label{classtraccc_1_1cuda_1_1stream_ac16b7326ec3515f9b9c1ffbb54808957}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!stream@{stream}}
+\index{stream@{stream}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{stream()}{stream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily traccc\+::cuda\+::stream\+::stream (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&\&}]{parent }\end{DoxyParamCaption})}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 : \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}{m\_stream}}(std::move(parent.m\_stream)) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_a470224c86ca40edf27523d05dc3e1397}\label{classtraccc_1_1cuda_1_1stream_a470224c86ca40edf27523d05dc3e1397}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!````~stream@{$\sim$stream}}
+\index{````~stream@{$\sim$stream}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{$\sim$stream()}{~stream()}}
+{\footnotesize\ttfamily traccc\+::cuda\+::stream\+::$\sim$stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+The destructor is implemented explicitly to avoid clients of the class having to know how to destruct {\ttfamily \mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream}{traccc\+::cuda\+::details\+::opaque\+\_\+stream}}}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_ad8224b3cebfca8079e035a10a9b1e20f}\label{classtraccc_1_1cuda_1_1stream_ad8224b3cebfca8079e035a10a9b1e20f}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!cudaStream@{cudaStream}}
+\index{cudaStream@{cudaStream}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{cudaStream()}{cudaStream()}}
+{\footnotesize\ttfamily void $\ast$ traccc\+::cuda\+::stream\+::cuda\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Access a typeless pointer to the managed {\ttfamily cuda\+Stream\+\_\+t} object. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                \{}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}{m\_stream}}-\/>m\_stream;}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+stream.
+
+
+
+Referenced by traccc\+::cuda\+::details\+::get\+\_\+stream(), main(), seq\+\_\+run(), T\+E\+S\+T(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_a10f92a7f556f2919905214c3c582d7cb}\label{classtraccc_1_1cuda_1_1stream_a10f92a7f556f2919905214c3c582d7cb}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!operator=@{operator=}}
+\index{operator=@{operator=}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \& traccc\+::cuda\+::stream\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&\&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Move assignment. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                                       \{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{// Avoid self-\/assignment.}}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} (\textcolor{keyword}{this} == \&rhs) \{}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{// Move the managed queue object.}}
+\DoxyCodeLine{44     \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}{m\_stream}} = std::move(rhs.m\_stream);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{// Return this object.}}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+stream.
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_a02822504e0827a6176095e1800d174ad}\label{classtraccc_1_1cuda_1_1stream_a02822504e0827a6176095e1800d174ad}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!synchronize@{synchronize}}
+\index{synchronize@{synchronize}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{synchronize()}{synchronize()}}
+{\footnotesize\ttfamily void traccc\+::cuda\+::stream\+::synchronize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Wait for all queued tasks from the stream to complete. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                                \{}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \mbox{\hyperlink{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a924e9e2dee296776f46a6c0814e27eda}{CUDA\_ERROR\_CHECK}}(cudaStreamSynchronize(\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}{m\_stream}}-\/>m\_stream));}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+References C\+U\+D\+A\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+H\+E\+CK, and m\+\_\+stream.
+
+
+
+Referenced by seq\+\_\+run().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_a409db4103629bc988bae0222f1a2fb23}\label{classtraccc_1_1cuda_1_1stream_a409db4103629bc988bae0222f1a2fb23}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!INVALID\_DEVICE@{INVALID\_DEVICE}}
+\index{INVALID\_DEVICE@{INVALID\_DEVICE}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{INVALID\_DEVICE}{INVALID\_DEVICE}}
+{\footnotesize\ttfamily constexpr int traccc\+::cuda\+::stream\+::\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE = -\/1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Invalid/default device identifier. 
+
+
+
+Referenced by stream().
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}\label{classtraccc_1_1cuda_1_1stream_aeda147e4dde552d88bfb5aa78c3534b8}} 
+\index{traccc::cuda::stream@{traccc::cuda::stream}!m\_stream@{m\_stream}}
+\index{m\_stream@{m\_stream}!traccc::cuda::stream@{traccc::cuda::stream}}
+\doxysubsubsection{\texorpdfstring{m\_stream}{m\_stream}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream}{details\+::opaque\+\_\+stream}}$>$ traccc\+::cuda\+::stream\+::m\+\_\+stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Smart pointer to the managed {\ttfamily cuda\+Stream\+\_\+t} object. 
+
+
+
+Referenced by cuda\+Stream(), operator=(), stream(), and synchronize().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+device/cuda/include/traccc/cuda/utils/\mbox{\hyperlink{stream_8hpp}{stream.\+hpp}}\item 
+device/cuda/src/utils/\mbox{\hyperlink{stream_8cpp}{stream.\+cpp}}\end{DoxyCompactItemize}

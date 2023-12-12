@@ -1,0 +1,177 @@
+\hypertarget{structtraccc_1_1telescope__detector__options}{}\doxysection{traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1telescope__detector__options}\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+
+
+{\ttfamily \#include $<$telescope\+\_\+detector\+\_\+options.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{d6/d3c/structtraccc_1_1telescope__detector__options__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a7556a62ebe245bb307f039cf3c757409}{telescope\+\_\+detector\+\_\+options}} (po\+::options\+\_\+description \&desc)
+\item 
+void \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a56618d581b7f7177a9f533e5bb34fb09}{read}} (const po\+::variables\+\_\+map \&vm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_af89585a358f8c48371eefa797a8554ca}{empty\+\_\+material}}
+\item 
+unsigned int \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a09277ecba4eb25a191a6a154c98d8902}{n\+\_\+planes}}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_ae6b02ee068d751ee31287bd8b95880b2}{thickness}}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a167b4592c86c19a29ef656946783041b}{spacing}}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a1619557418f86b4a74e0b8c87b9c065b}{smearing}}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a4479fcc1e1cd46595c78d5e428c41ff4}{half\+\_\+length}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_a7556a62ebe245bb307f039cf3c757409}\label{structtraccc_1_1telescope__detector__options_a7556a62ebe245bb307f039cf3c757409}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!telescope\_detector\_options@{telescope\_detector\_options}}
+\index{telescope\_detector\_options@{telescope\_detector\_options}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{telescope\_detector\_options()}{telescope\_detector\_options()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{telescope\+\_\+detector\+\_\+options}} (\begin{DoxyParamCaption}\item[{po\+::options\+\_\+description \&}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                                             \{}
+\DoxyCodeLine{31         desc.add\_options()(\textcolor{stringliteral}{"empty\_material"},}
+\DoxyCodeLine{32                            po::value<bool>()-\/>default\_value(\textcolor{keyword}{false}),}
+\DoxyCodeLine{33                            \textcolor{stringliteral}{"Build detector without materials"});}
+\DoxyCodeLine{34         desc.add\_options()(\textcolor{stringliteral}{"n\_planes"},}
+\DoxyCodeLine{35                            po::value<unsigned int>()-\/>default\_value(9),}
+\DoxyCodeLine{36                            \textcolor{stringliteral}{"Number of planes"});}
+\DoxyCodeLine{37         desc.add\_options()(\textcolor{stringliteral}{"thickness"},}
+\DoxyCodeLine{38                            po::value<scalar\_t>()-\/>default\_value(0.5f),}
+\DoxyCodeLine{39                            \textcolor{stringliteral}{"Slab thickness in [mm]"});}
+\DoxyCodeLine{40         desc.add\_options()(\textcolor{stringliteral}{"spacing"},}
+\DoxyCodeLine{41                            po::value<scalar\_t>()-\/>default\_value(20.f),}
+\DoxyCodeLine{42                            \textcolor{stringliteral}{"Space between planes in [mm]"});}
+\DoxyCodeLine{43         desc.add\_options()(\textcolor{stringliteral}{"smearing"},}
+\DoxyCodeLine{44                            po::value<scalar\_t>()-\/>default\_value(50.f),}
+\DoxyCodeLine{45                            \textcolor{stringliteral}{"Measurement smearing in [um]"});}
+\DoxyCodeLine{46         desc.add\_options()(\textcolor{stringliteral}{"half\_length"},}
+\DoxyCodeLine{47                            po::value<scalar\_t>()-\/>default\_value(1000000.f),}
+\DoxyCodeLine{48                            \textcolor{stringliteral}{"Half length of plane [mm]"});}
+\DoxyCodeLine{49     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_a56618d581b7f7177a9f533e5bb34fb09}\label{structtraccc_1_1telescope__detector__options_a56618d581b7f7177a9f533e5bb34fb09}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!read@{read}}
+\index{read@{read}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+void \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::read (\begin{DoxyParamCaption}\item[{const po\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                          \{}
+\DoxyCodeLine{52         \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_af89585a358f8c48371eefa797a8554ca}{empty\_material}} = vm[\textcolor{stringliteral}{"empty\_material"}].as<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{53         \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a09277ecba4eb25a191a6a154c98d8902}{n\_planes}} = vm[\textcolor{stringliteral}{"n\_planes"}].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{54         \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_ae6b02ee068d751ee31287bd8b95880b2}{thickness}} = vm[\textcolor{stringliteral}{"thickness"}].as<scalar\_t>() * detray::unit<scalar\_t>::mm;}
+\DoxyCodeLine{55         \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a167b4592c86c19a29ef656946783041b}{spacing}} = vm[\textcolor{stringliteral}{"spacing"}].as<scalar\_t>() * detray::unit<scalar\_t>::mm;}
+\DoxyCodeLine{56         \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a1619557418f86b4a74e0b8c87b9c065b}{smearing}} = vm[\textcolor{stringliteral}{"smearing"}].as<scalar\_t>() * detray::unit<scalar\_t>::um;}
+\DoxyCodeLine{57         \mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a4479fcc1e1cd46595c78d5e428c41ff4}{half\_length}} =}
+\DoxyCodeLine{58             vm[\textcolor{stringliteral}{"half\_length"}].as<scalar\_t>() * detray::unit<scalar\_t>::mm;}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::empty\+\_\+material, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::half\+\_\+length, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::n\+\_\+planes, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::smearing, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::spacing, and traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::thickness.
+
+
+
+Referenced by main().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_af89585a358f8c48371eefa797a8554ca}\label{structtraccc_1_1telescope__detector__options_af89585a358f8c48371eefa797a8554ca}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!empty\_material@{empty\_material}}
+\index{empty\_material@{empty\_material}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{empty\_material}{empty\_material}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+bool \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::empty\+\_\+material}
+
+
+
+Referenced by traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_a4479fcc1e1cd46595c78d5e428c41ff4}\label{structtraccc_1_1telescope__detector__options_a4479fcc1e1cd46595c78d5e428c41ff4}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!half\_length@{half\_length}}
+\index{half\_length@{half\_length}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{half\_length}{half\_length}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::half\+\_\+length}
+
+
+
+Referenced by traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_a09277ecba4eb25a191a6a154c98d8902}\label{structtraccc_1_1telescope__detector__options_a09277ecba4eb25a191a6a154c98d8902}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!n\_planes@{n\_planes}}
+\index{n\_planes@{n\_planes}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{n\_planes}{n\_planes}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+unsigned int \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::n\+\_\+planes}
+
+
+
+Referenced by traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_a1619557418f86b4a74e0b8c87b9c065b}\label{structtraccc_1_1telescope__detector__options_a1619557418f86b4a74e0b8c87b9c065b}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!smearing@{smearing}}
+\index{smearing@{smearing}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{smearing}{smearing}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::smearing}
+
+
+
+Referenced by traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_a167b4592c86c19a29ef656946783041b}\label{structtraccc_1_1telescope__detector__options_a167b4592c86c19a29ef656946783041b}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!spacing@{spacing}}
+\index{spacing@{spacing}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{spacing}{spacing}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::spacing}
+
+
+
+Referenced by traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{structtraccc_1_1telescope__detector__options_ae6b02ee068d751ee31287bd8b95880b2}\label{structtraccc_1_1telescope__detector__options_ae6b02ee068d751ee31287bd8b95880b2}} 
+\index{traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}!thickness@{thickness}}
+\index{thickness@{thickness}!traccc::telescope\_detector\_options$<$ scalar\_t $>$@{traccc::telescope\_detector\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{thickness}{thickness}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ scalar\+\_\+t $>$\+::thickness}
+
+
+
+Referenced by traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/options/include/traccc/options/\mbox{\hyperlink{telescope__detector__options_8hpp}{telescope\+\_\+detector\+\_\+options.\+hpp}}\end{DoxyCompactItemize}

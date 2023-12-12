@@ -1,0 +1,267 @@
+\hypertarget{classtraccc_1_1seeding__performance__writer}{}\doxysection{traccc\+::seeding\+\_\+performance\+\_\+writer Class Reference}
+\label{classtraccc_1_1seeding__performance__writer}\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+
+
+{\ttfamily \#include $<$seeding\+\_\+performance\+\_\+writer.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::seeding\+\_\+performance\+\_\+writer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{d2/d3c/classtraccc_1_1seeding__performance__writer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config}{config}}
+\begin{DoxyCompactList}\small\item\em Configuration for the tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7b78bc4a9a444c7f898d0edb329f4701}{seeding\+\_\+performance\+\_\+writer}} (const \mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config}{config}} \&cfg)
+\item 
+\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a30e89977c8b3d6a0e74640587ebba07e}{$\sim$seeding\+\_\+performance\+\_\+writer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a4205ded7a34a086b7bfd8741b463c89f}{write}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{seed\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&seeds\+\_\+view, const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&spacepoints\+\_\+view, const \mbox{\hyperlink{structtraccc_1_1event__map}{event\+\_\+map}} \&evt\+\_\+map)
+\item 
+void \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aa123fd8e57b82116e43631757de63bfa}{write}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{seed\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&seeds\+\_\+view, const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&spacepoints\+\_\+view, const \mbox{\hyperlink{structtraccc_1_1event__map2}{event\+\_\+map2}} \&evt\+\_\+map)
+\item 
+void \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aa933f1a4d59cf68be30badfc815acfff}{finalize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config}{config}} \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\+\_\+cfg}}
+\begin{DoxyCompactList}\small\item\em Configuration for the tool. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structtraccc_1_1details_1_1seeding__performance__writer__data}{details\+::seeding\+\_\+performance\+\_\+writer\+\_\+data}} $>$ \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Opaque data members for the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seeding__performance__writer_a7b78bc4a9a444c7f898d0edb329f4701}\label{classtraccc_1_1seeding__performance__writer_a7b78bc4a9a444c7f898d0edb329f4701}} 
+\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}!seeding\_performance\_writer@{seeding\_performance\_writer}}
+\index{seeding\_performance\_writer@{seeding\_performance\_writer}!traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{seeding\_performance\_writer()}{seeding\_performance\_writer()}}
+{\footnotesize\ttfamily traccc\+::seeding\+\_\+performance\+\_\+writer\+::seeding\+\_\+performance\+\_\+writer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config}{config}} \&}]{cfg }\end{DoxyParamCaption})}
+
+Construct from configuration and log level. 
+\begin{DoxyParams}{Parameters}
+{\em cfg} & The configuration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52     : \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}(cfg),}
+\DoxyCodeLine{53       \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}(std::make\_unique<details::seeding\_performance\_writer\_data>(cfg)) \{}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_tool.book(\textcolor{stringliteral}{"seeding"}, \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_cache);}
+\DoxyCodeLine{56     \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_tool.book(\textcolor{stringliteral}{"seeding"},}
+\DoxyCodeLine{57                                          \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_cache);}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+data.
+
+\mbox{\Hypertarget{classtraccc_1_1seeding__performance__writer_a30e89977c8b3d6a0e74640587ebba07e}\label{classtraccc_1_1seeding__performance__writer_a30e89977c8b3d6a0e74640587ebba07e}} 
+\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}!````~seeding\_performance\_writer@{$\sim$seeding\_performance\_writer}}
+\index{````~seeding\_performance\_writer@{$\sim$seeding\_performance\_writer}!traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{$\sim$seeding\_performance\_writer()}{~seeding\_performance\_writer()}}
+{\footnotesize\ttfamily traccc\+::seeding\+\_\+performance\+\_\+writer\+::$\sim$seeding\+\_\+performance\+\_\+writer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seeding__performance__writer_aa933f1a4d59cf68be30badfc815acfff}\label{classtraccc_1_1seeding__performance__writer_aa933f1a4d59cf68be30badfc815acfff}} 
+\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}!finalize@{finalize}}
+\index{finalize@{finalize}!traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily void traccc\+::seeding\+\_\+performance\+\_\+writer\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{150                                           \{}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#ifdef TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{153     \textcolor{comment}{// Open the output file.}}
+\DoxyCodeLine{154     std::unique\_ptr<TFile> ofile(}
+\DoxyCodeLine{155         TFile::Open(\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config_a3880bdb508114962709120bc3de92538}{file\_path}}.c\_str(), \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config_ac685a13b72a5ef6648ad2ee248a2d65e}{file\_mode}}.c\_str()));}
+\DoxyCodeLine{156     \textcolor{keywordflow}{if} ((!ofile) || ofile-\/>IsZombie()) \{}
+\DoxyCodeLine{157         \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Could not open output file \(\backslash\)""} +}
+\DoxyCodeLine{158                                  \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config_a3880bdb508114962709120bc3de92538}{file\_path}} + \textcolor{stringliteral}{"\(\backslash\)" in mode \(\backslash\)""} +}
+\DoxyCodeLine{159                                  \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config_ac685a13b72a5ef6648ad2ee248a2d65e}{file\_mode}} + \textcolor{stringliteral}{"\(\backslash\)""});}
+\DoxyCodeLine{160     \}}
+\DoxyCodeLine{161     ofile-\/>cd();}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{163     std::cout << \textcolor{stringliteral}{"ROOT file \(\backslash\)""} << \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config_a3880bdb508114962709120bc3de92538}{file\_path}} << \textcolor{stringliteral}{"\(\backslash\)" is NOT created"}}
+\DoxyCodeLine{164               << std::endl;}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#endif  // TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167     \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_tool.write(\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_cache);}
+\DoxyCodeLine{168     \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_tool.write(\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_cache);}
+\DoxyCodeLine{169 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::seeding\+\_\+performance\+\_\+writer\+::config\+::file\+\_\+mode, traccc\+::seeding\+\_\+performance\+\_\+writer\+::config\+::file\+\_\+path, m\+\_\+cfg, and m\+\_\+data.
+
+\mbox{\Hypertarget{classtraccc_1_1seeding__performance__writer_a4205ded7a34a086b7bfd8741b463c89f}\label{classtraccc_1_1seeding__performance__writer_a4205ded7a34a086b7bfd8741b463c89f}} 
+\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}!write@{write}}
+\index{write@{write}!traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void traccc\+::seeding\+\_\+performance\+\_\+writer\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{seed\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{seeds\+\_\+view,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{spacepoints\+\_\+view,  }\item[{const \mbox{\hyperlink{structtraccc_1_1event__map}{event\+\_\+map}} \&}]{evt\+\_\+map }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                               \{}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     std::map<particle\_id, std::size\_t> match\_counter;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{comment}{// Iterate over the seeds.}}
+\DoxyCodeLine{70     \mbox{\hyperlink{structtraccc_1_1collection__types_a2c17f74f33da865b1fb58c83e44ecb71}{seed\_collection\_types::const\_device}} seeds(seeds\_view);}
+\DoxyCodeLine{71     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} seed\& sd : seeds) \{}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73         \textcolor{comment}{// Check which particle matches this seed.}}
+\DoxyCodeLine{74         std::vector<particle\_hit\_count> particle\_hit\_counts =}
+\DoxyCodeLine{75             \mbox{\hyperlink{namespacetraccc_aad1305fcc33704bacc8ed9872c93b1f1}{identify\_contributing\_particles}}(}
+\DoxyCodeLine{76                 sd.get\_measurements(spacepoints\_view), evt\_map.meas\_ptc\_map);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{keywordflow}{if} (particle\_hit\_counts.size() == 1) \{}
+\DoxyCodeLine{79             \textcolor{keyword}{auto} pid = particle\_hit\_counts.at(0).ptc.particle\_id;}
+\DoxyCodeLine{80             match\_counter[pid]++;}
+\DoxyCodeLine{81         \}}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [pid, ptc] : evt\_map.ptc\_map) \{}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         \textcolor{comment}{// Count only charged particles which satisfiy pT\_cut}}
+\DoxyCodeLine{87         \textcolor{keywordflow}{if} (ptc.charge == 0 || getter::perp(ptc.mom) < \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config_a96e869eafb471f8d520f315eac8a024d}{pT\_cut}}) \{}
+\DoxyCodeLine{88             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91         \textcolor{keywordtype}{bool} is\_matched = \textcolor{keyword}{false};}
+\DoxyCodeLine{92         std::size\_t n\_matched\_seeds\_for\_particle = 0;}
+\DoxyCodeLine{93         \textcolor{keyword}{auto} it = match\_counter.find(pid);}
+\DoxyCodeLine{94         \textcolor{keywordflow}{if} (it != match\_counter.end()) \{}
+\DoxyCodeLine{95             is\_matched = \textcolor{keyword}{true};}
+\DoxyCodeLine{96             n\_matched\_seeds\_for\_particle = it-\/>second;}
+\DoxyCodeLine{97         \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_tool.fill(\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_cache, ptc, is\_matched);}
+\DoxyCodeLine{100         \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_tool.fill(\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_cache,}
+\DoxyCodeLine{101                                              ptc,}
+\DoxyCodeLine{102                                              n\_matched\_seeds\_for\_particle -\/ 1);}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::identify\+\_\+contributing\+\_\+particles(), m\+\_\+cfg, m\+\_\+data, traccc\+::event\+\_\+map\+::meas\+\_\+ptc\+\_\+map, traccc\+::seeding\+\_\+performance\+\_\+writer\+::config\+::p\+T\+\_\+cut, and traccc\+::event\+\_\+map\+::ptc\+\_\+map.
+
+\mbox{\Hypertarget{classtraccc_1_1seeding__performance__writer_aa123fd8e57b82116e43631757de63bfa}\label{classtraccc_1_1seeding__performance__writer_aa123fd8e57b82116e43631757de63bfa}} 
+\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}!write@{write}}
+\index{write@{write}!traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void traccc\+::seeding\+\_\+performance\+\_\+writer\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{seed\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{seeds\+\_\+view,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{spacepoints\+\_\+view,  }\item[{const \mbox{\hyperlink{structtraccc_1_1event__map2}{event\+\_\+map2}} \&}]{evt\+\_\+map }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                                \{}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     std::map<particle\_id, std::size\_t> match\_counter;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{comment}{// Iterate over the seeds.}}
+\DoxyCodeLine{114     \mbox{\hyperlink{structtraccc_1_1collection__types_a2c17f74f33da865b1fb58c83e44ecb71}{seed\_collection\_types::const\_device}} seeds(seeds\_view);}
+\DoxyCodeLine{115     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} seed\& sd : seeds) \{}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117         \textcolor{comment}{// Check which particle matches this seed.}}
+\DoxyCodeLine{118         std::vector<particle\_hit\_count> particle\_hit\_counts =}
+\DoxyCodeLine{119             \mbox{\hyperlink{namespacetraccc_aad1305fcc33704bacc8ed9872c93b1f1}{identify\_contributing\_particles}}(}
+\DoxyCodeLine{120                 sd.get\_measurements(spacepoints\_view), evt\_map.meas\_ptc\_map);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122         \textcolor{keywordflow}{if} (particle\_hit\_counts.size() == 1) \{}
+\DoxyCodeLine{123             \textcolor{keyword}{auto} pid = particle\_hit\_counts.at(0).ptc.particle\_id;}
+\DoxyCodeLine{124             match\_counter[pid]++;}
+\DoxyCodeLine{125         \}}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [pid, ptc] : evt\_map.ptc\_map) \{}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130         \textcolor{comment}{// Count only charged particles which satisfiy pT\_cut}}
+\DoxyCodeLine{131         \textcolor{keywordflow}{if} (ptc.charge == 0 || getter::perp(ptc.mom) < \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config_a96e869eafb471f8d520f315eac8a024d}{pT\_cut}}) \{}
+\DoxyCodeLine{132             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{133         \}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135         \textcolor{keywordtype}{bool} is\_matched = \textcolor{keyword}{false};}
+\DoxyCodeLine{136         std::size\_t n\_matched\_seeds\_for\_particle = 0;}
+\DoxyCodeLine{137         \textcolor{keyword}{auto} it = match\_counter.find(pid);}
+\DoxyCodeLine{138         \textcolor{keywordflow}{if} (it != match\_counter.end()) \{}
+\DoxyCodeLine{139             is\_matched = \textcolor{keyword}{true};}
+\DoxyCodeLine{140             n\_matched\_seeds\_for\_particle = it-\/>second;}
+\DoxyCodeLine{141         \}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143         \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_tool.fill(\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_eff\_plot\_cache, ptc, is\_matched);}
+\DoxyCodeLine{144         \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_tool.fill(\mbox{\hyperlink{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}{m\_data}}-\/>m\_duplication\_plot\_cache,}
+\DoxyCodeLine{145                                              ptc,}
+\DoxyCodeLine{146                                              n\_matched\_seeds\_for\_particle -\/ 1);}
+\DoxyCodeLine{147     \}}
+\DoxyCodeLine{148 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::identify\+\_\+contributing\+\_\+particles(), m\+\_\+cfg, m\+\_\+data, traccc\+::event\+\_\+map2\+::meas\+\_\+ptc\+\_\+map, traccc\+::seeding\+\_\+performance\+\_\+writer\+::config\+::p\+T\+\_\+cut, and traccc\+::event\+\_\+map2\+::ptc\+\_\+map.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}\label{classtraccc_1_1seeding__performance__writer_aef0d5bbe8a9472f3cad34023fbdae42d}} 
+\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}!m\_cfg@{m\_cfg}}
+\index{m\_cfg@{m\_cfg}!traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_cfg}{m\_cfg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config}{config}} traccc\+::seeding\+\_\+performance\+\_\+writer\+::m\+\_\+cfg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Configuration for the tool. 
+
+
+
+Referenced by finalize(), and write().
+
+\mbox{\Hypertarget{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}\label{classtraccc_1_1seeding__performance__writer_a7690fbe55d426c8ffeb5a88b4d7ffda5}} 
+\index{traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!traccc::seeding\_performance\_writer@{traccc::seeding\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structtraccc_1_1details_1_1seeding__performance__writer__data}{details\+::seeding\+\_\+performance\+\_\+writer\+\_\+data}}$>$ traccc\+::seeding\+\_\+performance\+\_\+writer\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opaque data members for the class. 
+
+
+
+Referenced by finalize(), seeding\+\_\+performance\+\_\+writer(), and write().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/efficiency/\mbox{\hyperlink{seeding__performance__writer_8hpp}{seeding\+\_\+performance\+\_\+writer.\+hpp}}\item 
+performance/src/efficiency/\mbox{\hyperlink{seeding__performance__writer_8cpp}{seeding\+\_\+performance\+\_\+writer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{extern_2googletest_2CMakeLists_8txt}{}\doxysection{extern/googletest/\+C\+Make\+Lists.txt File Reference}
+\label{extern_2googletest_2CMakeLists_8txt}\index{extern/googletest/CMakeLists.txt@{extern/googletest/CMakeLists.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_ad38af70cf259bc59c29b43ad0b3db504}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+11) \mbox{\hyperlink{tests_2CMakeLists_8txt_a6b91a6041b901d418431cddf34b441e9}{include}}(Fetch\+Content) \mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a4a671601c7008dcb84390407829a2899}{if}}(P\+O\+L\+I\+CY C\+M\+P0135) cmake\+\_\+policy(S\+ET C\+M\+P0135 N\+EW) \mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_a8acb2602075c7a12cad696cf19c6f22b}{endif}}() message(S\+T\+A\+T\+US \char`\"{}Building Google\+Test as part of the T\+R\+A\+C\+CC project\char`\"{}) set(T\+R\+A\+C\+C\+C\+\_\+\+G\+O\+O\+G\+L\+E\+T\+E\+S\+T\+\_\+\+S\+O\+U\+R\+CE \char`\"{}U\+RL
+\item 
+https when built as part of this project \mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_a1cf1c6bef57a0dd452483480b761051c}{mark\+\_\+as\+\_\+advanced}} (T\+R\+A\+C\+C\+C\+\_\+\+G\+O\+O\+G\+L\+E\+T\+E\+S\+T\+\_\+\+S\+O\+U\+R\+CE) Fetch\+Content\+\_\+\+Declare(Google\+Test \$
+\item 
+\mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_a319b54a25e7bca373e58edaa0b14a3ea}{set}} (B\+U\+I\+L\+D\+\_\+\+G\+M\+O\+CK T\+R\+UE C\+A\+C\+HE B\+O\+OL \char`\"{}Turn off the build of G\+Mock\char`\"{}) set(I\+N\+S\+T\+A\+L\+L\+\_\+\+G\+T\+E\+ST F\+A\+L\+SE C\+A\+C\+HE B\+O\+OL \char`\"{}Turn off the installation of Google\+Test\char`\"{}) if(W\+I\+N32) set(gtest\+\_\+force\+\_\+shared\+\_\+crt T\+R\+UE C\+A\+C\+HE B\+O\+OL \char`\"{}Use shared (D\+LL) \mbox{\hyperlink{io__dec__par__example_8cpp_a2280d45109980acc30541590e2778923}{run}}-\/time library
+\item 
+even static with libraries \mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_a8acb2602075c7a12cad696cf19c6f22b}{endif}} () \mbox{\hyperlink{extern_2kokkos_2CMakeLists_8txt_abb83f476e526bc0a32cf573fda1c3482}{set}}(C\+M\+A\+K\+E\+\_\+\+M\+A\+C\+O\+S\+X\+\_\+\+R\+P\+A\+TH T\+R\+UE) Fetch\+Content\+\_\+\+Populate(Google\+Test) add\+\_\+subdirectory(\char`\"{}\$
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+https \mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_a07b25a06e18b83f94fecc3eea09051b9}{\+\_\+\+\_\+pad7\+\_\+\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{extern_2googletest_2CMakeLists_8txt_ad38af70cf259bc59c29b43ad0b3db504}\label{extern_2googletest_2CMakeLists_8txt_ad38af70cf259bc59c29b43ad0b3db504}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.}]{11 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29      \{CMAKE\_BINARY\_DIR\}/\$\{CMAKE\_INSTALL\_BINDIR\}\textcolor{stringliteral}{" CACHE PATH}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{extern_2googletest_2CMakeLists_8txt_a8acb2602075c7a12cad696cf19c6f22b}\label{extern_2googletest_2CMakeLists_8txt_a8acb2602075c7a12cad696cf19c6f22b}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!endif@{endif}}
+\index{endif@{endif}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{endif()}{endif()}}
+{\footnotesize\ttfamily even static with libraries endif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                     \{googletest\_SOURCE\_DIR\}\textcolor{stringliteral}{" "}\$\{googletest\_BINARY\_DIR\}\textcolor{stringliteral}{"}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{extern_2googletest_2CMakeLists_8txt_a1cf1c6bef57a0dd452483480b761051c}\label{extern_2googletest_2CMakeLists_8txt_a1cf1c6bef57a0dd452483480b761051c}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!mark\_as\_advanced@{mark\_as\_advanced}}
+\index{mark\_as\_advanced@{mark\_as\_advanced}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{mark\_as\_advanced()}{mark\_as\_advanced()}}
+{\footnotesize\ttfamily https when built as part of this project mark\+\_\+as\+\_\+advanced (\begin{DoxyParamCaption}\item[{T\+R\+A\+C\+C\+C\+\_\+\+G\+O\+O\+G\+L\+E\+T\+E\+S\+T\+\_\+\+S\+O\+U\+R\+CE}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                   \{TRACCC\_GOOGLETEST\_SOURCE\} )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{extern_2googletest_2CMakeLists_8txt_a319b54a25e7bca373e58edaa0b14a3ea}\label{extern_2googletest_2CMakeLists_8txt_a319b54a25e7bca373e58edaa0b14a3ea}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!set@{set}}
+\index{set@{set}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{B\+U\+I\+L\+D\+\_\+\+G\+M\+O\+CK T\+R\+UE C\+A\+C\+HE B\+O\+OL \char`\"{}Turn off the build of G\+Mock\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{extern_2googletest_2CMakeLists_8txt_a07b25a06e18b83f94fecc3eea09051b9}\label{extern_2googletest_2CMakeLists_8txt_a07b25a06e18b83f94fecc3eea09051b9}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!\_\_pad7\_\_@{\_\_pad7\_\_}}
+\index{\_\_pad7\_\_@{\_\_pad7\_\_}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{\_\_pad7\_\_}{\_\_pad7\_\_}}
+{\footnotesize\ttfamily https \+\_\+\+\_\+pad7\+\_\+\+\_\+}
+

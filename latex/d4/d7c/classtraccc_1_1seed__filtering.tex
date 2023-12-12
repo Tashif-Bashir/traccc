@@ -1,0 +1,192 @@
+\hypertarget{classtraccc_1_1seed__filtering}{}\doxysection{traccc\+::seed\+\_\+filtering Class Reference}
+\label{classtraccc_1_1seed__filtering}\index{traccc::seed\_filtering@{traccc::seed\_filtering}}
+
+
+Seed filtering to filter out the bad triplets.  
+
+
+
+
+{\ttfamily \#include $<$seed\+\_\+filtering.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::seed\+\_\+filtering\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{d1/d2e/classtraccc_1_1seed__filtering__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1seed__filtering_a486c4a14dd50921656fab6cc070d5465}{seed\+\_\+filtering}} (const \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} \&config)
+\begin{DoxyCompactList}\small\item\em Constructor with the seed filter configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1seed__filtering_a7aca64d14f52479f07a3d37ef3eafd3c}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&sp\+\_\+collection, const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&g2, \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{triplet\+\_\+collection\+\_\+types\+::host}} \&triplets, \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{seed\+\_\+collection\+\_\+types\+::host}} \&seeds) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} \mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\+\_\+filter\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Seed filter configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seed filtering to filter out the bad triplets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seed__filtering_a486c4a14dd50921656fab6cc070d5465}\label{classtraccc_1_1seed__filtering_a486c4a14dd50921656fab6cc070d5465}} 
+\index{traccc::seed\_filtering@{traccc::seed\_filtering}!seed\_filtering@{seed\_filtering}}
+\index{seed\_filtering@{seed\_filtering}!traccc::seed\_filtering@{traccc::seed\_filtering}}
+\doxysubsubsection{\texorpdfstring{seed\_filtering()}{seed\_filtering()}}
+{\footnotesize\ttfamily traccc\+::seed\+\_\+filtering\+::seed\+\_\+filtering (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} \&}]{config }\end{DoxyParamCaption})}
+
+
+
+Constructor with the seed filter configuration. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     : \mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\_filter\_config}}(config) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seed__filtering_a7aca64d14f52479f07a3d37ef3eafd3c}\label{classtraccc_1_1seed__filtering_a7aca64d14f52479f07a3d37ef3eafd3c}} 
+\index{traccc::seed\_filtering@{traccc::seed\_filtering}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::seed\_filtering@{traccc::seed\_filtering}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void traccc\+::seed\+\_\+filtering\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&}]{sp\+\_\+collection,  }\item[{const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&}]{g2,  }\item[{\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{triplet\+\_\+collection\+\_\+types\+::host}} \&}]{triplets,  }\item[{\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{seed\+\_\+collection\+\_\+types\+::host}} \&}]{seeds }\end{DoxyParamCaption}) const}
+
+Callable operator for the seed filtering
+
+
+\begin{DoxyParams}{Parameters}
+{\em isp\+\_\+collection} & is internal spacepoint collection \\
+\hline
+{\em triplets} & is the vector of triplets per middle spacepoint\\
+\hline
+\end{DoxyParams}
+void interface
+
+\begin{DoxyReturn}{Returns}
+seeds are the vector of seeds where the new compatible seeds are added 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                             \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{seed\_collection\_types::host}} seeds\_per\_spM;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordflow}{for} (triplet\& triplet : triplets) \{}
+\DoxyCodeLine{26         \textcolor{comment}{// bottom}}
+\DoxyCodeLine{27         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spB\_idx = triplet.sp1;}
+\DoxyCodeLine{28         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spB = g2.bin(spB\_idx.bin\_idx)[spB\_idx.sp\_idx];}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{comment}{// middle}}
+\DoxyCodeLine{31         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spM\_idx = triplet.sp2;}
+\DoxyCodeLine{32         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spM = g2.bin(spM\_idx.bin\_idx)[spM\_idx.sp\_idx];}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{comment}{// top}}
+\DoxyCodeLine{35         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spT\_idx = triplet.sp3;}
+\DoxyCodeLine{36         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spT = g2.bin(spT\_idx.bin\_idx)[spT\_idx.sp\_idx];}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \mbox{\hyperlink{structtraccc_1_1seed__selecting__helper_a3485432622be6326cc00b091a1eb685f}{seed\_selecting\_helper::seed\_weight}}(\mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\_filter\_config}}, spM, spB, spT,}
+\DoxyCodeLine{39                                            triplet.weight);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structtraccc_1_1seed__selecting__helper_aaa344059053c3334c8753bc98077008f}{seed\_selecting\_helper::single\_seed\_cut}}(\mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\_filter\_config}}, spM, spB,}
+\DoxyCodeLine{42                                                     spT, triplet.weight)) \{}
+\DoxyCodeLine{43             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         seeds\_per\_spM.push\_back(\{spB.m\_link, spM.m\_link, spT.m\_link,}
+\DoxyCodeLine{47                                  triplet.weight, triplet.z\_vertex\});}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// sort seeds based on their weights}}
+\DoxyCodeLine{51     std::sort(seeds\_per\_spM.begin(), seeds\_per\_spM.end(),}
+\DoxyCodeLine{52               [\&](seed\& seed1, seed\& seed2) \{}
+\DoxyCodeLine{53                   if (seed1.weight != seed2.weight) \{}
+\DoxyCodeLine{54                       return seed1.weight > seed2.weight;}
+\DoxyCodeLine{55                   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{56                       scalar seed1\_sum = 0;}
+\DoxyCodeLine{57                       scalar seed2\_sum = 0;}
+\DoxyCodeLine{58                       auto\& spB1 = sp\_collection.at(seed1.spB\_link);}
+\DoxyCodeLine{59                       auto\& spT1 = sp\_collection.at(seed1.spT\_link);}
+\DoxyCodeLine{60                       auto\& spB2 = sp\_collection.at(seed2.spB\_link);}
+\DoxyCodeLine{61                       auto\& spT2 = sp\_collection.at(seed2.spT\_link);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63                       seed1\_sum += pow(spB1.y(), 2) + pow(spB1.z(), 2);}
+\DoxyCodeLine{64                       seed1\_sum += pow(spT1.y(), 2) + pow(spT1.z(), 2);}
+\DoxyCodeLine{65                       seed2\_sum += pow(spB2.y(), 2) + pow(spB2.z(), 2);}
+\DoxyCodeLine{66                       seed2\_sum += pow(spT2.y(), 2) + pow(spT2.z(), 2);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68                       return seed1\_sum > seed2\_sum;}
+\DoxyCodeLine{69                   \}}
+\DoxyCodeLine{70               \});}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{seed\_collection\_types::host}} new\_seeds;}
+\DoxyCodeLine{73     \textcolor{keywordflow}{if} (seeds\_per\_spM.size() > 1) \{}
+\DoxyCodeLine{74         new\_seeds.push\_back(seeds\_per\_spM[0]);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{keywordtype}{size\_t} itLength = std::min(seeds\_per\_spM.size(),}
+\DoxyCodeLine{77                                    \mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_a55f7630d397696366b11d25f45cc8aca}{max\_triplets\_per\_spM}});}
+\DoxyCodeLine{78         \textcolor{comment}{// don't cut first element}}
+\DoxyCodeLine{79         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < itLength; i++) \{}
+\DoxyCodeLine{80             \textcolor{keywordflow}{if} (\mbox{\hyperlink{structtraccc_1_1seed__selecting__helper_a0e26c12230b1e334608f5fddefdbcbad}{seed\_selecting\_helper::cut\_per\_middle\_sp}}(}
+\DoxyCodeLine{81                     \mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\_filter\_config}}, sp\_collection, seeds\_per\_spM[i],}
+\DoxyCodeLine{82                     seeds\_per\_spM[i].weight)) \{}
+\DoxyCodeLine{83                 new\_seeds.push\_back(std::move(seeds\_per\_spM[i]));}
+\DoxyCodeLine{84             \}}
+\DoxyCodeLine{85         \}}
+\DoxyCodeLine{86         seeds\_per\_spM = std::move(new\_seeds);}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} maxSeeds = seeds\_per\_spM.size();}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \textcolor{keywordflow}{if} (maxSeeds > \mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_a928d6073c4227858bb5235383378a9c5}{maxSeedsPerSpM}}) \{}
+\DoxyCodeLine{92         maxSeeds = \mbox{\hyperlink{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_a928d6073c4227858bb5235383378a9c5}{maxSeedsPerSpM}} + 1;}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \textcolor{keyword}{auto} itBegin = seeds\_per\_spM.begin();}
+\DoxyCodeLine{96     \textcolor{keyword}{auto} it = seeds\_per\_spM.begin();}
+\DoxyCodeLine{97     \textcolor{comment}{// default filter removes the last seeds if maximum amount exceeded}}
+\DoxyCodeLine{98     \textcolor{comment}{// ordering by weight by filterSeeds\_2SpFixed means these are the lowest}}
+\DoxyCodeLine{99     \textcolor{comment}{// weight seeds}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     \textcolor{keywordflow}{for} (; it < itBegin + maxSeeds; ++it) \{}
+\DoxyCodeLine{102         seeds.push\_back(*it);}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+filter\+\_\+config, traccc\+::seed\+\_\+selecting\+\_\+helper\+::seed\+\_\+weight(), traccc\+::seed\+\_\+selecting\+\_\+helper\+::single\+\_\+seed\+\_\+cut(), traccc\+::triplet\+::sp1, traccc\+::triplet\+::sp2, traccc\+::triplet\+::sp3, traccc\+::triplet\+::weight, and traccc\+::triplet\+::z\+\_\+vertex.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}\label{classtraccc_1_1seed__filtering_a32624617e9e10641956c26f4dee28747}} 
+\index{traccc::seed\_filtering@{traccc::seed\_filtering}!m\_filter\_config@{m\_filter\_config}}
+\index{m\_filter\_config@{m\_filter\_config}!traccc::seed\_filtering@{traccc::seed\_filtering}}
+\doxysubsubsection{\texorpdfstring{m\_filter\_config}{m\_filter\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} traccc\+::seed\+\_\+filtering\+::m\+\_\+filter\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Seed filter configuration. 
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/\mbox{\hyperlink{seed__filtering_8hpp}{seed\+\_\+filtering.\+hpp}}\item 
+core/src/seeding/\mbox{\hyperlink{seed__filtering_8cpp}{seed\+\_\+filtering.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,409 @@
+\hypertarget{classtraccc_1_1host__container}{}\doxysection{traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$ Class Template Reference}
+\label{classtraccc_1_1host__container}\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+
+
+Host container describing objects in a given event.  
+
+
+
+
+{\ttfamily \#include $<$host\+\_\+container.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d2/d88/classtraccc_1_1host__container__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dc/dae/classtraccc_1_1host__container__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtraccc_1_1host__container_af3429952e310f4bfdffdd9d8ce852452}{base\+\_\+type}} = \mbox{\hyperlink{classtraccc_1_1container__base}{container\+\_\+base}}$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$
+\begin{DoxyCompactList}\small\item\em Base class type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_ae7ac45e08f36207116409db3450abe79}{base\+\_\+type\+::element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container_a22f19b70178832415310bb4fd17b9d48}{at}} (typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} i)
+\begin{DoxyCompactList}\small\item\em Bounds-\/checking mutable element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_af3eae22e534311ff594d071eaa7639a8}{base\+\_\+type\+::const\+\_\+element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container_a0147bfe049a48a53b7d5bd575cbab0df}{at}} (typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} i) const
+\begin{DoxyCompactList}\small\item\em Bounds-\/checking immutable element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}} \& \mbox{\hyperlink{classtraccc_1_1host__container_a40d30cd5007826078dd61aabd9985e51}{at}} (const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&link)
+\begin{DoxyCompactList}\small\item\em Bounds-\/checking mutable item vector element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} const \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}} \& \mbox{\hyperlink{classtraccc_1_1host__container_afe9714cda7c5b8236b828a1c76523794}{at}} (const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&link) const
+\begin{DoxyCompactList}\small\item\em Bounds-\/checking immutable item vector element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_ae7ac45e08f36207116409db3450abe79}{base\+\_\+type\+::element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container_a1c5e4e8ba5c045d56cbe104c16ebfccc}{operator\mbox{[}$\,$\mbox{]}}} (typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} i)
+\begin{DoxyCompactList}\small\item\em Mutable element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_af3eae22e534311ff594d071eaa7639a8}{base\+\_\+type\+::const\+\_\+element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container_aeb687a6e9fb294f3e4a8b2a8fc71ea3b}{operator\mbox{[}$\,$\mbox{]}}} (typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} i) const
+\begin{DoxyCompactList}\small\item\em Immutable element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}} \& \mbox{\hyperlink{classtraccc_1_1host__container_a23fe148ce406c60e9355919eb900c372}{operator\mbox{[}$\,$\mbox{]}}} (const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&link)
+\begin{DoxyCompactList}\small\item\em Mutable item vector element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} const \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}} \& \mbox{\hyperlink{classtraccc_1_1host__container_a94fb11e98bafed8cbb2149de3799752d}{operator\mbox{[}$\,$\mbox{]}}} (const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&link) const
+\begin{DoxyCompactList}\small\item\em Immutable item vector element accessor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}} (void) const
+\begin{DoxyCompactList}\small\item\em Return the size of the container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{classtraccc_1_1host__container_ae87489c1a05bf1fcfd1abd0937a5cc49}{reserve}} (typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} s)
+\begin{DoxyCompactList}\small\item\em Reserve space in both vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{classtraccc_1_1host__container_ad891135e313301865c52d21755918605}{resize}} (typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} s)
+\begin{DoxyCompactList}\small\item\em Resize space in both vectors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename h\+\_\+prime , typename v\+\_\+prime $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{classtraccc_1_1host__container_ab12ca383e3e9fe3959e7cea14c075475}{push\+\_\+back}} (h\+\_\+prime \&\&new\+\_\+header, v\+\_\+prime \&\&new\+\_\+items)
+\begin{DoxyCompactList}\small\item\em Push a header and a vector into the container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1host__container_a2200eb3cfa5f71a8a8fabacc3f0d8a66}{total\+\_\+size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename header\+\_\+t, typename item\+\_\+t$>$\newline
+class traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$}
+
+Host container describing objects in a given event. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtraccc_1_1host__container_af3429952e310f4bfdffdd9d8ce852452}\label{classtraccc_1_1host__container_af3429952e310f4bfdffdd9d8ce852452}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!base\_type@{base\_type}}
+\index{base\_type@{base\_type}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{base\_type}{base\_type}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1host__container_af3429952e310f4bfdffdd9d8ce852452}{base\+\_\+type}} =  \mbox{\hyperlink{classtraccc_1_1container__base}{container\+\_\+base}}$<$header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector$>$}
+
+
+
+Base class type. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1host__container_a40d30cd5007826078dd61aabd9985e51}\label{classtraccc_1_1host__container_a40d30cd5007826078dd61aabd9985e51}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!at@{at}}
+\index{at@{at}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}}\& \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::at (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&}]{link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bounds-\/checking mutable item vector element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                                  \{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}.at(link.first).at(link.second);}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_afe9714cda7c5b8236b828a1c76523794}\label{classtraccc_1_1host__container_afe9714cda7c5b8236b828a1c76523794}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!at@{at}}
+\index{at@{at}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} const \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}}\& \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::at (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&}]{link }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bounds-\/checking immutable item vector element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66                                                        \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}.at(link.first).at(link.second);}
+\DoxyCodeLine{68     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_a22f19b70178832415310bb4fd17b9d48}\label{classtraccc_1_1host__container_a22f19b70178832415310bb4fd17b9d48}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!at@{at}}
+\index{at@{at}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_ae7ac45e08f36207116409db3450abe79}{base\+\_\+type\+::element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::at (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bounds-\/checking mutable element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                                                      \{}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} \{this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}.at(i), this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}.at(i)\};}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers, and traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+
+
+Referenced by main(), traccc\+::futhark\+::spacepoint\+\_\+formation\+::operator()(), traccc\+::measurement\+\_\+creation\+::operator()(), seq\+\_\+run(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_a0147bfe049a48a53b7d5bd575cbab0df}\label{classtraccc_1_1host__container_a0147bfe049a48a53b7d5bd575cbab0df}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!at@{at}}
+\index{at@{at}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_af3eae22e534311ff594d071eaa7639a8}{base\+\_\+type\+::const\+\_\+element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::at (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bounds-\/checking immutable element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                              \{}
+\DoxyCodeLine{49         \textcolor{keywordflow}{return} \{this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}.at(i), this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}.at(i)\};}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers, and traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_a23fe148ce406c60e9355919eb900c372}\label{classtraccc_1_1host__container_a23fe148ce406c60e9355919eb900c372}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}}\& \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&}]{link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mutable item vector element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                                  \{}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}[link.first][link.second];}
+\DoxyCodeLine{95     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_a94fb11e98bafed8cbb2149de3799752d}\label{classtraccc_1_1host__container_a94fb11e98bafed8cbb2149de3799752d}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} const \mbox{\hyperlink{classtraccc_1_1container__base_a427343da7fda079217d6f75b04fb0fdb}{base\+\_\+type\+::item\+\_\+type}}\& \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{classtraccc_1_1container__base_aaa6b9f924c2891aaad5a12de6ae1fa59}{base\+\_\+type\+::link\+\_\+type}} \&}]{link }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Immutable item vector element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                        \{}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}[link.first][link.second];}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_a1c5e4e8ba5c045d56cbe104c16ebfccc}\label{classtraccc_1_1host__container_a1c5e4e8ba5c045d56cbe104c16ebfccc}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_ae7ac45e08f36207116409db3450abe79}{base\+\_\+type\+::element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mutable element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                        \{}
+\DoxyCodeLine{76         \textcolor{keywordflow}{return} \{this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}[i], this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}[i]\};}
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers, and traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_aeb687a6e9fb294f3e4a8b2a8fc71ea3b}\label{classtraccc_1_1host__container_aeb687a6e9fb294f3e4a8b2a8fc71ea3b}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_af3eae22e534311ff594d071eaa7639a8}{base\+\_\+type\+::const\+\_\+element\+\_\+view}} \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Immutable element accessor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                              \{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} \{this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}[i], this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}[i]\};}
+\DoxyCodeLine{86     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers, and traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_ab12ca383e3e9fe3959e7cea14c075475}\label{classtraccc_1_1host__container_ab12ca383e3e9fe3959e7cea14c075475}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+template$<$typename h\+\_\+prime , typename v\+\_\+prime $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{h\+\_\+prime \&\&}]{new\+\_\+header,  }\item[{v\+\_\+prime \&\&}]{new\+\_\+items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Push a header and a vector into the container. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140                                                                           \{}
+\DoxyCodeLine{141         this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}.push\_back(}
+\DoxyCodeLine{142             std::forward<typename base\_type::header\_type>(new\_header));}
+\DoxyCodeLine{143         this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}.push\_back(}
+\DoxyCodeLine{144             std::forward<typename base\_type::item\_vector::value\_type>(}
+\DoxyCodeLine{145                 new\_items));}
+\DoxyCodeLine{146     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers, and traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+
+
+Referenced by traccc\+::event\+\_\+map2\+::generate\+\_\+truth\+\_\+candidates(), traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$\+::operator()(), and traccc\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_ae87489c1a05bf1fcfd1abd0937a5cc49}\label{classtraccc_1_1host__container_ae87489c1a05bf1fcfd1abd0937a5cc49}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::reserve (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reserve space in both vectors. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122                                                 \{}
+\DoxyCodeLine{123         this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}.reserve(s);}
+\DoxyCodeLine{124         this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}.reserve(s);}
+\DoxyCodeLine{125     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers, and traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+
+
+Referenced by traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$\+::operator()(), and traccc\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_ad891135e313301865c52d21755918605}\label{classtraccc_1_1host__container_ad891135e313301865c52d21755918605}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!resize@{resize}}
+\index{resize@{resize}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::resize (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resize space in both vectors. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                                                \{}
+\DoxyCodeLine{132         this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}.resize(s);}
+\DoxyCodeLine{133         this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}.resize(s);}
+\DoxyCodeLine{134     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers, and traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+
+
+Referenced by traccc\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}\label{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!size@{size}}
+\index{size@{size}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the size of the container. 
+
+In principle, the size of the two internal vectors should always be equal, but we can assert this at runtime for debug builds. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113                                                  \{}
+\DoxyCodeLine{114         assert(this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}.size() == this-\/>m\_items.size());}
+\DoxyCodeLine{115         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ac138b0ee895916fb774644aa2b1d1158}{m\_headers}}.size();}
+\DoxyCodeLine{116     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+headers.
+
+
+
+Referenced by main(), traccc\+::futhark\+::spacepoint\+\_\+formation\+::operator()(), traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$\+::operator()(), traccc\+::measurement\+\_\+creation\+::operator()(), seq\+\_\+run(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{classtraccc_1_1host__container_a2200eb3cfa5f71a8a8fabacc3f0d8a66}\label{classtraccc_1_1host__container_a2200eb3cfa5f71a8a8fabacc3f0d8a66}} 
+\index{traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}!total\_size@{total\_size}}
+\index{total\_size@{total\_size}!traccc::host\_container$<$ header\_t, item\_t $>$@{traccc::host\_container$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{total\_size()}{total\_size()}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\+\_\+type\+::size\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1host__container}{traccc\+::host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$\+::total\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+@breif Get number of items of jagged vector 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152                                                    \{}
+\DoxyCodeLine{153         \textcolor{keyword}{typename} \mbox{\hyperlink{classtraccc_1_1container__base_a840a104cfa95d2576efa9ffa4e805a3f}{base\_type::size\_type}} ret = 0;}
+\DoxyCodeLine{154         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{typename} base\_type::item\_vector::value\_type\& item :}
+\DoxyCodeLine{155              this-\/>\mbox{\hyperlink{classtraccc_1_1container__base_ad26b2d80a4b9bc82ec4cab6136c82a51}{m\_items}}) \{}
+\DoxyCodeLine{156             ret += item.size();}
+\DoxyCodeLine{157         \}}
+\DoxyCodeLine{158         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{159     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::container\+\_\+base$<$ header\+\_\+t, item\+\_\+t, vecmem\+::vector, vecmem\+::jagged\+\_\+vector $>$\+::m\+\_\+items.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/edm/details/\mbox{\hyperlink{host__container_8hpp}{host\+\_\+container.\+hpp}}\end{DoxyCompactItemize}

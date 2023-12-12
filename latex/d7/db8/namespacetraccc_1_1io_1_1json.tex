@@ -1,0 +1,44 @@
+\hypertarget{namespacetraccc_1_1io_1_1json}{}\doxysection{traccc\+::io\+::json Namespace Reference}
+\label{namespacetraccc_1_1io_1_1json}\index{traccc::io::json@{traccc::io::json}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} \mbox{\hyperlink{namespacetraccc_1_1io_1_1json_a18db814f0e01bb8c02c749b31709bd4f}{read\+\_\+digitization\+\_\+config}} (std\+::string\+\_\+view filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetraccc_1_1io_1_1json_a18db814f0e01bb8c02c749b31709bd4f}\label{namespacetraccc_1_1io_1_1json_a18db814f0e01bb8c02c749b31709bd4f}} 
+\index{traccc::io::json@{traccc::io::json}!read\_digitization\_config@{read\_digitization\_config}}
+\index{read\_digitization\_config@{read\_digitization\_config}!traccc::io::json@{traccc::io::json}}
+\doxysubsubsection{\texorpdfstring{read\_digitization\_config()}{read\_digitization\_config()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} traccc\+::io\+::json\+::read\+\_\+digitization\+\_\+config (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                                       \{}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{// Open the input file. Relying on exceptions for the error handling.}}
+\DoxyCodeLine{47     std::ifstream infile(filename.data(), \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{std::ifstream::binary}});}
+\DoxyCodeLine{48     infile.exceptions(std::ofstream::failbit | std::ofstream::badbit);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Read the contents of the file into a JSON object.}}
+\DoxyCodeLine{51     \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daade8883fdae97f32ca2381bf112bccc14}{nlohmann::json}} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daade8883fdae97f32ca2381bf112bccc14}{json}};}
+\DoxyCodeLine{52     infile >> \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daade8883fdae97f32ca2381bf112bccc14}{json}};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{// Construct the object from the JSON configuration.}}
+\DoxyCodeLine{55     \textcolor{keyword}{static} \textcolor{keyword}{const} Acts::GeometryHierarchyMapJsonConverter<}
+\DoxyCodeLine{56         module\_digitization\_config>}
+\DoxyCodeLine{57         converter\{\textcolor{stringliteral}{"digitization-\/configuration"}\};}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} converter.fromJson(\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daade8883fdae97f32ca2381bf112bccc14}{json}});}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary, and traccc\+::json.
+
+
+
+Referenced by traccc\+::io\+::read\+\_\+digitization\+\_\+config().
+

@@ -1,0 +1,12 @@
+<map id="traccc::seed_finding" name="traccc::seed_finding">
+<area shape="rect" id="node1" title="Seed finding." alt="" coords="389,549,539,641"/>
+<area shape="rect" id="node2" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="5,351,179,487"/>
+<area shape="rect" id="node3" href="$d4/d7c/classtraccc_1_1seed__filtering.html" title="Seed filtering to filter out the bad triplets." alt="" coords="203,373,360,465"/>
+<area shape="rect" id="node4" href="$d5/d73/structtraccc_1_1seedfilter__config.html" title=" " alt="" coords="73,5,287,288"/>
+<area shape="rect" id="node8" href="$dc/d7a/structtraccc_1_1triplet__finding.html" title=" " alt="" coords="385,365,543,472"/>
+<area shape="rect" id="node5" href="$d1/d36/structtraccc_1_1doublet__finding.html" title=" " alt="" coords="763,351,933,487"/>
+<area shape="rect" id="node6" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="804,71,1023,222"/>
+<area shape="rect" id="node10" href="$d1/d36/structtraccc_1_1doublet__finding.html" title=" " alt="" coords="570,351,739,487"/>
+<area shape="rect" id="node7" href="$d8/dda/structtraccc_1_1seedfinder__config.html" title=" " alt="" coords="577,5,780,288"/>
+<area shape="rect" id="node9" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="311,57,553,237"/>
+</map>

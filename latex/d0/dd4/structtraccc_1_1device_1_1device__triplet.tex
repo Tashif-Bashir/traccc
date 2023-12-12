@@ -1,0 +1,121 @@
+\hypertarget{structtraccc_1_1device_1_1device__triplet}{}\doxysection{traccc\+::device\+::device\+\_\+triplet Struct Reference}
+\label{structtraccc_1_1device_1_1device__triplet}\index{traccc::device::device\_triplet@{traccc::device::device\_triplet}}
+
+
+Triplets of bottom, middle and top spacepoints.  
+
+
+
+
+{\ttfamily \#include $<$device\+\_\+triplet.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::device\+::device\+\_\+triplet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d3/d89/structtraccc_1_1device_1_1device__triplet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_a35880feea3e85f130a5daece80b9da69}{link\+\_\+type}} = device\+::triplet\+\_\+counter\+\_\+collection\+\_\+types\+::host\+::size\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1sp__location}{sp\+\_\+location}} \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_ac442e88aa4843acc23e92bcdc4a73ead}{spT}}
+\item 
+\mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_a35880feea3e85f130a5daece80b9da69}{link\+\_\+type}} \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_a9009ebd7e3342f34eb55eeaa25fdac3e}{counter\+\_\+link}}
+\item 
+\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_adbdfe680b24f38562f16c9e8a60510c4}{curvature}}
+\begin{DoxyCompactList}\small\item\em curvature of circle estimated from triplet \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_a1f17ad577bd1585a5e0eab43abe7f59a}{weight}}
+\begin{DoxyCompactList}\small\item\em weight of triplet \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_ac1368973a523d4b821be2fc82399fa65}{z\+\_\+vertex}}
+\begin{DoxyCompactList}\small\item\em z origin of triplet \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Triplets of bottom, middle and top spacepoints. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1device_1_1device__triplet_a35880feea3e85f130a5daece80b9da69}\label{structtraccc_1_1device_1_1device__triplet_a35880feea3e85f130a5daece80b9da69}} 
+\index{traccc::device::device\_triplet@{traccc::device::device\_triplet}!link\_type@{link\_type}}
+\index{link\_type@{link\_type}!traccc::device::device\_triplet@{traccc::device::device\_triplet}}
+\doxysubsubsection{\texorpdfstring{link\_type}{link\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_a35880feea3e85f130a5daece80b9da69}{traccc\+::device\+::device\+\_\+triplet\+::link\+\_\+type}} =  device\+::triplet\+\_\+counter\+\_\+collection\+\_\+types\+::host\+::size\+\_\+type}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1device_1_1device__triplet_a9009ebd7e3342f34eb55eeaa25fdac3e}\label{structtraccc_1_1device_1_1device__triplet_a9009ebd7e3342f34eb55eeaa25fdac3e}} 
+\index{traccc::device::device\_triplet@{traccc::device::device\_triplet}!counter\_link@{counter\_link}}
+\index{counter\_link@{counter\_link}!traccc::device::device\_triplet@{traccc::device::device\_triplet}}
+\doxysubsubsection{\texorpdfstring{counter\_link}{counter\_link}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1device_1_1device__triplet_a35880feea3e85f130a5daece80b9da69}{link\+\_\+type}} traccc\+::device\+::device\+\_\+triplet\+::counter\+\_\+link}
+
+Link to triplet counter where the middle and bottom spacepoints are stored 
+
+Referenced by traccc\+::device\+::select\+\_\+seeds(), and traccc\+::device\+::update\+\_\+triplet\+\_\+weights().
+
+\mbox{\Hypertarget{structtraccc_1_1device_1_1device__triplet_adbdfe680b24f38562f16c9e8a60510c4}\label{structtraccc_1_1device_1_1device__triplet_adbdfe680b24f38562f16c9e8a60510c4}} 
+\index{traccc::device::device\_triplet@{traccc::device::device\_triplet}!curvature@{curvature}}
+\index{curvature@{curvature}!traccc::device::device\_triplet@{traccc::device::device\_triplet}}
+\doxysubsubsection{\texorpdfstring{curvature}{curvature}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} traccc\+::device\+::device\+\_\+triplet\+::curvature}
+
+
+
+curvature of circle estimated from triplet 
+
+
+
+Referenced by traccc\+::device\+::select\+\_\+seeds(), and traccc\+::device\+::update\+\_\+triplet\+\_\+weights().
+
+\mbox{\Hypertarget{structtraccc_1_1device_1_1device__triplet_ac442e88aa4843acc23e92bcdc4a73ead}\label{structtraccc_1_1device_1_1device__triplet_ac442e88aa4843acc23e92bcdc4a73ead}} 
+\index{traccc::device::device\_triplet@{traccc::device::device\_triplet}!spT@{spT}}
+\index{spT@{spT}!traccc::device::device\_triplet@{traccc::device::device\_triplet}}
+\doxysubsubsection{\texorpdfstring{spT}{spT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1sp__location}{sp\+\_\+location}} traccc\+::device\+::device\+\_\+triplet\+::spT}
+
+
+
+Referenced by traccc\+::device\+::select\+\_\+seeds(), and traccc\+::device\+::update\+\_\+triplet\+\_\+weights().
+
+\mbox{\Hypertarget{structtraccc_1_1device_1_1device__triplet_a1f17ad577bd1585a5e0eab43abe7f59a}\label{structtraccc_1_1device_1_1device__triplet_a1f17ad577bd1585a5e0eab43abe7f59a}} 
+\index{traccc::device::device\_triplet@{traccc::device::device\_triplet}!weight@{weight}}
+\index{weight@{weight}!traccc::device::device\_triplet@{traccc::device::device\_triplet}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} traccc\+::device\+::device\+\_\+triplet\+::weight}
+
+
+
+weight of triplet 
+
+
+
+Referenced by traccc\+::device\+::select\+\_\+seeds(), and traccc\+::device\+::update\+\_\+triplet\+\_\+weights().
+
+\mbox{\Hypertarget{structtraccc_1_1device_1_1device__triplet_ac1368973a523d4b821be2fc82399fa65}\label{structtraccc_1_1device_1_1device__triplet_ac1368973a523d4b821be2fc82399fa65}} 
+\index{traccc::device::device\_triplet@{traccc::device::device\_triplet}!z\_vertex@{z\_vertex}}
+\index{z\_vertex@{z\_vertex}!traccc::device::device\_triplet@{traccc::device::device\_triplet}}
+\doxysubsubsection{\texorpdfstring{z\_vertex}{z\_vertex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} traccc\+::device\+::device\+\_\+triplet\+::z\+\_\+vertex}
+
+
+
+z origin of triplet 
+
+
+
+Referenced by traccc\+::device\+::select\+\_\+seeds().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/common/include/traccc/edm/device/\mbox{\hyperlink{device__triplet_8hpp}{device\+\_\+triplet.\+hpp}}\end{DoxyCompactItemize}

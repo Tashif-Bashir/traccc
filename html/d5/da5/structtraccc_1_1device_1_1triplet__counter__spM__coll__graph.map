@@ -1,0 +1,4 @@
+<map id="traccc::device::triplet_counter_spM" name="traccc::device::triplet_counter_spM">
+<area shape="rect" id="node1" title="Number of triplets for one specific middle spacepoint." alt="" coords="5,160,164,267"/>
+<area shape="rect" id="node2" href="$d7/dca/structtraccc_1_1sp__location.html" title="location of spacepoint in internal spacepoint container" alt="" coords="13,5,156,97"/>
+</map>

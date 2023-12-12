@@ -1,0 +1,246 @@
+\hypertarget{classtraccc_1_1container__comparator}{}\doxysection{traccc\+::container\+\_\+comparator$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ Class Template Reference}
+\label{classtraccc_1_1container__comparator}\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+
+
+{\ttfamily \#include $<$container\+\_\+comparator.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::container\+\_\+comparator$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/ddb/classtraccc_1_1container__comparator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1container__comparator_a4f5a44327dd5ae508f5c15aa3d1b8ea3}{container\+\_\+comparator}} (std\+::string\+\_\+view type\+\_\+name, \mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE $>$ header\+\_\+comp\+\_\+factory=\{\}, \mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$ I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ item\+\_\+comp\+\_\+factory=\{\}, std\+::string\+\_\+view lhs\+\_\+type=\char`\"{}host\char`\"{}, std\+::string\+\_\+view rhs\+\_\+type=\char`\"{}device\char`\"{}, std\+::ostream \&out=std\+::cout, const std\+::vector$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&uncertainties=\{0.\+0001, 0.\+001, 0.\+01, 0.\+05\})
+\begin{DoxyCompactList}\small\item\em Constructor with all configurable options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1container__comparator_a119186c44e406309e116fbe5fc5e4d9c}{operator()}} (const typename \mbox{\hyperlink{structtraccc_1_1container__types}{container\+\_\+types}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::const\+\_\+view \&lhs, const typename \mbox{\hyperlink{structtraccc_1_1container__types}{container\+\_\+types}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::const\+\_\+view \&rhs) const
+\begin{DoxyCompactList}\small\item\em Function comparing two collections, and printing the results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtraccc_1_1container__comparator_a0b6633358ac70bfcf12aaaf2430f0b7d}{m\+\_\+type\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Container type name to print. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtraccc_1_1container__comparator_a8088acbe9c20d5faf3f9b2423a6bac41}{m\+\_\+lhs\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type of the \char`\"{}\+Left Hand Side\char`\"{} collection. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtraccc_1_1container__comparator_af26c10ac9df73145f4b58a458e8505d1}{m\+\_\+rhs\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type of the \char`\"{}\+Right Hand Side\char`\"{} collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE $>$ \mbox{\hyperlink{classtraccc_1_1container__comparator_a43856b37f768a8ac3bc631f72013e8f2}{m\+\_\+header\+\_\+comp\+\_\+factory}}
+\begin{DoxyCompactList}\small\item\em Factory for making comparator objects for header objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$ I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \mbox{\hyperlink{classtraccc_1_1container__comparator_aec311af3ec2323dccc60056f56e1e0cd}{m\+\_\+item\+\_\+comp\+\_\+factory}}
+\begin{DoxyCompactList}\small\item\em Factory for making comparator objects for item objects. \end{DoxyCompactList}\item 
+std\+::reference\+\_\+wrapper$<$ std\+::ostream $>$ \mbox{\hyperlink{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}{m\+\_\+out}}
+\begin{DoxyCompactList}\small\item\em Output stream to print the results to. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \mbox{\hyperlink{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}{m\+\_\+uncertainties}}
+\begin{DoxyCompactList}\small\item\em Uncertainties to evaluate the comparison for. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, typename I\+T\+E\+M\+\_\+\+T\+Y\+PE$>$\newline
+class traccc\+::container\+\_\+comparator$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+P\+E, I\+T\+E\+M\+\_\+\+T\+Y\+P\+E $>$}
+
+Functor comparing two containers, and printing the results to the output
+
+This is meant to be used in the example applications for nicely comparing the results made on the host and on a device. Though the code actually allows comparisons between any two containers.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE} & The header type in the container \\
+\hline
+{\em I\+T\+E\+M\+\_\+\+T\+Y\+PE} & The item type in the container \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_a4f5a44327dd5ae508f5c15aa3d1b8ea3}\label{classtraccc_1_1container__comparator_a4f5a44327dd5ae508f5c15aa3d1b8ea3}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!container\_comparator@{container\_comparator}}
+\index{container\_comparator@{container\_comparator}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{container\_comparator()}{container\_comparator()}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+\mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::\mbox{\hyperlink{classtraccc_1_1container__comparator}{container\+\_\+comparator}} (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{type\+\_\+name,  }\item[{\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE $>$}]{header\+\_\+comp\+\_\+factory = {\ttfamily \{\}},  }\item[{\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$ I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$}]{item\+\_\+comp\+\_\+factory = {\ttfamily \{\}},  }\item[{std\+::string\+\_\+view}]{lhs\+\_\+type = {\ttfamily \char`\"{}host\char`\"{}},  }\item[{std\+::string\+\_\+view}]{rhs\+\_\+type = {\ttfamily \char`\"{}device\char`\"{}},  }\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout},  }\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&}]{uncertainties = {\ttfamily \{0.0001,~0.001,~0.01,~0.05\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor with all configurable options. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36     : \mbox{\hyperlink{classtraccc_1_1container__comparator_a0b6633358ac70bfcf12aaaf2430f0b7d}{m\_type\_name}}(type\_name),}
+\DoxyCodeLine{37       \mbox{\hyperlink{classtraccc_1_1container__comparator_a8088acbe9c20d5faf3f9b2423a6bac41}{m\_lhs\_type}}(lhs\_type),}
+\DoxyCodeLine{38       \mbox{\hyperlink{classtraccc_1_1container__comparator_af26c10ac9df73145f4b58a458e8505d1}{m\_rhs\_type}}(rhs\_type),}
+\DoxyCodeLine{39       \mbox{\hyperlink{classtraccc_1_1container__comparator_a43856b37f768a8ac3bc631f72013e8f2}{m\_header\_comp\_factory}}(header\_comp\_factory),}
+\DoxyCodeLine{40       \mbox{\hyperlink{classtraccc_1_1container__comparator_aec311af3ec2323dccc60056f56e1e0cd}{m\_item\_comp\_factory}}(item\_comp\_factory),}
+\DoxyCodeLine{41       \mbox{\hyperlink{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}{m\_out}}(out),}
+\DoxyCodeLine{42       \mbox{\hyperlink{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}{m\_uncertainties}}(uncertainties) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_a119186c44e406309e116fbe5fc5e4d9c}\label{classtraccc_1_1container__comparator_a119186c44e406309e116fbe5fc5e4d9c}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+void \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::operator() (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{structtraccc_1_1container__types}{container\+\_\+types}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::const\+\_\+view \&}]{lhs,  }\item[{const typename \mbox{\hyperlink{structtraccc_1_1container__types}{container\+\_\+types}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::const\+\_\+view \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Function comparing two collections, and printing the results. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48           \{}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Create device containers on top of the views.}}
+\DoxyCodeLine{51     \textcolor{keyword}{const} \textcolor{keyword}{typename} \mbox{\hyperlink{structtraccc_1_1container__types_a7fc26a3b614a9bfd960edc39c3d65017}{container\_types<HEADER\_TYPE, ITEM\_TYPE>::const\_device}}}
+\DoxyCodeLine{52         lhs\_cont\{lhs\},}
+\DoxyCodeLine{53         rhs\_cont\{rhs\};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// Print some basic output.}}
+\DoxyCodeLine{56     \mbox{\hyperlink{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}{m\_out}}.get() << \textcolor{stringliteral}{"Number of "} << \mbox{\hyperlink{classtraccc_1_1container__comparator_a0b6633358ac70bfcf12aaaf2430f0b7d}{m\_type\_name}} << \textcolor{stringliteral}{": "} << lhs\_cont.total\_size()}
+\DoxyCodeLine{57                 << \textcolor{stringliteral}{" ("} << \mbox{\hyperlink{classtraccc_1_1container__comparator_a8088acbe9c20d5faf3f9b2423a6bac41}{m\_lhs\_type}} << \textcolor{stringliteral}{"), "} << rhs\_cont.total\_size() << \textcolor{stringliteral}{" ("}}
+\DoxyCodeLine{58                 << \mbox{\hyperlink{classtraccc_1_1container__comparator_af26c10ac9df73145f4b58a458e8505d1}{m\_rhs\_type}} << \textcolor{stringliteral}{")\(\backslash\)n"};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{comment}{// Calculate the agreements at various uncertainties.}}
+\DoxyCodeLine{61     std::vector<scalar> agreements;}
+\DoxyCodeLine{62     agreements.reserve(\mbox{\hyperlink{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}{m\_uncertainties}}.size());}
+\DoxyCodeLine{63     \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} uncertainty : \mbox{\hyperlink{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}{m\_uncertainties}}) \{}
+\DoxyCodeLine{64         \textcolor{comment}{// The number of matched items between the containers.}}
+\DoxyCodeLine{65         std::size\_t matched = 0;}
+\DoxyCodeLine{66         \textcolor{comment}{// If the two containers differ in size, only compare the first N}}
+\DoxyCodeLine{67         \textcolor{comment}{// "inner vectors", that both of them have.}}
+\DoxyCodeLine{68         \textcolor{keyword}{const} std::size\_t cont\_size =}
+\DoxyCodeLine{69             std::min(lhs\_cont.get\_items().size(), rhs\_cont.get\_items().size());}
+\DoxyCodeLine{70         \textcolor{comment}{// Iterate over the "outer vectors".}}
+\DoxyCodeLine{71         \textcolor{keywordflow}{for} (std::size\_t i = 0; i < cont\_size; ++i) \{}
+\DoxyCodeLine{72             \textcolor{comment}{// If the headers don't match, don't even compare the items.}}
+\DoxyCodeLine{73             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtraccc_1_1container__comparator_a43856b37f768a8ac3bc631f72013e8f2}{m\_header\_comp\_factory}}.\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory_af5eb9367593e289bc524c52eb6bf793a}{make\_comparator}}(}
+\DoxyCodeLine{74                     lhs\_cont.get\_headers().at(i),}
+\DoxyCodeLine{75                     uncertainty)(rhs\_cont.get\_headers().at(i)) == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{76                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{77             \}}
+\DoxyCodeLine{78             \textcolor{comment}{// Compare the items.}}
+\DoxyCodeLine{79             \textcolor{keyword}{const} \textcolor{keyword}{typename} \mbox{\hyperlink{structtraccc_1_1collection__types_a2c17f74f33da865b1fb58c83e44ecb71}{collection\_types<ITEM\_TYPE>::const\_device}} lhs\_items =}
+\DoxyCodeLine{80                 lhs\_cont.get\_items().at(i);}
+\DoxyCodeLine{81             \textcolor{keyword}{const} \textcolor{keyword}{typename} \mbox{\hyperlink{structtraccc_1_1collection__types_a2c17f74f33da865b1fb58c83e44ecb71}{collection\_types<ITEM\_TYPE>::const\_device}} rhs\_items =}
+\DoxyCodeLine{82                 rhs\_cont.get\_items().at(i);}
+\DoxyCodeLine{83             \textcolor{keywordflow}{for} (\textcolor{keyword}{const} ITEM\_TYPE\& obj : lhs\_items) \{}
+\DoxyCodeLine{84                 \textcolor{keywordflow}{if} (std::find\_if(rhs\_items.begin(), rhs\_items.end(),}
+\DoxyCodeLine{85                                  \mbox{\hyperlink{classtraccc_1_1container__comparator_aec311af3ec2323dccc60056f56e1e0cd}{m\_item\_comp\_factory}}.\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory_af5eb9367593e289bc524c52eb6bf793a}{make\_comparator}}(}
+\DoxyCodeLine{86                                      obj, uncertainty)) != rhs\_items.end()) \{}
+\DoxyCodeLine{87                     ++matched;}
+\DoxyCodeLine{88                 \}}
+\DoxyCodeLine{89             \}}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91         \textcolor{comment}{// Calculate the agreement value.}}
+\DoxyCodeLine{92         agreements.push\_back(}
+\DoxyCodeLine{93             \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(matched) /}
+\DoxyCodeLine{94             \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(}
+\DoxyCodeLine{95                 std::max(lhs\_cont.total\_size(), rhs\_cont.total\_size())) *}
+\DoxyCodeLine{96             100.);}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98     assert(agreements.size() == \mbox{\hyperlink{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}{m\_uncertainties}}.size());}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{comment}{// Now print them.}}
+\DoxyCodeLine{101     \mbox{\hyperlink{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}{m\_out}}.get() << \textcolor{stringliteral}{"  Matching rate(s):\(\backslash\)n"};}
+\DoxyCodeLine{102     \textcolor{keywordflow}{for} (std::size\_t i = 0; i < \mbox{\hyperlink{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}{m\_uncertainties}}.size(); ++i) \{}
+\DoxyCodeLine{103         \mbox{\hyperlink{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}{m\_out}}.get() << \textcolor{stringliteral}{"    -\/ "} << agreements.at(i) << \textcolor{stringliteral}{"\% at "}}
+\DoxyCodeLine{104                     << \mbox{\hyperlink{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}{m\_uncertainties}}.at(i) * 100. << \textcolor{stringliteral}{"\% uncertainty\(\backslash\)n"};}
+\DoxyCodeLine{105     \}}
+\DoxyCodeLine{106     \mbox{\hyperlink{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}{m\_out}}.get() << std::flush;}
+\DoxyCodeLine{107 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_a43856b37f768a8ac3bc631f72013e8f2}\label{classtraccc_1_1container__comparator_a43856b37f768a8ac3bc631f72013e8f2}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!m\_header\_comp\_factory@{m\_header\_comp\_factory}}
+\index{m\_header\_comp\_factory@{m\_header\_comp\_factory}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{m\_header\_comp\_factory}{m\_header\_comp\_factory}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE$>$ \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::m\+\_\+header\+\_\+comp\+\_\+factory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Factory for making comparator objects for header objects. 
+
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_aec311af3ec2323dccc60056f56e1e0cd}\label{classtraccc_1_1container__comparator_aec311af3ec2323dccc60056f56e1e0cd}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!m\_item\_comp\_factory@{m\_item\_comp\_factory}}
+\index{m\_item\_comp\_factory@{m\_item\_comp\_factory}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{m\_item\_comp\_factory}{m\_item\_comp\_factory}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+\mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{details\+::comparator\+\_\+factory}}$<$I\+T\+E\+M\+\_\+\+T\+Y\+PE$>$ \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::m\+\_\+item\+\_\+comp\+\_\+factory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Factory for making comparator objects for item objects. 
+
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_a8088acbe9c20d5faf3f9b2423a6bac41}\label{classtraccc_1_1container__comparator_a8088acbe9c20d5faf3f9b2423a6bac41}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!m\_lhs\_type@{m\_lhs\_type}}
+\index{m\_lhs\_type@{m\_lhs\_type}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{m\_lhs\_type}{m\_lhs\_type}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+std\+::string \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::m\+\_\+lhs\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Type of the \char`\"{}\+Left Hand Side\char`\"{} collection. 
+
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}\label{classtraccc_1_1container__comparator_a5a66ece86cacc82b598264d8fd469355}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!m\_out@{m\_out}}
+\index{m\_out@{m\_out}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{m\_out}{m\_out}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+std\+::reference\+\_\+wrapper$<$std\+::ostream$>$ \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::m\+\_\+out\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Output stream to print the results to. 
+
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_af26c10ac9df73145f4b58a458e8505d1}\label{classtraccc_1_1container__comparator_af26c10ac9df73145f4b58a458e8505d1}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!m\_rhs\_type@{m\_rhs\_type}}
+\index{m\_rhs\_type@{m\_rhs\_type}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{m\_rhs\_type}{m\_rhs\_type}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+std\+::string \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::m\+\_\+rhs\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Type of the \char`\"{}\+Right Hand Side\char`\"{} collection. 
+
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_a0b6633358ac70bfcf12aaaf2430f0b7d}\label{classtraccc_1_1container__comparator_a0b6633358ac70bfcf12aaaf2430f0b7d}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!m\_type\_name@{m\_type\_name}}
+\index{m\_type\_name@{m\_type\_name}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{m\_type\_name}{m\_type\_name}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+std\+::string \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::m\+\_\+type\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Container type name to print. 
+
+\mbox{\Hypertarget{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}\label{classtraccc_1_1container__comparator_a161cd09fbc9ebee97f10d4a76eb32f6c}} 
+\index{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}!m\_uncertainties@{m\_uncertainties}}
+\index{m\_uncertainties@{m\_uncertainties}!traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$@{traccc::container\_comparator$<$ HEADER\_TYPE, ITEM\_TYPE $>$}}
+\doxysubsubsection{\texorpdfstring{m\_uncertainties}{m\_uncertainties}}
+{\footnotesize\ttfamily template$<$typename H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE , typename I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$ \\
+std\+::vector$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}$>$ \mbox{\hyperlink{classtraccc_1_1container__comparator}{traccc\+::container\+\_\+comparator}}$<$ H\+E\+A\+D\+E\+R\+\_\+\+T\+Y\+PE, I\+T\+E\+M\+\_\+\+T\+Y\+PE $>$\+::m\+\_\+uncertainties\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Uncertainties to evaluate the comparison for. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/performance/\mbox{\hyperlink{container__comparator_8hpp}{container\+\_\+comparator.\+hpp}}\item 
+performance/include/traccc/performance/impl/\mbox{\hyperlink{container__comparator_8ipp}{container\+\_\+comparator.\+ipp}}\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{structtraccc_1_1aos_1_1owner}{}\doxysection{traccc\+::aos$<$ Ts $>$\+::owner Struct Reference}
+\label{structtraccc_1_1aos_1_1owner}\index{traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}}
+
+
+{\ttfamily \#include $<$array\+\_\+wrapper.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::aos$<$ Ts $>$\+::owner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d4/dcb/structtraccc_1_1aos_1_1owner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_a6f46e56e7befa1ad3a96d32c9857ded6}{owner}} (vecmem\+::memory\+\_\+resource \&mr, std\+::size\+\_\+t n)
+\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_aaacc3ca88ccb5bada1a83cdcb94ec902}{size}} () const
+\item 
+constexpr const vecmem\+::unique\+\_\+alloc\+\_\+ptr$<$ \mbox{\hyperlink{structtraccc_1_1pod}{pod}}$<$ Ts... $>$\mbox{[}$\,$\mbox{]}$>$ \& \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_a493304a6f0f9a1fc0902890b4d6db4c4}{pointer}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_a1f7f0581222450172bf62c1f2e0bbd62}{\+\_\+size}}
+\item 
+vecmem\+::unique\+\_\+alloc\+\_\+ptr$<$ \mbox{\hyperlink{structtraccc_1_1pod}{pod}}$<$ Ts... $>$\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_afa324fce855c5b29966a499220bcb899}{\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1aos_1_1owner_a6f46e56e7befa1ad3a96d32c9857ded6}\label{structtraccc_1_1aos_1_1owner_a6f46e56e7befa1ad3a96d32c9857ded6}} 
+\index{traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}!owner@{owner}}
+\index{owner@{owner}!traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}}
+\doxysubsubsection{\texorpdfstring{owner()}{owner()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+constexpr \mbox{\hyperlink{structtraccc_1_1aos}{traccc\+::aos}}$<$ Ts $>$\+::owner\+::owner (\begin{DoxyParamCaption}\item[{vecmem\+::memory\+\_\+resource \&}]{mr,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{202             : \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_a1f7f0581222450172bf62c1f2e0bbd62}{\_size}}(n), \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_afa324fce855c5b29966a499220bcb899}{\_ptr}}\{vecmem::make\_unique\_alloc<pod<Ts...>[]>(mr, n)\} \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1aos_1_1owner_a493304a6f0f9a1fc0902890b4d6db4c4}\label{structtraccc_1_1aos_1_1owner_a493304a6f0f9a1fc0902890b4d6db4c4}} 
+\index{traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}!pointer@{pointer}}
+\index{pointer@{pointer}!traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}}
+\doxysubsubsection{\texorpdfstring{pointer()}{pointer()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+constexpr const vecmem\+::unique\+\_\+alloc\+\_\+ptr$<$\mbox{\hyperlink{structtraccc_1_1pod}{pod}}$<$Ts...$>$\mbox{[}$\,$\mbox{]}$>$\& \mbox{\hyperlink{structtraccc_1_1aos}{traccc\+::aos}}$<$ Ts $>$\+::owner\+::pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207                   \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_afa324fce855c5b29966a499220bcb899}{\_ptr}}; \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::aos$<$ Ts $>$\+::owner\+::\+\_\+ptr.
+
+\mbox{\Hypertarget{structtraccc_1_1aos_1_1owner_aaacc3ca88ccb5bada1a83cdcb94ec902}\label{structtraccc_1_1aos_1_1owner_aaacc3ca88ccb5bada1a83cdcb94ec902}} 
+\index{traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}!size@{size}}
+\index{size@{size}!traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1aos}{traccc\+::aos}}$<$ Ts $>$\+::owner\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{204 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1aos_1_1owner_a1f7f0581222450172bf62c1f2e0bbd62}{\_size}}; \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::aos$<$ Ts $>$\+::owner\+::\+\_\+size.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1aos_1_1owner_afa324fce855c5b29966a499220bcb899}\label{structtraccc_1_1aos_1_1owner_afa324fce855c5b29966a499220bcb899}} 
+\index{traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}!\_ptr@{\_ptr}}
+\index{\_ptr@{\_ptr}!traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}}
+\doxysubsubsection{\texorpdfstring{\_ptr}{\_ptr}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+vecmem\+::unique\+\_\+alloc\+\_\+ptr$<$\mbox{\hyperlink{structtraccc_1_1pod}{pod}}$<$Ts...$>$\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{structtraccc_1_1aos}{traccc\+::aos}}$<$ Ts $>$\+::owner\+::\+\_\+ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by traccc\+::aos$<$ Ts $>$\+::owner\+::pointer().
+
+\mbox{\Hypertarget{structtraccc_1_1aos_1_1owner_a1f7f0581222450172bf62c1f2e0bbd62}\label{structtraccc_1_1aos_1_1owner_a1f7f0581222450172bf62c1f2e0bbd62}} 
+\index{traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}!\_size@{\_size}}
+\index{\_size@{\_size}!traccc::aos$<$ Ts $>$::owner@{traccc::aos$<$ Ts $>$::owner}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1aos}{traccc\+::aos}}$<$ Ts $>$\+::owner\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by traccc\+::aos$<$ Ts $>$\+::owner\+::size().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/utils/\mbox{\hyperlink{array__wrapper_8hpp}{array\+\_\+wrapper.\+hpp}}\end{DoxyCompactItemize}

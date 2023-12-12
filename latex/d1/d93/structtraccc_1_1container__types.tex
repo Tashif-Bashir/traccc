@@ -1,0 +1,142 @@
+\hypertarget{structtraccc_1_1container__types}{}\doxysection{traccc\+::container\+\_\+types$<$ header\+\_\+t, item\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1container__types}\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+
+
+Type trait defining all \char`\"{}container types\char`\"{} for an E\+DM class pair.  
+
+
+
+
+{\ttfamily \#include $<$container.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::container\+\_\+types$<$ header\+\_\+t, item\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{d5/d75/structtraccc_1_1container__types__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{host}} = \mbox{\hyperlink{classtraccc_1_1host__container}{host\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em {\ttfamily header\+\_\+t} must not be a constant type \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_a886daea266d3117e143329b4b9e9a78a}{device}} = \mbox{\hyperlink{classtraccc_1_1device__container}{device\+\_\+container}}$<$ header\+\_\+t, item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Non-\/const device container for {\ttfamily header\+\_\+t} and {\ttfamily item\+\_\+t}. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_a7fc26a3b614a9bfd960edc39c3d65017}{const\+\_\+device}} = \mbox{\hyperlink{classtraccc_1_1device__container}{device\+\_\+container}}$<$ const header\+\_\+t, const item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Constant device container for {\ttfamily header\+\_\+t} and {\ttfamily item\+\_\+t}. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_a3344afd1f08f09bcec6d7206d380b26c}{view}} = \mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Non-\/constant view of an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_aa6a3c3afb08abf3aad41b6002ef8b48f}{const\+\_\+view}} = \mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}}$<$ const header\+\_\+t, const item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Constant view of an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_a6f4fd57b50d79f2233dbd95ec2990bf6}{data}} = \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}$<$ header\+\_\+t, item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Non-\/constant data for an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_ab3be4cbcffd6d7add5edfc48f46133f8}{const\+\_\+data}} = \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}$<$ const header\+\_\+t, const item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Constant data for an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__types_af4001ea1a859d8f3df8cc138f3bf9d5c}{buffer}} = \mbox{\hyperlink{structtraccc_1_1container__buffer}{container\+\_\+buffer}}$<$ header\+\_\+t, item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Buffer for an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename header\+\_\+t, typename item\+\_\+t$>$\newline
+struct traccc\+::container\+\_\+types$<$ header\+\_\+t, item\+\_\+t $>$}
+
+Type trait defining all \char`\"{}container types\char`\"{} for an E\+DM class pair. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1container__types_af4001ea1a859d8f3df8cc138f3bf9d5c}\label{structtraccc_1_1container__types_af4001ea1a859d8f3df8cc138f3bf9d5c}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!buffer@{buffer}}
+\index{buffer@{buffer}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_af4001ea1a859d8f3df8cc138f3bf9d5c}{buffer}} =  \mbox{\hyperlink{structtraccc_1_1container__buffer}{container\+\_\+buffer}}$<$header\+\_\+t, item\+\_\+t$>$}
+
+
+
+Buffer for an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__types_ab3be4cbcffd6d7add5edfc48f46133f8}\label{structtraccc_1_1container__types_ab3be4cbcffd6d7add5edfc48f46133f8}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!const\_data@{const\_data}}
+\index{const\_data@{const\_data}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{const\_data}{const\_data}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_ab3be4cbcffd6d7add5edfc48f46133f8}{const\+\_\+data}} =  \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}$<$const header\+\_\+t, const item\+\_\+t$>$}
+
+
+
+Constant data for an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__types_a7fc26a3b614a9bfd960edc39c3d65017}\label{structtraccc_1_1container__types_a7fc26a3b614a9bfd960edc39c3d65017}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!const\_device@{const\_device}}
+\index{const\_device@{const\_device}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{const\_device}{const\_device}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_a7fc26a3b614a9bfd960edc39c3d65017}{const\+\_\+device}} =  \mbox{\hyperlink{classtraccc_1_1device__container}{device\+\_\+container}}$<$const header\+\_\+t, const item\+\_\+t$>$}
+
+
+
+Constant device container for {\ttfamily header\+\_\+t} and {\ttfamily item\+\_\+t}. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__types_aa6a3c3afb08abf3aad41b6002ef8b48f}\label{structtraccc_1_1container__types_aa6a3c3afb08abf3aad41b6002ef8b48f}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!const\_view@{const\_view}}
+\index{const\_view@{const\_view}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{const\_view}{const\_view}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_aa6a3c3afb08abf3aad41b6002ef8b48f}{const\+\_\+view}} =  \mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}}$<$const header\+\_\+t, const item\+\_\+t$>$}
+
+
+
+Constant view of an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__types_a6f4fd57b50d79f2233dbd95ec2990bf6}\label{structtraccc_1_1container__types_a6f4fd57b50d79f2233dbd95ec2990bf6}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!data@{data}}
+\index{data@{data}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_a6f4fd57b50d79f2233dbd95ec2990bf6}{data}} =  \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}$<$header\+\_\+t, item\+\_\+t$>$}
+
+
+
+Non-\/constant data for an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__types_a886daea266d3117e143329b4b9e9a78a}\label{structtraccc_1_1container__types_a886daea266d3117e143329b4b9e9a78a}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!device@{device}}
+\index{device@{device}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_a886daea266d3117e143329b4b9e9a78a}{device}} =  \mbox{\hyperlink{classtraccc_1_1device__container}{device\+\_\+container}}$<$header\+\_\+t, item\+\_\+t$>$}
+
+
+
+Non-\/const device container for {\ttfamily header\+\_\+t} and {\ttfamily item\+\_\+t}. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}\label{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!host@{host}}
+\index{host@{host}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{host}} =  \mbox{\hyperlink{classtraccc_1_1host__container}{host\+\_\+container}}$<$header\+\_\+t, item\+\_\+t$>$}
+
+
+
+{\ttfamily header\+\_\+t} must not be a constant type 
+
+{\ttfamily item\+\_\+t} must not be a constant type Host container for {\ttfamily header\+\_\+t} and {\ttfamily item\+\_\+t} \mbox{\Hypertarget{structtraccc_1_1container__types_a3344afd1f08f09bcec6d7206d380b26c}\label{structtraccc_1_1container__types_a3344afd1f08f09bcec6d7206d380b26c}} 
+\index{traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}!view@{view}}
+\index{view@{view}!traccc::container\_types$<$ header\_t, item\_t $>$@{traccc::container\_types$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__types}{traccc\+::container\+\_\+types}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__types_a3344afd1f08f09bcec6d7206d380b26c}{view}} =  \mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}}$<$header\+\_\+t, item\+\_\+t$>$}
+
+
+
+Non-\/constant view of an {\ttfamily header\+\_\+t} / {\ttfamily item\+\_\+t} container. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/edm/\mbox{\hyperlink{container_8hpp}{container.\+hpp}}\end{DoxyCompactItemize}

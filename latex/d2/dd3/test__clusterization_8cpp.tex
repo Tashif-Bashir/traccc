@@ -1,0 +1,87 @@
+\hypertarget{test__clusterization_8cpp}{}\doxysection{tests/cuda/test\+\_\+clusterization.cpp File Reference}
+\label{test__clusterization_8cpp}\index{tests/cuda/test\_clusterization.cpp@{tests/cuda/test\_clusterization.cpp}}
+{\ttfamily \#include \char`\"{}traccc/cuda/clusterization/experimental/clusterization\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/definitions/common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/cuda/managed\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/utils/cuda/async\+\_\+copy.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for test\+\_\+clusterization.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d79/test__clusterization_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__clusterization_8cpp_a74461aa50affa810fee42adf7c09d38d}{T\+E\+ST}} (clusterization, cuda)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__clusterization_8cpp_a74461aa50affa810fee42adf7c09d38d}\label{test__clusterization_8cpp_a74461aa50affa810fee42adf7c09d38d}} 
+\index{test\_clusterization.cpp@{test\_clusterization.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_clusterization.cpp@{test\_clusterization.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{clusterization}]{,  }\item[{cuda}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                            \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Memory resource used by the EDM.}}
+\DoxyCodeLine{24     vecmem::cuda::managed\_memory\_resource mng\_mr;}
+\DoxyCodeLine{25     \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc::memory\_resource}} mr\{mng\_mr\};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Cuda stream}}
+\DoxyCodeLine{28     \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{traccc::cuda::stream}} stream;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// Cuda copy objects}}
+\DoxyCodeLine{31     vecmem::cuda::async\_copy copy\{stream.\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_ad8224b3cebfca8079e035a10a9b1e20f}{cudaStream}}()\};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Create cell collection}}
+\DoxyCodeLine{34     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::cell\_collection\_types::host}} cells\{\&mng\_mr\};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     cells.push\_back(\{1u, 2u, 1.f, 0, 0\});}
+\DoxyCodeLine{37     cells.push\_back(\{2u, 2u, 1.f, 0, 0\});}
+\DoxyCodeLine{38     cells.push\_back(\{3u, 2u, 1.f, 0, 0\});}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     cells.push\_back(\{5u, 5u, 1.f, 0, 0\});}
+\DoxyCodeLine{41     cells.push\_back(\{6u, 4u, 1.f, 0, 0\});}
+\DoxyCodeLine{42     cells.push\_back(\{6u, 5u, 1.f, 0, 0\});}
+\DoxyCodeLine{43     cells.push\_back(\{6u, 6u, 1.f, 0, 0\});}
+\DoxyCodeLine{44     cells.push\_back(\{7u, 5u, 1.f, 0, 0\});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{// Create module collection}}
+\DoxyCodeLine{47     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::cell\_module\_collection\_types::host}} modules\{\&mng\_mr\};}
+\DoxyCodeLine{48     modules.push\_back(\{\});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Run Clusterization}}
+\DoxyCodeLine{51     \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm}{traccc::cuda::experimental::clusterization\_algorithm}} ca\_cuda(mr, copy,}
+\DoxyCodeLine{52                                                                  stream, 1024);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keyword}{auto} measurements\_buffer =}
+\DoxyCodeLine{55         ca\_cuda(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(cells), \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(modules));}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \mbox{\hyperlink{structtraccc_1_1collection__types_af0070c88384f71011d7c52f29d4c45af}{measurement\_collection\_types::device}} measurements(measurements\_buffer);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{// Check the results}}
+\DoxyCodeLine{60     EXPECT\_EQ(copy.get\_size(measurements\_buffer), 2u);}
+\DoxyCodeLine{61     std::set<measurement> test;}
+\DoxyCodeLine{62     test.insert(measurements[0]);}
+\DoxyCodeLine{63     test.insert(measurements[1]);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     std::set<measurement> ref;}
+\DoxyCodeLine{66     ref.insert(\{\{2.f, 2.f\}, \{0.75, 0.0833333\}, detray::geometry::barcode\{0u\}\});}
+\DoxyCodeLine{67     ref.insert(}
+\DoxyCodeLine{68         \{\{6.f, 5.f\}, \{0.483333, 0.483333\}, detray::geometry::barcode\{0u\}\});}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     EXPECT\_EQ(test, ref);}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::cuda\+::stream\+::cuda\+Stream(), and traccc\+::get\+\_\+data().
+

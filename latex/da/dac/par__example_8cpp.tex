@@ -1,0 +1,190 @@
+\hypertarget{par__example_8cpp}{}\doxysection{examples/run/openmp/par\+\_\+example.cpp File Reference}
+\label{par__example_8cpp}\index{examples/run/openmp/par\_example.cpp@{examples/run/openmp/par\_example.cpp}}
+{\ttfamily \#include \char`\"{}traccc/clusterization/clusterization\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/clusterization/spacepoint\+\_\+formation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/cell.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/cluster.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/measurement.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/spacepoint.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/geometry/pixel\+\_\+data.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+cells.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+digitization\+\_\+config.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+geometry.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for par\+\_\+example.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/daf/par__example_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{par__example_8cpp_a890d554e00e743d79f8119f6d316df28}{par\+\_\+run}} (const std\+::string \&\mbox{\hyperlink{test__mapper_8cpp_a902d72422a60bd9a079e899a54f552c1}{detector\+\_\+file}}, const std\+::string \&\mbox{\hyperlink{test__mapper_8cpp_a5a453e9bf94f17c28f4cd86724b542a3}{digi\+\_\+config\+\_\+file}}, const std\+::string \&\mbox{\hyperlink{test__mapper_8cpp_af681bec9ccf28cf4b8ab8d20a1c9f0a4}{cells\+\_\+dir}}, unsigned int events)
+\item 
+int \mbox{\hyperlink{par__example_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{par__example_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{par__example_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{par\_example.cpp@{par\_example.cpp}!main@{main}}
+\index{main@{main}!par\_example.cpp@{par\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                  \{}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{comment}{// Set up the program options.}}
+\DoxyCodeLine{114     po::options\_description desc(\textcolor{stringliteral}{"Allowed options"});}
+\DoxyCodeLine{115     desc.add\_options()(\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"Give some help with the program's options"});}
+\DoxyCodeLine{116     desc.add\_options()(\textcolor{stringliteral}{"detector\_file"}, po::value<std::string>()-\/>required(),}
+\DoxyCodeLine{117                        \textcolor{stringliteral}{"specify detector file"});}
+\DoxyCodeLine{118     desc.add\_options()(\textcolor{stringliteral}{"digitization\_config\_file"},}
+\DoxyCodeLine{119                        po::value<std::string>()-\/>required(),}
+\DoxyCodeLine{120                        \textcolor{stringliteral}{"specify digitization configuration file"});}
+\DoxyCodeLine{121     desc.add\_options()(\textcolor{stringliteral}{"cell\_directory"}, po::value<std::string>()-\/>required(),}
+\DoxyCodeLine{122                        \textcolor{stringliteral}{"specify the directory of cell files"});}
+\DoxyCodeLine{123     desc.add\_options()(\textcolor{stringliteral}{"events"}, po::value<int>()-\/>required(),}
+\DoxyCodeLine{124                        \textcolor{stringliteral}{"number of events"});}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     \textcolor{comment}{// Interpret the program options.}}
+\DoxyCodeLine{127     po::variables\_map vm;}
+\DoxyCodeLine{128     po::store(po::parse\_command\_line(argc, argv, desc), vm);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \textcolor{comment}{// Print a help message if the user asked for it.}}
+\DoxyCodeLine{131     \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"help"})) \{}
+\DoxyCodeLine{132         std::cout << desc << std::endl;}
+\DoxyCodeLine{133         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{134     \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \textcolor{comment}{// Handle any and all errors.}}
+\DoxyCodeLine{137     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{138         po::notify(vm);}
+\DoxyCodeLine{139     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception \&ex) \{}
+\DoxyCodeLine{140         std::cerr << \textcolor{stringliteral}{"Couldn't interpret command line options because of:\(\backslash\)n\(\backslash\)n"}}
+\DoxyCodeLine{141                   << ex.what() << \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"}}
+\DoxyCodeLine{142                   << desc << std::endl;}
+\DoxyCodeLine{143         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     \textcolor{keyword}{auto} \mbox{\hyperlink{test__mapper_8cpp_a902d72422a60bd9a079e899a54f552c1}{detector\_file}} = vm[\textcolor{stringliteral}{"detector\_file"}].as<std::string>();}
+\DoxyCodeLine{147     \textcolor{keyword}{auto} \mbox{\hyperlink{test__mapper_8cpp_a5a453e9bf94f17c28f4cd86724b542a3}{digi\_config\_file}} = vm[\textcolor{stringliteral}{"digitization\_config\_file"}].as<std::string>();}
+\DoxyCodeLine{148     \textcolor{keyword}{auto} cell\_directory = vm[\textcolor{stringliteral}{"cell\_directory"}].as<std::string>();}
+\DoxyCodeLine{149     \textcolor{keyword}{auto} events = vm[\textcolor{stringliteral}{"events"}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     std::cout << \textcolor{stringliteral}{"Running "} << argv[0] << \textcolor{stringliteral}{" "} << \mbox{\hyperlink{test__mapper_8cpp_a902d72422a60bd9a079e899a54f552c1}{detector\_file}} << \textcolor{stringliteral}{" "}}
+\DoxyCodeLine{152               << cell\_directory << \textcolor{stringliteral}{" "} << events << std::endl;}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154     \textcolor{keyword}{auto} start = std::chrono::system\_clock::now();}
+\DoxyCodeLine{155     \textcolor{keyword}{auto} result =}
+\DoxyCodeLine{156         \mbox{\hyperlink{par__example_8cpp_a890d554e00e743d79f8119f6d316df28}{par\_run}}(\mbox{\hyperlink{test__mapper_8cpp_a902d72422a60bd9a079e899a54f552c1}{detector\_file}}, \mbox{\hyperlink{test__mapper_8cpp_a5a453e9bf94f17c28f4cd86724b542a3}{digi\_config\_file}}, cell\_directory, events);}
+\DoxyCodeLine{157     \textcolor{keyword}{auto} end = std::chrono::system\_clock::now();}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     std::chrono::duration<double> diff = end -\/ start;}
+\DoxyCodeLine{160     std::cout << \textcolor{stringliteral}{"Execution time: "} << diff.count() << \textcolor{stringliteral}{" sec."} << std::endl;}
+\DoxyCodeLine{161     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{162 \}}
+
+\end{DoxyCode}
+
+
+References detector\+\_\+file, digi\+\_\+config\+\_\+file, and par\+\_\+run().
+
+\mbox{\Hypertarget{par__example_8cpp_a890d554e00e743d79f8119f6d316df28}\label{par__example_8cpp_a890d554e00e743d79f8119f6d316df28}} 
+\index{par\_example.cpp@{par\_example.cpp}!par\_run@{par\_run}}
+\index{par\_run@{par\_run}!par\_example.cpp@{par\_example.cpp}}
+\doxysubsubsection{\texorpdfstring{par\_run()}{par\_run()}}
+{\footnotesize\ttfamily int par\+\_\+run (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{detector\+\_\+file,  }\item[{const std\+::string \&}]{digi\+\_\+config\+\_\+file,  }\item[{const std\+::string \&}]{cells\+\_\+dir,  }\item[{unsigned int}]{events }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2021-\/2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                  \{}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{comment}{// Read the surface transforms}}
+\DoxyCodeLine{43     \textcolor{keyword}{auto} surface\_transforms = \mbox{\hyperlink{namespacetraccc_1_1io_a5a6c904c086473a05b85a0bf060bfa8d}{traccc::io::read\_geometry}}(\mbox{\hyperlink{test__mapper_8cpp_a902d72422a60bd9a079e899a54f552c1}{detector\_file}});}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// Read the digitization configuration file}}
+\DoxyCodeLine{46     \textcolor{keyword}{auto} digi\_cfg = \mbox{\hyperlink{namespacetraccc_1_1io_aa6519a2968b73b699f1aee456d80c190}{traccc::io::read\_digitization\_config}}(\mbox{\hyperlink{test__mapper_8cpp_a5a453e9bf94f17c28f4cd86724b542a3}{digi\_config\_file}});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// Memory resource used by the EDM.}}
+\DoxyCodeLine{49     vecmem::host\_memory\_resource resource;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// Algorithms}}
+\DoxyCodeLine{52     \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm}{traccc::clusterization\_algorithm}} ca(resource);}
+\DoxyCodeLine{53     \mbox{\hyperlink{classtraccc_1_1spacepoint__formation}{traccc::spacepoint\_formation}} sf(resource);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// Output stats}}
+\DoxyCodeLine{56     uint64\_t n\_modules = 0;}
+\DoxyCodeLine{57     uint64\_t n\_cells = 0;}
+\DoxyCodeLine{58     uint64\_t n\_measurements = 0;}
+\DoxyCodeLine{59     uint64\_t n\_spacepoints = 0;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#pragma omp parallel for reduction (+:n\_modules, n\_cells, n\_measurements, n\_spacepoints)}}
+\DoxyCodeLine{62     \textcolor{comment}{// Loop over events}}
+\DoxyCodeLine{63     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}} = 0; \textcolor{keyword}{event} < events; ++\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}) \{}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{comment}{// Read the cells from the relevant event file}}
+\DoxyCodeLine{66         \mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{traccc::io::cell\_reader\_output}} readOut(\&resource);}
+\DoxyCodeLine{67         \mbox{\hyperlink{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}{traccc::io::read\_cells}}(readOut, \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \mbox{\hyperlink{test__mapper_8cpp_af681bec9ccf28cf4b8ab8d20a1c9f0a4}{cells\_dir}},}
+\DoxyCodeLine{68                                \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}}, \&surface\_transforms,}
+\DoxyCodeLine{69                                \&digi\_cfg);}
+\DoxyCodeLine{70         \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::cell\_collection\_types::host}} \&cells\_per\_event = readOut.cells;}
+\DoxyCodeLine{71         \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::cell\_module\_collection\_types::host}} \&modules\_per\_event =}
+\DoxyCodeLine{72             readOut.modules;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{75 \textcolor{comment}{            Clusterization}}
+\DoxyCodeLine{76 \textcolor{comment}{          -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{keyword}{auto} measurements\_per\_event = ca(cells\_per\_event, modules\_per\_event);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{81 \textcolor{comment}{            Spacepoint formation}}
+\DoxyCodeLine{82 \textcolor{comment}{          -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         \textcolor{keyword}{auto} spacepoints\_per\_event =}
+\DoxyCodeLine{85             sf(measurements\_per\_event, modules\_per\_event);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87         \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{88 \textcolor{comment}{          Statistics}}
+\DoxyCodeLine{89 \textcolor{comment}{          -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91         n\_modules += modules\_per\_event.size();}
+\DoxyCodeLine{92         n\_cells += cells\_per\_event.size();}
+\DoxyCodeLine{93         n\_measurements += measurements\_per\_event.size();}
+\DoxyCodeLine{94         n\_spacepoints += spacepoints\_per\_event.size();}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#pragma omp critical}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     std::cout << \textcolor{stringliteral}{"==> Statistics ... "} << std::endl;}
+\DoxyCodeLine{100     std::cout << \textcolor{stringliteral}{"-\/ read    "} << n\_cells << \textcolor{stringliteral}{" cells from "} << n\_modules}
+\DoxyCodeLine{101               << \textcolor{stringliteral}{" modules"} << std::endl;}
+\DoxyCodeLine{102     std::cout << \textcolor{stringliteral}{"-\/ created "} << n\_measurements << \textcolor{stringliteral}{" measurements. "}}
+\DoxyCodeLine{103               << std::endl;}
+\DoxyCodeLine{104     std::cout << \textcolor{stringliteral}{"-\/ created "} << n\_spacepoints << \textcolor{stringliteral}{" spacepoints. "} << std::endl;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{107 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::cells, cells\+\_\+dir, traccc\+::csv, detector\+\_\+file, digi\+\_\+config\+\_\+file, event, traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::modules, traccc\+::io\+::read\+\_\+cells(), traccc\+::io\+::read\+\_\+digitization\+\_\+config(), and traccc\+::io\+::read\+\_\+geometry().
+
+
+
+Referenced by main().
+

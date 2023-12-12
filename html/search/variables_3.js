@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['cell_5fdist_2411',['cell_dist',['../de/dd4/namespaceccl__generator.html#adf372ad6b035b7543edb58ee1131b9b2',1,'ccl_generator']]],
+  ['cells_2412',['cells',['../d6/d54/structtraccc_1_1io_1_1cell__reader__output.html#a5b89ef9bdcde8df9c69beed98969b87a',1,'traccc::io::cell_reader_output']]],
+  ['cells_5fdir_2413',['cells_dir',['../df/d35/test__mapper_8cpp.html#af681bec9ccf28cf4b8ab8d20a1c9f0a4',1,'test_mapper.cpp']]],
+  ['channel0_2414',['channel0',['../de/d75/structtraccc_1_1cell.html#a921955d3f678441f9aad6d55ebf0a706',1,'traccc::cell::channel0()'],['../d8/d86/structtraccc_1_1io_1_1csv_1_1cell.html#aff8577e5633cf6f507cc39a7215991d6',1,'traccc::io::csv::cell::channel0()'],['../db/dd1/structConnectedComponentAnalysisTests_1_1cca__truth__hit.html#a17adc0bc8cbe566cd67af643c810d6e4',1,'ConnectedComponentAnalysisTests::cca_truth_hit::channel0()']]],
+  ['channel1_2415',['channel1',['../de/d75/structtraccc_1_1cell.html#a59bd8e0f6c1562c21d74f7e12eae49e9',1,'traccc::cell::channel1()'],['../d8/d86/structtraccc_1_1io_1_1csv_1_1cell.html#ab69bf242cc0fdb261c0ed9a9afffecef',1,'traccc::io::csv::cell::channel1()'],['../db/dd1/structConnectedComponentAnalysisTests_1_1cca__truth__hit.html#a05399d15b60cb6b22d38275f7506bd11',1,'ConnectedComponentAnalysisTests::cca_truth_hit::channel1()']]],
+  ['charge_2416',['charge',['../d3/d04/structtraccc_1_1particle.html#ae6bb1e898fedd51f27a2ea8f1bb0625c',1,'traccc::particle::charge()'],['../d8/dfb/structtraccc_1_1particle__gen__options.html#abd499f0091c634a75a14500831b35382',1,'traccc::particle_gen_options::charge()']]],
+  ['check_5fperformance_2417',['check_performance',['../d4/dc5/structtraccc_1_1common__options.html#a06a875a852f866c6ad5abfaae82cb440',1,'traccc::common_options']]],
+  ['chi2_2418',['chi2',['../dd/da7/structtraccc_1_1fitter__info.html#a4dd34e71fcf66a786996dc59d902fded',1,'traccc::fitter_info']]],
+  ['chi2_5fmax_2419',['chi2_max',['../de/daf/structtraccc_1_1finding__config.html#abf6b835357a44c1d99ed7fd066e9c0cd',1,'traccc::finding_config']]],
+  ['cluster_5flink_2420',['cluster_link',['../d8/d8e/structtraccc_1_1measurement.html#a1068dc6afd003dc983d45ca39a1bea8a',1,'traccc::measurement']]],
+  ['cold_5frun_5fevents_2421',['cold_run_events',['../dc/def/structtraccc_1_1throughput__options.html#a16f01a8e12f94dccb8242fb13470c077',1,'traccc::throughput_options']]],
+  ['collisionregionmax_2422',['collisionRegionMax',['../d8/dda/structtraccc_1_1seedfinder__config.html#a1fe9c1f0e4b405a1c9acf54a9ee19f99',1,'traccc::seedfinder_config']]],
+  ['collisionregionmin_2423',['collisionRegionMin',['../d8/dda/structtraccc_1_1seedfinder__config.html#af3ea99cbcf46f390ff7d51cfdb88b7d8',1,'traccc::seedfinder_config']]],
+  ['compatseedlimit_2424',['compatSeedLimit',['../d5/d73/structtraccc_1_1seedfilter__config.html#af15c65b168c31d76d13692022014aa0a',1,'traccc::seedfilter_config']]],
+  ['compatseedweight_2425',['compatSeedWeight',['../d5/d73/structtraccc_1_1seedfilter__config.html#aea9a45d27a98cdc54281d9369351cbac',1,'traccc::seedfilter_config']]],
+  ['constrained_5fstep_5fsize_2426',['constrained_step_size',['../de/daf/structtraccc_1_1finding__config.html#ac996b1aeae89fd3dbe4cf30126bd5605',1,'traccc::finding_config']]],
+  ['cotthetamax_2427',['cotThetaMax',['../d8/dda/structtraccc_1_1seedfinder__config.html#a5233cec7d37198f52cce6a2bf39317c2',1,'traccc::seedfinder_config::cotThetaMax()'],['../d1/d67/structtraccc_1_1spacepoint__grid__config.html#aa21561e4f764ec7fe79c8c558daef758',1,'traccc::spacepoint_grid_config::cotThetaMax()']]],
+  ['counter_5flink_2428',['counter_link',['../d8/d32/structtraccc_1_1device_1_1device__doublet.html#ae40d195247b91593255114ac01e6a6af',1,'traccc::device::device_doublet::counter_link()'],['../d0/dd4/structtraccc_1_1device_1_1device__triplet.html#a9009ebd7e3342f34eb55eeaa25fdac3e',1,'traccc::device::device_triplet::counter_link()']]],
+  ['curvature_2429',['curvature',['../db/d24/structtraccc_1_1triplet.html#a2b900e993b580119e721d9fa36490ef3',1,'traccc::triplet::curvature()'],['../d0/dd4/structtraccc_1_1device_1_1device__triplet.html#adbdfe680b24f38562f16c9e8a60510c4',1,'traccc::device::device_triplet::curvature()']]],
+  ['cx_2430',['cx',['../dd/d2f/structtraccc_1_1io_1_1csv_1_1surface.html#a926e459262c94cdf8d5af5341de4039c',1,'traccc::io::csv::surface']]],
+  ['cy_2431',['cy',['../dd/d2f/structtraccc_1_1io_1_1csv_1_1surface.html#ae59457e43170d8a471cd148a28cb51c5',1,'traccc::io::csv::surface']]],
+  ['cz_2432',['cz',['../dd/d2f/structtraccc_1_1io_1_1csv_1_1surface.html#accb23d9c774177bff4e988848d78eb46',1,'traccc::io::csv::surface']]]
+];

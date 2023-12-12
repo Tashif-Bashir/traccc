@@ -1,0 +1,175 @@
+\hypertarget{simulate__toy__detector_8cpp}{}\doxysection{examples/simulation/simulate\+\_\+toy\+\_\+detector.cpp File Reference}
+\label{simulate__toy__detector_8cpp}\index{examples/simulation/simulate\_toy\_detector.cpp@{examples/simulation/simulate\_toy\_detector.cpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/primitives.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/track\+\_\+parameters.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/common\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/handle\+\_\+argument\+\_\+errors.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/particle\+\_\+gen\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/propagation\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/measurement\+\_\+smearer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/simulator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/smearing\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/bfield.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/create\+\_\+toy\+\_\+geometry.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/io/common/detector\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/simulation/event\+\_\+generator/track\+\_\+generators.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
+Include dependency graph for simulate\+\_\+toy\+\_\+detector.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d82/simulate__toy__detector_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{simulate__toy__detector_8cpp_a4ccd26e9a52977a95a905d613d5c7195}{simulate}} (std\+::string output\+\_\+directory, unsigned int events, const \mbox{\hyperlink{structtraccc_1_1particle__gen__options}{traccc\+::particle\+\_\+gen\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&pg\+\_\+opts, const \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&propagation\+\_\+opts)
+\item 
+int \mbox{\hyperlink{simulate__toy__detector_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{simulate__toy__detector_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{simulate__toy__detector_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{simulate\_toy\_detector.cpp@{simulate\_toy\_detector.cpp}!main@{main}}
+\index{main@{main}!simulate\_toy\_detector.cpp@{simulate\_toy\_detector.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118                                  \{}
+\DoxyCodeLine{119     \textcolor{comment}{// Set up the program options}}
+\DoxyCodeLine{120     po::options\_description desc(\textcolor{stringliteral}{"Allowed options"});}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{comment}{// Add options}}
+\DoxyCodeLine{123     desc.add\_options()(\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"Give some help with the program's options"});}
+\DoxyCodeLine{124     desc.add\_options()(\textcolor{stringliteral}{"output\_directory"}, po::value<std::string>()-\/>required(),}
+\DoxyCodeLine{125                        \textcolor{stringliteral}{"specify the directory of output data"});}
+\DoxyCodeLine{126     desc.add\_options()(\textcolor{stringliteral}{"events"}, po::value<unsigned int>()-\/>required(),}
+\DoxyCodeLine{127                        \textcolor{stringliteral}{"number of events"});}
+\DoxyCodeLine{128     \mbox{\hyperlink{structtraccc_1_1particle__gen__options}{traccc::particle\_gen\_options<scalar>}} pg\_opts(desc);}
+\DoxyCodeLine{129     \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc::propagation\_options<scalar>}} propagation\_opts(desc);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     po::variables\_map vm;}
+\DoxyCodeLine{132     po::store(po::parse\_command\_line(argc, argv, desc), vm);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \textcolor{comment}{// Check errors}}
+\DoxyCodeLine{135     \mbox{\hyperlink{namespacetraccc_a018e1f5ae8dbab3e118c08cfb905be01}{traccc::handle\_argument\_errors}}(vm, desc);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137     \textcolor{comment}{// Read options}}
+\DoxyCodeLine{138     \textcolor{keyword}{auto} output\_directory = vm[\textcolor{stringliteral}{"output\_directory"}].as<std::string>();}
+\DoxyCodeLine{139     \textcolor{keyword}{auto} events = vm[\textcolor{stringliteral}{"events"}].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{140     pg\_opts.read(vm);}
+\DoxyCodeLine{141     propagation\_opts.read(vm);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     std::cout << \textcolor{stringliteral}{"Running "} << argv[0] << \textcolor{stringliteral}{" "} << output\_directory << \textcolor{stringliteral}{" "}}
+\DoxyCodeLine{144               << events << std::endl;}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     \textcolor{keywordflow}{return} \mbox{\hyperlink{simulate__toy__detector_8cpp_a4ccd26e9a52977a95a905d613d5c7195}{simulate}}(output\_directory, events, pg\_opts, propagation\_opts);}
+\DoxyCodeLine{147 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::handle\+\_\+argument\+\_\+errors(), traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{simulate__toy__detector_8cpp_a4ccd26e9a52977a95a905d613d5c7195}\label{simulate__toy__detector_8cpp_a4ccd26e9a52977a95a905d613d5c7195}} 
+\index{simulate\_toy\_detector.cpp@{simulate\_toy\_detector.cpp}!simulate@{simulate}}
+\index{simulate@{simulate}!simulate\_toy\_detector.cpp@{simulate\_toy\_detector.cpp}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily int simulate (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+directory,  }\item[{unsigned int}]{events,  }\item[{const \mbox{\hyperlink{structtraccc_1_1particle__gen__options}{traccc\+::particle\+\_\+gen\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&}]{pg\+\_\+opts,  }\item[{const \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&}]{propagation\+\_\+opts }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                                                         \{}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{// Use deterministic random number generator for testing}}
+\DoxyCodeLine{41     \textcolor{keyword}{using} uniform\_gen\_t =}
+\DoxyCodeLine{42         detray::random\_numbers<scalar, std::uniform\_real\_distribution<scalar>,}
+\DoxyCodeLine{43                                std::seed\_seq>;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// Memory resource}}
+\DoxyCodeLine{46     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{    /*****************************}}
+\DoxyCodeLine{49 \textcolor{comment}{     * Build a toy geometry}}
+\DoxyCodeLine{50 \textcolor{comment}{     *****************************/}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{comment}{// Detector type}}
+\DoxyCodeLine{53     \textcolor{keyword}{using} detector\_type = detray::detector<detray::toy\_metadata>;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// B field value and its type}}
+\DoxyCodeLine{56     \textcolor{comment}{// @TODO: Set B field as argument}}
+\DoxyCodeLine{57     \textcolor{keyword}{using} b\_field\_t = covfie::field<detray::bfield::const\_bknd\_t>;}
+\DoxyCodeLine{58     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} B\{0, 0, 2 * detray::unit<scalar>::T\};}
+\DoxyCodeLine{59     \textcolor{keyword}{auto} field = detray::bfield::create\_const\_field(B);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{comment}{// Create the toy geometry}}
+\DoxyCodeLine{62     \textcolor{keyword}{const} \textcolor{keyword}{auto} [det, name\_map] = detray::create\_toy\_geometry(host\_mr, \{4u, 7u\});}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{    /***************************}}
+\DoxyCodeLine{65 \textcolor{comment}{     * Generate simulation data}}
+\DoxyCodeLine{66 \textcolor{comment}{     ***************************/}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{comment}{// Origin of particles}}
+\DoxyCodeLine{69     \textcolor{keyword}{using} generator\_type =}
+\DoxyCodeLine{70         detray::random\_track\_generator<\mbox{\hyperlink{namespacetraccc_a50d288f62d4a051cca68e9071c6318e8}{traccc::free\_track\_parameters}},}
+\DoxyCodeLine{71                                        uniform\_gen\_t>;}
+\DoxyCodeLine{72     generator\_type::configuration gen\_cfg\{\};}
+\DoxyCodeLine{73     gen\_cfg.n\_tracks(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a64c75be067ccd8dc80b0fc27aeb9d393}{gen\_nparticles}});}
+\DoxyCodeLine{74     gen\_cfg.origin(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_ac38a5b741ebfbc54202462636ce9b1e5}{vertex}});}
+\DoxyCodeLine{75     gen\_cfg.origin\_stddev(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_afcd35dc9f84ab7b8828aa4aa1a751cef}{vertex\_stddev}});}
+\DoxyCodeLine{76     gen\_cfg.phi\_range(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a9d237379538712ce502b2e834a1bb7e0}{phi\_range}}[0], pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a9d237379538712ce502b2e834a1bb7e0}{phi\_range}}[1]);}
+\DoxyCodeLine{77     gen\_cfg.theta\_range(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a2863ed45c256807e1793c58dba6efbd4}{theta\_range}}[0], pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a2863ed45c256807e1793c58dba6efbd4}{theta\_range}}[1]);}
+\DoxyCodeLine{78     gen\_cfg.mom\_range(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_ab35fe8fdc227ce81bad09745df5fea8f}{mom\_range}}[0], pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_ab35fe8fdc227ce81bad09745df5fea8f}{mom\_range}}[1]);}
+\DoxyCodeLine{79     gen\_cfg.charge(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_abd499f0091c634a75a14500831b35382}{charge}});}
+\DoxyCodeLine{80     generator\_type generator(gen\_cfg);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{comment}{// Smearing value for measurements}}
+\DoxyCodeLine{83     \mbox{\hyperlink{structtraccc_1_1measurement__smearer}{traccc::measurement\_smearer<transform3>}} meas\_smearer(}
+\DoxyCodeLine{84         50 * detray::unit<scalar>::um, 50 * detray::unit<scalar>::um);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{comment}{// Type declarations}}
+\DoxyCodeLine{87     \textcolor{keyword}{using} writer\_type =}
+\DoxyCodeLine{88         \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc::smearing\_writer<traccc::measurement\_smearer<transform3>}}>;}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     \textcolor{comment}{// Writer config}}
+\DoxyCodeLine{91     \textcolor{keyword}{typename} writer\_type::config smearer\_writer\_cfg\{meas\_smearer\};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \textcolor{comment}{// Run simulator}}
+\DoxyCodeLine{94     \textcolor{keyword}{const} std::string full\_path = \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}{io::data\_directory}}() + output\_directory;}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     boost::filesystem::create\_directories(full\_path);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     \textcolor{keyword}{auto} sim = \mbox{\hyperlink{structtraccc_1_1simulator}{traccc::simulator}}<detector\_type, b\_field\_t, generator\_type,}
+\DoxyCodeLine{99                                  writer\_type>(}
+\DoxyCodeLine{100         events, det, field, std::move(generator), std::move(smearer\_writer\_cfg),}
+\DoxyCodeLine{101         full\_path);}
+\DoxyCodeLine{102     sim.\mbox{\hyperlink{structtraccc_1_1simulator_a7692d409a08f9d6bcad077939784c27c}{get\_config}}().\mbox{\hyperlink{structtraccc_1_1simulator_1_1config_aab33c45d2c2bd351ecab0ce3ab489f9f}{step\_constraint}} = propagation\_opts.\mbox{\hyperlink{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}{step\_constraint}};}
+\DoxyCodeLine{103     sim.get\_config().overstep\_tolerance = propagation\_opts.\mbox{\hyperlink{structtraccc_1_1propagation__options_acba9ecace5891ed986671a4235d80e56}{overstep\_tolerance}};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     sim.run();}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107     \textcolor{comment}{// Create detector file}}
+\DoxyCodeLine{108     \textcolor{keyword}{auto} writer\_cfg = detray::io::detector\_writer\_config\{\}}
+\DoxyCodeLine{109                           .format(\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daade8883fdae97f32ca2381bf112bccc14}{detray::io::format::json}})}
+\DoxyCodeLine{110                           .replace\_files(\textcolor{keyword}{true});}
+\DoxyCodeLine{111     detray::io::write\_detector(det, name\_map, writer\_cfg);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{114 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::charge, traccc\+::tests\+::data\+\_\+test\+::data\+\_\+directory, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::gen\+\_\+nparticles, traccc\+::simulator$<$ detector\+\_\+t, bfield\+\_\+t, track\+\_\+generator\+\_\+t, writer\+\_\+t $>$\+::get\+\_\+config(), traccc\+::json, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::mom\+\_\+range, traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::overstep\+\_\+tolerance, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::phi\+\_\+range, traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::step\+\_\+constraint, traccc\+::simulator$<$ detector\+\_\+t, bfield\+\_\+t, track\+\_\+generator\+\_\+t, writer\+\_\+t $>$\+::config\+::step\+\_\+constraint, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::theta\+\_\+range, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::vertex, and traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::vertex\+\_\+stddev.
+
+
+
+Referenced by main().
+

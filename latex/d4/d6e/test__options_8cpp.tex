@@ -1,0 +1,45 @@
+\hypertarget{test__options_8cpp}{}\doxysection{tests/examples/test\+\_\+options.cpp File Reference}
+\label{test__options_8cpp}\index{tests/examples/test\_options.cpp@{tests/examples/test\_options.cpp}}
+{\ttfamily \#include \char`\"{}traccc/options/options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Include dependency graph for test\+\_\+options.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d21/test__options_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__options_8cpp_ac9970264ed368cb6671ef2aa06413edd}{T\+E\+ST}} (options, parsing)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__options_8cpp_ac9970264ed368cb6671ef2aa06413edd}\label{test__options_8cpp_ac9970264ed368cb6671ef2aa06413edd}} 
+\index{test\_options.cpp@{test\_options.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_options.cpp@{test\_options.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{options}]{,  }\item[{parsing}]{ }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2023 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                        \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \mbox{\hyperlink{classtraccc_1_1Reals}{traccc::Reals<int, 3>}} parsed\_vars;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     std::istringstream I(\textcolor{stringliteral}{"100:200:300"});}
+\DoxyCodeLine{23     I >> parsed\_vars;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     ASSERT\_EQ(parsed\_vars[0], 100);}
+\DoxyCodeLine{26     ASSERT\_EQ(parsed\_vars[1], 200);}
+\DoxyCodeLine{27     ASSERT\_EQ(parsed\_vars[2], 300);}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}

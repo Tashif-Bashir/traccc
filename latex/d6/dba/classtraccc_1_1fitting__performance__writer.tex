@@ -1,0 +1,300 @@
+\hypertarget{classtraccc_1_1fitting__performance__writer}{}\doxysection{traccc\+::fitting\+\_\+performance\+\_\+writer Class Reference}
+\label{classtraccc_1_1fitting__performance__writer}\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+
+
+{\ttfamily \#include $<$fitting\+\_\+performance\+\_\+writer.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::fitting\+\_\+performance\+\_\+writer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{de/d36/classtraccc_1_1fitting__performance__writer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_af9535b0a48e20b7e77c032661268ffd6}{fitting\+\_\+performance\+\_\+writer}} (const \mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{config}} \&cfg)
+\begin{DoxyCompactList}\small\item\em Constructor with writer config. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aad216ac1d859051f57464f1d2f22181b}{$\sim$fitting\+\_\+performance\+\_\+writer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that closes the file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename detector\+\_\+t $>$ }\\void \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a4a67753171cb336d87140de7acba60a2}{write}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&track\+\_\+states\+\_\+per\+\_\+track, const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&fit\+\_\+info, const detector\+\_\+t \&det, \mbox{\hyperlink{structtraccc_1_1event__map2}{event\+\_\+map2}} \&evt\+\_\+map)
+\item 
+void \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a1f258162551a364d501283cb70904f0d}{finalize}} ()
+\begin{DoxyCompactList}\small\item\em Writing caches into the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_ae1e75ae2fcfc94330fdab88a1839622c}{write\+\_\+res}} (const \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&truth\+\_\+param, const \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&fit\+\_\+param, const \mbox{\hyperlink{structtraccc_1_1particle}{particle}} \&ptc)
+\begin{DoxyCompactList}\small\item\em Non-\/templated part of the {\ttfamily write(...)} function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_ad6d9328f2ec2f4201ad188ea427398cd}{write\+\_\+stat}} (const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&fit\+\_\+info, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&track\+\_\+states)
+\begin{DoxyCompactList}\small\item\em Non-\/templated part of the {\ttfamily write(...)} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{config}} \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}{m\+\_\+cfg}}
+\begin{DoxyCompactList}\small\item\em Configuration for the tool. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structtraccc_1_1details_1_1fitting__performance__writer__data}{details\+::fitting\+\_\+performance\+\_\+writer\+\_\+data}} $>$ \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Opaque data members for the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_af9535b0a48e20b7e77c032661268ffd6}\label{classtraccc_1_1fitting__performance__writer_af9535b0a48e20b7e77c032661268ffd6}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!fitting\_performance\_writer@{fitting\_performance\_writer}}
+\index{fitting\_performance\_writer@{fitting\_performance\_writer}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{fitting\_performance\_writer()}{fitting\_performance\_writer()}}
+{\footnotesize\ttfamily traccc\+::fitting\+\_\+performance\+\_\+writer\+::fitting\+\_\+performance\+\_\+writer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{config}} \&}]{cfg }\end{DoxyParamCaption})}
+
+
+
+Constructor with writer config. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45     : \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}{m\_cfg}}(cfg),}
+\DoxyCodeLine{46       \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}(std::make\_unique<details::fitting\_performance\_writer\_data>(cfg)) \{}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_res\_plot\_tool.book(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_res\_plot\_cache);}
+\DoxyCodeLine{49     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_tool.book(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_cache);}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+data.
+
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_aad216ac1d859051f57464f1d2f22181b}\label{classtraccc_1_1fitting__performance__writer_aad216ac1d859051f57464f1d2f22181b}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!````~fitting\_performance\_writer@{$\sim$fitting\_performance\_writer}}
+\index{````~fitting\_performance\_writer@{$\sim$fitting\_performance\_writer}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{$\sim$fitting\_performance\_writer()}{~fitting\_performance\_writer()}}
+{\footnotesize\ttfamily traccc\+::fitting\+\_\+performance\+\_\+writer\+::$\sim$fitting\+\_\+performance\+\_\+writer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor that closes the file. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_a1f258162551a364d501283cb70904f0d}\label{classtraccc_1_1fitting__performance__writer_a1f258162551a364d501283cb70904f0d}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!finalize@{finalize}}
+\index{finalize@{finalize}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily void traccc\+::fitting\+\_\+performance\+\_\+writer\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Writing caches into the file. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                           \{}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#ifdef TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{57     \textcolor{comment}{// Open the output file.}}
+\DoxyCodeLine{58     std::unique\_ptr<TFile> ofile(}
+\DoxyCodeLine{59         TFile::Open(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_aa7ac2a11d51ba6bcd1a98dc769725a84}{file\_path}}.c\_str(), \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_ade61f55b578102c6cd211fd7e4409c21}{file\_mode}}.c\_str()));}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} ((!ofile) || ofile-\/>IsZombie()) \{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Could not open output file \(\backslash\)""} +}
+\DoxyCodeLine{62                                  \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_aa7ac2a11d51ba6bcd1a98dc769725a84}{file\_path}} + \textcolor{stringliteral}{"\(\backslash\)" in mode \(\backslash\)""} +}
+\DoxyCodeLine{63                                  \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_ade61f55b578102c6cd211fd7e4409c21}{file\_mode}} + \textcolor{stringliteral}{"\(\backslash\)""});}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65     ofile-\/>cd();}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{67     std::cout << \textcolor{stringliteral}{"ROOT file \(\backslash\)""} << \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_aa7ac2a11d51ba6bcd1a98dc769725a84}{file\_path}} << \textcolor{stringliteral}{"\(\backslash\)" is NOT created"}}
+\DoxyCodeLine{68               << std::endl;}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif  // TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_res\_plot\_tool.write(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_res\_plot\_cache);}
+\DoxyCodeLine{72     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_tool.write(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_cache);}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::fitting\+\_\+performance\+\_\+writer\+::config\+::file\+\_\+mode, traccc\+::fitting\+\_\+performance\+\_\+writer\+::config\+::file\+\_\+path, m\+\_\+cfg, and m\+\_\+data.
+
+
+
+Referenced by T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_a4a67753171cb336d87140de7acba60a2}\label{classtraccc_1_1fitting__performance__writer_a4a67753171cb336d87140de7acba60a2}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!write@{write}}
+\index{write@{write}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+void traccc\+::fitting\+\_\+performance\+\_\+writer\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&}]{track\+\_\+states\+\_\+per\+\_\+track,  }\item[{const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&}]{fit\+\_\+info,  }\item[{const detector\+\_\+t \&}]{det,  }\item[{\mbox{\hyperlink{structtraccc_1_1event__map2}{event\+\_\+map2}} \&}]{evt\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fill the tracking results into the histograms
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+\_\+states\+\_\+per\+\_\+track} & vector of track states of a track \\
+\hline
+{\em det} & detector object \\
+\hline
+{\em evt\+\_\+map} & event map to find the truth values \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                     \{}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{keyword}{auto}\& m\_p\_map = evt\_map.meas\_ptc\_map;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{comment}{// Get the track state at the first surface}}
+\DoxyCodeLine{65         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& trk\_state = track\_states\_per\_track[0];}
+\DoxyCodeLine{66         \textcolor{keyword}{const} measurement meas = trk\_state.get\_measurement();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{comment}{// Find the contributing particle}}
+\DoxyCodeLine{69         \textcolor{comment}{// @todo: Use identify\_contributing\_particles function}}
+\DoxyCodeLine{70         std::map<particle, uint64\_t> contributing\_particles = m\_p\_map[meas];}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72         \textcolor{keyword}{const} particle ptc = contributing\_particles.begin()-\/>first;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         \textcolor{comment}{// Find the truth global position and momentum}}
+\DoxyCodeLine{75         \textcolor{keyword}{const} \textcolor{keyword}{auto} global\_pos = evt\_map.meas\_xp\_map[meas].first;}
+\DoxyCodeLine{76         \textcolor{keyword}{const} \textcolor{keyword}{auto} global\_mom = evt\_map.meas\_xp\_map[meas].second;}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{keyword}{const} detray::surface<detector\_t> sf\{det, meas.surface\_link\};}
+\DoxyCodeLine{79         \textcolor{keyword}{using} cxt\_t = \textcolor{keyword}{typename} detector\_t::geometry\_context;}
+\DoxyCodeLine{80         \textcolor{keyword}{const} cxt\_t ctx\{\};}
+\DoxyCodeLine{81         \textcolor{keyword}{const} \textcolor{keyword}{auto} truth\_local =}
+\DoxyCodeLine{82             sf.global\_to\_local(ctx, global\_pos, vector::normalize(global\_mom));}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         \textcolor{comment}{// Return value}}
+\DoxyCodeLine{85         \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\_track\_parameters}} truth\_param;}
+\DoxyCodeLine{86         \textcolor{keyword}{auto}\& truth\_vec = truth\_param.vector();}
+\DoxyCodeLine{87         getter::element(truth\_vec, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151a7c442b5fe12d5f43c76e4a0adc56d8d4}{e\_bound\_loc0}}, 0) = truth\_local[0];}
+\DoxyCodeLine{88         getter::element(truth\_vec, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151a1c164e6843bf2d09b171fdae4c8ec682}{e\_bound\_loc1}}, 0) = truth\_local[1];}
+\DoxyCodeLine{89         getter::element(truth\_vec, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151ad6f19efb4f1808d6d650cc9959d9b689}{e\_bound\_phi}}, 0) = getter::phi(global\_mom);}
+\DoxyCodeLine{90         getter::element(truth\_vec, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151a94d28b6ee63df16fa327aff7ae3e8b32}{e\_bound\_theta}}, 0) =}
+\DoxyCodeLine{91             getter::theta(global\_mom);}
+\DoxyCodeLine{92         \textcolor{comment}{// @todo: Assign a proper value to time}}
+\DoxyCodeLine{93         getter::element(truth\_vec, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151a67a1d8eb43563e9e33014888d014acda}{e\_bound\_time}}, 0) = 0.;}
+\DoxyCodeLine{94         getter::element(truth\_vec, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151a6d667690a6d83582fbc41229249c0afa}{e\_bound\_qoverp}}, 0) =}
+\DoxyCodeLine{95             ptc.charge / getter::norm(global\_mom);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         \textcolor{comment}{// For the moment, only fill with the first measurements}}
+\DoxyCodeLine{98         \textcolor{keywordflow}{if} (fit\_info.ndf > 0 \&\& !trk\_state.is\_hole) \{}
+\DoxyCodeLine{99             \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_ae1e75ae2fcfc94330fdab88a1839622c}{write\_res}}(truth\_param, trk\_state.smoothed(), ptc);}
+\DoxyCodeLine{100         \}}
+\DoxyCodeLine{101         \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_ad6d9328f2ec2f4201ad188ea427398cd}{write\_stat}}(fit\_info, track\_states\_per\_track);}
+\DoxyCodeLine{102     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::particle\+::charge, traccc\+::e\+\_\+bound\+\_\+loc0, traccc\+::e\+\_\+bound\+\_\+loc1, traccc\+::e\+\_\+bound\+\_\+phi, traccc\+::e\+\_\+bound\+\_\+qoverp, traccc\+::e\+\_\+bound\+\_\+theta, traccc\+::e\+\_\+bound\+\_\+time, traccc\+::event\+\_\+map2\+::meas\+\_\+ptc\+\_\+map, traccc\+::event\+\_\+map2\+::meas\+\_\+xp\+\_\+map, traccc\+::fitter\+\_\+info$<$ algebra\+\_\+t $>$\+::ndf, traccc\+::measurement\+::surface\+\_\+link, write\+\_\+res(), and write\+\_\+stat().
+
+
+
+Referenced by T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_ae1e75ae2fcfc94330fdab88a1839622c}\label{classtraccc_1_1fitting__performance__writer_ae1e75ae2fcfc94330fdab88a1839622c}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!write\_res@{write\_res}}
+\index{write\_res@{write\_res}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{write\_res()}{write\_res()}}
+{\footnotesize\ttfamily void traccc\+::fitting\+\_\+performance\+\_\+writer\+::write\+\_\+res (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&}]{truth\+\_\+param,  }\item[{const \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&}]{fit\+\_\+param,  }\item[{const \mbox{\hyperlink{structtraccc_1_1particle}{particle}} \&}]{ptc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Non-\/templated part of the {\ttfamily write(...)} function. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                                                   \{}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_res\_plot\_tool.fill(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_res\_plot\_cache, truth\_param,}
+\DoxyCodeLine{80                                  fit\_param, ptc);}
+\DoxyCodeLine{81 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+data.
+
+
+
+Referenced by write().
+
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_ad6d9328f2ec2f4201ad188ea427398cd}\label{classtraccc_1_1fitting__performance__writer_ad6d9328f2ec2f4201ad188ea427398cd}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!write\_stat@{write\_stat}}
+\index{write\_stat@{write\_stat}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{write\_stat()}{write\_stat()}}
+{\footnotesize\ttfamily void traccc\+::fitting\+\_\+performance\+\_\+writer\+::write\+\_\+stat (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&}]{fit\+\_\+info,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&}]{track\+\_\+states }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Non-\/templated part of the {\ttfamily write(...)} function. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                                           \{}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_tool.fill(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_cache, fit\_info);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& trk\_state : track\_states) \{}
+\DoxyCodeLine{90         \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_tool.fill(\mbox{\hyperlink{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}{m\_data}}-\/>m\_stat\_plot\_cache, trk\_state);}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+data.
+
+
+
+Referenced by write().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}\label{classtraccc_1_1fitting__performance__writer_aa0cc776489e8721c129967f8c10967a8}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!m\_cfg@{m\_cfg}}
+\index{m\_cfg@{m\_cfg}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_cfg}{m\_cfg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{config}} traccc\+::fitting\+\_\+performance\+\_\+writer\+::m\+\_\+cfg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Configuration for the tool. 
+
+
+
+Referenced by finalize().
+
+\mbox{\Hypertarget{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}\label{classtraccc_1_1fitting__performance__writer_a71f3ac8175932f834b16bc24d652df3f}} 
+\index{traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!traccc::fitting\_performance\_writer@{traccc::fitting\_performance\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structtraccc_1_1details_1_1fitting__performance__writer__data}{details\+::fitting\+\_\+performance\+\_\+writer\+\_\+data}}$>$ traccc\+::fitting\+\_\+performance\+\_\+writer\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opaque data members for the class. 
+
+
+
+Referenced by finalize(), fitting\+\_\+performance\+\_\+writer(), write\+\_\+res(), and write\+\_\+stat().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/resolution/\mbox{\hyperlink{fitting__performance__writer_8hpp}{fitting\+\_\+performance\+\_\+writer.\+hpp}}\item 
+performance/src/resolution/\mbox{\hyperlink{fitting__performance__writer_8cpp}{fitting\+\_\+performance\+\_\+writer.\+cpp}}\end{DoxyCompactItemize}

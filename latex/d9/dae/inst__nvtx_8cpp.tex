@@ -1,0 +1,81 @@
+\hypertarget{inst__nvtx_8cpp}{}\doxysection{device/cuda/src/inst\+\_\+nvtx.cpp File Reference}
+\label{inst__nvtx_8cpp}\index{device/cuda/src/inst\_nvtx.cpp@{device/cuda/src/inst\_nvtx.cpp}}
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}nvtx3/nv\+Tools\+Ext.\+h\char`\"{}}\newline
+Include dependency graph for inst\+\_\+nvtx.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/da0/inst__nvtx_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inst__nvtx_8cpp_aa3e124eb1bb7a37a83f3ee8323a8449d}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((no\+\_\+instrument\+\_\+function)) \+\_\+\+\_\+cyg\+\_\+profile\+\_\+func\+\_\+enter(void $\ast$this\+\_\+fn
+\item 
+void void $\ast$ \mbox{\hyperlink{inst__nvtx_8cpp_a9fee21184f651ed17410e2a85d0a1f6f}{if}} (dladdr(this\+\_\+fn, \&this\+\_\+fn\+\_\+info))
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{inst__nvtx_8cpp_a0544c3fe466e421738dae463968b70ba}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{inst__nvtx_8cpp_aa3e124eb1bb7a37a83f3ee8323a8449d}\label{inst__nvtx_8cpp_aa3e124eb1bb7a37a83f3ee8323a8449d}} 
+\index{inst\_nvtx.cpp@{inst\_nvtx.cpp}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!inst\_nvtx.cpp@{inst\_nvtx.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(no\+\_\+instrument\+\_\+function)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inst__nvtx_8cpp_a9fee21184f651ed17410e2a85d0a1f6f}\label{inst__nvtx_8cpp_a9fee21184f651ed17410e2a85d0a1f6f}} 
+\index{inst\_nvtx.cpp@{inst\_nvtx.cpp}!if@{if}}
+\index{if@{if}!inst\_nvtx.cpp@{inst\_nvtx.cpp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily void void$\ast$ if (\begin{DoxyParamCaption}\item[{dladdr(this\+\_\+fn, \&this\+\_\+fn\+\_\+info)}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                         \{}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#ifdef HAVE\_CXXABI}}
+\DoxyCodeLine{82         \textcolor{keywordtype}{int} status = 0;}
+\DoxyCodeLine{83         std::unique\_ptr<char[]> fname(abi::\_\_cxa\_demangle(}
+\DoxyCodeLine{84             this\_fn\_info.dli\_sname, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \&status));}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         \textcolor{keywordflow}{if} (status == 0 \&\& fname) \{}
+\DoxyCodeLine{87             nvtxRangePushWrapper(fname.get());}
+\DoxyCodeLine{88         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{89             nvtxRangePushWrapper(\{\});}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{92         nvtxRangePushWrapper(this\_fn\_info.dli\_sname);}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \} \textcolor{keywordflow}{else} \{}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::get\+\_\+axes().
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{inst__nvtx_8cpp_a0544c3fe466e421738dae463968b70ba}\label{inst__nvtx_8cpp_a0544c3fe466e421738dae463968b70ba}} 
+\index{inst\_nvtx.cpp@{inst\_nvtx.cpp}!else@{else}}
+\index{else@{else}!inst\_nvtx.cpp@{inst\_nvtx.cpp}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        nvtxRangePushWrapper(\{\})}
+
+\end{DoxyCode}

@@ -1,0 +1,48 @@
+\hypertarget{structtraccc_1_1array__wrapper}{}\doxysection{traccc\+::array\+\_\+wrapper$<$ F, T $>$ Struct Template Reference}
+\label{structtraccc_1_1array__wrapper}\index{traccc::array\_wrapper$<$ F, T $>$@{traccc::array\_wrapper$<$ F, T $>$}}
+
+
+An array wrapper that can swap between SoA and AoS layouts almost transparently.  
+
+
+
+
+{\ttfamily \#include $<$array\+\_\+wrapper.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::array\+\_\+wrapper$<$ F, T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d8/dc5/structtraccc_1_1array__wrapper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle}{handle}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1owner}{owner}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$\newline
+struct traccc\+::array\+\_\+wrapper$<$ F, T $>$}
+
+An array wrapper that can swap between SoA and AoS layouts almost transparently. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em F} & The higher-\/order layout type, either {\ttfamily soa} or {\ttfamily aos}. \\
+\hline
+{\em T} & The struct type to embed in memory. \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/utils/\mbox{\hyperlink{array__wrapper_8hpp}{array\+\_\+wrapper.\+hpp}}\end{DoxyCompactItemize}

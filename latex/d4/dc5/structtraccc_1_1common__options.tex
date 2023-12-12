@@ -1,0 +1,178 @@
+\hypertarget{structtraccc_1_1common__options}{}\doxysection{traccc\+::common\+\_\+options Struct Reference}
+\label{structtraccc_1_1common__options}\index{traccc::common\_options@{traccc::common\_options}}
+
+
+{\ttfamily \#include $<$common\+\_\+options.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::common\+\_\+options\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{dc/d1b/structtraccc_1_1common__options__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1common__options_aceff3ce6b80f1e6dea6304dd6650f62d}{common\+\_\+options}} (po\+::options\+\_\+description \&desc)
+\item 
+void \mbox{\hyperlink{structtraccc_1_1common__options_a5064368ad49382ac2b9a501ef4c6f722}{read}} (const po\+::variables\+\_\+map \&vm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{traccc\+::data\+\_\+format}} \mbox{\hyperlink{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}{input\+\_\+data\+\_\+format}} = traccc\+::data\+\_\+format\+::csv
+\item 
+std\+::string \mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\+\_\+directory}}
+\item 
+unsigned int \mbox{\hyperlink{structtraccc_1_1common__options_adefc317cdc0b846c7be8db1e5f0c3ef2}{events}}
+\item 
+int \mbox{\hyperlink{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}{skip}}
+\item 
+unsigned short \mbox{\hyperlink{structtraccc_1_1common__options_a37c3f39aee3d48292fb8c3ccb441f117}{target\+\_\+cells\+\_\+per\+\_\+partition}}
+\item 
+bool \mbox{\hyperlink{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}{check\+\_\+performance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1common__options_aceff3ce6b80f1e6dea6304dd6650f62d}\label{structtraccc_1_1common__options_aceff3ce6b80f1e6dea6304dd6650f62d}} 
+\index{traccc::common\_options@{traccc::common\_options}!common\_options@{common\_options}}
+\index{common\_options@{common\_options}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{common\_options()}{common\_options()}}
+{\footnotesize\ttfamily traccc\+::common\+\_\+options\+::common\+\_\+options (\begin{DoxyParamCaption}\item[{po\+::options\+\_\+description \&}]{desc }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                                                                 \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     desc.add\_options()(\textcolor{stringliteral}{"input-\/csv"}, \textcolor{stringliteral}{"Use csv input file"});}
+\DoxyCodeLine{14     desc.add\_options()(\textcolor{stringliteral}{"input-\/binary"}, \textcolor{stringliteral}{"Use binary input file"});}
+\DoxyCodeLine{15     desc.add\_options()(\textcolor{stringliteral}{"input\_directory"}, po::value<std::string>()-\/>required(),}
+\DoxyCodeLine{16                        \textcolor{stringliteral}{"specify the directory of input data"});}
+\DoxyCodeLine{17     desc.add\_options()(\textcolor{stringliteral}{"events"}, po::value<unsigned int>()-\/>required(),}
+\DoxyCodeLine{18                        \textcolor{stringliteral}{"number of events"});}
+\DoxyCodeLine{19     desc.add\_options()(\textcolor{stringliteral}{"skip"}, po::value<int>()-\/>default\_value(0),}
+\DoxyCodeLine{20                        \textcolor{stringliteral}{"number of events to skip"});}
+\DoxyCodeLine{21     desc.add\_options()(\textcolor{stringliteral}{"target\_cells\_per\_partition"},}
+\DoxyCodeLine{22                        po::value<unsigned short>()-\/>default\_value(1024),}
+\DoxyCodeLine{23                        \textcolor{stringliteral}{"Number of cells to merge in a partition. Equal to the "}}
+\DoxyCodeLine{24                        \textcolor{stringliteral}{"number of threads multiplied by CELLS\_PER\_THREAD "}}
+\DoxyCodeLine{25                        \textcolor{stringliteral}{"defined in clusterization."});}
+\DoxyCodeLine{26     desc.add\_options()(\textcolor{stringliteral}{"check\_performance"},}
+\DoxyCodeLine{27                        po::value<bool>()-\/>default\_value(\textcolor{keyword}{false}),}
+\DoxyCodeLine{28                        \textcolor{stringliteral}{"generate performance result"});}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1common__options_a5064368ad49382ac2b9a501ef4c6f722}\label{structtraccc_1_1common__options_a5064368ad49382ac2b9a501ef4c6f722}} 
+\index{traccc::common\_options@{traccc::common\_options}!read@{read}}
+\index{read@{read}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void traccc\+::common\+\_\+options\+::read (\begin{DoxyParamCaption}\item[{const po\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                                          \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"input-\/csv"})) \{}
+\DoxyCodeLine{34         \mbox{\hyperlink{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}{input\_data\_format}} = \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}};}
+\DoxyCodeLine{35     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"input-\/binary"})) \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}{input\_data\_format}} = \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{traccc::data\_format::binary}};}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38     \mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\_directory}} = vm[\textcolor{stringliteral}{"input\_directory"}].as<std::string>();}
+\DoxyCodeLine{39     \mbox{\hyperlink{structtraccc_1_1common__options_adefc317cdc0b846c7be8db1e5f0c3ef2}{events}} = vm[\textcolor{stringliteral}{"events"}].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{40     \mbox{\hyperlink{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}{skip}} = vm[\textcolor{stringliteral}{"skip"}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{41     \mbox{\hyperlink{structtraccc_1_1common__options_a37c3f39aee3d48292fb8c3ccb441f117}{target\_cells\_per\_partition}} =}
+\DoxyCodeLine{42         vm[\textcolor{stringliteral}{"target\_cells\_per\_partition"}].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}>();}
+\DoxyCodeLine{43     \mbox{\hyperlink{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}{check\_performance}} = vm[\textcolor{stringliteral}{"check\_performance"}].as<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary, and traccc\+::csv.
+
+
+
+Referenced by main().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}\label{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}} 
+\index{traccc::common\_options@{traccc::common\_options}!check\_performance@{check\_performance}}
+\index{check\_performance@{check\_performance}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{check\_performance}{check\_performance}}
+{\footnotesize\ttfamily bool traccc\+::common\+\_\+options\+::check\+\_\+performance}
+
+
+
+Referenced by main(), and seq\+\_\+run().
+
+\mbox{\Hypertarget{structtraccc_1_1common__options_adefc317cdc0b846c7be8db1e5f0c3ef2}\label{structtraccc_1_1common__options_adefc317cdc0b846c7be8db1e5f0c3ef2}} 
+\index{traccc::common\_options@{traccc::common\_options}!events@{events}}
+\index{events@{events}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{events}{events}}
+{\footnotesize\ttfamily unsigned int traccc\+::common\+\_\+options\+::events}
+
+
+
+Referenced by create\+\_\+binaries(), main(), and seq\+\_\+run().
+
+\mbox{\Hypertarget{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}\label{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}} 
+\index{traccc::common\_options@{traccc::common\_options}!input\_data\_format@{input\_data\_format}}
+\index{input\_data\_format@{input\_data\_format}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{input\_data\_format}{input\_data\_format}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{traccc\+::data\+\_\+format}} traccc\+::common\+\_\+options\+::input\+\_\+data\+\_\+format = traccc\+::data\+\_\+format\+::csv}
+
+
+
+Referenced by create\+\_\+binaries(), and seq\+\_\+run().
+
+\mbox{\Hypertarget{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}\label{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}} 
+\index{traccc::common\_options@{traccc::common\_options}!input\_directory@{input\_directory}}
+\index{input\_directory@{input\_directory}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{input\_directory}{input\_directory}}
+{\footnotesize\ttfamily std\+::string traccc\+::common\+\_\+options\+::input\+\_\+directory}
+
+
+
+Referenced by create\+\_\+binaries(), main(), and seq\+\_\+run().
+
+\mbox{\Hypertarget{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}\label{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}} 
+\index{traccc::common\_options@{traccc::common\_options}!skip@{skip}}
+\index{skip@{skip}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{skip}{skip}}
+{\footnotesize\ttfamily int traccc\+::common\+\_\+options\+::skip}
+
+
+
+Referenced by create\+\_\+binaries(), main(), and seq\+\_\+run().
+
+\mbox{\Hypertarget{structtraccc_1_1common__options_a37c3f39aee3d48292fb8c3ccb441f117}\label{structtraccc_1_1common__options_a37c3f39aee3d48292fb8c3ccb441f117}} 
+\index{traccc::common\_options@{traccc::common\_options}!target\_cells\_per\_partition@{target\_cells\_per\_partition}}
+\index{target\_cells\_per\_partition@{target\_cells\_per\_partition}!traccc::common\_options@{traccc::common\_options}}
+\doxysubsubsection{\texorpdfstring{target\_cells\_per\_partition}{target\_cells\_per\_partition}}
+{\footnotesize\ttfamily unsigned short traccc\+::common\+\_\+options\+::target\+\_\+cells\+\_\+per\+\_\+partition}
+
+
+
+Referenced by seq\+\_\+run().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/options/include/traccc/options/\mbox{\hyperlink{common__options_8hpp}{common\+\_\+options.\+hpp}}\item 
+examples/options/src/options/\mbox{\hyperlink{common__options_8cpp}{common\+\_\+options.\+cpp}}\end{DoxyCompactItemize}

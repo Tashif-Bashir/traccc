@@ -1,0 +1,71 @@
+\hypertarget{test__track__params__estimation_8cpp}{}\doxysection{tests/cpu/test\+\_\+track\+\_\+params\+\_\+estimation.cpp File Reference}
+\label{test__track__params__estimation_8cpp}\index{tests/cpu/test\_track\_params\_estimation.cpp@{tests/cpu/test\_track\_params\_estimation.cpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/spacepoint.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/seeding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/track\+\_\+params\+\_\+estimation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/intersection/detail/trajectories.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for test\+\_\+track\+\_\+params\+\_\+estimation.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d4c/test__track__params__estimation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__track__params__estimation_8cpp_a64359cc22c8300e9811bf6e2e0fe8964}{T\+E\+ST}} (\mbox{\hyperlink{classtraccc_1_1track__params__estimation}{track\+\_\+params\+\_\+estimation}}, helix)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__track__params__estimation_8cpp_a64359cc22c8300e9811bf6e2e0fe8964}\label{test__track__params__estimation_8cpp_a64359cc22c8300e9811bf6e2e0fe8964}} 
+\index{test\_track\_params\_estimation.cpp@{test\_track\_params\_estimation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_track\_params\_estimation.cpp@{test\_track\_params\_estimation.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtraccc_1_1track__params__estimation}{track\+\_\+params\+\_\+estimation}}}]{,  }\item[{helix}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                      \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Memory resource used by the EDM.}}
+\DoxyCodeLine{28     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// Set B field}}
+\DoxyCodeLine{31     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} B\{0. * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::T}}, 0. * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::T}},}
+\DoxyCodeLine{32                     2. * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::T}}\};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{comment}{// Track property}}
+\DoxyCodeLine{35     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a7a1ed25524ba151f7ee54cec655fb3f3}{point3}} pos\{0.f, 0.f, 0.f\};}
+\DoxyCodeLine{36     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} time\{0.f\};}
+\DoxyCodeLine{37     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} mom\{1.f, 0.f, 1.f * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::GeV}}\};}
+\DoxyCodeLine{38     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} q\{-\/1.f * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::e}}\};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{// Make a helix}}
+\DoxyCodeLine{41     detray::detail::helix<transform3> hlx(pos, time, mom, q, \&B);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{// Make three spacepoints with the helix}}
+\DoxyCodeLine{44     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\_collection\_types::host}} spacepoints;}
+\DoxyCodeLine{45     spacepoints.push\_back(\{hlx(50 * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::mm}}), \{\}\});}
+\DoxyCodeLine{46     spacepoints.push\_back(\{hlx(100 * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::mm}}), \{\}\});}
+\DoxyCodeLine{47     spacepoints.push\_back(\{hlx(150 * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::mm}}), \{\}\});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{comment}{// Make a seed from the three spacepoints}}
+\DoxyCodeLine{50     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{seed\_collection\_types::host}} seeds;}
+\DoxyCodeLine{51     seeds.push\_back(\{0u, 1u, 2u, 0.f, 0.f\});}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{comment}{// Run track parameter estimation}}
+\DoxyCodeLine{54     \mbox{\hyperlink{classtraccc_1_1track__params__estimation}{traccc::track\_params\_estimation}} tp(host\_mr);}
+\DoxyCodeLine{55     \textcolor{keyword}{auto} bound\_params = tp(spacepoints, seeds, B);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{// Make sure that the reconstructed momentum is equal to the original}}
+\DoxyCodeLine{58     \textcolor{comment}{// momentum}}
+\DoxyCodeLine{59     ASSERT\_EQ(bound\_params.size(), 1u);}
+\DoxyCodeLine{60     ASSERT\_NEAR(bound\_params[0].p(), getter::norm(mom), 1e-\/4);}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}

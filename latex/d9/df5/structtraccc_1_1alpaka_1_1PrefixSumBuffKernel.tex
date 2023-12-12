@@ -1,0 +1,51 @@
+\hypertarget{structtraccc_1_1alpaka_1_1PrefixSumBuffKernel}{}\doxysection{traccc\+::alpaka\+::Prefix\+Sum\+Buff\+Kernel Struct Reference}
+\label{structtraccc_1_1alpaka_1_1PrefixSumBuffKernel}\index{traccc::alpaka::PrefixSumBuffKernel@{traccc::alpaka::PrefixSumBuffKernel}}
+
+
+Collaboration diagram for traccc\+::alpaka\+::Prefix\+Sum\+Buff\+Kernel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{dd/de0/structtraccc_1_1alpaka_1_1PrefixSumBuffKernel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Acc $>$ }\\A\+L\+P\+A\+K\+A\+\_\+\+F\+N\+\_\+\+A\+CC void \mbox{\hyperlink{structtraccc_1_1alpaka_1_1PrefixSumBuffKernel_a748eb28412fd45af409e8e631586c27f}{operator()}} (Acc const \&acc, vecmem\+::data\+::vector\+\_\+view$<$ const \mbox{\hyperlink{namespacetraccc_1_1device_ade298ff55a1bdb496e412262cdb66433}{device\+::prefix\+\_\+sum\+\_\+size\+\_\+t}} $>$ sizes\+\_\+view, vecmem\+::data\+::vector\+\_\+view$<$ \mbox{\hyperlink{namespacetraccc_1_1device_aec5610a925cef95697843cc4e8b38bcb}{device\+::prefix\+\_\+sum\+\_\+element\+\_\+t}} $>$ ps\+\_\+view) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1alpaka_1_1PrefixSumBuffKernel_a748eb28412fd45af409e8e631586c27f}\label{structtraccc_1_1alpaka_1_1PrefixSumBuffKernel_a748eb28412fd45af409e8e631586c27f}} 
+\index{traccc::alpaka::PrefixSumBuffKernel@{traccc::alpaka::PrefixSumBuffKernel}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::alpaka::PrefixSumBuffKernel@{traccc::alpaka::PrefixSumBuffKernel}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename Acc $>$ \\
+A\+L\+P\+A\+K\+A\+\_\+\+F\+N\+\_\+\+A\+CC void traccc\+::alpaka\+::\+Prefix\+Sum\+Buff\+Kernel\+::operator() (\begin{DoxyParamCaption}\item[{Acc const \&}]{acc,  }\item[{vecmem\+::data\+::vector\+\_\+view$<$ const \mbox{\hyperlink{namespacetraccc_1_1device_ade298ff55a1bdb496e412262cdb66433}{device\+::prefix\+\_\+sum\+\_\+size\+\_\+t}} $>$}]{sizes\+\_\+view,  }\item[{vecmem\+::data\+::vector\+\_\+view$<$ \mbox{\hyperlink{namespacetraccc_1_1device_aec5610a925cef95697843cc4e8b38bcb}{device\+::prefix\+\_\+sum\+\_\+element\+\_\+t}} $>$}]{ps\+\_\+view }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                                                          \{}
+\DoxyCodeLine{23         \textcolor{keyword}{auto} threadIdx =}
+\DoxyCodeLine{24             ::alpaka::getIdx<::alpaka::Block, ::alpaka::Threads>(acc)[0u];}
+\DoxyCodeLine{25         \textcolor{keyword}{auto} blockDim =}
+\DoxyCodeLine{26             ::alpaka::getWorkDiv<::alpaka::Block, ::alpaka::Threads>(acc)[0u];}
+\DoxyCodeLine{27         \textcolor{keyword}{auto} blockIdx =}
+\DoxyCodeLine{28             ::alpaka::getIdx<::alpaka::Grid, ::alpaka::Blocks>(acc)[0u];}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \mbox{\hyperlink{namespacetraccc_1_1device_a7c2b528a06357f0ac89eae726d2b31ca}{device::fill\_prefix\_sum}}(threadIdx + blockIdx * blockDim, sizes\_view,}
+\DoxyCodeLine{31                                 ps\_view);}
+\DoxyCodeLine{32     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::device\+::fill\+\_\+prefix\+\_\+sum().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/alpaka/src/utils/\mbox{\hyperlink{alpaka_2src_2utils_2make__prefix__sum__buff_8cpp}{make\+\_\+prefix\+\_\+sum\+\_\+buff.\+cpp}}\end{DoxyCompactItemize}

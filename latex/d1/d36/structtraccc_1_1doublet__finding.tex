@@ -1,0 +1,192 @@
+\hypertarget{structtraccc_1_1doublet__finding}{}\doxysection{traccc\+::doublet\+\_\+finding$<$ other\+Sp\+Type $>$ Struct Template Reference}
+\label{structtraccc_1_1doublet__finding}\index{traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}}
+
+
+{\ttfamily \#include $<$doublet\+\_\+finding.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::doublet\+\_\+finding$<$ other\+Sp\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{df/d2e/structtraccc_1_1doublet__finding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::doublet\+\_\+finding$<$ other\+Sp\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d61/structtraccc_1_1doublet__finding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1doublet__finding_ac5cc1218309cccb3282aa428a0ba5a24}{doublet\+\_\+finding}} (const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&config)
+\item 
+output\+\_\+type \mbox{\hyperlink{structtraccc_1_1doublet__finding_a066b470920f061bea91d1f8f02e4e529}{operator()}} (const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&g2, const \mbox{\hyperlink{structtraccc_1_1sp__location}{sp\+\_\+location}} \&l) const override
+\item 
+void \mbox{\hyperlink{structtraccc_1_1doublet__finding_a53e09288ced835d66947cb6c685ae44e}{operator()}} (const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&g2, const \mbox{\hyperlink{structtraccc_1_1sp__location}{sp\+\_\+location}} \&l, output\+\_\+type \&o) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \mbox{\hyperlink{structtraccc_1_1doublet__finding_af3a1ba03454ccc7aba2aa243f1440f22}{m\+\_\+config}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$details\+::spacepoint\+\_\+type other\+Sp\+Type$>$\newline
+struct traccc\+::doublet\+\_\+finding$<$ other\+Sp\+Type $>$}
+
+Doublet finding to search the combinations of two compatible spacepoints 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em other\+Sp\+Type} & is whether it is for middle-\/bottom or middle-\/top doublet \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1doublet__finding_ac5cc1218309cccb3282aa428a0ba5a24}\label{structtraccc_1_1doublet__finding_ac5cc1218309cccb3282aa428a0ba5a24}} 
+\index{traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}!doublet\_finding@{doublet\_finding}}
+\index{doublet\_finding@{doublet\_finding}!traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}}
+\doxysubsubsection{\texorpdfstring{doublet\_finding()}{doublet\_finding()}}
+{\footnotesize\ttfamily template$<$details\+::spacepoint\+\_\+type other\+Sp\+Type$>$ \\
+\mbox{\hyperlink{structtraccc_1_1doublet__finding}{traccc\+::doublet\+\_\+finding}}$<$ other\+Sp\+Type $>$\+::\mbox{\hyperlink{structtraccc_1_1doublet__finding}{doublet\+\_\+finding}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the doublet finding
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}}} & is the configuration parameters \\
+\hline
+{\em isp\+\_\+container} & is the internal spacepoint container \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35 : \mbox{\hyperlink{structtraccc_1_1doublet__finding_af3a1ba03454ccc7aba2aa243f1440f22}{m\_config}}(config) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1doublet__finding_a066b470920f061bea91d1f8f02e4e529}\label{structtraccc_1_1doublet__finding_a066b470920f061bea91d1f8f02e4e529}} 
+\index{traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$details\+::spacepoint\+\_\+type other\+Sp\+Type$>$ \\
+output\+\_\+type \mbox{\hyperlink{structtraccc_1_1doublet__finding}{traccc\+::doublet\+\_\+finding}}$<$ other\+Sp\+Type $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&}]{g2,  }\item[{const \mbox{\hyperlink{structtraccc_1_1sp__location}{sp\+\_\+location}} \&}]{l }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Callable operator for doublet finding per middle spacepoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\+\_\+information} & is the information of current bin \\
+\hline
+{\em sp\+M\+\_\+location} & is the location of the current middle spacepoint in internal spacepoint container\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pair of vectors of doublets and transformed coordinates 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                                 \{}
+\DoxyCodeLine{46         output\_type result;}
+\DoxyCodeLine{47         this-\/>\mbox{\hyperlink{structtraccc_1_1doublet__finding_a066b470920f061bea91d1f8f02e4e529}{operator()}}(g2, l, result);}
+\DoxyCodeLine{48         \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{49     \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::doublet\+\_\+finding$<$ details\+::spacepoint\+\_\+type\+::bottom $>$\+::operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1doublet__finding_a53e09288ced835d66947cb6c685ae44e}\label{structtraccc_1_1doublet__finding_a53e09288ced835d66947cb6c685ae44e}} 
+\index{traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$details\+::spacepoint\+\_\+type other\+Sp\+Type$>$ \\
+void \mbox{\hyperlink{structtraccc_1_1doublet__finding}{traccc\+::doublet\+\_\+finding}}$<$ other\+Sp\+Type $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&}]{g2,  }\item[{const \mbox{\hyperlink{structtraccc_1_1sp__location}{sp\+\_\+location}} \&}]{l,  }\item[{output\+\_\+type \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Callable operator for doublet finding of a middle spacepoint
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin\+\_\+information} & is the information of current bin \\
+\hline
+{\em sp\+M\+\_\+location} & is the location of the current middle spacepoint in internal spacepoint container\\
+\hline
+\end{DoxyParams}
+void interface
+
+\begin{DoxyReturn}{Returns}
+a pair of vectors of doublets and transformed coordinates 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                           \{}
+\DoxyCodeLine{62         \textcolor{comment}{// output}}
+\DoxyCodeLine{63         \textcolor{keyword}{auto}\& doublets = o.first;}
+\DoxyCodeLine{64         \textcolor{keyword}{auto}\& lin\_circles = o.second;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         \textcolor{comment}{// middle spacepoint}}
+\DoxyCodeLine{67         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spM = g2.bin(l.bin\_idx)[l.sp\_idx];}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{keyword}{auto} phi\_bins = g2.axis\_p0().zone(spM.phi(), \mbox{\hyperlink{structtraccc_1_1doublet__finding_af3a1ba03454ccc7aba2aa243f1440f22}{m\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_af67455f2be06f852fc5aa60b05053153}{neighbor\_scope}});}
+\DoxyCodeLine{70         \textcolor{keyword}{auto} z\_bins = g2.axis\_p1().zone(spM.z(), \mbox{\hyperlink{structtraccc_1_1doublet__finding_af3a1ba03454ccc7aba2aa243f1440f22}{m\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_af67455f2be06f852fc5aa60b05053153}{neighbor\_scope}});}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72         \textcolor{comment}{// iterator over neighbor bins}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& phi\_bin : phi\_bins) \{}
+\DoxyCodeLine{74             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& z\_bin : z\_bins) \{}
+\DoxyCodeLine{75                 \textcolor{keyword}{auto} bin\_idx = phi\_bin + z\_bin * g2.axis\_p0().bins();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77                 \textcolor{keyword}{const} \textcolor{keyword}{auto}\& neighbors = g2.bin(phi\_bin, z\_bin);}
+\DoxyCodeLine{78                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sp\_idx = 0; sp\_idx < neighbors.size();}
+\DoxyCodeLine{79                      sp\_idx++) \{}
+\DoxyCodeLine{80                     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& sp\_nb = neighbors[sp\_idx];}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82                     \textcolor{keywordflow}{if} (!doublet\_finding\_helper::isCompatible<otherSpType>(}
+\DoxyCodeLine{83                             spM, sp\_nb, \mbox{\hyperlink{structtraccc_1_1doublet__finding_af3a1ba03454ccc7aba2aa243f1440f22}{m\_config}})) \{}
+\DoxyCodeLine{84                         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{85                     \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87                     lin\_circle lin =}
+\DoxyCodeLine{88                         \mbox{\hyperlink{structtraccc_1_1doublet__finding__helper_ad5f94a6c063d05a2f46cd7340b71ce77}{doublet\_finding\_helper::transform\_coordinates}}<}
+\DoxyCodeLine{89                             otherSpType>(spM, sp\_nb);}
+\DoxyCodeLine{90                     sp\_location sp\_nb\_location = \{}
+\DoxyCodeLine{91                         \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\textcolor{keyword}{>}(bin\_idx),}
+\DoxyCodeLine{92                         \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\textcolor{keyword}{>}(sp\_idx)\};}
+\DoxyCodeLine{93                     doublets.push\_back(doublet(\{l, sp\_nb\_location\}));}
+\DoxyCodeLine{94                     lin\_circles.push\_back(std::move(lin));}
+\DoxyCodeLine{95                 \}}
+\DoxyCodeLine{96             \}}
+\DoxyCodeLine{97         \}}
+\DoxyCodeLine{98     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1doublet__finding_af3a1ba03454ccc7aba2aa243f1440f22}\label{structtraccc_1_1doublet__finding_af3a1ba03454ccc7aba2aa243f1440f22}} 
+\index{traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!traccc::doublet\_finding$<$ otherSpType $>$@{traccc::doublet\_finding$<$ otherSpType $>$}}
+\doxysubsubsection{\texorpdfstring{m\_config}{m\_config}}
+{\footnotesize\ttfamily template$<$details\+::spacepoint\+\_\+type other\+Sp\+Type$>$ \\
+\mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \mbox{\hyperlink{structtraccc_1_1doublet__finding}{traccc\+::doublet\+\_\+finding}}$<$ other\+Sp\+Type $>$\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by traccc\+::doublet\+\_\+finding$<$ details\+::spacepoint\+\_\+type\+::bottom $>$\+::operator()().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/\mbox{\hyperlink{doublet__finding_8hpp}{doublet\+\_\+finding.\+hpp}}\end{DoxyCompactItemize}

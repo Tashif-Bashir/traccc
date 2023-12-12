@@ -1,0 +1,127 @@
+\hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning}{}\doxysection{traccc\+::cuda\+::spacepoint\+\_\+binning Class Reference}
+\label{classtraccc_1_1cuda_1_1spacepoint__binning}\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+
+
+{\ttfamily \#include $<$spacepoint\+\_\+binning.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::cuda\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{d7/d94/classtraccc_1_1cuda_1_1spacepoint__binning__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::cuda\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dda/classtraccc_1_1cuda_1_1spacepoint__binning__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1spacepoint__binning_ac1d4dbd5f9f825d7417563d9d22e84db}{spacepoint\+\_\+binning}} (const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&config, const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&grid\+\_\+config, const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&mr, vecmem\+::copy \&copy, \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&str)
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetraccc_a6f3edb21be66a15213280ee97867bf8c}{sp\+\_\+grid\+\_\+buffer}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1spacepoint__binning_aff1951fa3de9388f2155898b11bea6c5}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&spacepoints\+\_\+view) const override
+\begin{DoxyCompactList}\small\item\em Function executing the algorithm with a a view of spacepoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1spacepoint__binning_a082faf0c2ebd7ebf38e3117e5bbb5397}{m\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Member variables. \end{DoxyCompactList}\item 
+std\+::pair$<$ sp\+\_\+grid\+::axis\+\_\+p0\+\_\+type, sp\+\_\+grid\+::axis\+\_\+p1\+\_\+type $>$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1spacepoint__binning_a663de37f3aee0d6b689ceb4c83d61a2f}{m\+\_\+axes}}
+\item 
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1spacepoint__binning_ab7c8e524b84d3fc4451ac801edb58ae3}{m\+\_\+mr}}
+\item 
+vecmem\+::copy \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1spacepoint__binning_a3cd10aa8d0b1d7dfc6e3fcbc260f4b45}{m\+\_\+copy}}
+\begin{DoxyCompactList}\small\item\em The copy object to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1spacepoint__binning_afbee604b4b942906948fb98de8417e4c}{m\+\_\+stream}}
+\begin{DoxyCompactList}\small\item\em The C\+U\+DA stream to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Spacepoing binning executed on a C\+U\+DA device
+
+This algorithm returns a buffer which is not necessarily filled yet. A synchronisation statement is required before destroying this buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning_ac1d4dbd5f9f825d7417563d9d22e84db}\label{classtraccc_1_1cuda_1_1spacepoint__binning_ac1d4dbd5f9f825d7417563d9d22e84db}} 
+\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}!spacepoint\_binning@{spacepoint\_binning}}
+\index{spacepoint\_binning@{spacepoint\_binning}!traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{spacepoint\_binning()}{spacepoint\_binning()}}
+{\footnotesize\ttfamily traccc\+::cuda\+::spacepoint\+\_\+binning\+::spacepoint\+\_\+binning (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&}]{grid\+\_\+config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&}]{mr,  }\item[{vecmem\+::copy \&}]{copy,  }\item[{\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Constructor for the algorithm. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning_aff1951fa3de9388f2155898b11bea6c5}\label{classtraccc_1_1cuda_1_1spacepoint__binning_aff1951fa3de9388f2155898b11bea6c5}} 
+\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_a6f3edb21be66a15213280ee97867bf8c}{sp\+\_\+grid\+\_\+buffer}} traccc\+::cuda\+::spacepoint\+\_\+binning\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{spacepoints\+\_\+view }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Function executing the algorithm with a a view of spacepoints. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning_a663de37f3aee0d6b689ceb4c83d61a2f}\label{classtraccc_1_1cuda_1_1spacepoint__binning_a663de37f3aee0d6b689ceb4c83d61a2f}} 
+\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}!m\_axes@{m\_axes}}
+\index{m\_axes@{m\_axes}!traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_axes}{m\_axes}}
+{\footnotesize\ttfamily std\+::pair$<$sp\+\_\+grid\+::axis\+\_\+p0\+\_\+type, sp\+\_\+grid\+::axis\+\_\+p1\+\_\+type$>$ traccc\+::cuda\+::spacepoint\+\_\+binning\+::m\+\_\+axes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning_a082faf0c2ebd7ebf38e3117e5bbb5397}\label{classtraccc_1_1cuda_1_1spacepoint__binning_a082faf0c2ebd7ebf38e3117e5bbb5397}} 
+\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_config}{m\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} traccc\+::cuda\+::spacepoint\+\_\+binning\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Member variables. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning_a3cd10aa8d0b1d7dfc6e3fcbc260f4b45}\label{classtraccc_1_1cuda_1_1spacepoint__binning_a3cd10aa8d0b1d7dfc6e3fcbc260f4b45}} 
+\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}!m\_copy@{m\_copy}}
+\index{m\_copy@{m\_copy}!traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_copy}{m\_copy}}
+{\footnotesize\ttfamily vecmem\+::copy\& traccc\+::cuda\+::spacepoint\+\_\+binning\+::m\+\_\+copy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The copy object to use. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning_ab7c8e524b84d3fc4451ac801edb58ae3}\label{classtraccc_1_1cuda_1_1spacepoint__binning_ab7c8e524b84d3fc4451ac801edb58ae3}} 
+\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} traccc\+::cuda\+::spacepoint\+\_\+binning\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1spacepoint__binning_afbee604b4b942906948fb98de8417e4c}\label{classtraccc_1_1cuda_1_1spacepoint__binning_afbee604b4b942906948fb98de8417e4c}} 
+\index{traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}!m\_stream@{m\_stream}}
+\index{m\_stream@{m\_stream}!traccc::cuda::spacepoint\_binning@{traccc::cuda::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_stream}{m\_stream}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}}\& traccc\+::cuda\+::spacepoint\+\_\+binning\+::m\+\_\+stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The C\+U\+DA stream to use. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/cuda/include/traccc/cuda/seeding/\mbox{\hyperlink{device_2cuda_2include_2traccc_2cuda_2seeding_2spacepoint__binning_8hpp}{spacepoint\+\_\+binning.\+hpp}}\end{DoxyCompactItemize}

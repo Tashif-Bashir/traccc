@@ -1,0 +1,80 @@
+\hypertarget{structtraccc_1_1cell__module}{}\doxysection{traccc\+::cell\+\_\+module Struct Reference}
+\label{structtraccc_1_1cell__module}\index{traccc::cell\_module@{traccc::cell\_module}}
+
+
+{\ttfamily \#include $<$cell.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::cell\+\_\+module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{d5/d07/structtraccc_1_1cell__module__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+detray\+::geometry\+::barcode \mbox{\hyperlink{structtraccc_1_1cell__module_a883c62a59d8c058ce6215ad50fd7a1b4}{surface\+\_\+link}} \{0u\}
+\item 
+\mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} \mbox{\hyperlink{structtraccc_1_1cell__module_a3a2055223dd9b5837a498c435198fd86}{placement}} = \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}}\{\}
+\item 
+\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{structtraccc_1_1cell__module_a99429b52c9c629eb4344f6e2605d0fdf}{threshold}} = 0
+\item 
+\mbox{\hyperlink{structtraccc_1_1pixel__data}{pixel\+\_\+data}} \mbox{\hyperlink{structtraccc_1_1cell__module_ab435849a012678d81f05dfbf76d36899}{pixel}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of a detector module
+
+It is handled separately from the list of all of the cells belonging to the detector module, to be able to lay out the data in memory in a way that is more friendly towards accelerators. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1cell__module_ab435849a012678d81f05dfbf76d36899}\label{structtraccc_1_1cell__module_ab435849a012678d81f05dfbf76d36899}} 
+\index{traccc::cell\_module@{traccc::cell\_module}!pixel@{pixel}}
+\index{pixel@{pixel}!traccc::cell\_module@{traccc::cell\_module}}
+\doxysubsubsection{\texorpdfstring{pixel}{pixel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1pixel__data}{pixel\+\_\+data}} traccc\+::cell\+\_\+module\+::pixel}
+
+
+
+Referenced by traccc\+::device\+::aggregate\+\_\+cluster(), traccc\+::detail\+::fill\+\_\+measurement(), and traccc\+::detail\+::position\+\_\+from\+\_\+cell().
+
+\mbox{\Hypertarget{structtraccc_1_1cell__module_a3a2055223dd9b5837a498c435198fd86}\label{structtraccc_1_1cell__module_a3a2055223dd9b5837a498c435198fd86}} 
+\index{traccc::cell\_module@{traccc::cell\_module}!placement@{placement}}
+\index{placement@{placement}!traccc::cell\_module@{traccc::cell\_module}}
+\doxysubsubsection{\texorpdfstring{placement}{placement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} traccc\+::cell\+\_\+module\+::placement = \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}}\{\}}
+
+
+
+Referenced by traccc\+::device\+::form\+\_\+spacepoints(), traccc\+::spacepoint\+\_\+formation\+::operator()(), and traccc\+::io\+::csv\+::read\+\_\+spacepoints().
+
+\mbox{\Hypertarget{structtraccc_1_1cell__module_a883c62a59d8c058ce6215ad50fd7a1b4}\label{structtraccc_1_1cell__module_a883c62a59d8c058ce6215ad50fd7a1b4}} 
+\index{traccc::cell\_module@{traccc::cell\_module}!surface\_link@{surface\_link}}
+\index{surface\_link@{surface\_link}!traccc::cell\_module@{traccc::cell\_module}}
+\doxysubsubsection{\texorpdfstring{surface\_link}{surface\_link}}
+{\footnotesize\ttfamily detray\+::geometry\+::barcode traccc\+::cell\+\_\+module\+::surface\+\_\+link \{0u\}}
+
+
+
+Referenced by traccc\+::device\+::aggregate\+\_\+cluster(), traccc\+::detail\+::fill\+\_\+measurement(), traccc\+::operator==(), traccc\+::io\+::csv\+::read\+\_\+measurements(), traccc\+::io\+::csv\+::read\+\_\+measurements\+\_\+container(), and traccc\+::io\+::csv\+::read\+\_\+spacepoints().
+
+\mbox{\Hypertarget{structtraccc_1_1cell__module_a99429b52c9c629eb4344f6e2605d0fdf}\label{structtraccc_1_1cell__module_a99429b52c9c629eb4344f6e2605d0fdf}} 
+\index{traccc::cell\_module@{traccc::cell\_module}!threshold@{threshold}}
+\index{threshold@{threshold}!traccc::cell\_module@{traccc::cell\_module}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} traccc\+::cell\+\_\+module\+::threshold = 0}
+
+
+
+Referenced by traccc\+::device\+::aggregate\+\_\+cluster(), and traccc\+::detail\+::calc\+\_\+cluster\+\_\+properties().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/edm/\mbox{\hyperlink{core_2include_2traccc_2edm_2cell_8hpp}{cell.\+hpp}}\end{DoxyCompactItemize}

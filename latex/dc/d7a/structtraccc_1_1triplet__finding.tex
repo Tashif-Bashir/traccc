@@ -1,0 +1,262 @@
+\hypertarget{structtraccc_1_1triplet__finding}{}\doxysection{traccc\+::triplet\+\_\+finding Struct Reference}
+\label{structtraccc_1_1triplet__finding}\index{traccc::triplet\_finding@{traccc::triplet\_finding}}
+
+
+{\ttfamily \#include $<$triplet\+\_\+finding.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::triplet\+\_\+finding\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d1/df3/structtraccc_1_1triplet__finding__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::triplet\+\_\+finding\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d56/structtraccc_1_1triplet__finding__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1triplet__finding_a5bc6d4bf0602c5c56451c8369f316fc8}{triplet\+\_\+finding}} (const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&config)
+\item 
+output\+\_\+type \mbox{\hyperlink{structtraccc_1_1triplet__finding_af7dfa30de0444aca4b5e8889ec30a1e2}{operator()}} (const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&g2, const \mbox{\hyperlink{structtraccc_1_1doublet}{doublet}} \&d, const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&lc, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{doublet\+\_\+collection\+\_\+types\+::host}} \&\mbox{\hyperlink{structtraccc_1_1doublet}{doublet}}, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{lin\+\_\+circle\+\_\+collection\+\_\+types\+::host}} \&lincol) const override
+\item 
+void \mbox{\hyperlink{structtraccc_1_1triplet__finding_acf75681ef93cea3ac203faa2e8de095f}{operator()}} (const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&g2, const \mbox{\hyperlink{structtraccc_1_1doublet}{doublet}} \&mid\+\_\+bot, const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&lb, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{doublet\+\_\+collection\+\_\+types\+::host}} \&doublets\+\_\+mid\+\_\+top, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{lin\+\_\+circle\+\_\+collection\+\_\+types\+::host}} \&lin\+\_\+circles\+\_\+mid\+\_\+top, output\+\_\+type \&o) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \mbox{\hyperlink{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}{m\+\_\+config}}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\+\_\+filter\+\_\+config}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Triplet finding to search the compatible combintations of two doublets which share same middle spacepoint 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1triplet__finding_a5bc6d4bf0602c5c56451c8369f316fc8}\label{structtraccc_1_1triplet__finding_a5bc6d4bf0602c5c56451c8369f316fc8}} 
+\index{traccc::triplet\_finding@{traccc::triplet\_finding}!triplet\_finding@{triplet\_finding}}
+\index{triplet\_finding@{triplet\_finding}!traccc::triplet\_finding@{traccc::triplet\_finding}}
+\doxysubsubsection{\texorpdfstring{triplet\_finding()}{triplet\_finding()}}
+{\footnotesize\ttfamily traccc\+::triplet\+\_\+finding\+::triplet\+\_\+finding (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the triplet finding
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}}} & is the configuration parameters \\
+\hline
+{\em isp\+\_\+container} & is the internal spacepoint container \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 : \mbox{\hyperlink{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}{m\_config}}(config) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1triplet__finding_af7dfa30de0444aca4b5e8889ec30a1e2}\label{structtraccc_1_1triplet__finding_af7dfa30de0444aca4b5e8889ec30a1e2}} 
+\index{traccc::triplet\_finding@{traccc::triplet\_finding}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::triplet\_finding@{traccc::triplet\_finding}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily output\+\_\+type traccc\+::triplet\+\_\+finding\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&}]{g2,  }\item[{const \mbox{\hyperlink{structtraccc_1_1doublet}{doublet}} \&}]{d,  }\item[{const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&}]{lc,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{doublet\+\_\+collection\+\_\+types\+::host}} \&}]{doublet,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{lin\+\_\+circle\+\_\+collection\+\_\+types\+::host}} \&}]{lincol }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Callable operator for triplet finding per middle-\/bottom doublet
+
+
+\begin{DoxyParams}{Parameters}
+{\em mid\+\_\+bot} & is the current middle-\/bottom doublets \\
+\hline
+{\em lb} & is transformed coordinate of mid\+\_\+bot \\
+\hline
+{\em doublets\+\_\+mid\+\_\+top} & is the vector of middle-\/top doublets which share same middle spacepoint with current middle-\/bottom doublet \\
+\hline
+{\em lin\+\_\+circles\+\_\+mid\+\_\+top} & is transformed coordinates of doublets\+\_\+mid\+\_\+top\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of triplets 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                                       \{}
+\DoxyCodeLine{44         output\_type result;}
+\DoxyCodeLine{45         this-\/>\mbox{\hyperlink{structtraccc_1_1triplet__finding_af7dfa30de0444aca4b5e8889ec30a1e2}{operator()}}(g2, d, lc, doublet, lincol, result);}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{47     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtraccc_1_1triplet__finding_acf75681ef93cea3ac203faa2e8de095f}\label{structtraccc_1_1triplet__finding_acf75681ef93cea3ac203faa2e8de095f}} 
+\index{traccc::triplet\_finding@{traccc::triplet\_finding}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::triplet\_finding@{traccc::triplet\_finding}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void traccc\+::triplet\+\_\+finding\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetraccc_a238ca82836cc5cff0a7c1026ea0530e0}{sp\+\_\+grid}} \&}]{g2,  }\item[{const \mbox{\hyperlink{structtraccc_1_1doublet}{doublet}} \&}]{mid\+\_\+bot,  }\item[{const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&}]{lb,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{doublet\+\_\+collection\+\_\+types\+::host}} \&}]{doublets\+\_\+mid\+\_\+top,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{lin\+\_\+circle\+\_\+collection\+\_\+types\+::host}} \&}]{lin\+\_\+circles\+\_\+mid\+\_\+top,  }\item[{output\+\_\+type \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Callable operator for triplet finding per middle-\/bottom doublet
+
+
+\begin{DoxyParams}{Parameters}
+{\em mid\+\_\+bot} & is the current middle-\/bottom doublets \\
+\hline
+{\em lb} & is transformed coordinate of mid\+\_\+bot \\
+\hline
+{\em doublets\+\_\+mid\+\_\+top} & is the vector of middle-\/top doublets which share same middle spacepoint with current middle-\/bottom doublet \\
+\hline
+{\em lin\+\_\+circles\+\_\+mid\+\_\+top} & is transformed coordinates of doublets\+\_\+mid\+\_\+top\\
+\hline
+\end{DoxyParams}
+void interface
+
+\begin{DoxyReturn}{Returns}
+a vector of triplets 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                               \{}
+\DoxyCodeLine{66         \textcolor{comment}{// output}}
+\DoxyCodeLine{67         \textcolor{keyword}{auto}\& triplets = o;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{comment}{// Run the algorithm}}
+\DoxyCodeLine{70         \textcolor{keyword}{auto}\& l = mid\_bot.sp1;}
+\DoxyCodeLine{71         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& spM = g2.bin(l.bin\_idx)[l.sp\_idx];}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73         \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} iSinTheta2 = 1 + lb.cotTheta() * lb.cotTheta();}
+\DoxyCodeLine{74         \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} scatteringInRegion2 = \mbox{\hyperlink{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}{m\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_ad621edcb12b86883b431e8c581da51ef}{maxScatteringAngle2}} * iSinTheta2;}
+\DoxyCodeLine{75         scatteringInRegion2 *=}
+\DoxyCodeLine{76             \mbox{\hyperlink{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}{m\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_a599852ee91a92905c57cd532b5659d1c}{sigmaScattering}} * \mbox{\hyperlink{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}{m\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_a599852ee91a92905c57cd532b5659d1c}{sigmaScattering}};}
+\DoxyCodeLine{77         \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} curvature, impact\_parameter;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < doublets\_mid\_top.size(); ++i) \{}
+\DoxyCodeLine{80             \textcolor{keyword}{auto}\& mid\_top = doublets\_mid\_top[i];}
+\DoxyCodeLine{81             \textcolor{keyword}{auto}\& lt = lin\_circles\_mid\_top[i];}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{structtraccc_1_1triplet__finding__helper_a2bcf66c0ebe8c89242f0f132e81a76ab}{triplet\_finding\_helper::isCompatible}}(}
+\DoxyCodeLine{84                     spM, lb, lt, \mbox{\hyperlink{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}{m\_config}}, iSinTheta2, scatteringInRegion2,}
+\DoxyCodeLine{85                     curvature, impact\_parameter)) \{}
+\DoxyCodeLine{86                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{87             \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89             triplets.push\_back(}
+\DoxyCodeLine{90                 \{mid\_bot.sp2,  \textcolor{comment}{// bottom}}
+\DoxyCodeLine{91                  mid\_bot.sp1,  \textcolor{comment}{// middle}}
+\DoxyCodeLine{92                  mid\_top.sp2,  \textcolor{comment}{// top}}
+\DoxyCodeLine{93                  curvature,    \textcolor{comment}{// curvature}}
+\DoxyCodeLine{94                  -\/impact\_parameter * \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_ab4dc18842ae03b2b47a1e4c33d11e739}{impactWeightFactor}},}
+\DoxyCodeLine{95                  lb.Zo()\});}
+\DoxyCodeLine{96         \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < triplets.size(); ++i) \{}
+\DoxyCodeLine{99             \textcolor{keyword}{auto}\& current\_triplet = triplets[i];}
+\DoxyCodeLine{100             \textcolor{keyword}{auto}\& spT\_idx = current\_triplet.sp3;}
+\DoxyCodeLine{101             \textcolor{keyword}{auto}\& current\_spT = g2.bin(spT\_idx.bin\_idx)[spT\_idx.sp\_idx];}
+\DoxyCodeLine{102             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& currentTop\_r = current\_spT.radius();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104             \textcolor{comment}{// if two compatible seeds with high distance in r are found,}}
+\DoxyCodeLine{105             \textcolor{comment}{// compatible seeds span 5 layers}}
+\DoxyCodeLine{106             \textcolor{comment}{// -\/> very good seed}}
+\DoxyCodeLine{107             std::vector<scalar> compatibleSeedR;}
+\DoxyCodeLine{108             \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} lowerLimitCurv = current\_triplet.curvature -\/}
+\DoxyCodeLine{109                                     \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_a341ed687873146db8dde11ab339bdb69}{deltaInvHelixDiameter}};}
+\DoxyCodeLine{110             \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} upperLimitCurv = current\_triplet.curvature +}
+\DoxyCodeLine{111                                     \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_a341ed687873146db8dde11ab339bdb69}{deltaInvHelixDiameter}};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 0; j < triplets.size(); ++j) \{}
+\DoxyCodeLine{114                 \textcolor{keywordflow}{if} (i == j) \{}
+\DoxyCodeLine{115                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{116                 \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118                 \textcolor{keyword}{auto}\& other\_triplet = triplets[j];}
+\DoxyCodeLine{119                 \textcolor{keyword}{auto}\& other\_spT\_idx = other\_triplet.sp3;}
+\DoxyCodeLine{120                 \textcolor{keyword}{auto}\& other\_spT =}
+\DoxyCodeLine{121                     g2.bin(other\_spT\_idx.bin\_idx)[other\_spT\_idx.sp\_idx];}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123                 \textcolor{comment}{// compared top SP should have at least deltaRMin distance}}
+\DoxyCodeLine{124                 \textcolor{keyword}{const} \textcolor{keyword}{auto}\& otherTop\_r = other\_spT.radius();}
+\DoxyCodeLine{125                 \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} deltaR = currentTop\_r -\/ otherTop\_r;}
+\DoxyCodeLine{126                 \textcolor{keywordflow}{if} (std::abs(deltaR) < \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_ac8b1982ea2bc8196449d64dd739fc533}{deltaRMin}}) \{}
+\DoxyCodeLine{127                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{128                 \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130                 \textcolor{comment}{// curvature difference within limits?}}
+\DoxyCodeLine{131                 \textcolor{comment}{// TODO: how much slower than sorting all vectors by curvature}}
+\DoxyCodeLine{132                 \textcolor{comment}{// and breaking out of loop? i.e. is vector size large (e.g. in}}
+\DoxyCodeLine{133                 \textcolor{comment}{// jets?)}}
+\DoxyCodeLine{134                 \textcolor{keywordflow}{if} (other\_triplet.curvature < lowerLimitCurv) \{}
+\DoxyCodeLine{135                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{136                 \}}
+\DoxyCodeLine{137                 \textcolor{keywordflow}{if} (other\_triplet.curvature > upperLimitCurv) \{}
+\DoxyCodeLine{138                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{139                 \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141                 \textcolor{keywordtype}{bool} newCompSeed = \textcolor{keyword}{true};}
+\DoxyCodeLine{142                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} previousDiameter : compatibleSeedR) \{}
+\DoxyCodeLine{143                     \textcolor{comment}{// original ATLAS code uses higher min distance for 2nd}}
+\DoxyCodeLine{144                     \textcolor{comment}{// found compatible seed (20mm instead of 5mm) add new}}
+\DoxyCodeLine{145                     \textcolor{comment}{// compatible seed only if distance larger than rmin to all}}
+\DoxyCodeLine{146                     \textcolor{comment}{// other compatible seeds}}
+\DoxyCodeLine{147                     \textcolor{keywordflow}{if} (std::abs(previousDiameter -\/ otherTop\_r) <}
+\DoxyCodeLine{148                         \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_ac8b1982ea2bc8196449d64dd739fc533}{deltaRMin}}) \{}
+\DoxyCodeLine{149                         newCompSeed = \textcolor{keyword}{false};}
+\DoxyCodeLine{150                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{151                     \}}
+\DoxyCodeLine{152                 \}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154                 \textcolor{keywordflow}{if} (newCompSeed) \{}
+\DoxyCodeLine{155                     compatibleSeedR.push\_back(otherTop\_r);}
+\DoxyCodeLine{156                     current\_triplet.weight += \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_aea9a45d27a98cdc54281d9369351cbac}{compatSeedWeight}};}
+\DoxyCodeLine{157                 \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159                 \textcolor{keywordflow}{if} (compatibleSeedR.size() >= \mbox{\hyperlink{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}{m\_filter\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfilter__config_af15c65b168c31d76d13692022014aa0a}{compatSeedLimit}}) \{}
+\DoxyCodeLine{160                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{161                 \}}
+\DoxyCodeLine{162             \}}
+\DoxyCodeLine{163         \}}
+\DoxyCodeLine{164     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::seedfilter\+\_\+config\+::compat\+Seed\+Limit, traccc\+::seedfilter\+\_\+config\+::compat\+Seed\+Weight, traccc\+::lin\+\_\+circle\+::cot\+Theta(), traccc\+::seedfilter\+\_\+config\+::delta\+Inv\+Helix\+Diameter, traccc\+::seedfilter\+\_\+config\+::delta\+R\+Min, traccc\+::seedfilter\+\_\+config\+::impact\+Weight\+Factor, traccc\+::triplet\+\_\+finding\+\_\+helper\+::is\+Compatible(), m\+\_\+config, m\+\_\+filter\+\_\+config, traccc\+::seedfinder\+\_\+config\+::max\+Scattering\+Angle2, traccc\+::seedfinder\+\_\+config\+::sigma\+Scattering, traccc\+::doublet\+::sp1, traccc\+::doublet\+::sp2, and traccc\+::lin\+\_\+circle\+::\+Zo().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}\label{structtraccc_1_1triplet__finding_abd74467a0752797606c59ba439d41fc1}} 
+\index{traccc::triplet\_finding@{traccc::triplet\_finding}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!traccc::triplet\_finding@{traccc::triplet\_finding}}
+\doxysubsubsection{\texorpdfstring{m\_config}{m\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} traccc\+::triplet\+\_\+finding\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}\label{structtraccc_1_1triplet__finding_a64cda6a6834f45705a4c1a9003a59272}} 
+\index{traccc::triplet\_finding@{traccc::triplet\_finding}!m\_filter\_config@{m\_filter\_config}}
+\index{m\_filter\_config@{m\_filter\_config}!traccc::triplet\_finding@{traccc::triplet\_finding}}
+\doxysubsubsection{\texorpdfstring{m\_filter\_config}{m\_filter\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} traccc\+::triplet\+\_\+finding\+::m\+\_\+filter\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/\mbox{\hyperlink{triplet__finding_8hpp}{triplet\+\_\+finding.\+hpp}}\end{DoxyCompactItemize}

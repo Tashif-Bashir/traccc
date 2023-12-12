@@ -4,6 +4,13 @@
 #
 # Mozilla Public License Version 2.0
 
+
+
+# Use Gprof
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pg")
+SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg")
+
+
 # Set up the project.
 cmake_minimum_required( VERSION 3.9 )
 project( traccc VERSION 0.6.0 LANGUAGES CXX )
@@ -300,3 +307,4 @@ endif()
 
 # Set up the packaging of the project.
 include( traccc-packaging )
+

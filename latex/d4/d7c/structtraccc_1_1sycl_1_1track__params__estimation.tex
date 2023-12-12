@@ -1,0 +1,121 @@
+\hypertarget{structtraccc_1_1sycl_1_1track__params__estimation}{}\doxysection{traccc\+::sycl\+::track\+\_\+params\+\_\+estimation Struct Reference}
+\label{structtraccc_1_1sycl_1_1track__params__estimation}\index{traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}}
+
+
+track parameter estimation for sycl  
+
+
+
+
+{\ttfamily \#include $<$track\+\_\+params\+\_\+estimation.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::sycl\+::track\+\_\+params\+\_\+estimation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{d4/d76/structtraccc_1_1sycl_1_1track__params__estimation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::sycl\+::track\+\_\+params\+\_\+estimation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d19/structtraccc_1_1sycl_1_1track__params__estimation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1sycl_1_1track__params__estimation_a6c0cdecfc91bb2c68a2df3d7ab127c7d}{track\+\_\+params\+\_\+estimation}} (const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&mr, vecmem\+::copy \&copy, \mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}} queue)
+\item 
+output\+\_\+type \mbox{\hyperlink{structtraccc_1_1sycl_1_1track__params__estimation_a4ecbe8fe4a4353ac723dabbbe112ac44}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&spacepoints\+\_\+view, const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{seed\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&seeds\+\_\+view, const \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} \&bfield, const std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{traccc\+::e\+\_\+bound\+\_\+size}} $>$ \&stddev=\{ 0.\+02 $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::mm, 0.\+03 $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::mm, 1. $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::degree, 1. $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::degree, 0.\+01/detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::GeV, 1 $\ast$detray\+::unit$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$\+::ns\}) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{structtraccc_1_1sycl_1_1track__params__estimation_a744875fd37371cf9c907d2bb28e500c6}{m\+\_\+mr}}
+\item 
+\mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}} \mbox{\hyperlink{structtraccc_1_1sycl_1_1track__params__estimation_a8fc3a95757c9aea9e104697053ae0bf9}{m\+\_\+queue}}
+\item 
+vecmem\+::copy \& \mbox{\hyperlink{structtraccc_1_1sycl_1_1track__params__estimation_ad3ed6e4e1262a84e7c978ab81a923583}{m\+\_\+copy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+track parameter estimation for sycl 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1sycl_1_1track__params__estimation_a6c0cdecfc91bb2c68a2df3d7ab127c7d}\label{structtraccc_1_1sycl_1_1track__params__estimation_a6c0cdecfc91bb2c68a2df3d7ab127c7d}} 
+\index{traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}!track\_params\_estimation@{track\_params\_estimation}}
+\index{track\_params\_estimation@{track\_params\_estimation}!traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{track\_params\_estimation()}{track\_params\_estimation()}}
+{\footnotesize\ttfamily traccc\+::sycl\+::track\+\_\+params\+\_\+estimation\+::track\+\_\+params\+\_\+estimation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&}]{mr,  }\item[{vecmem\+::copy \&}]{copy,  }\item[{\mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}}}]{queue }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{structtraccc_1_1sycl_1_1track__params__estimation}{track\+\_\+params\+\_\+estimation}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & is a struct of memory resources (shared or host \& device) \\
+\hline
+{\em copy} & The copy object to use for copying data between device and host memory blocks \\
+\hline
+{\em queue} & is a wrapper for the sycl queue for kernel invocation \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1sycl_1_1track__params__estimation_a4ecbe8fe4a4353ac723dabbbe112ac44}\label{structtraccc_1_1sycl_1_1track__params__estimation_a4ecbe8fe4a4353ac723dabbbe112ac44}} 
+\index{traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily output\+\_\+type traccc\+::sycl\+::track\+\_\+params\+\_\+estimation\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{spacepoints\+\_\+view,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{seed\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{seeds\+\_\+view,  }\item[{const \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} \&}]{bfield,  }\item[{const std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{traccc\+::e\+\_\+bound\+\_\+size}} $>$ \&}]{stddev = {\ttfamily \{~0.02~$\ast$detray\+:\+:unit$<$~\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}~$>$\+:\+:mm,~0.03~$\ast$detray\+:\+:unit$<$~\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}~$>$\+:\+:mm,~1.~$\ast$detray\+:\+:unit$<$~\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}~$>$\+:\+:degree,~1.~$\ast$detray\+:\+:unit$<$~\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}~$>$\+:\+:degree,~0.01/detray\+:\+:unit$<$~\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}~$>$\+:\+:GeV,~1~$\ast$detray\+:\+:unit$<$~\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}}~$>$\+:\+:ns\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Callable operator for track\+\_\+params\+\_\+esitmation
+
+
+\begin{DoxyParams}{Parameters}
+{\em spacepoints} & All spacepoints of the event \\
+\hline
+{\em seeds} & The reconstructed track seeds of the event \\
+\hline
+{\em bfield} & (Temporary) Magnetic field vector \\
+\hline
+{\em stddev} & standard deviation for setting the covariance (Default value from ar\+Xiv\+:2112.\+09470v1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of bound track parameters 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1sycl_1_1track__params__estimation_ad3ed6e4e1262a84e7c978ab81a923583}\label{structtraccc_1_1sycl_1_1track__params__estimation_ad3ed6e4e1262a84e7c978ab81a923583}} 
+\index{traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}!m\_copy@{m\_copy}}
+\index{m\_copy@{m\_copy}!traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{m\_copy}{m\_copy}}
+{\footnotesize\ttfamily vecmem\+::copy\& traccc\+::sycl\+::track\+\_\+params\+\_\+estimation\+::m\+\_\+copy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structtraccc_1_1sycl_1_1track__params__estimation_a744875fd37371cf9c907d2bb28e500c6}\label{structtraccc_1_1sycl_1_1track__params__estimation_a744875fd37371cf9c907d2bb28e500c6}} 
+\index{traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} traccc\+::sycl\+::track\+\_\+params\+\_\+estimation\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structtraccc_1_1sycl_1_1track__params__estimation_a8fc3a95757c9aea9e104697053ae0bf9}\label{structtraccc_1_1sycl_1_1track__params__estimation_a8fc3a95757c9aea9e104697053ae0bf9}} 
+\index{traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}!m\_queue@{m\_queue}}
+\index{m\_queue@{m\_queue}!traccc::sycl::track\_params\_estimation@{traccc::sycl::track\_params\_estimation}}
+\doxysubsubsection{\texorpdfstring{m\_queue}{m\_queue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}} traccc\+::sycl\+::track\+\_\+params\+\_\+estimation\+::m\+\_\+queue\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/sycl/include/traccc/sycl/seeding/\mbox{\hyperlink{device_2sycl_2include_2traccc_2sycl_2seeding_2track__params__estimation_8hpp}{track\+\_\+params\+\_\+estimation.\+hpp}}\end{DoxyCompactItemize}

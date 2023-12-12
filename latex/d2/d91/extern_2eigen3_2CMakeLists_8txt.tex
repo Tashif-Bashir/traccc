@@ -1,0 +1,88 @@
+\hypertarget{extern_2eigen3_2CMakeLists_8txt}{}\doxysection{extern/eigen3/\+C\+Make\+Lists.txt File Reference}
+\label{extern_2eigen3_2CMakeLists_8txt}\index{extern/eigen3/CMakeLists.txt@{extern/eigen3/CMakeLists.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a6d2058b4c5a10a8508c2926cfeca4ce5}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+14) \mbox{\hyperlink{tests_2CMakeLists_8txt_a6b91a6041b901d418431cddf34b441e9}{include}}(Fetch\+Content) \mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a4a671601c7008dcb84390407829a2899}{if}}(P\+O\+L\+I\+CY C\+M\+P0135) cmake\+\_\+policy(S\+ET C\+M\+P0135 N\+EW) \mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_a8acb2602075c7a12cad696cf19c6f22b}{endif}}() message(S\+T\+A\+T\+US \char`\"{}Building Eigen3 as part of the T\+R\+A\+C\+CC project\char`\"{}) set(T\+R\+A\+C\+C\+C\+\_\+\+E\+I\+G\+E\+N\+\_\+\+S\+O\+U\+R\+CE \char`\"{}U\+RL
+\item 
+https when built as part of this project \mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_aad99f575f3997e7732ea9a646d11d67b}{mark\+\_\+as\+\_\+advanced}} (T\+R\+A\+C\+C\+C\+\_\+\+E\+I\+G\+E\+N\+\_\+\+S\+O\+U\+R\+CE) Fetch\+Content\+\_\+\+Declare(Eigen3 \$
+\item 
+\mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a4a671601c7008dcb84390407829a2899}{if}} (D\+E\+F\+I\+N\+ED C\+A\+C\+HE\{B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG\}) \mbox{\hyperlink{extern_2kokkos_2CMakeLists_8txt_abb83f476e526bc0a32cf573fda1c3482}{set}}(\+\_\+build\+Testing\+Value \$
+\item 
+\mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a3f25f8ee4798b115390e282a4fc35aca}{endif}} () \mbox{\hyperlink{extern_2kokkos_2CMakeLists_8txt_abb83f476e526bc0a32cf573fda1c3482}{set}}(B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG F\+A\+L\+SE C\+A\+C\+HE I\+N\+T\+E\+R\+N\+AL \char`\"{}Forceful setting of B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG\char`\"{}) set(E\+I\+G\+E\+N\+\_\+\+B\+U\+I\+L\+D\+\_\+\+D\+OC F\+A\+L\+SE C\+A\+C\+HE B\+O\+OL \char`\"{}Turn off the Eigen documentation build\char`\"{}) set(E\+I\+G\+E\+N\+\_\+\+T\+E\+S\+T\+\_\+\+N\+O\+QT T\+R\+UE C\+A\+C\+HE B\+O\+OL \char`\"{}Don\textquotesingle{}t \mbox{\hyperlink{extern_2kokkos_2CMakeLists_8txt_abb83f476e526bc0a32cf573fda1c3482}{set}} up Qt based Eigen tests/demos\char`\"{}) Fetch\+Content\+\_\+\+Make\+Available(Eigen3) \mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a4a671601c7008dcb84390407829a2899}{if}}(D\+E\+F\+I\+N\+ED \+\_\+build\+Testing\+Value) \mbox{\hyperlink{extern_2kokkos_2CMakeLists_8txt_abb83f476e526bc0a32cf573fda1c3482}{set}}(B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG \$
+\item 
+C\+A\+C\+HE B\+O\+OL Turn tests on off F\+O\+R\+CE \mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a4b63f50ec2bac3490cc14d1ba76cc97c}{unset}} (\+\_\+build\+Testing\+Value) \mbox{\hyperlink{inst__nvtx_8cpp_a0544c3fe466e421738dae463968b70ba}{else}}() unset(B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG C\+A\+C\+HE) \mbox{\hyperlink{extern_2googletest_2CMakeLists_8txt_a8acb2602075c7a12cad696cf19c6f22b}{endif}}() get\+\_\+target\+\_\+property(\+\_\+inc\+Dirs eigen I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+R\+E\+C\+T\+O\+R\+I\+ES) target\+\_\+include\+\_\+directories(eigen S\+Y\+S\+T\+EM I\+N\+T\+E\+R\+F\+A\+CE \$
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+https \mbox{\hyperlink{extern_2eigen3_2CMakeLists_8txt_a0729a129b5339fbc7f2f52e5e37e942e}{\+\_\+\+\_\+pad6\+\_\+\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{extern_2eigen3_2CMakeLists_8txt_a6d2058b4c5a10a8508c2926cfeca4ce5}\label{extern_2eigen3_2CMakeLists_8txt_a6d2058b4c5a10a8508c2926cfeca4ce5}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.}]{14 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29      \{CMAKE\_BINARY\_DIR\}/\$\{CMAKE\_INSTALL\_BINDIR\}\textcolor{stringliteral}{" CACHE PATH}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{extern_2eigen3_2CMakeLists_8txt_a3f25f8ee4798b115390e282a4fc35aca}\label{extern_2eigen3_2CMakeLists_8txt_a3f25f8ee4798b115390e282a4fc35aca}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!endif@{endif}}
+\index{endif@{endif}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{endif()}{endif()}}
+{\footnotesize\ttfamily endif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                        \{\_buildTestingValue\} CACHE BOOL \textcolor{stringliteral}{"Turn tests on/off"}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{extern_2eigen3_2CMakeLists_8txt_a4a671601c7008dcb84390407829a2899}\label{extern_2eigen3_2CMakeLists_8txt_a4a671601c7008dcb84390407829a2899}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!if@{if}}
+\index{if@{if}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{D\+E\+F\+I\+N\+ED C\+A\+C\+HE\{B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG\}}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                  \{BUILD\_TESTING\} )}
+\DoxyCodeLine{28    \mbox{\hyperlink{extern_2alpaka_2CMakeLists_8txt_a8e5fe0ea85ac60203de48176b27ec966}{set}}( \_buildTestingValue \$\{BUILD\_TESTING\} )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{extern_2eigen3_2CMakeLists_8txt_aad99f575f3997e7732ea9a646d11d67b}\label{extern_2eigen3_2CMakeLists_8txt_aad99f575f3997e7732ea9a646d11d67b}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!mark\_as\_advanced@{mark\_as\_advanced}}
+\index{mark\_as\_advanced@{mark\_as\_advanced}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{mark\_as\_advanced()}{mark\_as\_advanced()}}
+{\footnotesize\ttfamily https when built as part of this project mark\+\_\+as\+\_\+advanced (\begin{DoxyParamCaption}\item[{T\+R\+A\+C\+C\+C\+\_\+\+E\+I\+G\+E\+N\+\_\+\+S\+O\+U\+R\+CE}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                               \{TRACCC\_EIGEN\_SOURCE\} )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{extern_2eigen3_2CMakeLists_8txt_a4b63f50ec2bac3490cc14d1ba76cc97c}\label{extern_2eigen3_2CMakeLists_8txt_a4b63f50ec2bac3490cc14d1ba76cc97c}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!unset@{unset}}
+\index{unset@{unset}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{unset()}{unset()}}
+{\footnotesize\ttfamily C\+A\+C\+HE B\+O\+OL Turn tests on off F\+O\+R\+CE unset (\begin{DoxyParamCaption}\item[{\+\_\+build\+Testing\+Value}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                      \{\_incDirs\} )}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{extern_2eigen3_2CMakeLists_8txt_a0729a129b5339fbc7f2f52e5e37e942e}\label{extern_2eigen3_2CMakeLists_8txt_a0729a129b5339fbc7f2f52e5e37e942e}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!\_\_pad6\_\_@{\_\_pad6\_\_}}
+\index{\_\_pad6\_\_@{\_\_pad6\_\_}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{\_\_pad6\_\_}{\_\_pad6\_\_}}
+{\footnotesize\ttfamily https \+\_\+\+\_\+pad6\+\_\+\+\_\+}
+

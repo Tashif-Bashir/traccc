@@ -1,0 +1,62 @@
+\hypertarget{kokkos__main_8cpp}{}\doxysection{tests/kokkos/kokkos\+\_\+main.cpp File Reference}
+\label{kokkos__main_8cpp}\index{tests/kokkos/kokkos\_main.cpp@{tests/kokkos/kokkos\_main.cpp}}
+{\ttfamily \#include $<$Kokkos\+\_\+\+Core.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for kokkos\+\_\+main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{d1/dfa/kokkos__main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{kokkos__main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kokkos__main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{kokkos__main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{kokkos\_main.cpp@{kokkos\_main.cpp}!main@{main}}
+\index{main@{main}!kokkos\_main.cpp@{kokkos\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 Main function for the Kokkos unit test(s)
+
+In order to ensure that Kokkos is initialised and finalised just once in the test jobs, we need to use a custom {\ttfamily main} function instead of the Googe\+Test provided one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command line arguments \\
+\hline
+{\em argv} & The array of command line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily 0} if successful, something else if not 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Initialise both Kokkos and GoogleTest.}}
+\DoxyCodeLine{28     Kokkos::initialize(argc, argv);}
+\DoxyCodeLine{29     testing::InitGoogleTest(\&argc, argv);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{comment}{// Run all of the tests.}}
+\DoxyCodeLine{32     \textcolor{keyword}{const} \textcolor{keywordtype}{int} r = RUN\_ALL\_TESTS();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{comment}{// Finalise Kokkos.}}
+\DoxyCodeLine{35     Kokkos::finalize();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// Return the appropriate code.}}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}

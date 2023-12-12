@@ -1,0 +1,4 @@
+<map id="traccc::simple_charged_eta_pt_cut" name="traccc::simple_charged_eta_pt_cut">
+<area shape="rect" id="node1" title="Simple η and pT cut for charged particles." alt="" coords="5,160,177,311"/>
+<area shape="rect" id="node2" href="$d8/d24/structtraccc_1_1track__filter.html" title="Abstract track filtering descriptor." alt="" coords="22,5,161,112"/>
+</map>

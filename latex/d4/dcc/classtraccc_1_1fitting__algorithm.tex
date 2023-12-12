@@ -1,0 +1,195 @@
+\hypertarget{classtraccc_1_1fitting__algorithm}{}\doxysection{traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$ Class Template Reference}
+\label{classtraccc_1_1fitting__algorithm}\index{traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}}
+
+
+Fitting algorithm for a set of tracks.  
+
+
+
+
+{\ttfamily \#include $<$fitting\+\_\+algorithm.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{d6/da0/classtraccc_1_1fitting__algorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{d0/d2a/classtraccc_1_1fitting__algorithm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a32bf551fc0e6c34d1d55a39acbcc0f30}{transform3\+\_\+type}} = typename fitter\+\_\+t\+::transform3\+\_\+type
+\item 
+using \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a2953e040b7ef6450954ac2475c980067}{bfield\+\_\+type}} = typename fitter\+\_\+t\+::bfield\+\_\+type
+\item 
+using \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{config\+\_\+type}} = typename fitter\+\_\+t\+::config\+\_\+type
+\begin{DoxyCompactList}\small\item\em Configuration type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1fitting__algorithm_ad955ddde13f8d507dfa5ed9ff5f8ba71}{fitting\+\_\+algorithm}} (const \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{config\+\_\+type}} \&cfg)
+\item 
+\mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{track\+\_\+state\+\_\+container\+\_\+types\+::host}} \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a8a3a221883ea0070af22c4f6fdbe0894}{operator()}} (const typename fitter\+\_\+t\+::detector\+\_\+type \&det, const typename fitter\+\_\+t\+::bfield\+\_\+type \&field, const typename \mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{track\+\_\+candidate\+\_\+container\+\_\+types\+::host}} \&track\+\_\+candidates) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{config\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a382a789cadb521eafe224d49a414fcac}{m\+\_\+cfg}}
+\begin{DoxyCompactList}\small\item\em Config object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename fitter\+\_\+t$>$\newline
+class traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$}
+
+Fitting algorithm for a set of tracks. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtraccc_1_1fitting__algorithm_a2953e040b7ef6450954ac2475c980067}\label{classtraccc_1_1fitting__algorithm_a2953e040b7ef6450954ac2475c980067}} 
+\index{traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}!bfield\_type@{bfield\_type}}
+\index{bfield\_type@{bfield\_type}!traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}}
+\doxysubsubsection{\texorpdfstring{bfield\_type}{bfield\_type}}
+{\footnotesize\ttfamily template$<$typename fitter\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{traccc\+::fitting\+\_\+algorithm}}$<$ fitter\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a2953e040b7ef6450954ac2475c980067}{bfield\+\_\+type}} =  typename fitter\+\_\+t\+::bfield\+\_\+type}
+
+\mbox{\Hypertarget{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}\label{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}} 
+\index{traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}!config\_type@{config\_type}}
+\index{config\_type@{config\_type}!traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}}
+\doxysubsubsection{\texorpdfstring{config\_type}{config\_type}}
+{\footnotesize\ttfamily template$<$typename fitter\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{traccc\+::fitting\+\_\+algorithm}}$<$ fitter\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{config\+\_\+type}} =  typename fitter\+\_\+t\+::config\+\_\+type}
+
+
+
+Configuration type. 
+
+\mbox{\Hypertarget{classtraccc_1_1fitting__algorithm_a32bf551fc0e6c34d1d55a39acbcc0f30}\label{classtraccc_1_1fitting__algorithm_a32bf551fc0e6c34d1d55a39acbcc0f30}} 
+\index{traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}!transform3\_type@{transform3\_type}}
+\index{transform3\_type@{transform3\_type}!traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}}
+\doxysubsubsection{\texorpdfstring{transform3\_type}{transform3\_type}}
+{\footnotesize\ttfamily template$<$typename fitter\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{traccc\+::fitting\+\_\+algorithm}}$<$ fitter\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a32bf551fc0e6c34d1d55a39acbcc0f30}{transform3\+\_\+type}} =  typename fitter\+\_\+t\+::transform3\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1fitting__algorithm_ad955ddde13f8d507dfa5ed9ff5f8ba71}\label{classtraccc_1_1fitting__algorithm_ad955ddde13f8d507dfa5ed9ff5f8ba71}} 
+\index{traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}!fitting\_algorithm@{fitting\_algorithm}}
+\index{fitting\_algorithm@{fitting\_algorithm}!traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}}
+\doxysubsubsection{\texorpdfstring{fitting\_algorithm()}{fitting\_algorithm()}}
+{\footnotesize\ttfamily template$<$typename fitter\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{traccc\+::fitting\+\_\+algorithm}}$<$ fitter\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{fitting\+\_\+algorithm}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{config\+\_\+type}} \&}]{cfg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the fitting algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em cfg} & Configuration object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 : \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a382a789cadb521eafe224d49a414fcac}{m\_cfg}}(cfg) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1fitting__algorithm_a8a3a221883ea0070af22c4f6fdbe0894}\label{classtraccc_1_1fitting__algorithm_a8a3a221883ea0070af22c4f6fdbe0894}} 
+\index{traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename fitter\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{track\+\_\+state\+\_\+container\+\_\+types\+::host}} \mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{traccc\+::fitting\+\_\+algorithm}}$<$ fitter\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const typename fitter\+\_\+t\+::detector\+\_\+type \&}]{det,  }\item[{const typename fitter\+\_\+t\+::bfield\+\_\+type \&}]{field,  }\item[{const typename \mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{track\+\_\+candidate\+\_\+container\+\_\+types\+::host}} \&}]{track\+\_\+candidates }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Run the algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+\_\+candidates} & the candidate measurements from track finding \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the container of the fitted track parameters 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                        \{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         fitter\_t fitter(det, field, \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_a382a789cadb521eafe224d49a414fcac}{m\_cfg}});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{track\_state\_container\_types::host}} output\_states;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \textcolor{comment}{// The number of tracks}}
+\DoxyCodeLine{54         std::size\_t n\_tracks = track\_candidates.size();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{comment}{// Iterate over tracks}}
+\DoxyCodeLine{57         \textcolor{keywordflow}{for} (std::size\_t i = 0; i < n\_tracks; i++) \{}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59             \textcolor{comment}{// Seed parameter}}
+\DoxyCodeLine{60             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& seed\_param = track\_candidates[i].header;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62             \textcolor{comment}{// Make a vector of track state}}
+\DoxyCodeLine{63             \textcolor{keyword}{auto}\& cands = track\_candidates[i].items;}
+\DoxyCodeLine{64             vecmem::vector<track\_state<transform3\_type>> input\_states;}
+\DoxyCodeLine{65             input\_states.reserve(cands.size());}
+\DoxyCodeLine{66             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& cand : cands) \{}
+\DoxyCodeLine{67                 input\_states.emplace\_back(cand);}
+\DoxyCodeLine{68             \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70             \textcolor{comment}{// Make a fitter state}}
+\DoxyCodeLine{71             \textcolor{keyword}{typename} fitter\_t::state fitter\_state(std::move(input\_states));}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73             \textcolor{comment}{// Run fitter}}
+\DoxyCodeLine{74             fitter.fit(seed\_param, fitter\_state);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76             output\_states.push\_back(}
+\DoxyCodeLine{77                 std::move(fitter\_state.m\_fit\_info),}
+\DoxyCodeLine{78                 std::move(fitter\_state.m\_fit\_actor\_state.m\_track\_states));}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} output\_states;}
+\DoxyCodeLine{82     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$\+::m\+\_\+cfg, traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::push\+\_\+back(), traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::reserve(), and traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::size().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1fitting__algorithm_a382a789cadb521eafe224d49a414fcac}\label{classtraccc_1_1fitting__algorithm_a382a789cadb521eafe224d49a414fcac}} 
+\index{traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}!m\_cfg@{m\_cfg}}
+\index{m\_cfg@{m\_cfg}!traccc::fitting\_algorithm$<$ fitter\_t $>$@{traccc::fitting\_algorithm$<$ fitter\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_cfg}{m\_cfg}}
+{\footnotesize\ttfamily template$<$typename fitter\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{config\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{traccc\+::fitting\+\_\+algorithm}}$<$ fitter\+\_\+t $>$\+::m\+\_\+cfg}
+
+
+
+Config object. 
+
+
+
+Referenced by traccc\+::fitting\+\_\+algorithm$<$ fitter\+\_\+t $>$\+::operator()().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/fitting/\mbox{\hyperlink{core_2include_2traccc_2fitting_2fitting__algorithm_8hpp}{fitting\+\_\+algorithm.\+hpp}}\end{DoxyCompactItemize}

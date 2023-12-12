@@ -1,0 +1,200 @@
+\hypertarget{structtraccc_1_1kalman__fitter_1_1state}{}\doxysection{traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state Struct Reference}
+\label{structtraccc_1_1kalman__fitter_1_1state}\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+
+
+Kalman fitter state.  
+
+
+
+
+{\ttfamily \#include $<$kalman\+\_\+fitter.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{df/dae/structtraccc_1_1kalman__fitter_1_1state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_ad9344ec9918b0721bc1ea70e8695a952}{state}} (\mbox{\hyperlink{classtraccc_1_1kalman__fitter_aaf9e1904e6749de0ecc44fa2d78f63df}{vector\+\_\+type}}$<$ \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ \mbox{\hyperlink{classtraccc_1_1kalman__fitter_a77fd84cb461036a33386672f90d1087d}{transform3\+\_\+type}} $>$$>$ \&\&track\+\_\+states)
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_a2f734c393637b24bd6302de5ce191389}{state}} (const \mbox{\hyperlink{classtraccc_1_1kalman__fitter_aaf9e1904e6749de0ecc44fa2d78f63df}{vector\+\_\+type}}$<$ \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ \mbox{\hyperlink{classtraccc_1_1kalman__fitter_a77fd84cb461036a33386672f90d1087d}{transform3\+\_\+type}} $>$$>$ \&track\+\_\+states)
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} actor\+\_\+chain\+\_\+type\+::state \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_a9910be80e8dde40672b90f53b2622158}{operator()}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+aborter\+::state \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_a88ffd46e820ded3217791d28b4696ee6}{m\+\_\+aborter\+\_\+state}} \{\}
+\begin{DoxyCompactList}\small\item\em Individual actor states. \end{DoxyCompactList}\item 
+transporter\+::state \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_ad1d56ead71296d4ca59653f0bfeb0283}{m\+\_\+transporter\+\_\+state}} \{\}
+\item 
+interactor\+::state \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_a6d896a25a5951d4affda93dd95c4f082}{m\+\_\+interactor\+\_\+state}} \{\}
+\item 
+\mbox{\hyperlink{structtraccc_1_1kalman__actor_1_1state}{fit\+\_\+actor\+::state}} \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_ac5bcbbd04bd8490d0b4102dad2b79469}{m\+\_\+fit\+\_\+actor\+\_\+state}}
+\item 
+resetter\+::state \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_acf975a11dae1405444d2e9389ed4abf5}{m\+\_\+resetter\+\_\+state}} \{\}
+\item 
+\mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{classtraccc_1_1kalman__fitter_a77fd84cb461036a33386672f90d1087d}{transform3\+\_\+type}} $>$ \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_a3fe2af99df375e424eda725c28445de5}{m\+\_\+fit\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em Fitting result per track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename stepper\+\_\+t, typename navigator\+\_\+t$>$\newline
+struct traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state}
+
+Kalman fitter state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_ad9344ec9918b0721bc1ea70e8695a952}\label{structtraccc_1_1kalman__fitter_1_1state_ad9344ec9918b0721bc1ea70e8695a952}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!state@{state}}
+\index{state@{state}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtraccc_1_1kalman__fitter_aaf9e1904e6749de0ecc44fa2d78f63df}{vector\+\_\+type}}$<$ \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ \mbox{\hyperlink{classtraccc_1_1kalman__fitter_a77fd84cb461036a33386672f90d1087d}{transform3\+\_\+type}} $>$$>$ \&\&}]{track\+\_\+states }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+State constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+\_\+states} & the vector of track states \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91             : \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_ac5bcbbd04bd8490d0b4102dad2b79469}{m\_fit\_actor\_state}}(std::move(track\_states)) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_a2f734c393637b24bd6302de5ce191389}\label{structtraccc_1_1kalman__fitter_1_1state_a2f734c393637b24bd6302de5ce191389}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!state@{state}}
+\index{state@{state}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::state (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtraccc_1_1kalman__fitter_aaf9e1904e6749de0ecc44fa2d78f63df}{vector\+\_\+type}}$<$ \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ \mbox{\hyperlink{classtraccc_1_1kalman__fitter_a77fd84cb461036a33386672f90d1087d}{transform3\+\_\+type}} $>$$>$ \&}]{track\+\_\+states }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+State constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+\_\+states} & the vector of track states \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98             : \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_ac5bcbbd04bd8490d0b4102dad2b79469}{m\_fit\_actor\_state}}(track\_states) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_a9910be80e8dde40672b90f53b2622158}\label{structtraccc_1_1kalman__fitter_1_1state_a9910be80e8dde40672b90f53b2622158}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} actor\+\_\+chain\+\_\+type\+::state \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the actor chain state 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                     \{}
+\DoxyCodeLine{103             \textcolor{keywordflow}{return} std::tie(\mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_a88ffd46e820ded3217791d28b4696ee6}{m\_aborter\_state}}, \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_ad1d56ead71296d4ca59653f0bfeb0283}{m\_transporter\_state}},}
+\DoxyCodeLine{104                             \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_a6d896a25a5951d4affda93dd95c4f082}{m\_interactor\_state}}, \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_ac5bcbbd04bd8490d0b4102dad2b79469}{m\_fit\_actor\_state}},}
+\DoxyCodeLine{105                             \mbox{\hyperlink{structtraccc_1_1kalman__fitter_1_1state_acf975a11dae1405444d2e9389ed4abf5}{m\_resetter\_state}});}
+\DoxyCodeLine{106         \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+aborter\+\_\+state, traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+fit\+\_\+actor\+\_\+state, traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+interactor\+\_\+state, traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+resetter\+\_\+state, and traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+transporter\+\_\+state.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_a88ffd46e820ded3217791d28b4696ee6}\label{structtraccc_1_1kalman__fitter_1_1state_a88ffd46e820ded3217791d28b4696ee6}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!m\_aborter\_state@{m\_aborter\_state}}
+\index{m\_aborter\_state@{m\_aborter\_state}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{m\_aborter\_state}{m\_aborter\_state}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+aborter\+::state \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+aborter\+\_\+state \{\}}
+
+
+
+Individual actor states. 
+
+
+
+Referenced by traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_ac5bcbbd04bd8490d0b4102dad2b79469}\label{structtraccc_1_1kalman__fitter_1_1state_ac5bcbbd04bd8490d0b4102dad2b79469}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!m\_fit\_actor\_state@{m\_fit\_actor\_state}}
+\index{m\_fit\_actor\_state@{m\_fit\_actor\_state}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{m\_fit\_actor\_state}{m\_fit\_actor\_state}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1kalman__actor_1_1state}{fit\+\_\+actor\+::state}} \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+fit\+\_\+actor\+\_\+state}
+
+
+
+Referenced by traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::operator()(), traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::smooth(), and traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::update\+\_\+statistics().
+
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_a3fe2af99df375e424eda725c28445de5}\label{structtraccc_1_1kalman__fitter_1_1state_a3fe2af99df375e424eda725c28445de5}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!m\_fit\_info@{m\_fit\_info}}
+\index{m\_fit\_info@{m\_fit\_info}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{m\_fit\_info}{m\_fit\_info}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$\mbox{\hyperlink{classtraccc_1_1kalman__fitter_a77fd84cb461036a33386672f90d1087d}{transform3\+\_\+type}}$>$ \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+fit\+\_\+info}
+
+
+
+Fitting result per track. 
+
+
+
+Referenced by traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::update\+\_\+statistics().
+
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_a6d896a25a5951d4affda93dd95c4f082}\label{structtraccc_1_1kalman__fitter_1_1state_a6d896a25a5951d4affda93dd95c4f082}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!m\_interactor\_state@{m\_interactor\_state}}
+\index{m\_interactor\_state@{m\_interactor\_state}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{m\_interactor\_state}{m\_interactor\_state}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+interactor\+::state \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+interactor\+\_\+state \{\}}
+
+
+
+Referenced by traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_acf975a11dae1405444d2e9389ed4abf5}\label{structtraccc_1_1kalman__fitter_1_1state_acf975a11dae1405444d2e9389ed4abf5}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!m\_resetter\_state@{m\_resetter\_state}}
+\index{m\_resetter\_state@{m\_resetter\_state}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{m\_resetter\_state}{m\_resetter\_state}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+resetter\+::state \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+resetter\+\_\+state \{\}}
+
+
+
+Referenced by traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1kalman__fitter_1_1state_ad1d56ead71296d4ca59653f0bfeb0283}\label{structtraccc_1_1kalman__fitter_1_1state_ad1d56ead71296d4ca59653f0bfeb0283}} 
+\index{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}!m\_transporter\_state@{m\_transporter\_state}}
+\index{m\_transporter\_state@{m\_transporter\_state}!traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state@{traccc::kalman\_fitter$<$ stepper\_t, navigator\_t $>$::state}}
+\doxysubsubsection{\texorpdfstring{m\_transporter\_state}{m\_transporter\_state}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+transporter\+::state \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc\+::kalman\+\_\+fitter}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::m\+\_\+transporter\+\_\+state \{\}}
+
+
+
+Referenced by traccc\+::kalman\+\_\+fitter$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::state\+::operator()().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/fitting/kalman\+\_\+filter/\mbox{\hyperlink{kalman__fitter_8hpp}{kalman\+\_\+fitter.\+hpp}}\end{DoxyCompactItemize}

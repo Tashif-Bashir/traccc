@@ -1,0 +1,207 @@
+\hypertarget{test__csv_8cpp}{}\doxysection{tests/io/test\+\_\+csv.cpp File Reference}
+\label{test__csv_8cpp}\index{tests/io/test\_csv.cpp@{tests/io/test\_csv.cpp}}
+{\ttfamily \#include \char`\"{}traccc/io/details/read\+\_\+surfaces.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+cells.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+digitization\+\_\+config.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+geometry.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+measurements.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+particles.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+spacepoints.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests/data\+\_\+test.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for test\+\_\+csv.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d57/test__csv_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classio}{io}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__csv_8cpp_a78132a2d541bca70bda5857e7137fa43}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classio}{io}}, csv\+\_\+read\+\_\+single\+\_\+module)
+\item 
+\mbox{\hyperlink{test__csv_8cpp_adada02073a898390dd4a313652709dd3}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classio}{io}}, csv\+\_\+read\+\_\+two\+\_\+modules)
+\item 
+\mbox{\hyperlink{test__csv_8cpp_aa607db88ee79f20366518bcd3cfe287b}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classio}{io}}, csv\+\_\+read\+\_\+tml\+\_\+transforms)
+\item 
+\mbox{\hyperlink{test__csv_8cpp_a5caba1fc059737b9979c877bbf6d89e4}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classio}{io}}, csv\+\_\+read\+\_\+tml\+\_\+pixelbarrel)
+\item 
+\mbox{\hyperlink{test__csv_8cpp_accefebdb2d31b77b962748c460711058}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classio}{io}}, csv\+\_\+read\+\_\+tml\+\_\+single\+\_\+muon)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__csv_8cpp_a78132a2d541bca70bda5857e7137fa43}\label{test__csv_8cpp_a78132a2d541bca70bda5857e7137fa43}} 
+\index{test\_csv.cpp@{test\_csv.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_csv.cpp@{test\_csv.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classio}{io}}}]{,  }\item[{csv\+\_\+read\+\_\+single\+\_\+module}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                    \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{traccc::io::cell\_reader\_output}} single\_module\_cells;}
+\DoxyCodeLine{32     \mbox{\hyperlink{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}{traccc::io::read\_cells}}(single\_module\_cells,}
+\DoxyCodeLine{33                            get\_datafile(\textcolor{stringliteral}{"single\_module/cells.csv"}),}
+\DoxyCodeLine{34                            \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}});}
+\DoxyCodeLine{35     \textcolor{keyword}{auto}\& cells = single\_module\_cells.\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output_a5b89ef9bdcde8df9c69beed98969b87a}{cells}};}
+\DoxyCodeLine{36     \textcolor{keyword}{auto}\& modules = single\_module\_cells.\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output_ae40d3eb5e2f81aa71a3186ecf94364ec}{modules}};}
+\DoxyCodeLine{37     ASSERT\_EQ(cells.size(), 6u);}
+\DoxyCodeLine{38     ASSERT\_EQ(modules.size(), 1u);}
+\DoxyCodeLine{39     \textcolor{keyword}{auto} module = single\_module\_cells.\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output_ae40d3eb5e2f81aa71a3186ecf94364ec}{modules}}.at(0);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     ASSERT\_EQ(module.surface\_link.value(), 0u);}
+\DoxyCodeLine{42     ASSERT\_EQ(cells.at(0).channel0, 123u);}
+\DoxyCodeLine{43     ASSERT\_EQ(cells.at(0).channel1, 32u);}
+\DoxyCodeLine{44     ASSERT\_EQ(cells.at(5).channel0, 174u);}
+\DoxyCodeLine{45     ASSERT\_EQ(cells.at(5).channel1, 880u);}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::cells, traccc\+::csv, traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::modules, and traccc\+::io\+::read\+\_\+cells().
+
+\mbox{\Hypertarget{test__csv_8cpp_a5caba1fc059737b9979c877bbf6d89e4}\label{test__csv_8cpp_a5caba1fc059737b9979c877bbf6d89e4}} 
+\index{test\_csv.cpp@{test\_csv.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_csv.cpp@{test\_csv.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classio}{io}}}]{,  }\item[{csv\+\_\+read\+\_\+tml\+\_\+pixelbarrel}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                      \{}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{traccc::io::cell\_reader\_output}} readOut;}
+\DoxyCodeLine{94     \mbox{\hyperlink{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}{traccc::io::read\_cells}}(}
+\DoxyCodeLine{95         readOut, get\_datafile(\textcolor{stringliteral}{"tml\_pixel\_barrel/event000000000-\/cells.csv"}),}
+\DoxyCodeLine{96         \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}});}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98     ASSERT\_EQ(readOut.\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output_ae40d3eb5e2f81aa71a3186ecf94364ec}{modules}}.size(), 2382u);}
+\DoxyCodeLine{99 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::modules, and traccc\+::io\+::read\+\_\+cells().
+
+\mbox{\Hypertarget{test__csv_8cpp_accefebdb2d31b77b962748c460711058}\label{test__csv_8cpp_accefebdb2d31b77b962748c460711058}} 
+\index{test\_csv.cpp@{test\_csv.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_csv.cpp@{test\_csv.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classio}{io}}}]{,  }\item[{csv\+\_\+read\+\_\+tml\+\_\+single\+\_\+muon}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                      \{}
+\DoxyCodeLine{103     vecmem::host\_memory\_resource resource;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{comment}{// Read the surface transforms}}
+\DoxyCodeLine{106     \textcolor{keyword}{auto} surface\_transforms =}
+\DoxyCodeLine{107         \mbox{\hyperlink{namespacetraccc_1_1io_a5a6c904c086473a05b85a0bf060bfa8d}{traccc::io::read\_geometry}}(\textcolor{stringliteral}{"tml\_detector/trackml-\/detector.csv"});}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{comment}{// Read the hits from the relevant event file}}
+\DoxyCodeLine{110     \mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{traccc::io::spacepoint\_reader\_output}} spacepoints\_per\_event(\&resource);}
+\DoxyCodeLine{111     \mbox{\hyperlink{namespacetraccc_1_1io_afe49060da2ab77f49cfcd82308122f84}{traccc::io::read\_spacepoints}}(spacepoints\_per\_event, 0,}
+\DoxyCodeLine{112                                  \textcolor{stringliteral}{"tml\_full/single\_muon/"}, surface\_transforms,}
+\DoxyCodeLine{113                                  \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}});}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     \textcolor{comment}{// Read the measurements from the relevant event file}}
+\DoxyCodeLine{116     \mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{traccc::io::measurement\_reader\_output}} measurements\_per\_event(\&resource);}
+\DoxyCodeLine{117     \mbox{\hyperlink{namespacetraccc_1_1io_a84e36824b32d23770ed527b25f810307}{traccc::io::read\_measurements}}(measurements\_per\_event, 0,}
+\DoxyCodeLine{118                                   \textcolor{stringliteral}{"tml\_full/single\_muon/"},}
+\DoxyCodeLine{119                                   \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}});}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{comment}{// Read the particles from the relevant event file}}
+\DoxyCodeLine{122     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::particle\_collection\_types::host}} particles\_per\_event =}
+\DoxyCodeLine{123         \mbox{\hyperlink{namespacetraccc_1_1io_a5a3d8b24e28cd4722ab500e3ade6ea1c}{traccc::io::read\_particles}}(0, \textcolor{stringliteral}{"tml\_full/single\_muon/"},}
+\DoxyCodeLine{124                                    \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}}, \&resource);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     ASSERT\_EQ(spacepoints\_per\_event.modules.size(), 11u);}
+\DoxyCodeLine{127     ASSERT\_EQ(measurements\_per\_event.modules.size(), 11u);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     ASSERT\_EQ(spacepoints\_per\_event.spacepoints.size(), 11u);}
+\DoxyCodeLine{130     ASSERT\_EQ(measurements\_per\_event.measurements.size(), 11u);}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     ASSERT\_EQ(particles\_per\_event.size(), 1u);}
+\DoxyCodeLine{133 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, traccc\+::io\+::measurement\+\_\+reader\+\_\+output\+::measurements, traccc\+::io\+::measurement\+\_\+reader\+\_\+output\+::modules, traccc\+::io\+::spacepoint\+\_\+reader\+\_\+output\+::modules, traccc\+::io\+::read\+\_\+geometry(), traccc\+::io\+::read\+\_\+measurements(), traccc\+::io\+::read\+\_\+particles(), traccc\+::io\+::read\+\_\+spacepoints(), and traccc\+::io\+::spacepoint\+\_\+reader\+\_\+output\+::spacepoints.
+
+\mbox{\Hypertarget{test__csv_8cpp_aa607db88ee79f20366518bcd3cfe287b}\label{test__csv_8cpp_aa607db88ee79f20366518bcd3cfe287b}} 
+\index{test\_csv.cpp@{test\_csv.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_csv.cpp@{test\_csv.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classio}{io}}}]{,  }\item[{csv\+\_\+read\+\_\+tml\+\_\+transforms}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                     \{}
+\DoxyCodeLine{83     std::string file = get\_datafile(\textcolor{stringliteral}{"tml\_detector/trackml-\/detector.csv"});}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{keyword}{auto} tml\_barrel\_transforms = \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a0a0bd7ed4c0a9dec6a1975ab2632980a}{traccc::io::details::read\_surfaces}}(file);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     ASSERT\_EQ(tml\_barrel\_transforms.size(), 18791u);}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::io\+::details\+::read\+\_\+surfaces().
+
+\mbox{\Hypertarget{test__csv_8cpp_adada02073a898390dd4a313652709dd3}\label{test__csv_8cpp_adada02073a898390dd4a313652709dd3}} 
+\index{test\_csv.cpp@{test\_csv.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!test\_csv.cpp@{test\_csv.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classio}{io}}}]{,  }\item[{csv\+\_\+read\+\_\+two\+\_\+modules}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                  \{}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{traccc::io::cell\_reader\_output}} two\_module\_cells;}
+\DoxyCodeLine{52     \mbox{\hyperlink{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}{traccc::io::read\_cells}}(two\_module\_cells,}
+\DoxyCodeLine{53                            get\_datafile(\textcolor{stringliteral}{"two\_modules/cells.csv"}),}
+\DoxyCodeLine{54                            \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}});}
+\DoxyCodeLine{55     \textcolor{keyword}{auto}\& cells = two\_module\_cells.\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output_a5b89ef9bdcde8df9c69beed98969b87a}{cells}};}
+\DoxyCodeLine{56     \textcolor{keyword}{auto}\& modules = two\_module\_cells.\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output_ae40d3eb5e2f81aa71a3186ecf94364ec}{modules}};}
+\DoxyCodeLine{57     ASSERT\_EQ(modules.size(), 2u);}
+\DoxyCodeLine{58     ASSERT\_EQ(cells.size(), 14u);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{comment}{// Check cells in first module}}
+\DoxyCodeLine{61     ASSERT\_EQ(cells.at(0).channel0, 123u);}
+\DoxyCodeLine{62     ASSERT\_EQ(cells.at(0).channel1, 32u);}
+\DoxyCodeLine{63     ASSERT\_EQ(cells.at(0).module\_link, 0u);}
+\DoxyCodeLine{64     ASSERT\_EQ(cells.at(5).channel0, 174u);}
+\DoxyCodeLine{65     ASSERT\_EQ(cells.at(5).channel1, 880u);}
+\DoxyCodeLine{66     ASSERT\_EQ(cells.at(5).module\_link, 0u);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     ASSERT\_EQ(modules.at(0u).surface\_link.value(), 0u);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{comment}{// Check cells in second module}}
+\DoxyCodeLine{71     ASSERT\_EQ(cells.at(6).channel0, 0u);}
+\DoxyCodeLine{72     ASSERT\_EQ(cells.at(6).channel1, 4u);}
+\DoxyCodeLine{73     ASSERT\_EQ(cells.at(6).module\_link, 1u);}
+\DoxyCodeLine{74     ASSERT\_EQ(cells.at(13).channel0, 5u);}
+\DoxyCodeLine{75     ASSERT\_EQ(cells.at(13).channel1, 98u);}
+\DoxyCodeLine{76     ASSERT\_EQ(cells.at(13).module\_link, 1u);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     ASSERT\_EQ(modules.at(1u).surface\_link.value(), 1u);}
+\DoxyCodeLine{79 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::cells, traccc\+::csv, traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::modules, and traccc\+::io\+::read\+\_\+cells().
+

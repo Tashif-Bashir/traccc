@@ -1,0 +1,82 @@
+\hypertarget{cpu_2test__spacepoint__formation_8cpp}{}\doxysection{tests/cpu/test\+\_\+spacepoint\+\_\+formation.cpp File Reference}
+\label{cpu_2test__spacepoint__formation_8cpp}\index{tests/cpu/test\_spacepoint\_formation.cpp@{tests/cpu/test\_spacepoint\_formation.cpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/spacepoint.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/experimental/spacepoint\+\_\+formation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/create\+\_\+telescope\+\_\+detector.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/intersection/detail/trajectories.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for test\+\_\+spacepoint\+\_\+formation.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d16/cpu_2test__spacepoint__formation_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cpu_2test__spacepoint__formation_8cpp_a85983ac98cb38dd1d1b14fb9f98d8899}{T\+E\+ST}} (\mbox{\hyperlink{classtraccc_1_1spacepoint__formation}{spacepoint\+\_\+formation}}, cpu)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cpu_2test__spacepoint__formation_8cpp_a85983ac98cb38dd1d1b14fb9f98d8899}\label{cpu_2test__spacepoint__formation_8cpp_a85983ac98cb38dd1d1b14fb9f98d8899}} 
+\index{test\_spacepoint\_formation.cpp@{test\_spacepoint\_formation.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_spacepoint\_formation.cpp@{test\_spacepoint\_formation.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtraccc_1_1spacepoint__formation}{spacepoint\+\_\+formation}}}]{,  }\item[{cpu}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Memory resource used by the EDM.}}
+\DoxyCodeLine{28     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// Use rectangle surfaces}}
+\DoxyCodeLine{31     detray::mask<detray::rectangle2D<>> rectangle\{}
+\DoxyCodeLine{32         0u, 10000.f * detray::unit<scalar>::mm,}
+\DoxyCodeLine{33         10000.f * detray::unit<scalar>::mm\};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{// Plane alignment direction (aligned to x-\/axis)}}
+\DoxyCodeLine{36     detray::detail::ray<transform3> traj\{\{0, 0, 0\}, 0, \{1, 0, 0\}, -\/1\};}
+\DoxyCodeLine{37     \textcolor{comment}{// Position of planes (in mm unit)}}
+\DoxyCodeLine{38     std::vector<scalar> plane\_positions = \{20.f,  40.f,  60.f,  80.f, 100.f,}
+\DoxyCodeLine{39                                            120.f, 140.f, 160.f, 180.f\};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     detray::tel\_det\_config<> tel\_cfg\{rectangle\};}
+\DoxyCodeLine{42     tel\_cfg.positions(plane\_positions);}
+\DoxyCodeLine{43     tel\_cfg.pilot\_track(traj);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// Create telescope geometry}}
+\DoxyCodeLine{46     \textcolor{keyword}{const} \textcolor{keyword}{auto} [det, name\_map] = create\_telescope\_detector(host\_mr, tel\_cfg);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// Surface lookup}}
+\DoxyCodeLine{49     \textcolor{keyword}{auto} surfaces = det.surface\_lookup();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// Prepare measurement collection}}
+\DoxyCodeLine{52     \textcolor{keyword}{typename} \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{measurement\_collection\_types::host}} measurements\{\&host\_mr\};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{// Add a measurement at the first plane}}
+\DoxyCodeLine{55     measurements.push\_back(\{\{7.f, 2.f\}, \{0.f, 0.f\}, surfaces[0].barcode()\});}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{// Add a measurement at the last plane}}
+\DoxyCodeLine{58     measurements.push\_back(\{\{10.f, 15.f\}, \{0.f, 0.f\}, surfaces[8u].barcode()\});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{comment}{// Run spacepoint formation}}
+\DoxyCodeLine{61     \mbox{\hyperlink{classtraccc_1_1experimental_1_1spacepoint__formation}{experimental::spacepoint\_formation}}<decltype(det)> sp\_formation(host\_mr);}
+\DoxyCodeLine{62     \textcolor{keyword}{auto} spacepoints = sp\_formation(det, measurements);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{comment}{// Check the results}}
+\DoxyCodeLine{65     EXPECT\_EQ(spacepoints.size(), 2u);}
+\DoxyCodeLine{66     EXPECT\_FLOAT\_EQ(spacepoints[0].global[0], 20.f);}
+\DoxyCodeLine{67     EXPECT\_FLOAT\_EQ(spacepoints[0].global[1], 7.f);}
+\DoxyCodeLine{68     EXPECT\_FLOAT\_EQ(spacepoints[0].global[2], 2.f);}
+\DoxyCodeLine{69     EXPECT\_FLOAT\_EQ(spacepoints[1].global[0], 180.f);}
+\DoxyCodeLine{70     EXPECT\_FLOAT\_EQ(spacepoints[1].global[1], 10.f);}
+\DoxyCodeLine{71     EXPECT\_FLOAT\_EQ(spacepoints[1].global[2], 15.f);}
+\DoxyCodeLine{72 \}}
+
+\end{DoxyCode}

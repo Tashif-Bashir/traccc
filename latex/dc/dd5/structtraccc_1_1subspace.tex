@@ -1,0 +1,277 @@
+\hypertarget{structtraccc_1_1subspace}{}\doxysection{traccc\+::subspace$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$ Struct Template Reference}
+\label{structtraccc_1_1subspace}\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+
+
+{\ttfamily \#include $<$subspace.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::subspace$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{d5/d66/structtraccc_1_1subspace__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1subspace_af8f8d0b26edd3f0a08e71378a96cc5a9}{matrix\+\_\+operator}} = typename algebra\+\_\+t\+::matrix\+\_\+actor
+\item 
+using \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}} = typename matrix\+\_\+operator\+::size\+\_\+ty
+\item 
+{\footnotesize template$<$size\+\_\+type R\+O\+WS, size\+\_\+type C\+O\+LS$>$ }\\using \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}} = typename matrix\+\_\+operator\+::template \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$ R\+O\+WS, C\+O\+LS $>$
+\item 
+using \mbox{\hyperlink{structtraccc_1_1subspace_a904d58a5db5d5eaead2893fe90800cea}{subspace\+\_\+vector}} = \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$ k\+Size, 1u $>$
+\item 
+using \mbox{\hyperlink{structtraccc_1_1subspace_a910e7f4f512a641083c99820d51188e3}{fullspace\+\_\+vector}} = \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$ k\+Full\+Size, 1u $>$
+\item 
+using \mbox{\hyperlink{structtraccc_1_1subspace_abcf48f20287a25a292b0e92726f66b71}{projection\+\_\+matrix}} = \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$ k\+Size, k\+Full\+Size $>$
+\item 
+using \mbox{\hyperlink{structtraccc_1_1subspace_a5371de37fb6e4e57ee41eb82a44fecbc}{expansion\+\_\+matrix}} = \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$ k\+Full\+Size, k\+Size $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{structtraccc_1_1subspace_a4432dba6acae79b58fd6f7919381e8d9}{subspace}} (const std\+::array$<$ \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size $>$ \&indices)
+\item 
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} const std\+::array$<$ \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size $>$ \& \mbox{\hyperlink{structtraccc_1_1subspace_a6709dccbbfb665b1ebd4e7bcc7b09adf}{get\+\_\+indices}} () const
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1subspace_a0f7555492f6d578604930482e85dad18}{set\+\_\+indices}} (const std\+::array$<$ \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Function that sets the m\+\_\+axes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+type D$>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto \mbox{\hyperlink{structtraccc_1_1subspace_ad58da59b43eddc273fd3d06c40589ce7}{projector}} () const -\/$>$ \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$ D, k\+Full\+Size $>$
+\begin{DoxyCompactList}\small\item\em Projection matrix that maps from the full space into the subspace. \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+type D$>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto \mbox{\hyperlink{structtraccc_1_1subspace_a48b9b7f6adc1d3e145c30de26a4bfab8}{expander}} () const -\/$>$ \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$ k\+Full\+Size, D $>$
+\begin{DoxyCompactList}\small\item\em Expansion matrix that maps from the subspace into the full space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}} \mbox{\hyperlink{structtraccc_1_1subspace_acfb57ceac770f8c75d38956455d2f17a}{size}} = k\+Size
+\item 
+static const \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}} \mbox{\hyperlink{structtraccc_1_1subspace_a8f7a7d823b0aeb998950a4016f68f055}{full\+Size}} = k\+Full\+Size
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size $>$ \mbox{\hyperlink{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}{m\+\_\+axes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1subspace_a5371de37fb6e4e57ee41eb82a44fecbc}\label{structtraccc_1_1subspace_a5371de37fb6e4e57ee41eb82a44fecbc}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!expansion\_matrix@{expansion\_matrix}}
+\index{expansion\_matrix@{expansion\_matrix}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{expansion\_matrix}{expansion\_matrix}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace_a5371de37fb6e4e57ee41eb82a44fecbc}{expansion\+\_\+matrix}} =  \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$k\+Full\+Size, k\+Size$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_a910e7f4f512a641083c99820d51188e3}\label{structtraccc_1_1subspace_a910e7f4f512a641083c99820d51188e3}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!fullspace\_vector@{fullspace\_vector}}
+\index{fullspace\_vector@{fullspace\_vector}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{fullspace\_vector}{fullspace\_vector}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace_a910e7f4f512a641083c99820d51188e3}{fullspace\+\_\+vector}} =  \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$k\+Full\+Size, 1u$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_af8f8d0b26edd3f0a08e71378a96cc5a9}\label{structtraccc_1_1subspace_af8f8d0b26edd3f0a08e71378a96cc5a9}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!matrix\_operator@{matrix\_operator}}
+\index{matrix\_operator@{matrix\_operator}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{matrix\_operator}{matrix\_operator}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace_af8f8d0b26edd3f0a08e71378a96cc5a9}{matrix\+\_\+operator}} =  typename algebra\+\_\+t\+::matrix\+\_\+actor}
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}\label{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!matrix\_type@{matrix\_type}}
+\index{matrix\_type@{matrix\_type}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{matrix\_type}{matrix\_type}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+template$<$size\+\_\+type R\+O\+WS, size\+\_\+type C\+O\+LS$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}} =  typename matrix\+\_\+operator\+::template \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$R\+O\+WS, C\+O\+LS$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_abcf48f20287a25a292b0e92726f66b71}\label{structtraccc_1_1subspace_abcf48f20287a25a292b0e92726f66b71}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!projection\_matrix@{projection\_matrix}}
+\index{projection\_matrix@{projection\_matrix}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{projection\_matrix}{projection\_matrix}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace_abcf48f20287a25a292b0e92726f66b71}{projection\+\_\+matrix}} =  \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$k\+Size, k\+Full\+Size$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}\label{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}} =  typename matrix\+\_\+operator\+::size\+\_\+ty}
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_a904d58a5db5d5eaead2893fe90800cea}\label{structtraccc_1_1subspace_a904d58a5db5d5eaead2893fe90800cea}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!subspace\_vector@{subspace\_vector}}
+\index{subspace\_vector@{subspace\_vector}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{subspace\_vector}{subspace\_vector}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace_a904d58a5db5d5eaead2893fe90800cea}{subspace\+\_\+vector}} =  \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$k\+Size, 1u$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1subspace_a4432dba6acae79b58fd6f7919381e8d9}\label{structtraccc_1_1subspace_a4432dba6acae79b58fd6f7919381e8d9}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!subspace@{subspace}}
+\index{subspace@{subspace}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{subspace()}{subspace()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::\mbox{\hyperlink{structtraccc_1_1subspace}{subspace}} (\begin{DoxyParamCaption}\item[{const std\+::array$<$ \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size $>$ \&}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+Construct from a container of axis indices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Unique, ordered indices \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                                                   \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\_type}} i = 0u; i < kSize; ++i) \{}
+\DoxyCodeLine{49             assert((indices[i] < kFullSize) and}
+\DoxyCodeLine{50                    \textcolor{stringliteral}{"Axis indices must be within the full space"});}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\_type}} i = 0; i < kSize; ++i) \{}
+\DoxyCodeLine{53             \mbox{\hyperlink{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}{m\_axes}}[i] = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\_type}}\textcolor{keyword}{>}(indices[i]);}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1subspace_a48b9b7f6adc1d3e145c30de26a4bfab8}\label{structtraccc_1_1subspace_a48b9b7f6adc1d3e145c30de26a4bfab8}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!expander@{expander}}
+\index{expander@{expander}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{expander()}{expander()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+template$<$size\+\_\+type D$>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::expander (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$k\+Full\+Size, D$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Expansion matrix that maps from the subspace into the full space. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                                                           \{}
+\DoxyCodeLine{92         static\_assert(D <= kSize,}
+\DoxyCodeLine{93                       \textcolor{stringliteral}{"The dimension of projection should be smaller than "}}
+\DoxyCodeLine{94                       \textcolor{stringliteral}{"subspace dimension"});}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96         matrix\_type<kFullSize, D> expn =}
+\DoxyCodeLine{97             \mbox{\hyperlink{structtraccc_1_1subspace_af8f8d0b26edd3f0a08e71378a96cc5a9}{matrix\_operator}}().template zero<kFullSize, D>();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\_type}} i = 0u; i < kSize; ++i) \{}
+\DoxyCodeLine{100             getter::element(expn, \mbox{\hyperlink{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}{m\_axes}}[i], i) = 1;}
+\DoxyCodeLine{101         \}}
+\DoxyCodeLine{102         \textcolor{keywordflow}{return} expn;}
+\DoxyCodeLine{103     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtraccc_1_1subspace_a6709dccbbfb665b1ebd4e7bcc7b09adf}\label{structtraccc_1_1subspace_a6709dccbbfb665b1ebd4e7bcc7b09adf}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!get\_indices@{get\_indices}}
+\index{get\_indices@{get\_indices}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{get\_indices()}{get\_indices()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} const std\+::array$<$\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size$>$\& \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::get\+\_\+indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+Axis indices that comprise the subspace.
+
+The specific container and index type should be considered an implementation detail. Users should treat the return type as a generic container whose elements are convertible to {\ttfamily size\+\_\+t}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                                     \{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}{m\_axes}};}
+\DoxyCodeLine{65     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtraccc_1_1subspace_ad58da59b43eddc273fd3d06c40589ce7}\label{structtraccc_1_1subspace_ad58da59b43eddc273fd3d06c40589ce7}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!projector@{projector}}
+\index{projector@{projector}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{projector()}{projector()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+template$<$size\+\_\+type D$>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::projector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{structtraccc_1_1subspace_a125572a699c42be914b3f2f9bccd0555}{matrix\+\_\+type}}$<$D, k\+Full\+Size$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Projection matrix that maps from the full space into the subspace. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                                                            \{}
+\DoxyCodeLine{76         static\_assert(D <= kSize,}
+\DoxyCodeLine{77                       \textcolor{stringliteral}{"The dimension of projection should be smaller than "}}
+\DoxyCodeLine{78                       \textcolor{stringliteral}{"subspace dimension"});}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         matrix\_type<D, kFullSize> proj =}
+\DoxyCodeLine{81             \mbox{\hyperlink{structtraccc_1_1subspace_af8f8d0b26edd3f0a08e71378a96cc5a9}{matrix\_operator}}().template zero<D, kFullSize>();}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\_type}} i = 0u; i < D; ++i) \{}
+\DoxyCodeLine{84             getter::element(proj, i, \mbox{\hyperlink{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}{m\_axes}}[i]) = 1;}
+\DoxyCodeLine{85         \}}
+\DoxyCodeLine{86         \textcolor{keywordflow}{return} proj;}
+\DoxyCodeLine{87     \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::measurement\+\_\+smearer$<$ transform3\+\_\+t $>$\+::operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_a0f7555492f6d578604930482e85dad18}\label{structtraccc_1_1subspace_a0f7555492f6d578604930482e85dad18}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!set\_indices@{set\_indices}}
+\index{set\_indices@{set\_indices}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{set\_indices()}{set\_indices()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::set\+\_\+indices (\begin{DoxyParamCaption}\item[{const std\+::array$<$ \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size $>$ \&}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function that sets the m\+\_\+axes. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                                 \{}
+\DoxyCodeLine{70         \mbox{\hyperlink{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}{m\_axes}} = indices;}
+\DoxyCodeLine{71     \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::event\+\_\+map2\+::event\+\_\+map2(), and traccc\+::io\+::csv\+::read\+\_\+measurements().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1subspace_a8f7a7d823b0aeb998950a4016f68f055}\label{structtraccc_1_1subspace_a8f7a7d823b0aeb998950a4016f68f055}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!fullSize@{fullSize}}
+\index{fullSize@{fullSize}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{fullSize}{fullSize}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+const \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}} \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::full\+Size = k\+Full\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}\label{structtraccc_1_1subspace_a15bd1c19ccc76a0547dad57d05d67ff0}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!m\_axes@{m\_axes}}
+\index{m\_axes@{m\_axes}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{m\_axes}{m\_axes}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+std\+::array$<$\mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}}, k\+Size$>$ \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::m\+\_\+axes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by traccc\+::subspace$<$ transform3, e\+\_\+bound\+\_\+size, 2u $>$\+::expander(), traccc\+::subspace$<$ transform3, e\+\_\+bound\+\_\+size, 2u $>$\+::get\+\_\+indices(), traccc\+::subspace$<$ transform3, e\+\_\+bound\+\_\+size, 2u $>$\+::projector(), traccc\+::subspace$<$ transform3, e\+\_\+bound\+\_\+size, 2u $>$\+::set\+\_\+indices(), and traccc\+::subspace$<$ transform3, e\+\_\+bound\+\_\+size, 2u $>$\+::subspace().
+
+\mbox{\Hypertarget{structtraccc_1_1subspace_acfb57ceac770f8c75d38956455d2f17a}\label{structtraccc_1_1subspace_acfb57ceac770f8c75d38956455d2f17a}} 
+\index{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}!size@{size}}
+\index{size@{size}!traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$@{traccc::subspace$<$ algebra\_t, kFullSize, kSize $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , typename algebra\+\_\+t\+::size\+\_\+type k\+Full\+Size, typename algebra\+\_\+t\+::size\+\_\+type k\+Size = 2u$>$ \\
+const \mbox{\hyperlink{structtraccc_1_1subspace_af0bf040c502c88a2b37f66d16996c65f}{size\+\_\+type}} \mbox{\hyperlink{structtraccc_1_1subspace}{traccc\+::subspace}}$<$ algebra\+\_\+t, k\+Full\+Size, k\+Size $>$\+::size = k\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/utils/\mbox{\hyperlink{subspace_8hpp}{subspace.\+hpp}}\end{DoxyCompactItemize}

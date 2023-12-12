@@ -1,0 +1,141 @@
+\hypertarget{structtraccc_1_1exact}{}\doxysection{traccc\+::exact Struct Reference}
+\label{structtraccc_1_1exact}\index{traccc::exact@{traccc::exact}}
+
+
+Matcher requiring exact particle matching.  
+
+
+
+
+{\ttfamily \#include $<$track\+\_\+matcher.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::exact\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d8/da8/structtraccc_1_1exact__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::exact\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d4/d78/structtraccc_1_1exact__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1exact_a2099d3b3eac4b70b07576c486cd30629}{exact}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{structtraccc_1_1exact_a9b26cda95860c03234c33ce7904a9667}{get\+\_\+name}} () const override final
+\begin{DoxyCompactList}\small\item\em Return a human-\/readable name for this matching method. \end{DoxyCompactList}\item 
+virtual std\+::optional$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{structtraccc_1_1exact_ad1fc6122c724d45dab99b26226deebc5}{operator()}} (const std\+::vector$<$ std\+::vector$<$ uint64\+\_\+t $>$$>$ \&) const override final
+\begin{DoxyCompactList}\small\item\em Determine the most likely particle, if any, for a given seed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Matcher requiring exact particle matching. 
+
+This matcher matches a seed to a track iff all spacepoints in the seed map onto the same particle. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1exact_a2099d3b3eac4b70b07576c486cd30629}\label{structtraccc_1_1exact_a2099d3b3eac4b70b07576c486cd30629}} 
+\index{traccc::exact@{traccc::exact}!exact@{exact}}
+\index{exact@{exact}!traccc::exact@{traccc::exact}}
+\doxysubsubsection{\texorpdfstring{exact()}{exact()}}
+{\footnotesize\ttfamily traccc\+::exact\+::exact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1exact_a9b26cda95860c03234c33ce7904a9667}\label{structtraccc_1_1exact_a9b26cda95860c03234c33ce7904a9667}} 
+\index{traccc::exact@{traccc::exact}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!traccc::exact@{traccc::exact}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string traccc\+::exact\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Return a human-\/readable name for this matching method. 
+
+
+
+Implements \mbox{\hyperlink{structtraccc_1_1track__matcher_af1216f651c5920772142c9dc8eb482b2}{traccc\+::track\+\_\+matcher}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                 \{}
+\DoxyCodeLine{61     \textcolor{keywordtype}{char} buffer[512];}
+\DoxyCodeLine{62     snprintf(buffer, 512, \textcolor{stringliteral}{"Exact"});}
+\DoxyCodeLine{63     \textcolor{keywordflow}{return} std::string(buffer);}
+\DoxyCodeLine{64 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtraccc_1_1exact_ad1fc6122c724d45dab99b26226deebc5}\label{structtraccc_1_1exact_ad1fc6122c724d45dab99b26226deebc5}} 
+\index{traccc::exact@{traccc::exact}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::exact@{traccc::exact}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily std\+::optional$<$ uint64\+\_\+t $>$ traccc\+::exact\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ uint64\+\_\+t $>$$>$ \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determine the most likely particle, if any, for a given seed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & A vector of sets of particle identifiers, such that the outer vector represents the list of spacepoints in a seed, and the inner sets represent the particles that match that spacepoint (usually only one).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matched particle identifier, or nothing if no particle matches. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structtraccc_1_1track__matcher_a46d12c5012cad5e36bfe7a4c8ea92a68}{traccc\+::track\+\_\+matcher}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                                    \{}
+\DoxyCodeLine{68     std::multiset<uint64\_t> cnt;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{comment}{/*}}
+\DoxyCodeLine{71 \textcolor{comment}{     * Record all the particle identifiers in a multiset in order to count}}
+\DoxyCodeLine{72 \textcolor{comment}{     * them.}}
+\DoxyCodeLine{73 \textcolor{comment}{     */}}
+\DoxyCodeLine{74     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} std::vector<uint64\_t>\& i : p) \{}
+\DoxyCodeLine{75         \textcolor{keywordflow}{for} (uint64\_t j : i) \{}
+\DoxyCodeLine{76             cnt.insert(j);}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{comment}{/*}}
+\DoxyCodeLine{81 \textcolor{comment}{     * Find a particle which matches every single spacepoint.}}
+\DoxyCodeLine{82 \textcolor{comment}{     */}}
+\DoxyCodeLine{83     \textcolor{keywordflow}{for} (uint64\_t i : cnt) \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (cnt.count(i) == p.size()) \{}
+\DoxyCodeLine{85             \textcolor{keywordflow}{return} \{i\};}
+\DoxyCodeLine{86         \}}
+\DoxyCodeLine{87     \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keywordflow}{return} \{\};}
+\DoxyCodeLine{90 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/efficiency/\mbox{\hyperlink{track__matcher_8hpp}{track\+\_\+matcher.\+hpp}}\item 
+performance/src/efficiency/\mbox{\hyperlink{track__matcher_8cpp}{track\+\_\+matcher.\+cpp}}\end{DoxyCompactItemize}

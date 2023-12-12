@@ -1,0 +1,219 @@
+\hypertarget{structtraccc_1_1gain__matrix__updater}{}\doxysection{traccc\+::gain\+\_\+matrix\+\_\+updater$<$ algebra\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1gain__matrix__updater}\index{traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}}
+
+
+Type unrolling functor for Kalman updating.  
+
+
+
+
+{\ttfamily \#include $<$gain\+\_\+matrix\+\_\+updater.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::gain\+\_\+matrix\+\_\+updater$<$ algebra\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{dd/dfa/structtraccc_1_1gain__matrix__updater__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\+\_\+operator}} = typename algebra\+\_\+t\+::matrix\+\_\+actor
+\item 
+using \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_ac5b26d5045022a73c9631e09cf4ab568}{size\+\_\+type}} = typename matrix\+\_\+operator\+::size\+\_\+ty
+\item 
+{\footnotesize template$<$size\+\_\+type R\+O\+WS, size\+\_\+type C\+O\+LS$>$ }\\using \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_ad5ca4887b3fa47bca5407a69a9228a6f}{matrix\+\_\+type}} = typename matrix\+\_\+operator\+::template \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_ad5ca4887b3fa47bca5407a69a9228a6f}{matrix\+\_\+type}}$<$ R\+O\+WS, C\+O\+LS $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename mask\+\_\+group\+\_\+t , typename index\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a5b5420443f58bc798611c836394e7faa}{operator()}} (const mask\+\_\+group\+\_\+t \&, const index\+\_\+t \&, \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ algebra\+\_\+t $>$ \&trk\+\_\+state, \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&bound\+\_\+params) const
+\begin{DoxyCompactList}\small\item\em Based on \char`\"{}\+Application of Kalman filtering to track and vertex
+fitting\char`\"{}, R.\+Frühwirth, N\+IM A. \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+type D, typename shape\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_ae20317d1c67ea60db65d824da8dc324c}{update}} (\mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ algebra\+\_\+t $>$ \&trk\+\_\+state, \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&bound\+\_\+params) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename algebra\+\_\+t$>$\newline
+struct traccc\+::gain\+\_\+matrix\+\_\+updater$<$ algebra\+\_\+t $>$}
+
+Type unrolling functor for Kalman updating. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}\label{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}} 
+\index{traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}!matrix\_operator@{matrix\_operator}}
+\index{matrix\_operator@{matrix\_operator}!traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}}
+\doxysubsubsection{\texorpdfstring{matrix\_operator}{matrix\_operator}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater}{traccc\+::gain\+\_\+matrix\+\_\+updater}}$<$ algebra\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\+\_\+operator}} =  typename algebra\+\_\+t\+::matrix\+\_\+actor}
+
+\mbox{\Hypertarget{structtraccc_1_1gain__matrix__updater_ad5ca4887b3fa47bca5407a69a9228a6f}\label{structtraccc_1_1gain__matrix__updater_ad5ca4887b3fa47bca5407a69a9228a6f}} 
+\index{traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}!matrix\_type@{matrix\_type}}
+\index{matrix\_type@{matrix\_type}!traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}}
+\doxysubsubsection{\texorpdfstring{matrix\_type}{matrix\_type}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t $>$ \\
+template$<$size\+\_\+type R\+O\+WS, size\+\_\+type C\+O\+LS$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater}{traccc\+::gain\+\_\+matrix\+\_\+updater}}$<$ algebra\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_ad5ca4887b3fa47bca5407a69a9228a6f}{matrix\+\_\+type}} =  typename matrix\+\_\+operator\+::template \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_ad5ca4887b3fa47bca5407a69a9228a6f}{matrix\+\_\+type}}$<$R\+O\+WS, C\+O\+LS$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1gain__matrix__updater_ac5b26d5045022a73c9631e09cf4ab568}\label{structtraccc_1_1gain__matrix__updater_ac5b26d5045022a73c9631e09cf4ab568}} 
+\index{traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater}{traccc\+::gain\+\_\+matrix\+\_\+updater}}$<$ algebra\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_ac5b26d5045022a73c9631e09cf4ab568}{size\+\_\+type}} =  typename matrix\+\_\+operator\+::size\+\_\+ty}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1gain__matrix__updater_a5b5420443f58bc798611c836394e7faa}\label{structtraccc_1_1gain__matrix__updater_a5b5420443f58bc798611c836394e7faa}} 
+\index{traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t $>$ \\
+template$<$typename mask\+\_\+group\+\_\+t , typename index\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater}{traccc\+::gain\+\_\+matrix\+\_\+updater}}$<$ algebra\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const mask\+\_\+group\+\_\+t \&}]{,  }\item[{const index\+\_\+t \&}]{,  }\item[{\mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ algebra\+\_\+t $>$ \&}]{trk\+\_\+state,  }\item[{\mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&}]{bound\+\_\+params }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Based on \char`\"{}\+Application of Kalman filtering to track and vertex
+fitting\char`\"{}, R.\+Frühwirth, N\+IM A. 
+
+Gain matrix updater operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask\+\_\+group} & mask group that contains the mask of surface \\
+\hline
+{\em index} & mask index of surface \\
+\hline
+{\em trk\+\_\+state} & track state of the surface \\
+\hline
+{\em bound\+\_\+params} & bound parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the update succeeds 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                     \{}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \textcolor{keyword}{using} shape\_type = \textcolor{keyword}{typename} mask\_group\_t::value\_type::shape;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \textcolor{keyword}{const} \textcolor{keyword}{auto} D = trk\_state.get\_measurement().meas\_dim;}
+\DoxyCodeLine{48         assert(D == 1u || D == 2u);}
+\DoxyCodeLine{49         \textcolor{keywordflow}{if} (D == 1u) \{}
+\DoxyCodeLine{50             update<1u, shape\_type>(trk\_state, bound\_params);}
+\DoxyCodeLine{51         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (D == 2u) \{}
+\DoxyCodeLine{52             update<2u, shape\_type>(trk\_state, bound\_params);}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::get\+\_\+measurement().
+
+\mbox{\Hypertarget{structtraccc_1_1gain__matrix__updater_ae20317d1c67ea60db65d824da8dc324c}\label{structtraccc_1_1gain__matrix__updater_ae20317d1c67ea60db65d824da8dc324c}} 
+\index{traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}!update@{update}}
+\index{update@{update}!traccc::gain\_matrix\_updater$<$ algebra\_t $>$@{traccc::gain\_matrix\_updater$<$ algebra\_t $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t $>$ \\
+template$<$size\+\_\+type D, typename shape\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater}{traccc\+::gain\+\_\+matrix\+\_\+updater}}$<$ algebra\+\_\+t $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ algebra\+\_\+t $>$ \&}]{trk\+\_\+state,  }\item[{\mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \&}]{bound\+\_\+params }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                                     \{}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         static\_assert(((D == 1u) || (D == 2u)),}
+\DoxyCodeLine{62                       \textcolor{stringliteral}{"The measurement dimension should be 1 or 2"});}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{keyword}{const} \textcolor{keyword}{auto} meas = trk\_state.get\_measurement();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         \textcolor{comment}{// Some identity matrices}}
+\DoxyCodeLine{67         \textcolor{comment}{// @Note: Make constexpr work}}
+\DoxyCodeLine{68         \textcolor{keyword}{const} matrix\_type<e\_bound\_size, e\_bound\_size> I66 =}
+\DoxyCodeLine{69             \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().template identity<e\_bound\_size, e\_bound\_size>();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         \textcolor{keyword}{const} matrix\_type<D, D> I\_m =}
+\DoxyCodeLine{72             \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().template identity<D, D>();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         matrix\_type<D, e\_bound\_size> H = meas.subs.template projector<D>();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// Measurement data on surface}}
+\DoxyCodeLine{77         \textcolor{keyword}{const} matrix\_type<D, 1>\& meas\_local =}
+\DoxyCodeLine{78             trk\_state.template measurement\_local<D>();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \textcolor{comment}{// Predicted vector of bound track parameters}}
+\DoxyCodeLine{81         \textcolor{keyword}{const} matrix\_type<e\_bound\_size, 1>\& predicted\_vec =}
+\DoxyCodeLine{82             bound\_params.vector();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         \textcolor{comment}{// Predicted covaraince of bound track parameters}}
+\DoxyCodeLine{85         \textcolor{keyword}{const} matrix\_type<e\_bound\_size, e\_bound\_size>\& predicted\_cov =}
+\DoxyCodeLine{86             bound\_params.covariance();}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88         \textcolor{comment}{// Set track state parameters}}
+\DoxyCodeLine{89         trk\_state.predicted().set\_vector(predicted\_vec);}
+\DoxyCodeLine{90         trk\_state.predicted().set\_covariance(predicted\_cov);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92         \textcolor{keywordflow}{if} constexpr (std::is\_same\_v<shape\_t, detray::line<true>> ||}
+\DoxyCodeLine{93                       std::is\_same\_v<shape\_t, detray::line<false>>) \{}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95             \textcolor{keywordflow}{if} (getter::element(predicted\_vec, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151a7c442b5fe12d5f43c76e4a0adc56d8d4}{e\_bound\_loc0}}, 0u) < 0) \{}
+\DoxyCodeLine{96                 getter::element(H, 0u, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151a7c442b5fe12d5f43c76e4a0adc56d8d4}{e\_bound\_loc0}}) = -\/1;}
+\DoxyCodeLine{97             \}}
+\DoxyCodeLine{98         \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         \textcolor{comment}{// Spatial resolution (Measurement covariance)}}
+\DoxyCodeLine{101         \textcolor{keyword}{const} matrix\_type<D, D> V =}
+\DoxyCodeLine{102             trk\_state.template measurement\_covariance<D>();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104         \textcolor{keyword}{const} matrix\_type<D, D> M =}
+\DoxyCodeLine{105             H * predicted\_cov * \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().transpose(H) + V;}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107         \textcolor{comment}{// Kalman gain matrix}}
+\DoxyCodeLine{108         \textcolor{keyword}{const} matrix\_type<6, D> K = predicted\_cov *}
+\DoxyCodeLine{109                                     \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().transpose(H) *}
+\DoxyCodeLine{110                                     \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().inverse(M);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112         \textcolor{comment}{// Calculate the filtered track parameters}}
+\DoxyCodeLine{113         \textcolor{keyword}{const} matrix\_type<6, 1> filtered\_vec =}
+\DoxyCodeLine{114             predicted\_vec + K * (meas\_local -\/ H * predicted\_vec);}
+\DoxyCodeLine{115         \textcolor{keyword}{const} matrix\_type<6, 6> filtered\_cov = (I66 -\/ K * H) * predicted\_cov;}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117         \textcolor{comment}{// Residual between measurement and (projected) filtered vector}}
+\DoxyCodeLine{118         \textcolor{keyword}{const} matrix\_type<D, 1> residual = meas\_local -\/ H * filtered\_vec;}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120         \textcolor{comment}{// Calculate the chi square}}
+\DoxyCodeLine{121         \textcolor{keyword}{const} matrix\_type<D, D> R = (I\_m -\/ H * K) * V;}
+\DoxyCodeLine{122         \textcolor{keyword}{const} matrix\_type<1, 1> chi2 = \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().transpose(residual) *}
+\DoxyCodeLine{123                                        \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().inverse(R) * residual;}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125         \textcolor{comment}{// Set the stepper parameter}}
+\DoxyCodeLine{126         bound\_params.set\_vector(filtered\_vec);}
+\DoxyCodeLine{127         bound\_params.set\_covariance(filtered\_cov);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129         \textcolor{comment}{// Set the track state parameters}}
+\DoxyCodeLine{130         trk\_state.filtered().set\_vector(filtered\_vec);}
+\DoxyCodeLine{131         trk\_state.filtered().set\_covariance(filtered\_cov);}
+\DoxyCodeLine{132         trk\_state.filtered\_chi2() = \mbox{\hyperlink{structtraccc_1_1gain__matrix__updater_a700b4bd06e28e8df88de2e2780e9b94e}{matrix\_operator}}().element(chi2, 0, 0);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{135     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::e\+\_\+bound\+\_\+loc0, traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::filtered(), traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::filtered\+\_\+chi2(), traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::get\+\_\+measurement(), and traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::predicted().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/fitting/kalman\+\_\+filter/\mbox{\hyperlink{gain__matrix__updater_8hpp}{gain\+\_\+matrix\+\_\+updater.\+hpp}}\end{DoxyCompactItemize}

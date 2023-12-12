@@ -1,0 +1,230 @@
+\hypertarget{seeding__example__alpaka_8cpp}{}\doxysection{examples/run/alpaka/seeding\+\_\+example\+\_\+alpaka.cpp File Reference}
+\label{seeding__example__alpaka_8cpp}\index{examples/run/alpaka/seeding\_example\_alpaka.cpp@{examples/run/alpaka/seeding\_example\_alpaka.cpp}}
+{\ttfamily \#include \char`\"{}traccc/alpaka/seeding/spacepoint\+\_\+binning.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/alpaka/utils/definitions.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/efficiency/seeding\+\_\+performance\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+geometry.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+spacepoints.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/common\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/detector\+\_\+input\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/handle\+\_\+argument\+\_\+errors.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/seeding\+\_\+input\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/performance/collection\+\_\+comparator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/performance/timer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/seeding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/track\+\_\+params\+\_\+estimation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$alpaka/alpaka.\+hpp$>$}\newline
+Include dependency graph for seeding\+\_\+example\+\_\+alpaka.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/df5/seeding__example__alpaka_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{seeding__example__alpaka_8cpp_ad3e13c776783766978925394effe9d39}{seq\+\_\+run}} (const \mbox{\hyperlink{structtraccc_1_1seeding__input__config}{traccc\+::seeding\+\_\+input\+\_\+config}} \&, const \mbox{\hyperlink{structtraccc_1_1common__options}{traccc\+::common\+\_\+options}} \&common\+\_\+opts, const \mbox{\hyperlink{structtraccc_1_1detector__input__options}{traccc\+::detector\+\_\+input\+\_\+options}} \&det\+\_\+opts, bool run\+\_\+cpu)
+\item 
+int \mbox{\hyperlink{seeding__example__alpaka_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{seeding__example__alpaka_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{seeding__example__alpaka_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{seeding\_example\_alpaka.cpp@{seeding\_example\_alpaka.cpp}!main@{main}}
+\index{main@{main}!seeding\_example\_alpaka.cpp@{seeding\_example\_alpaka.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{168                                  \{}
+\DoxyCodeLine{169     \textcolor{comment}{// Set up the program options}}
+\DoxyCodeLine{170     po::options\_description desc(\textcolor{stringliteral}{"Allowed options"});}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{comment}{// Add options}}
+\DoxyCodeLine{173     desc.add\_options()(\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"Give some help with the program's options"});}
+\DoxyCodeLine{174     \mbox{\hyperlink{structtraccc_1_1common__options}{traccc::common\_options}} common\_opts(desc);}
+\DoxyCodeLine{175     \mbox{\hyperlink{structtraccc_1_1detector__input__options}{traccc::detector\_input\_options}} det\_opts(desc);}
+\DoxyCodeLine{176     \mbox{\hyperlink{structtraccc_1_1seeding__input__config}{traccc::seeding\_input\_config}} seeding\_input\_cfg(desc);}
+\DoxyCodeLine{177     desc.add\_options()(\textcolor{stringliteral}{"run\_cpu"}, po::value<bool>()-\/>default\_value(\textcolor{keyword}{false}),}
+\DoxyCodeLine{178                        \textcolor{stringliteral}{"run cpu tracking as well"});}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180     po::variables\_map vm;}
+\DoxyCodeLine{181     po::store(po::parse\_command\_line(argc, argv, desc), vm);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183     \textcolor{comment}{// Check errors}}
+\DoxyCodeLine{184     \mbox{\hyperlink{namespacetraccc_a018e1f5ae8dbab3e118c08cfb905be01}{traccc::handle\_argument\_errors}}(vm, desc);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186     \textcolor{comment}{// Read options}}
+\DoxyCodeLine{187     common\_opts.read(vm);}
+\DoxyCodeLine{188     det\_opts.read(vm);}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190     seeding\_input\_cfg.read(vm);}
+\DoxyCodeLine{191     \textcolor{keyword}{auto} run\_cpu = vm[\textcolor{stringliteral}{"run\_cpu"}].as<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     std::cout << \textcolor{stringliteral}{"Running "} << argv[0] << \textcolor{stringliteral}{" "} << det\_opts.detector\_file << \textcolor{stringliteral}{" "}}
+\DoxyCodeLine{194               << common\_opts.input\_directory << \textcolor{stringliteral}{" "} << common\_opts.events}
+\DoxyCodeLine{195               << std::endl;}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197     \textcolor{keywordtype}{int} ret = \mbox{\hyperlink{seeding__example__alpaka_8cpp_ad3e13c776783766978925394effe9d39}{seq\_run}}(seeding\_input\_cfg, common\_opts, det\_opts, run\_cpu);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{200 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::detector\+\_\+input\+\_\+options\+::detector\+\_\+file, traccc\+::common\+\_\+options\+::events, traccc\+::handle\+\_\+argument\+\_\+errors(), traccc\+::common\+\_\+options\+::input\+\_\+directory, traccc\+::seeding\+\_\+input\+\_\+config\+::read(), traccc\+::detector\+\_\+input\+\_\+options\+::read(), traccc\+::common\+\_\+options\+::read(), and seq\+\_\+run().
+
+\mbox{\Hypertarget{seeding__example__alpaka_8cpp_ad3e13c776783766978925394effe9d39}\label{seeding__example__alpaka_8cpp_ad3e13c776783766978925394effe9d39}} 
+\index{seeding\_example\_alpaka.cpp@{seeding\_example\_alpaka.cpp}!seq\_run@{seq\_run}}
+\index{seq\_run@{seq\_run}!seeding\_example\_alpaka.cpp@{seeding\_example\_alpaka.cpp}}
+\doxysubsubsection{\texorpdfstring{seq\_run()}{seq\_run()}}
+{\footnotesize\ttfamily int seq\+\_\+run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seeding__input__config}{traccc\+::seeding\+\_\+input\+\_\+config}} \&}]{,  }\item[{const \mbox{\hyperlink{structtraccc_1_1common__options}{traccc\+::common\+\_\+options}} \&}]{common\+\_\+opts,  }\item[{const \mbox{\hyperlink{structtraccc_1_1detector__input__options}{traccc\+::detector\+\_\+input\+\_\+options}} \&}]{det\+\_\+opts,  }\item[{bool}]{run\+\_\+cpu }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2023 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                                                                         \{}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{comment}{// Read the surface transforms}}
+\DoxyCodeLine{45     \textcolor{keyword}{auto} surface\_transforms = \mbox{\hyperlink{namespacetraccc_1_1io_a5a6c904c086473a05b85a0bf060bfa8d}{traccc::io::read\_geometry}}(det\_opts.\mbox{\hyperlink{structtraccc_1_1detector__input__options_a1121f57fa16a57c9d2cef56f94390bcb}{detector\_file}});}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{comment}{// Output stats}}
+\DoxyCodeLine{48     uint64\_t n\_modules = 0;}
+\DoxyCodeLine{49     uint64\_t n\_spacepoints = 0;}
+\DoxyCodeLine{50     uint64\_t n\_seeds = 0;}
+\DoxyCodeLine{51     uint64\_t n\_seeds\_alpaka = 0;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{comment}{// Configs}}
+\DoxyCodeLine{54     \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{traccc::seedfinder\_config}} finder\_config;}
+\DoxyCodeLine{55     \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{traccc::spacepoint\_grid\_config}} grid\_config(finder\_config);}
+\DoxyCodeLine{56     \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{traccc::seedfilter\_config}} filter\_config;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{comment}{// Memory resources used by the application.}}
+\DoxyCodeLine{59     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#ifdef ALPAKA\_ACC\_GPU\_CUDA\_ENABLED}}
+\DoxyCodeLine{62     vecmem::cuda::copy copy;}
+\DoxyCodeLine{63     vecmem::cuda::device\_memory\_resource device\_mr;}
+\DoxyCodeLine{64     \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc::memory\_resource}} mr\{device\_mr, \&host\_mr\};}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{66     vecmem::copy copy;}
+\DoxyCodeLine{67     \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc::memory\_resource}} mr\{host\_mr, \&host\_mr\};}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \mbox{\hyperlink{classtraccc_1_1seeding__algorithm}{traccc::seeding\_algorithm}} sa(finder\_config, grid\_config, filter\_config,}
+\DoxyCodeLine{71                                  host\_mr);}
+\DoxyCodeLine{72     \mbox{\hyperlink{classtraccc_1_1track__params__estimation}{traccc::track\_params\_estimation}} tp(host\_mr);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{comment}{// Alpaka Spacepoint Binning}}
+\DoxyCodeLine{75     \mbox{\hyperlink{classtraccc_1_1alpaka_1_1spacepoint__binning}{traccc::alpaka::spacepoint\_binning}} m\_spacepoint\_binning(}
+\DoxyCodeLine{76         finder\_config, grid\_config, mr, copy);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{comment}{// performance writer}}
+\DoxyCodeLine{79     \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer}{traccc::seeding\_performance\_writer}} sd\_performance\_writer(}
+\DoxyCodeLine{80         \mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config}{traccc::seeding\_performance\_writer::config}}\{\});}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \mbox{\hyperlink{structtraccc_1_1performance_1_1timing__info}{traccc::performance::timing\_info}} elapsedTimes;}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{comment}{// Loop over events}}
+\DoxyCodeLine{85     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}} = common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}{skip}};}
+\DoxyCodeLine{86          \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}} < common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_adefc317cdc0b846c7be8db1e5f0c3ef2}{events}} + common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}{skip}}; ++\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}) \{}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88         \mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{traccc::io::spacepoint\_reader\_output}} reader\_output(mr.host);}
+\DoxyCodeLine{89         traccc::seeding\_algorithm::output\_type seeds;}
+\DoxyCodeLine{90         traccc::track\_params\_estimation::output\_type params;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92         \{  \textcolor{comment}{// Start measuring wall time}}
+\DoxyCodeLine{93             \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} wall\_t(\textcolor{stringliteral}{"Wall time"}, elapsedTimes);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{96 \textcolor{comment}{            hit file reading}}
+\DoxyCodeLine{97 \textcolor{comment}{            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{98             \{}
+\DoxyCodeLine{99                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Hit reading  (cpu)"},}
+\DoxyCodeLine{100                                              elapsedTimes);}
+\DoxyCodeLine{101                 \textcolor{comment}{// Read the hits from the relevant event file}}
+\DoxyCodeLine{102                 \mbox{\hyperlink{namespacetraccc_1_1io_afe49060da2ab77f49cfcd82308122f84}{traccc::io::read\_spacepoints}}(}
+\DoxyCodeLine{103                     reader\_output, \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\_directory}},}
+\DoxyCodeLine{104                     surface\_transforms, common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}{input\_data\_format}});}
+\DoxyCodeLine{105             \}  \textcolor{comment}{// stop measuring hit reading timer}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107             \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::spacepoint\_collection\_types::host}}\& spacepoints\_per\_event =}
+\DoxyCodeLine{108                 reader\_output.spacepoints;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110             \textcolor{comment}{// Copy the spacepoint data to the device.}}
+\DoxyCodeLine{111             \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::spacepoint\_collection\_types::buffer}}}
+\DoxyCodeLine{112                 spacepoints\_alpaka\_buffer(spacepoints\_per\_event.size(),}
+\DoxyCodeLine{113                                           mr.main);}
+\DoxyCodeLine{114             copy(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(spacepoints\_per\_event),}
+\DoxyCodeLine{115                  spacepoints\_alpaka\_buffer);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117             \{  \textcolor{comment}{// Spacepoint binning for alpaka}}
+\DoxyCodeLine{118                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Spacepoint binning (alpaka)"},}
+\DoxyCodeLine{119                                              elapsedTimes);}
+\DoxyCodeLine{120                 m\_spacepoint\_binning(}
+\DoxyCodeLine{121                     \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(spacepoints\_alpaka\_buffer));}
+\DoxyCodeLine{122             \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{125 \textcolor{comment}{                Seeding algorithm}}
+\DoxyCodeLine{126 \textcolor{comment}{            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128             \textcolor{comment}{// CPU}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130             \textcolor{keywordflow}{if} (run\_cpu) \{}
+\DoxyCodeLine{131                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Seeding  (cpu)"}, elapsedTimes);}
+\DoxyCodeLine{132                 seeds = sa(spacepoints\_per\_event);}
+\DoxyCodeLine{133             \}  \textcolor{comment}{// stop measuring seeding cpu timer}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{136 \textcolor{comment}{            Track params estimation}}
+\DoxyCodeLine{137 \textcolor{comment}{            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139             \textcolor{comment}{// CPU}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141             \textcolor{keywordflow}{if} (run\_cpu) \{}
+\DoxyCodeLine{142                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Track params  (cpu)"},}
+\DoxyCodeLine{143                                              elapsedTimes);}
+\DoxyCodeLine{144                 params = tp(std::move(spacepoints\_per\_event), seeds,}
+\DoxyCodeLine{145                             \{0.f, 0.f, finder\_config.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_af3b9be46bd90bb968da94db6ac36bd45}{bFieldInZ}}\});}
+\DoxyCodeLine{146             \}  \textcolor{comment}{// stop measuring track params cpu timer}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148         \}  \textcolor{comment}{// Stop measuring wall time}}
+\DoxyCodeLine{149     \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{keywordflow}{if} (common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}{check\_performance}}) \{}
+\DoxyCodeLine{152         sd\_performance\_writer.finalize();}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     std::cout << \textcolor{stringliteral}{"==> Statistics ... "} << std::endl;}
+\DoxyCodeLine{156     std::cout << \textcolor{stringliteral}{"-\/ read    "} << n\_spacepoints << \textcolor{stringliteral}{" spacepoints from "}}
+\DoxyCodeLine{157               << n\_modules << \textcolor{stringliteral}{" modules"} << std::endl;}
+\DoxyCodeLine{158     std::cout << \textcolor{stringliteral}{"-\/ created (cpu)  "} << n\_seeds << \textcolor{stringliteral}{" seeds"} << std::endl;}
+\DoxyCodeLine{159     std::cout << \textcolor{stringliteral}{"-\/ created (alpaka) "} << n\_seeds\_alpaka << \textcolor{stringliteral}{" seeds"}}
+\DoxyCodeLine{160               << std::endl;}
+\DoxyCodeLine{161     std::cout << \textcolor{stringliteral}{"==>Elapsed times...\(\backslash\)n"} << elapsedTimes << std::endl;}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{164 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::seedfinder\+\_\+config\+::b\+Field\+InZ, traccc\+::common\+\_\+options\+::check\+\_\+performance, traccc\+::detector\+\_\+input\+\_\+options\+::detector\+\_\+file, event, traccc\+::common\+\_\+options\+::events, traccc\+::get\+\_\+data(), traccc\+::common\+\_\+options\+::input\+\_\+data\+\_\+format, traccc\+::common\+\_\+options\+::input\+\_\+directory, traccc\+::io\+::read\+\_\+geometry(), traccc\+::io\+::read\+\_\+spacepoints(), traccc\+::common\+\_\+options\+::skip, and traccc\+::io\+::spacepoint\+\_\+reader\+\_\+output\+::spacepoints.
+
+
+
+Referenced by main().
+

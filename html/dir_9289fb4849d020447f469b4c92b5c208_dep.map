@@ -1,0 +1,12 @@
+<map id="examples/run/sycl" name="examples/run/sycl">
+<area shape="rect" id="node1" href="dir_9289fb4849d020447f469b4c92b5c208.html" title="sycl" alt="" coords="86,52,158,100"/>
+<area shape="rect" id="node2" href="dir_4572a2b0e8077d7721b47d353479f0e5.html" title="common" alt="" coords="5,148,84,196"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000017_000150.html" title="2" alt="" coords="78,131,87,146"/>
+<area shape="rect" id="node3" href="dir_4270bfced15e0e73154b13468c7c9ad9.html" title="core" alt="" coords="86,244,158,292"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000017_000000.html" title="2" alt="" coords="126,218,135,233"/>
+<area shape="rect" id="node4" href="dir_820b2b9dd608784780e51ab49715a98b.html" title="device" alt="" coords="159,148,231,196"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000017_000001.html" title="3" alt="" coords="168,121,177,135"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000150_000000.html" title="2" alt="" coords="93,217,102,231"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000001_000000.html" title="206" alt="" coords="146,227,171,242"/>
+<area shape="rect" id="clust1" href="dir_0cd4ecbeaad8eb167d860235a802ff11.html" title="run" alt="" coords="75,16,169,111"/>
+</map>

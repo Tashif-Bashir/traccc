@@ -1,0 +1,139 @@
+\hypertarget{structtraccc_1_1futhark_1_1component__connection}{}\doxysection{traccc\+::futhark\+::component\+\_\+connection Struct Reference}
+\label{structtraccc_1_1futhark_1_1component__connection}\index{traccc::futhark::component\_connection@{traccc::futhark::component\_connection}}
+
+
+{\ttfamily \#include $<$component\+\_\+connection.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::futhark\+::component\+\_\+connection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{d8/dca/structtraccc_1_1futhark_1_1component__connection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::futhark\+::component\+\_\+connection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{d3/ddc/structtraccc_1_1futhark_1_1component__connection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1futhark_1_1component__connection_a6d42e0fd9484deb958067c97d095ea8f}{component\+\_\+connection}} (vecmem\+::memory\+\_\+resource \&)
+\item 
+output\+\_\+type \mbox{\hyperlink{structtraccc_1_1futhark_1_1component__connection_afbfeb81ef70d7520ee69e085ea4c708b}{operator()}} (const cell\+\_\+container\+\_\+types\+::host \&cells) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vecmem\+::memory\+\_\+resource \& \mbox{\hyperlink{structtraccc_1_1futhark_1_1component__connection_a30073179353a732344689c2dd6579393}{m\+\_\+mr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1futhark_1_1component__connection_a6d42e0fd9484deb958067c97d095ea8f}\label{structtraccc_1_1futhark_1_1component__connection_a6d42e0fd9484deb958067c97d095ea8f}} 
+\index{traccc::futhark::component\_connection@{traccc::futhark::component\_connection}!component\_connection@{component\_connection}}
+\index{component\_connection@{component\_connection}!traccc::futhark::component\_connection@{traccc::futhark::component\_connection}}
+\doxysubsubsection{\texorpdfstring{component\_connection()}{component\_connection()}}
+{\footnotesize\ttfamily traccc\+::futhark\+::component\+\_\+connection\+::component\+\_\+connection (\begin{DoxyParamCaption}\item[{vecmem\+::memory\+\_\+resource \&}]{mr }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30     : \mbox{\hyperlink{structtraccc_1_1futhark_1_1component__connection_a30073179353a732344689c2dd6579393}{m\_mr}}(mr) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1futhark_1_1component__connection_afbfeb81ef70d7520ee69e085ea4c708b}\label{structtraccc_1_1futhark_1_1component__connection_afbfeb81ef70d7520ee69e085ea4c708b}} 
+\index{traccc::futhark::component\_connection@{traccc::futhark::component\_connection}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::futhark::component\_connection@{traccc::futhark::component\_connection}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily component\+\_\+connection\+::output\+\_\+type traccc\+::futhark\+::component\+\_\+connection\+::operator() (\begin{DoxyParamCaption}\item[{const cell\+\_\+container\+\_\+types\+::host \&}]{cells }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                 \{}
+\DoxyCodeLine{34     std::size\_t total\_cells = 0;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordflow}{for} (std::size\_t i = 0; i < data.size(); ++i) \{}
+\DoxyCodeLine{37         total\_cells += data.at(i).items.size();}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     std::vector<uint64\_t> host\_event(total\_cells);}
+\DoxyCodeLine{41     std::vector<uint64\_t> host\_geometry(total\_cells);}
+\DoxyCodeLine{42     std::vector<int64\_t> host\_channel0(total\_cells);}
+\DoxyCodeLine{43     std::vector<int64\_t> host\_channel1(total\_cells);}
+\DoxyCodeLine{44     std::vector<float> host\_activation(total\_cells);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordflow}{for} (std::size\_t i = 0, k = 0; i < data.size(); ++i) \{}
+\DoxyCodeLine{47         \textcolor{keywordflow}{for} (std::size\_t j = 0; j < data.at(i).items.size(); ++j, ++k) \{}
+\DoxyCodeLine{48             host\_event[k] = 0;}
+\DoxyCodeLine{49             host\_geometry[k] = data.at(i).header.module;}
+\DoxyCodeLine{50             host\_channel0[k] = data.at(i).items.at(j).channel0;}
+\DoxyCodeLine{51             host\_channel1[k] = data.at(i).items.at(j).channel1;}
+\DoxyCodeLine{52             host\_activation[k] = data.at(i).items.at(j).activation;}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     cells\_to\_measurements\_wrapper::output\_t r =}
+\DoxyCodeLine{57         \mbox{\hyperlink{io__dec__par__example_8cpp_a2280d45109980acc30541590e2778923}{cells\_to\_measurements\_wrapper::run}}(}
+\DoxyCodeLine{58             std::move(host\_event), std::move(host\_geometry),}
+\DoxyCodeLine{59             std::move(host\_channel0), std::move(host\_channel1),}
+\DoxyCodeLine{60             std::move(host\_activation));}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     output\_type out(\&\mbox{\hyperlink{structtraccc_1_1futhark_1_1component__connection_a30073179353a732344689c2dd6579393}{m\_mr}});}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{keywordflow}{for} (std::size\_t i = 0; i < data.size(); ++i) \{}
+\DoxyCodeLine{65         vecmem::vector<measurement> v(\&\mbox{\hyperlink{structtraccc_1_1futhark_1_1component__connection_a30073179353a732344689c2dd6579393}{m\_mr}});}
+\DoxyCodeLine{66         v.reserve(data.at(i).items.size());}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{keywordflow}{for} (std::size\_t j = 0; j < std::get<1>(r).size(); ++j) \{}
+\DoxyCodeLine{69             \textcolor{keywordflow}{if} (std::get<1>(r)[j] == data.at(i).header.module) \{}
+\DoxyCodeLine{70                 measurement m;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72                 m.local = \{std::get<2>(r)[j], std::get<3>(r)[j]\};}
+\DoxyCodeLine{73                 m.variance = \{std::get<4>(r)[j], std::get<5>(r)[j]\};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75                 v.push\_back(m);}
+\DoxyCodeLine{76             \}}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         out.push\_back(cell\_module(data.at(i).header), std::move(v));}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} out;}
+\DoxyCodeLine{83 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::measurement\+::local, m\+\_\+mr, run(), and traccc\+::measurement\+::variance.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1futhark_1_1component__connection_a30073179353a732344689c2dd6579393}\label{structtraccc_1_1futhark_1_1component__connection_a30073179353a732344689c2dd6579393}} 
+\index{traccc::futhark::component\_connection@{traccc::futhark::component\_connection}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::futhark::component\_connection@{traccc::futhark::component\_connection}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily vecmem\+::memory\+\_\+resource\& traccc\+::futhark\+::component\+\_\+connection\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+device/futhark/include/traccc/futhark/\mbox{\hyperlink{device_2futhark_2include_2traccc_2futhark_2component__connection_8hpp}{component\+\_\+connection.\+hpp}}\item 
+device/futhark/src/\mbox{\hyperlink{device_2futhark_2src_2component__connection_8cpp}{component\+\_\+connection.\+cpp}}\end{DoxyCompactItemize}

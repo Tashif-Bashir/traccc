@@ -1,0 +1,310 @@
+\hypertarget{cuda_2test__ckf__sparse__tracks__telescope_8cpp}{}\doxysection{tests/cuda/test\+\_\+ckf\+\_\+sparse\+\_\+tracks\+\_\+telescope.cpp File Reference}
+\label{cuda_2test__ckf__sparse__tracks__telescope_8cpp}\index{tests/cuda/test\_ckf\_sparse\_tracks\_telescope.cpp@{tests/cuda/test\_ckf\_sparse\_tracks\_telescope.cpp}}
+{\ttfamily \#include \char`\"{}traccc/cuda/finding/finding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/cuda/fitting/fitting\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/device/container\+\_\+d2h\+\_\+copy\+\_\+alg.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/device/container\+\_\+h2d\+\_\+copy\+\_\+alg.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/track\+\_\+candidate.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+measurements.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/resolution/fitting\+\_\+performance\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/simulator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/utils/memory\+\_\+resource.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/utils/ranges.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/utils/seed\+\_\+generator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests/ckf\+\_\+telescope\+\_\+test.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/create\+\_\+telescope\+\_\+detector.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/io/common/detector\+\_\+reader.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/io/common/detector\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/propagator/propagator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/simulation/event\+\_\+generator/track\+\_\+generators.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/cuda/device\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/memory/cuda/managed\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/utils/cuda/async\+\_\+copy.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for test\+\_\+ckf\+\_\+sparse\+\_\+tracks\+\_\+telescope.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/ddf/cuda_2test__ckf__sparse__tracks__telescope_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a2c5189bba64163f2466bfeb4cc67a060}{T\+E\+S\+T\+\_\+P}} (\mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}, Run)
+\item 
+\mbox{\hyperlink{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a15a05162ab47e11fe0426931354c2ecf}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Ckf\+Sparse\+Track\+Telescope\+Validation0, \mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+single\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 1, 5000)))
+\item 
+\mbox{\hyperlink{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a4ddeef48a156fa0ba358048670b57b3b}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Ckf\+Sparse\+Track\+Telescope\+Validation1, \mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+double\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 2, 2500)))
+\item 
+\mbox{\hyperlink{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a23f2725b8410ddc8c5d4e31f475de09d}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Ckf\+Sparse\+Track\+Telescope\+Validation2, \mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+quadra\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 4, 1250)))
+\item 
+\mbox{\hyperlink{cuda_2test__ckf__sparse__tracks__telescope_8cpp_ab0b7a90d765a41c5202371f66044d789}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Ckf\+Sparse\+Track\+Telescope\+Validation3, \mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+decade\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 10, 500)))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a15a05162ab47e11fe0426931354c2ecf}\label{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a15a05162ab47e11fe0426931354c2ecf}} 
+\index{test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Ckf\+Sparse\+Track\+Telescope\+Validation0}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+single\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 1, 5000))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a4ddeef48a156fa0ba358048670b57b3b}\label{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a4ddeef48a156fa0ba358048670b57b3b}} 
+\index{test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Ckf\+Sparse\+Track\+Telescope\+Validation1}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+double\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 2, 2500))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a23f2725b8410ddc8c5d4e31f475de09d}\label{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a23f2725b8410ddc8c5d4e31f475de09d}} 
+\index{test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Ckf\+Sparse\+Track\+Telescope\+Validation2}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+quadra\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 4, 1250))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cuda_2test__ckf__sparse__tracks__telescope_8cpp_ab0b7a90d765a41c5202371f66044d789}\label{cuda_2test__ckf__sparse__tracks__telescope_8cpp_ab0b7a90d765a41c5202371f66044d789}} 
+\index{test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Ckf\+Sparse\+Track\+Telescope\+Validation3}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}cuda\+\_\+telescope\+\_\+decade\+\_\+tracks\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 200.f, 200.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 0.f\}, -\/1.f, 10, 500))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a2c5189bba64163f2466bfeb4cc67a060}\label{cuda_2test__ckf__sparse__tracks__telescope_8cpp_a2c5189bba64163f2466bfeb4cc67a060}} 
+\index{test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}!TEST\_P@{TEST\_P}}
+\index{TEST\_P@{TEST\_P}!test\_ckf\_sparse\_tracks\_telescope.cpp@{test\_ckf\_sparse\_tracks\_telescope.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_P()}{TEST\_P()}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+P (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtraccc_1_1CkfSparseTrackTelescopeTests}{Ckf\+Sparse\+Track\+Telescope\+Tests}}}]{,  }\item[{Run}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                           \{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{comment}{// Get the parameters}}
+\DoxyCodeLine{50     \textcolor{keyword}{const} std::string name = std::get<0>(GetParam());}
+\DoxyCodeLine{51     \textcolor{keyword}{const} std::array<scalar, 3u> origin = std::get<1>(GetParam());}
+\DoxyCodeLine{52     \textcolor{keyword}{const} std::array<scalar, 3u> origin\_stddev = std::get<2>(GetParam());}
+\DoxyCodeLine{53     \textcolor{keyword}{const} std::array<scalar, 2u> mom\_range = std::get<3>(GetParam());}
+\DoxyCodeLine{54     \textcolor{keyword}{const} std::array<scalar, 2u> eta\_range = std::get<4>(GetParam());}
+\DoxyCodeLine{55     \textcolor{keyword}{const} std::array<scalar, 2u> theta\_range = \mbox{\hyperlink{namespacetraccc_a2e4564fb128521e2b616cd390e972c06}{eta\_to\_theta\_range}}(eta\_range);}
+\DoxyCodeLine{56     \textcolor{keyword}{const} std::array<scalar, 2u> phi\_range = std::get<5>(GetParam());}
+\DoxyCodeLine{57     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} charge = std::get<6>(GetParam());}
+\DoxyCodeLine{58     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_truth\_tracks = std::get<7>(GetParam());}
+\DoxyCodeLine{59     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_events = std::get<8>(GetParam());}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{comment}{// Performance writer}}
+\DoxyCodeLine{62     \mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{traccc::fitting\_performance\_writer::config}} fit\_writer\_cfg;}
+\DoxyCodeLine{63     fit\_writer\_cfg.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_aa7ac2a11d51ba6bcd1a98dc769725a84}{file\_path}} = \textcolor{stringliteral}{"performance\_track\_fitting\_"} + name + \textcolor{stringliteral}{".root"};}
+\DoxyCodeLine{64     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer}{traccc::fitting\_performance\_writer}} fit\_performance\_writer(fit\_writer\_cfg);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{comment}{    /*****************************}}
+\DoxyCodeLine{67 \textcolor{comment}{     * Build a telescope geometry}}
+\DoxyCodeLine{68 \textcolor{comment}{     *****************************/}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{comment}{// Memory resources used by the application.}}
+\DoxyCodeLine{71     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{72     vecmem::cuda::device\_memory\_resource device\_mr;}
+\DoxyCodeLine{73     \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc::memory\_resource}} mr\{device\_mr, \&host\_mr\};}
+\DoxyCodeLine{74     vecmem::cuda::managed\_memory\_resource mng\_mr;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{comment}{// Read back detector file}}
+\DoxyCodeLine{77     \textcolor{keyword}{const} std::string path = name + \textcolor{stringliteral}{"/"};}
+\DoxyCodeLine{78     detray::io::detector\_reader\_config reader\_cfg\{\};}
+\DoxyCodeLine{79     reader\_cfg.add\_file(path + \textcolor{stringliteral}{"telescope\_detector\_geometry.json"})}
+\DoxyCodeLine{80         .add\_file(path + \textcolor{stringliteral}{"telescope\_detector\_homogeneous\_material.json"});}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keyword}{auto} [host\_det, names] =}
+\DoxyCodeLine{83         detray::io::read\_detector<host\_detector\_type>(mng\_mr, reader\_cfg);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{keyword}{auto} field = detray::bfield::create\_const\_field(B);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{comment}{// Detector view object}}
+\DoxyCodeLine{88     \textcolor{keyword}{auto} det\_view = \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{detray::get\_data}}(host\_det);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{comment}{    /***************************}}
+\DoxyCodeLine{91 \textcolor{comment}{     * Generate simulation data}}
+\DoxyCodeLine{92 \textcolor{comment}{     ***************************/}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{comment}{// Track generator}}
+\DoxyCodeLine{95     \textcolor{keyword}{using} generator\_type =}
+\DoxyCodeLine{96         detray::random\_track\_generator<\mbox{\hyperlink{namespacetraccc_a50d288f62d4a051cca68e9071c6318e8}{traccc::free\_track\_parameters}},}
+\DoxyCodeLine{97                                        uniform\_gen\_t>;}
+\DoxyCodeLine{98     generator\_type::configuration gen\_cfg\{\};}
+\DoxyCodeLine{99     gen\_cfg.n\_tracks(n\_truth\_tracks);}
+\DoxyCodeLine{100     gen\_cfg.origin(origin);}
+\DoxyCodeLine{101     gen\_cfg.origin\_stddev(origin\_stddev);}
+\DoxyCodeLine{102     gen\_cfg.phi\_range(phi\_range[0], phi\_range[1]);}
+\DoxyCodeLine{103     gen\_cfg.theta\_range(theta\_range[0], theta\_range[1]);}
+\DoxyCodeLine{104     gen\_cfg.mom\_range(mom\_range[0], mom\_range[1]);}
+\DoxyCodeLine{105     gen\_cfg.charge(charge);}
+\DoxyCodeLine{106     generator\_type generator(gen\_cfg);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     \textcolor{comment}{// Smearing value for measurements}}
+\DoxyCodeLine{109     \mbox{\hyperlink{structtraccc_1_1measurement__smearer}{traccc::measurement\_smearer<transform3>}} meas\_smearer(smearing[0],}
+\DoxyCodeLine{110                                                          smearing[1]);}
+\DoxyCodeLine{111     \textcolor{keyword}{using} writer\_type =}
+\DoxyCodeLine{112         \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc::smearing\_writer<traccc::measurement\_smearer<transform3>}}>;}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \textcolor{keyword}{typename} writer\_type::config smearer\_writer\_cfg\{meas\_smearer\};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{comment}{// Run simulator}}
+\DoxyCodeLine{117     \textcolor{keyword}{const} std::string full\_path = \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}{io::data\_directory}}() + path;}
+\DoxyCodeLine{118     std::filesystem::create\_directories(full\_path);}
+\DoxyCodeLine{119     \textcolor{keyword}{auto} sim = \mbox{\hyperlink{structtraccc_1_1simulator}{traccc::simulator}}<host\_detector\_type, b\_field\_t, generator\_type,}
+\DoxyCodeLine{120                                  writer\_type>(}
+\DoxyCodeLine{121         n\_events, host\_det, field, std::move(generator),}
+\DoxyCodeLine{122         std::move(smearer\_writer\_cfg), full\_path);}
+\DoxyCodeLine{123     sim.\mbox{\hyperlink{structtraccc_1_1simulator_a99eb15583a5743549002b2caac5924c0}{run}}();}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{comment}{    /*****************************}}
+\DoxyCodeLine{126 \textcolor{comment}{     * Do the reconstruction}}
+\DoxyCodeLine{127 \textcolor{comment}{     *****************************/}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     \textcolor{comment}{// Stream object}}
+\DoxyCodeLine{130     \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{traccc::cuda::stream}} stream;}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     \textcolor{comment}{// Copy objects}}
+\DoxyCodeLine{133     vecmem::cuda::async\_copy copy\{stream.\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_ad8224b3cebfca8079e035a10a9b1e20f}{cudaStream}}()\};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \mbox{\hyperlink{classtraccc_1_1device_1_1container__h2d__copy__alg}{traccc::device::container\_h2d\_copy\_alg<traccc::measurement\_container\_types>}}}
+\DoxyCodeLine{136         measurement\_h2d\{mr, copy\};}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     \mbox{\hyperlink{classtraccc_1_1device_1_1container__d2h__copy__alg}{traccc::device::container\_d2h\_copy\_alg}}<}
+\DoxyCodeLine{139         \mbox{\hyperlink{structtraccc_1_1container__types}{traccc::track\_candidate\_container\_types}}>}
+\DoxyCodeLine{140         track\_candidate\_d2h\{mr, copy\};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \mbox{\hyperlink{classtraccc_1_1device_1_1container__d2h__copy__alg}{traccc::device::container\_d2h\_copy\_alg<traccc::track\_state\_container\_types>}}}
+\DoxyCodeLine{143         track\_state\_d2h\{mr, copy\};}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \textcolor{comment}{// Seed generator}}
+\DoxyCodeLine{146     \mbox{\hyperlink{structtraccc_1_1seed__generator}{seed\_generator<host\_detector\_type>}} sg(host\_det, stddevs);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{comment}{// Finding algorithm configuration}}
+\DoxyCodeLine{149     \textcolor{keyword}{typename} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc::cuda::finding\_algorithm}}<}
+\DoxyCodeLine{150         rk\_stepper\_type, device\_navigator\_type>::config\_type cfg;}
+\DoxyCodeLine{151     \textcolor{comment}{// few tracks (\string~1 out of 1000 tracks) are missed when chi2\_max = 15}}
+\DoxyCodeLine{152     cfg.chi2\_max = 30.f;}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154     \textcolor{comment}{// Finding algorithm object}}
+\DoxyCodeLine{155     \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc::cuda::finding\_algorithm<rk\_stepper\_type, device\_navigator\_type>}}}
+\DoxyCodeLine{156         device\_finding(cfg, mr, copy, stream);}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158     \textcolor{comment}{// Fitting algorithm object}}
+\DoxyCodeLine{159     \textcolor{keyword}{typename} \mbox{\hyperlink{classtraccc_1_1cuda_1_1fitting__algorithm_a234dcbfba67b542e936e1c74c14e7a14}{traccc::cuda::fitting\_algorithm<device\_fitter\_type>::config\_type}}}
+\DoxyCodeLine{160         fit\_cfg;}
+\DoxyCodeLine{161     \mbox{\hyperlink{classtraccc_1_1cuda_1_1fitting__algorithm}{traccc::cuda::fitting\_algorithm<device\_fitter\_type>}} device\_fitting(}
+\DoxyCodeLine{162         fit\_cfg, mr, copy, stream);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{comment}{// Iterate over events}}
+\DoxyCodeLine{165     \textcolor{keywordflow}{for} (std::size\_t i\_evt = 0; i\_evt < n\_events; i\_evt++) \{}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167         \textcolor{comment}{// Truth Track Candidates}}
+\DoxyCodeLine{168         \mbox{\hyperlink{structtraccc_1_1event__map2}{traccc::event\_map2}} evt\_map(i\_evt, path, path, path);}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_candidate\_container\_types::host}} truth\_track\_candidates =}
+\DoxyCodeLine{171             evt\_map.generate\_truth\_candidates(sg, mng\_mr);}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173         ASSERT\_EQ(truth\_track\_candidates.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}(), n\_truth\_tracks);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175         \textcolor{comment}{// Prepare truth seeds}}
+\DoxyCodeLine{176         \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::bound\_track\_parameters\_collection\_types::host}} seeds(mr.host);}
+\DoxyCodeLine{177         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_trk = 0; i\_trk < n\_truth\_tracks; i\_trk++) \{}
+\DoxyCodeLine{178             seeds.push\_back(truth\_track\_candidates.\mbox{\hyperlink{classtraccc_1_1host__container_a22f19b70178832415310bb4fd17b9d48}{at}}(i\_trk).\mbox{\hyperlink{structtraccc_1_1container__element_acabcc54aaa8cd9c56d1f4969189de7d1}{header}});}
+\DoxyCodeLine{179         \}}
+\DoxyCodeLine{180         ASSERT\_EQ(seeds.size(), n\_truth\_tracks);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182         \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::bound\_track\_parameters\_collection\_types::buffer}} seeds\_buffer\{}
+\DoxyCodeLine{183             \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\textcolor{keyword}{>}(seeds.size()), mr.main\};}
+\DoxyCodeLine{184         copy.setup(seeds\_buffer);}
+\DoxyCodeLine{185         copy(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(seeds), seeds\_buffer,}
+\DoxyCodeLine{186              vecmem::copy::type::host\_to\_device);}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188         \textcolor{comment}{// Read measurements}}
+\DoxyCodeLine{189         \mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{traccc::io::measurement\_reader\_output}} readOut(\&host\_mr);}
+\DoxyCodeLine{190         \mbox{\hyperlink{namespacetraccc_1_1io_a84e36824b32d23770ed527b25f810307}{traccc::io::read\_measurements}}(readOut, i\_evt, path,}
+\DoxyCodeLine{191                                       \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{traccc::data\_format::csv}});}
+\DoxyCodeLine{192         \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::measurement\_collection\_types::host}}\& measurements\_per\_event =}
+\DoxyCodeLine{193             readOut.measurements;}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195         \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::measurement\_collection\_types::buffer}} measurements\_buffer(}
+\DoxyCodeLine{196             measurements\_per\_event.size(), mr.main);}
+\DoxyCodeLine{197         copy(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(measurements\_per\_event), measurements\_buffer);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199         \textcolor{comment}{// Instantiate output cuda containers/collections}}
+\DoxyCodeLine{200         \mbox{\hyperlink{structtraccc_1_1container__buffer}{traccc::track\_candidate\_container\_types::buffer}}}
+\DoxyCodeLine{201             track\_candidates\_cuda\_buffer\{\{\{\}, *(mr.host)\},}
+\DoxyCodeLine{202                                          \{\{\}, *(mr.host), mr.host\}\};}
+\DoxyCodeLine{203         copy.setup(track\_candidates\_cuda\_buffer.headers);}
+\DoxyCodeLine{204         copy.setup(track\_candidates\_cuda\_buffer.items);}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206         \textcolor{comment}{// Navigation buffer}}
+\DoxyCodeLine{207         \textcolor{keyword}{auto} navigation\_buffer = detray::create\_candidates\_buffer(}
+\DoxyCodeLine{208             host\_det,}
+\DoxyCodeLine{209             device\_finding.get\_config().max\_num\_branches\_per\_seed *}
+\DoxyCodeLine{210                 seeds.size(),}
+\DoxyCodeLine{211             mr.main, mr.host);}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213         \textcolor{comment}{// Run finding}}
+\DoxyCodeLine{214         track\_candidates\_cuda\_buffer =}
+\DoxyCodeLine{215             device\_finding(det\_view, field, navigation\_buffer,}
+\DoxyCodeLine{216                            measurements\_buffer, seeds\_buffer);}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_candidate\_container\_types::host}} track\_candidates\_cuda =}
+\DoxyCodeLine{219             track\_candidate\_d2h(track\_candidates\_cuda\_buffer);}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221         ASSERT\_EQ(track\_candidates\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}(), n\_truth\_tracks);}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223         \textcolor{comment}{// Instantiate cuda containers/collections}}
+\DoxyCodeLine{224         \mbox{\hyperlink{structtraccc_1_1container__buffer}{traccc::track\_state\_container\_types::buffer}} track\_states\_cuda\_buffer\{}
+\DoxyCodeLine{225             \{\{\}, *(mr.host)\}, \{\{\}, *(mr.host), mr.host\}\};}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         \textcolor{comment}{// Run fitting}}
+\DoxyCodeLine{228         track\_states\_cuda\_buffer = device\_fitting(}
+\DoxyCodeLine{229             det\_view, field, navigation\_buffer, track\_candidates\_cuda\_buffer);}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_state\_container\_types::host}} track\_states\_cuda =}
+\DoxyCodeLine{232             track\_state\_d2h(track\_states\_cuda\_buffer);}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234         ASSERT\_EQ(track\_states\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}(), n\_truth\_tracks);}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_trk = 0; i\_trk < n\_truth\_tracks; i\_trk++) \{}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& track\_states\_per\_track = track\_states\_cuda[i\_trk].items;}
+\DoxyCodeLine{239             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& fit\_info = track\_states\_cuda[i\_trk].header;}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241             consistency\_tests(track\_states\_per\_track);}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243             ndf\_tests(fit\_info, track\_states\_per\_track);}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245             fit\_performance\_writer.write(track\_states\_per\_track, fit\_info,}
+\DoxyCodeLine{246                                          host\_det, evt\_map);}
+\DoxyCodeLine{247         \}}
+\DoxyCodeLine{248     \}}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250     fit\_performance\_writer.finalize();}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{comment}{    /********************}}
+\DoxyCodeLine{253 \textcolor{comment}{     * Pull value test}}
+\DoxyCodeLine{254 \textcolor{comment}{     ********************/}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256     \textcolor{keyword}{static} \textcolor{keyword}{const} std::vector<std::string> pull\_names\{}
+\DoxyCodeLine{257         \textcolor{stringliteral}{"pull\_d0"}, \textcolor{stringliteral}{"pull\_z0"}, \textcolor{stringliteral}{"pull\_phi"}, \textcolor{stringliteral}{"pull\_theta"}, \textcolor{stringliteral}{"pull\_qop"}\};}
+\DoxyCodeLine{258     pull\_value\_tests(fit\_writer\_cfg.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_aa7ac2a11d51ba6bcd1a98dc769725a84}{file\_path}}, pull\_names);}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260 \textcolor{comment}{    /********************}}
+\DoxyCodeLine{261 \textcolor{comment}{     * Success rate test}}
+\DoxyCodeLine{262 \textcolor{comment}{     ********************/}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} success\_rate =}
+\DoxyCodeLine{265         \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(n\_success) / (n\_truth\_tracks * n\_events);}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267     ASSERT\_FLOAT\_EQ(success\_rate, 1.00f);}
+\DoxyCodeLine{268 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::at(), traccc\+::csv, traccc\+::cuda\+::stream\+::cuda\+Stream(), traccc\+::tests\+::data\+\_\+test\+::data\+\_\+directory, traccc\+::eta\+\_\+to\+\_\+theta\+\_\+range(), traccc\+::fitting\+\_\+performance\+\_\+writer\+::config\+::file\+\_\+path, traccc\+::fitting\+\_\+performance\+\_\+writer\+::finalize(), traccc\+::event\+\_\+map2\+::generate\+\_\+truth\+\_\+candidates(), traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::get\+\_\+config(), traccc\+::get\+\_\+data(), traccc\+::container\+\_\+element$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::header, traccc\+::finding\+\_\+config$<$ scalar\+\_\+t $>$\+::max\+\_\+num\+\_\+branches\+\_\+per\+\_\+seed, traccc\+::io\+::measurement\+\_\+reader\+\_\+output\+::measurements, traccc\+::io\+::read\+\_\+measurements(), traccc\+::simulator$<$ detector\+\_\+t, bfield\+\_\+t, track\+\_\+generator\+\_\+t, writer\+\_\+t $>$\+::run(), traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::size(), and traccc\+::fitting\+\_\+performance\+\_\+writer\+::write().
+

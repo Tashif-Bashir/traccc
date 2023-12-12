@@ -1,0 +1,136 @@
+\hypertarget{structtraccc_1_1finding__config}{}\doxysection{traccc\+::finding\+\_\+config$<$ scalar\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1finding__config}\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+
+
+Configuration struct for track finding.  
+
+
+
+
+{\ttfamily \#include $<$finding\+\_\+config.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::finding\+\_\+config$<$ scalar\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{dc/ddf/structtraccc_1_1finding__config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config_ac7f7b13160cdfaf035f1304014352c0a}{max\+\_\+num\+\_\+branches\+\_\+per\+\_\+seed}} = 100
+\begin{DoxyCompactList}\small\item\em @\+N\+O\+TE\+: This paramter might be removed \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config_a1b0a9246dd96f51aa219c9533f4399bd}{max\+\_\+num\+\_\+branches\+\_\+per\+\_\+surface}} = 10
+\begin{DoxyCompactList}\small\item\em Maximum number of branches per surface. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config_a1d005a158e077945d963d685e30f5c47}{min\+\_\+track\+\_\+candidates\+\_\+per\+\_\+track}} = 3
+\begin{DoxyCompactList}\small\item\em Min/\+Max number of track candidates per track. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config_a7d7b63903a77b746661d636bfb062d5a}{max\+\_\+track\+\_\+candidates\+\_\+per\+\_\+track}} = 30
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1finding__config_a0291e96678e028d060b5299bc96f9e04}{min\+\_\+step\+\_\+length\+\_\+for\+\_\+surface\+\_\+aborter}}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1finding__config_abf6b835357a44c1d99ed7fd066e9c0cd}{chi2\+\_\+max}} = 15.f
+\begin{DoxyCompactList}\small\item\em Maximum Chi-\/square that is allowed for branching. \end{DoxyCompactList}\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1finding__config_ac996b1aeae89fd3dbe4cf30126bd5605}{constrained\+\_\+step\+\_\+size}} = std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()
+\item 
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config_a8661befe718d9849a4ac328c2ce90b9d}{n\+\_\+measurements\+\_\+per\+\_\+thread}} = 8
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t$>$\newline
+struct traccc\+::finding\+\_\+config$<$ scalar\+\_\+t $>$}
+
+Configuration struct for track finding. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1finding__config_abf6b835357a44c1d99ed7fd066e9c0cd}\label{structtraccc_1_1finding__config_abf6b835357a44c1d99ed7fd066e9c0cd}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!chi2\_max@{chi2\_max}}
+\index{chi2\_max@{chi2\_max}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{chi2\_max}{chi2\_max}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::chi2\+\_\+max = 15.f}
+
+
+
+Maximum Chi-\/square that is allowed for branching. 
+
+\mbox{\Hypertarget{structtraccc_1_1finding__config_ac996b1aeae89fd3dbe4cf30126bd5605}\label{structtraccc_1_1finding__config_ac996b1aeae89fd3dbe4cf30126bd5605}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!constrained\_step\_size@{constrained\_step\_size}}
+\index{constrained\_step\_size@{constrained\_step\_size}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{constrained\_step\_size}{constrained\_step\_size}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::constrained\+\_\+step\+\_\+size = std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()}
+
+Constrained step size for propagation @\+T\+O\+DO\+: Make a separate file for propagation config? \mbox{\Hypertarget{structtraccc_1_1finding__config_ac7f7b13160cdfaf035f1304014352c0a}\label{structtraccc_1_1finding__config_ac7f7b13160cdfaf035f1304014352c0a}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!max\_num\_branches\_per\_seed@{max\_num\_branches\_per\_seed}}
+\index{max\_num\_branches\_per\_seed@{max\_num\_branches\_per\_seed}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{max\_num\_branches\_per\_seed}{max\_num\_branches\_per\_seed}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::max\+\_\+num\+\_\+branches\+\_\+per\+\_\+seed = 100}
+
+
+
+@\+N\+O\+TE\+: This paramter might be removed 
+
+
+
+Referenced by seq\+\_\+run(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{structtraccc_1_1finding__config_a1b0a9246dd96f51aa219c9533f4399bd}\label{structtraccc_1_1finding__config_a1b0a9246dd96f51aa219c9533f4399bd}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!max\_num\_branches\_per\_surface@{max\_num\_branches\_per\_surface}}
+\index{max\_num\_branches\_per\_surface@{max\_num\_branches\_per\_surface}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{max\_num\_branches\_per\_surface}{max\_num\_branches\_per\_surface}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::max\+\_\+num\+\_\+branches\+\_\+per\+\_\+surface = 10}
+
+
+
+Maximum number of branches per surface. 
+
+\mbox{\Hypertarget{structtraccc_1_1finding__config_a7d7b63903a77b746661d636bfb062d5a}\label{structtraccc_1_1finding__config_a7d7b63903a77b746661d636bfb062d5a}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!max\_track\_candidates\_per\_track@{max\_track\_candidates\_per\_track}}
+\index{max\_track\_candidates\_per\_track@{max\_track\_candidates\_per\_track}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{max\_track\_candidates\_per\_track}{max\_track\_candidates\_per\_track}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::max\+\_\+track\+\_\+candidates\+\_\+per\+\_\+track = 30}
+
+\mbox{\Hypertarget{structtraccc_1_1finding__config_a0291e96678e028d060b5299bc96f9e04}\label{structtraccc_1_1finding__config_a0291e96678e028d060b5299bc96f9e04}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!min\_step\_length\_for\_surface\_aborter@{min\_step\_length\_for\_surface\_aborter}}
+\index{min\_step\_length\_for\_surface\_aborter@{min\_step\_length\_for\_surface\_aborter}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{min\_step\_length\_for\_surface\_aborter}{min\_step\_length\_for\_surface\_aborter}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::min\+\_\+step\+\_\+length\+\_\+for\+\_\+surface\+\_\+aborter}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        0.1f * detray::unit<scalar\_t>::mm}
+
+\end{DoxyCode}
+Minimum step length that track should make to reach the next surface. It should be set higher than the overstep tolerance not to make it stay on the same surface \mbox{\Hypertarget{structtraccc_1_1finding__config_a1d005a158e077945d963d685e30f5c47}\label{structtraccc_1_1finding__config_a1d005a158e077945d963d685e30f5c47}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!min\_track\_candidates\_per\_track@{min\_track\_candidates\_per\_track}}
+\index{min\_track\_candidates\_per\_track@{min\_track\_candidates\_per\_track}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{min\_track\_candidates\_per\_track}{min\_track\_candidates\_per\_track}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::min\+\_\+track\+\_\+candidates\+\_\+per\+\_\+track = 3}
+
+
+
+Min/\+Max number of track candidates per track. 
+
+\mbox{\Hypertarget{structtraccc_1_1finding__config_a8661befe718d9849a4ac328c2ce90b9d}\label{structtraccc_1_1finding__config_a8661befe718d9849a4ac328c2ce90b9d}} 
+\index{traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}!n\_measurements\_per\_thread@{n\_measurements\_per\_thread}}
+\index{n\_measurements\_per\_thread@{n\_measurements\_per\_thread}!traccc::finding\_config$<$ scalar\_t $>$@{traccc::finding\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{n\_measurements\_per\_thread}{n\_measurements\_per\_thread}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+unsigned int \mbox{\hyperlink{structtraccc_1_1finding__config}{traccc\+::finding\+\_\+config}}$<$ scalar\+\_\+t $>$\+::n\+\_\+measurements\+\_\+per\+\_\+thread = 8}
+
+G\+P\+U-\/specific parameter for the number of measurements to be iterated per thread 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/finding/\mbox{\hyperlink{finding__config_8hpp}{finding\+\_\+config.\+hpp}}\end{DoxyCompactItemize}

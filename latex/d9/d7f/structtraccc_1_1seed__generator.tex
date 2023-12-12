@@ -1,0 +1,226 @@
+\hypertarget{structtraccc_1_1seed__generator}{}\doxysection{traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1seed__generator}\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+
+
+Seed track parameter generator.  
+
+
+
+
+{\ttfamily \#include $<$seed\+\_\+generator.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{d8/d8d/structtraccc_1_1seed__generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}{matrix\+\_\+operator}} = typename transform3\+::matrix\+\_\+actor
+\item 
+using \mbox{\hyperlink{structtraccc_1_1seed__generator_a6cf2360c9b6ae28355eb12178741f6bd}{cxt\+\_\+t}} = typename detector\+\_\+t\+::geometry\+\_\+context
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seed__generator_aa4a19c711f7d786b198778ea757c3075}{seed\+\_\+generator}} (const detector\+\_\+t \&det, const std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{e\+\_\+bound\+\_\+size}} $>$ \&stddevs, const std\+::size\+\_\+t sd=0)
+\item 
+\mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \mbox{\hyperlink{structtraccc_1_1seed__generator_a631a82bdc3db6dccf06bcd78496b5c6a}{operator()}} (const detray\+::geometry\+::barcode surface\+\_\+link, const \mbox{\hyperlink{namespacetraccc_a50d288f62d4a051cca68e9071c6318e8}{free\+\_\+track\+\_\+parameters}} \&free\+\_\+param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::random\+\_\+device \mbox{\hyperlink{structtraccc_1_1seed__generator_a871d50ed52ec17a267226f2e56963ba9}{rd}} \{\}
+\item 
+std\+::mt19937 \mbox{\hyperlink{structtraccc_1_1seed__generator_af08c141f47026f8593e41512623d8611}{generator}} \{\mbox{\hyperlink{structtraccc_1_1seed__generator_a871d50ed52ec17a267226f2e56963ba9}{rd}}()\}
+\item 
+const detector\+\_\+t \& \mbox{\hyperlink{structtraccc_1_1seed__generator_a0f0be73b9326865fec69cae6a7fa4cb7}{m\+\_\+detector}}
+\item 
+std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{e\+\_\+bound\+\_\+size}} $>$ \mbox{\hyperlink{structtraccc_1_1seed__generator_a09a85b52d2016651978299b202138833}{m\+\_\+stddevs}}
+\begin{DoxyCompactList}\small\item\em Standard deviations for parameter smearing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename detector\+\_\+t$>$\newline
+struct traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$}
+
+Seed track parameter generator. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_a6cf2360c9b6ae28355eb12178741f6bd}\label{structtraccc_1_1seed__generator_a6cf2360c9b6ae28355eb12178741f6bd}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!cxt\_t@{cxt\_t}}
+\index{cxt\_t@{cxt\_t}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{cxt\_t}{cxt\_t}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1seed__generator_a6cf2360c9b6ae28355eb12178741f6bd}{cxt\+\_\+t}} =  typename detector\+\_\+t\+::geometry\+\_\+context}
+
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}\label{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!matrix\_operator@{matrix\_operator}}
+\index{matrix\_operator@{matrix\_operator}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{matrix\_operator}{matrix\_operator}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}{matrix\+\_\+operator}} =  typename transform3\+::matrix\+\_\+actor}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_aa4a19c711f7d786b198778ea757c3075}\label{structtraccc_1_1seed__generator_aa4a19c711f7d786b198778ea757c3075}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!seed\_generator@{seed\_generator}}
+\index{seed\_generator@{seed\_generator}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{seed\_generator()}{seed\_generator()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1seed__generator}{seed\+\_\+generator}} (\begin{DoxyParamCaption}\item[{const detector\+\_\+t \&}]{det,  }\item[{const std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{e\+\_\+bound\+\_\+size}} $>$ \&}]{stddevs,  }\item[{const std\+::size\+\_\+t}]{sd = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor with detector
+
+
+\begin{DoxyParams}{Parameters}
+{\em det} & input detector \\
+\hline
+{\em stddevs} & standard deviations for parameter smearing \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39         : \mbox{\hyperlink{structtraccc_1_1seed__generator_a0f0be73b9326865fec69cae6a7fa4cb7}{m\_detector}}(det), \mbox{\hyperlink{structtraccc_1_1seed__generator_a09a85b52d2016651978299b202138833}{m\_stddevs}}(stddevs) \{}
+\DoxyCodeLine{40         \mbox{\hyperlink{structtraccc_1_1seed__generator_af08c141f47026f8593e41512623d8611}{generator}}.seed(sd);}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::generator.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_a631a82bdc3db6dccf06bcd78496b5c6a}\label{structtraccc_1_1seed__generator_a631a82bdc3db6dccf06bcd78496b5c6a}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\+\_\+track\+\_\+parameters}} \mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const detray\+::geometry\+::barcode}]{surface\+\_\+link,  }\item[{const \mbox{\hyperlink{namespacetraccc_a50d288f62d4a051cca68e9071c6318e8}{free\+\_\+track\+\_\+parameters}} \&}]{free\+\_\+param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Seed generator operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & vertex of particle \\
+\hline
+{\em stddevs} & standard deviations for track parameter smearing \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                                  \{}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{comment}{// Get bound parameter}}
+\DoxyCodeLine{52         \textcolor{keyword}{const} detray::surface<detector\_t> sf\{\mbox{\hyperlink{structtraccc_1_1seed__generator_a0f0be73b9326865fec69cae6a7fa4cb7}{m\_detector}}, surface\_link\};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \textcolor{keyword}{const} \mbox{\hyperlink{structtraccc_1_1seed__generator_a6cf2360c9b6ae28355eb12178741f6bd}{cxt\_t}} ctx\{\};}
+\DoxyCodeLine{55         \textcolor{keyword}{auto} bound\_vec = sf.free\_to\_bound\_vector(ctx, free\_param.vector());}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         \textcolor{keyword}{auto} bound\_cov =}
+\DoxyCodeLine{58             \mbox{\hyperlink{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}{matrix\_operator}}().template zero<e\_bound\_size, e\_bound\_size>();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \mbox{\hyperlink{namespacetraccc_a49b1ec1e09c6b63a918d97428dd51f2e}{bound\_track\_parameters}} bound\_param\{surface\_link, bound\_vec, bound\_cov\};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{comment}{// Type definitions}}
+\DoxyCodeLine{63         \textcolor{keyword}{using} transform3\_type = \textcolor{keyword}{typename} \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{detector\_t::transform3}};}
+\DoxyCodeLine{64         \textcolor{keyword}{using} intersection\_type =}
+\DoxyCodeLine{65             detray::intersection2D<\textcolor{keyword}{typename} detector\_t::surface\_type,}
+\DoxyCodeLine{66                                    transform3\_type>;}
+\DoxyCodeLine{67         \textcolor{keyword}{using} interactor\_type =}
+\DoxyCodeLine{68             detray::pointwise\_material\_interactor<transform3\_type>;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         intersection\_type sfi;}
+\DoxyCodeLine{71         sfi.sf\_desc = \mbox{\hyperlink{structtraccc_1_1seed__generator_a0f0be73b9326865fec69cae6a7fa4cb7}{m\_detector}}.surface(surface\_link);}
+\DoxyCodeLine{72         sf.template visit\_mask<detray::intersection\_update>(}
+\DoxyCodeLine{73             detray::detail::ray<transform3\_type>(free\_param.vector()), sfi,}
+\DoxyCodeLine{74             \mbox{\hyperlink{structtraccc_1_1seed__generator_a0f0be73b9326865fec69cae6a7fa4cb7}{m\_detector}}.transform\_store());}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// Apply interactor}}
+\DoxyCodeLine{77         \textcolor{keyword}{typename} interactor\_type::state interactor\_state;}
+\DoxyCodeLine{78         interactor\_state.do\_multiple\_scattering = \textcolor{keyword}{false};}
+\DoxyCodeLine{79         interactor\_type\{\}.update(}
+\DoxyCodeLine{80             bound\_param, interactor\_state,}
+\DoxyCodeLine{81             \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(detray::navigation::direction::e\_backward), sf,}
+\DoxyCodeLine{82             sfi.cos\_incidence\_angle);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         \textcolor{keywordflow}{for} (std::size\_t i = 0; i < \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{e\_bound\_size}}; i++) \{}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86             \mbox{\hyperlink{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}{matrix\_operator}}().element(bound\_param.vector(), i, 0) =}
+\DoxyCodeLine{87                 std::normal\_distribution<scalar>(}
+\DoxyCodeLine{88                     \mbox{\hyperlink{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}{matrix\_operator}}().element(bound\_param.vector(), i, 0),}
+\DoxyCodeLine{89                     \mbox{\hyperlink{structtraccc_1_1seed__generator_a09a85b52d2016651978299b202138833}{m\_stddevs}}[i])(\mbox{\hyperlink{structtraccc_1_1seed__generator_af08c141f47026f8593e41512623d8611}{generator}});}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91             \mbox{\hyperlink{structtraccc_1_1seed__generator_a41f65f147ae94f7de84d2debcf464eaa}{matrix\_operator}}().element(bound\_param.covariance(), i, i) =}
+\DoxyCodeLine{92                 \mbox{\hyperlink{structtraccc_1_1seed__generator_a09a85b52d2016651978299b202138833}{m\_stddevs}}[i] * \mbox{\hyperlink{structtraccc_1_1seed__generator_a09a85b52d2016651978299b202138833}{m\_stddevs}}[i];}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95         \textcolor{keywordflow}{return} bound\_param;}
+\DoxyCodeLine{96     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::e\+\_\+bound\+\_\+size, traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::generator, traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::m\+\_\+detector, and traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::m\+\_\+stddevs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_af08c141f47026f8593e41512623d8611}\label{structtraccc_1_1seed__generator_af08c141f47026f8593e41512623d8611}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!generator@{generator}}
+\index{generator@{generator}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{generator}{generator}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+std\+::mt19937 \mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::generator \{\mbox{\hyperlink{structtraccc_1_1seed__generator_a871d50ed52ec17a267226f2e56963ba9}{rd}}()\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::operator()(), and traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::seed\+\_\+generator().
+
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_a0f0be73b9326865fec69cae6a7fa4cb7}\label{structtraccc_1_1seed__generator_a0f0be73b9326865fec69cae6a7fa4cb7}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!m\_detector@{m\_detector}}
+\index{m\_detector@{m\_detector}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_detector}{m\_detector}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+const detector\+\_\+t\& \mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::m\+\_\+detector\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_a09a85b52d2016651978299b202138833}\label{structtraccc_1_1seed__generator_a09a85b52d2016651978299b202138833}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!m\_stddevs@{m\_stddevs}}
+\index{m\_stddevs@{m\_stddevs}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_stddevs}{m\_stddevs}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+std\+::array$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, \mbox{\hyperlink{namespacetraccc_a65f3496a079e9bdcffaf1d62a5fa4151af60fe71ca99e61d0a0d70fb431aabc04}{e\+\_\+bound\+\_\+size}}$>$ \mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::m\+\_\+stddevs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Standard deviations for parameter smearing. 
+
+
+
+Referenced by traccc\+::seed\+\_\+generator$<$ detector\+\_\+t $>$\+::operator()().
+
+\mbox{\Hypertarget{structtraccc_1_1seed__generator_a871d50ed52ec17a267226f2e56963ba9}\label{structtraccc_1_1seed__generator_a871d50ed52ec17a267226f2e56963ba9}} 
+\index{traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}!rd@{rd}}
+\index{rd@{rd}!traccc::seed\_generator$<$ detector\_t $>$@{traccc::seed\_generator$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{rd}{rd}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+std\+::random\+\_\+device \mbox{\hyperlink{structtraccc_1_1seed__generator}{traccc\+::seed\+\_\+generator}}$<$ detector\+\_\+t $>$\+::rd \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/utils/\mbox{\hyperlink{seed__generator_8hpp}{seed\+\_\+generator.\+hpp}}\end{DoxyCompactItemize}

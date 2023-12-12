@@ -1,0 +1,399 @@
+\hypertarget{test__algorithm_8cpp}{}\doxysection{tests/core/test\+\_\+algorithm.cpp File Reference}
+\label{test__algorithm_8cpp}\index{tests/core/test\_algorithm.cpp@{tests/core/test\_algorithm.cpp}}
+{\ttfamily \#include \char`\"{}traccc/utils/algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for test\+\_\+algorithm.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/db4/test__algorithm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdouble__int}{double\+\_\+int}}
+\item 
+class \mbox{\hyperlink{classdouble__int__affine}{double\+\_\+int\+\_\+affine}}
+\item 
+class \mbox{\hyperlink{classdouble__string__affine}{double\+\_\+string\+\_\+affine}}
+\item 
+class \mbox{\hyperlink{classdouble__string__regular}{double\+\_\+string\+\_\+regular}}
+\item 
+class \mbox{\hyperlink{classadd}{add}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_aa6d93b8ba4189d346d6fb2f9544cde95}{T\+E\+ST}} (algorithm, basic)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_afe057dbd9088d3ebeef3640b3c980ee0}{T\+E\+ST}} (algorithm, basic\+\_\+affine)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a95b52bfa1e2afda3fed01d5db5c8f677}{T\+E\+ST}} (algorithm, string\+\_\+affine)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a51a7ada760c76af92bc63400dba37237}{T\+E\+ST}} (algorithm, string\+\_\+regular)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a813ec895d1f80cffd05f71120ce33db5}{T\+E\+ST}} (algorithm, compose\+\_\+double\+\_\+int\+\_\+affine\+\_\+1)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a5d61636a1f7bc03068230e2b4a51d5f9}{T\+E\+ST}} (algorithm, compose\+\_\+double\+\_\+int\+\_\+affine\+\_\+2)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a0cb583ca8cca0bacbbe0cd3b0a8f2966}{T\+E\+ST}} (algorithm, compose\+\_\+double\+\_\+int\+\_\+regular\+\_\+1)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a8ba474522ffa0ddac33b87e0781185a5}{T\+E\+ST}} (algorithm, compose\+\_\+double\+\_\+int\+\_\+regular\+\_\+2)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a15daa95e94482320aeb27d1cbb0384dd}{T\+E\+ST}} (algorithm, compose\+\_\+string\+\_\+lvalue\+\_\+1)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a83dadbefd495a400ded198ba56e67300}{T\+E\+ST}} (algorithm, compose\+\_\+string\+\_\+rvalue\+\_\+1)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_ab4b92bf5059f52a599a11bafc98c7e30}{T\+E\+ST}} (algorithm, compose\+\_\+double\+\_\+int\+\_\+many\+\_\+times)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_abae09950432efff3900ad86c3cdb8042}{T\+E\+ST}} (algorithm, side\+\_\+effect)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a6bc2b29a29d374d4d7214c3525645e41}{T\+E\+ST}} (algorithm, partial\+\_\+application\+\_\+bind)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_ad20ec411d2383226de04d3a9e3ebfb80}{T\+E\+ST}} (algorithm, partial\+\_\+application\+\_\+lambda)
+\item 
+\mbox{\hyperlink{test__algorithm_8cpp_a9724e32296509a2874756a3a46fb339e}{T\+E\+ST}} (algorithm, partial\+\_\+application\+\_\+compose)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__algorithm_8cpp_aa6d93b8ba4189d346d6fb2f9544cde95}\label{test__algorithm_8cpp_aa6d93b8ba4189d346d6fb2f9544cde95}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{basic}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                        \{}
+\DoxyCodeLine{52     \mbox{\hyperlink{classdouble__int}{double\_int}} i;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     ASSERT\_EQ(i(1), 2);}
+\DoxyCodeLine{55     ASSERT\_EQ(i(-\/1), -\/2);}
+\DoxyCodeLine{56     ASSERT\_EQ(i(5), 10);}
+\DoxyCodeLine{57 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__algorithm_8cpp_afe057dbd9088d3ebeef3640b3c980ee0}\label{test__algorithm_8cpp_afe057dbd9088d3ebeef3640b3c980ee0}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{basic\+\_\+affine}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                               \{}
+\DoxyCodeLine{60     \mbox{\hyperlink{classdouble__int__affine}{double\_int\_affine}} i;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     ASSERT\_EQ(i(1), 2);}
+\DoxyCodeLine{63     ASSERT\_EQ(i(-\/1), -\/2);}
+\DoxyCodeLine{64     ASSERT\_EQ(i(5), 10);}
+\DoxyCodeLine{65 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__algorithm_8cpp_a813ec895d1f80cffd05f71120ce33db5}\label{test__algorithm_8cpp_a813ec895d1f80cffd05f71120ce33db5}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{compose\+\_\+double\+\_\+int\+\_\+affine\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87                                              \{}
+\DoxyCodeLine{88     \mbox{\hyperlink{classdouble__int__affine}{double\_int\_affine}} i;}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     std::function<int(\textcolor{keywordtype}{int} \&\&)> f = \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(}
+\DoxyCodeLine{91         std::function<\textcolor{keywordtype}{int}(\textcolor{keywordtype}{int} \&\&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keywordtype}{int} \&\&)>(i));}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     ASSERT\_EQ(f(1), 4);}
+\DoxyCodeLine{94     ASSERT\_EQ(f(-\/1), -\/4);}
+\DoxyCodeLine{95     ASSERT\_EQ(f(5), 20);}
+\DoxyCodeLine{96 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_a5d61636a1f7bc03068230e2b4a51d5f9}\label{test__algorithm_8cpp_a5d61636a1f7bc03068230e2b4a51d5f9}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{compose\+\_\+double\+\_\+int\+\_\+affine\+\_\+2}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                                              \{}
+\DoxyCodeLine{99     \mbox{\hyperlink{classdouble__int__affine}{double\_int\_affine}} i;}
+\DoxyCodeLine{100     \mbox{\hyperlink{classdouble__int__affine}{double\_int\_affine}} j;}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     std::function<int(\textcolor{keywordtype}{int} \&\&)> f = \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(}
+\DoxyCodeLine{103         std::function<\textcolor{keywordtype}{int}(\textcolor{keywordtype}{int} \&\&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keywordtype}{int} \&\&)>(j));}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     ASSERT\_EQ(f(1), 4);}
+\DoxyCodeLine{106     ASSERT\_EQ(f(-\/1), -\/4);}
+\DoxyCodeLine{107     ASSERT\_EQ(f(5), 20);}
+\DoxyCodeLine{108 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_ab4b92bf5059f52a599a11bafc98c7e30}\label{test__algorithm_8cpp_ab4b92bf5059f52a599a11bafc98c7e30}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{compose\+\_\+double\+\_\+int\+\_\+many\+\_\+times}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161                                                \{}
+\DoxyCodeLine{162     \mbox{\hyperlink{classdouble__int}{double\_int}} i;}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> f = \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(}
+\DoxyCodeLine{165         std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i),}
+\DoxyCodeLine{166         std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i),}
+\DoxyCodeLine{167         std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i),}
+\DoxyCodeLine{168         std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i));}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170     ASSERT\_EQ(f(1), 256);}
+\DoxyCodeLine{171     ASSERT\_EQ(f(-\/1), -\/256);}
+\DoxyCodeLine{172     ASSERT\_EQ(f(5), 1280);}
+\DoxyCodeLine{173 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_a0cb583ca8cca0bacbbe0cd3b0a8f2966}\label{test__algorithm_8cpp_a0cb583ca8cca0bacbbe0cd3b0a8f2966}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{compose\+\_\+double\+\_\+int\+\_\+regular\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                               \{}
+\DoxyCodeLine{111     \mbox{\hyperlink{classdouble__int}{double\_int}} i;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> f = \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(}
+\DoxyCodeLine{114         std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i));}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     ASSERT\_EQ(f(1), 4);}
+\DoxyCodeLine{117     ASSERT\_EQ(f(-\/1), -\/4);}
+\DoxyCodeLine{118     ASSERT\_EQ(f(5), 20);}
+\DoxyCodeLine{119 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_a8ba474522ffa0ddac33b87e0781185a5}\label{test__algorithm_8cpp_a8ba474522ffa0ddac33b87e0781185a5}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{compose\+\_\+double\+\_\+int\+\_\+regular\+\_\+2}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{121                                               \{}
+\DoxyCodeLine{122     \mbox{\hyperlink{classdouble__int}{double\_int}} i;}
+\DoxyCodeLine{123     \mbox{\hyperlink{classdouble__int}{double\_int}} j;}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> f = \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(}
+\DoxyCodeLine{126         std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(j));}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     ASSERT\_EQ(f(1), 4);}
+\DoxyCodeLine{129     ASSERT\_EQ(f(-\/1), -\/4);}
+\DoxyCodeLine{130     ASSERT\_EQ(f(5), 20);}
+\DoxyCodeLine{131 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_a15daa95e94482320aeb27d1cbb0384dd}\label{test__algorithm_8cpp_a15daa95e94482320aeb27d1cbb0384dd}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{compose\+\_\+string\+\_\+lvalue\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                                          \{}
+\DoxyCodeLine{134     \mbox{\hyperlink{classdouble__string__regular}{double\_string\_regular}} i;}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     std::string s = \textcolor{stringliteral}{"test"};}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     std::function<std::string(\textcolor{keyword}{const} std::string \&)> f =}
+\DoxyCodeLine{139         \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(std::function<std::string(\textcolor{keyword}{const} std::string \&)>(i),}
+\DoxyCodeLine{140                         std::function<std::string(\textcolor{keyword}{const} std::string \&)>(i));}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     ASSERT\_EQ(f(\textcolor{stringliteral}{"hello"}), \textcolor{stringliteral}{"hellohellohellohello"});}
+\DoxyCodeLine{143     ASSERT\_EQ(f(\textcolor{stringliteral}{"bye"}), \textcolor{stringliteral}{"byebyebyebye"});}
+\DoxyCodeLine{144     ASSERT\_EQ(f(s), \textcolor{stringliteral}{"testtesttesttest"});}
+\DoxyCodeLine{145 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_a83dadbefd495a400ded198ba56e67300}\label{test__algorithm_8cpp_a83dadbefd495a400ded198ba56e67300}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{compose\+\_\+string\+\_\+rvalue\+\_\+1}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{147                                          \{}
+\DoxyCodeLine{148     \mbox{\hyperlink{classdouble__string__affine}{double\_string\_affine}} i;}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150     std::string s = \textcolor{stringliteral}{"test"};}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152     std::function<std::string(std::string \&\&)> f =}
+\DoxyCodeLine{153         \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(std::function<std::string(std::string \&\&)>(i),}
+\DoxyCodeLine{154                         std::function<std::string(std::string \&\&)>(i));}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     ASSERT\_EQ(f(\textcolor{stringliteral}{"hello"}), \textcolor{stringliteral}{"hellohellohellohello"});}
+\DoxyCodeLine{157     ASSERT\_EQ(f(\textcolor{stringliteral}{"bye"}), \textcolor{stringliteral}{"byebyebyebye"});}
+\DoxyCodeLine{158     ASSERT\_EQ(f(std::move(s)), \textcolor{stringliteral}{"testtesttesttest"});}
+\DoxyCodeLine{159 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_a6bc2b29a29d374d4d7214c3525645e41}\label{test__algorithm_8cpp_a6bc2b29a29d374d4d7214c3525645e41}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{partial\+\_\+application\+\_\+bind}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{189                                           \{}
+\DoxyCodeLine{190     \mbox{\hyperlink{classadd}{add}} i;}
+\DoxyCodeLine{191     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> f = std::bind(i, std::placeholders::\_1, 5);}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     ASSERT\_EQ(f(1), 6);}
+\DoxyCodeLine{194     ASSERT\_EQ(f(-\/1), 4);}
+\DoxyCodeLine{195     ASSERT\_EQ(f(5), 10);}
+\DoxyCodeLine{196 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__algorithm_8cpp_a9724e32296509a2874756a3a46fb339e}\label{test__algorithm_8cpp_a9724e32296509a2874756a3a46fb339e}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{partial\+\_\+application\+\_\+compose}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207                                              \{}
+\DoxyCodeLine{208     \mbox{\hyperlink{classadd}{add}} i;}
+\DoxyCodeLine{209     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> j = std::bind(i, std::placeholders::\_1, 5);}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> f = \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(j, j, j);}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213     ASSERT\_EQ(f(1), 16);}
+\DoxyCodeLine{214     ASSERT\_EQ(f(-\/1), 14);}
+\DoxyCodeLine{215     ASSERT\_EQ(f(5), 20);}
+\DoxyCodeLine{216 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_ad20ec411d2383226de04d3a9e3ebfb80}\label{test__algorithm_8cpp_ad20ec411d2383226de04d3a9e3ebfb80}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{partial\+\_\+application\+\_\+lambda}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{198                                             \{}
+\DoxyCodeLine{199     \mbox{\hyperlink{classadd}{add}} i;}
+\DoxyCodeLine{200     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> f = [i](\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&j) \{ \textcolor{keywordflow}{return} i(j, 5); \};}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202     ASSERT\_EQ(f(1), 6);}
+\DoxyCodeLine{203     ASSERT\_EQ(f(-\/1), 4);}
+\DoxyCodeLine{204     ASSERT\_EQ(f(5), 10);}
+\DoxyCodeLine{205 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__algorithm_8cpp_abae09950432efff3900ad86c3cdb8042}\label{test__algorithm_8cpp_abae09950432efff3900ad86c3cdb8042}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{side\+\_\+effect}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{175                              \{}
+\DoxyCodeLine{176     \mbox{\hyperlink{classdouble__int}{double\_int}} i;}
+\DoxyCodeLine{177     \textcolor{keywordtype}{int} j = 0;}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     std::function<int(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)> f = \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc::compose}}(}
+\DoxyCodeLine{180         std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i), std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i),}
+\DoxyCodeLine{181         \mbox{\hyperlink{namespacetraccc_ad5891cb05d7c5f52a92d1dbbfab04a98}{traccc::side\_effect}}(std::function<\textcolor{keywordtype}{int}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(i),}
+\DoxyCodeLine{182                             std::function<\textcolor{keywordtype}{void}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&)>(}
+\DoxyCodeLine{183                                 [\&j](\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&q) \{ j = q + 5; \})));}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185     ASSERT\_EQ(f(1), 8);}
+\DoxyCodeLine{186     ASSERT\_EQ(j, 9);}
+\DoxyCodeLine{187 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::compose(), and traccc\+::side\+\_\+effect().
+
+\mbox{\Hypertarget{test__algorithm_8cpp_a95b52bfa1e2afda3fed01d5db5c8f677}\label{test__algorithm_8cpp_a95b52bfa1e2afda3fed01d5db5c8f677}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{string\+\_\+affine}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                \{}
+\DoxyCodeLine{68     \mbox{\hyperlink{classdouble__string__affine}{double\_string\_affine}} i;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     std::string s = \textcolor{stringliteral}{"test"};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     ASSERT\_EQ(i(\textcolor{stringliteral}{"hello"}), \textcolor{stringliteral}{"hellohello"});}
+\DoxyCodeLine{73     ASSERT\_EQ(i(\textcolor{stringliteral}{"bye"}), \textcolor{stringliteral}{"byebye"});}
+\DoxyCodeLine{74     ASSERT\_EQ(i(std::move(s)), \textcolor{stringliteral}{"testtest"});}
+\DoxyCodeLine{75 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__algorithm_8cpp_a51a7ada760c76af92bc63400dba37237}\label{test__algorithm_8cpp_a51a7ada760c76af92bc63400dba37237}} 
+\index{test\_algorithm.cpp@{test\_algorithm.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_algorithm.cpp@{test\_algorithm.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/15]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{algorithm}]{,  }\item[{string\+\_\+regular}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                                 \{}
+\DoxyCodeLine{78     \mbox{\hyperlink{classdouble__string__regular}{double\_string\_regular}} i;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     std::string s = \textcolor{stringliteral}{"test"};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     ASSERT\_EQ(i(\textcolor{stringliteral}{"hello"}), \textcolor{stringliteral}{"hellohello"});}
+\DoxyCodeLine{83     ASSERT\_EQ(i(\textcolor{stringliteral}{"bye"}), \textcolor{stringliteral}{"byebye"});}
+\DoxyCodeLine{84     ASSERT\_EQ(i(s), \textcolor{stringliteral}{"testtest"});}
+\DoxyCodeLine{85 \}}
+
+\end{DoxyCode}

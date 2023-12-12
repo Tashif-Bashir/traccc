@@ -1,0 +1,6 @@
+<map id="examples/run/common/throughput_st.hpp" name="examples/run/common/throughput_st.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="267,5,439,47"/>
+<area shape="rect" id="node2" href="$db/dd9/cpu_2throughput__st_8cpp.html" title=" " alt="" coords="5,95,219,136"/>
+<area shape="rect" id="node3" href="$da/d78/cuda_2throughput__st_8cpp.html" title=" " alt="" coords="243,95,464,136"/>
+<area shape="rect" id="node4" href="$d5/d39/sycl_2throughput__st_8cpp.html" title=" " alt="" coords="488,95,704,136"/>
+</map>

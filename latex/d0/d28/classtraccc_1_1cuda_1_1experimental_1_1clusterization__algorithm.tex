@@ -1,0 +1,142 @@
+\hypertarget{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm}{}\doxysection{traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm Class Reference}
+\label{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm}\index{traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}}
+
+
+{\ttfamily \#include $<$clusterization\+\_\+algorithm.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{da/dbb/classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d47/classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a414e7efc73d678d875dbe8b1393f037c}{clusterization\+\_\+algorithm}} (const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&mr, vecmem\+::copy \&copy, \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&str, const unsigned short target\+\_\+cells\+\_\+per\+\_\+partition)
+\item 
+output\+\_\+type \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a7e462cb6cd5b62d3435b02e9502899f2}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{cell\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&cells, const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{cell\+\_\+module\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&modules) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_aa43e744aae92625fd39ff1b564f7c6bd}{m\+\_\+target\+\_\+cells\+\_\+per\+\_\+partition}}
+\begin{DoxyCompactList}\small\item\em The average number of cells in each partition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a9e269ccc5cae3eecd9eb30735c812f0c}{m\+\_\+mr}}
+\begin{DoxyCompactList}\small\item\em The memory resource(s) to use. \end{DoxyCompactList}\item 
+vecmem\+::copy \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_aae7cd0352bdf93b6d8ceb0f67d13d418}{m\+\_\+copy}}
+\begin{DoxyCompactList}\small\item\em The copy object to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_ae0a9f7fb782be5ff192812f3c50b8a39}{m\+\_\+stream}}
+\begin{DoxyCompactList}\small\item\em The C\+U\+DA stream to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Algorithm performing hit clusterization
+
+This algorithm implements hit clusterization in a massively-\/parallel approach. Each thread handles a pre-\/determined number of detector cells.
+
+This algorithm returns a buffer which is not necessarily filled yet. A synchronisation statement is required before destroying this buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a414e7efc73d678d875dbe8b1393f037c}\label{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a414e7efc73d678d875dbe8b1393f037c}} 
+\index{traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}!clusterization\_algorithm@{clusterization\_algorithm}}
+\index{clusterization\_algorithm@{clusterization\_algorithm}!traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{clusterization\_algorithm()}{clusterization\_algorithm()}}
+{\footnotesize\ttfamily traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+::clusterization\+\_\+algorithm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&}]{mr,  }\item[{vecmem\+::copy \&}]{copy,  }\item[{\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&}]{str,  }\item[{const unsigned short}]{target\+\_\+cells\+\_\+per\+\_\+partition }\end{DoxyParamCaption})}
+
+Constructor for clusterization algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & The memory resource(s) to use in the algorithm \\
+\hline
+{\em copy} & The copy object to use for copying data between device and host memory blocks \\
+\hline
+{\em str} & The C\+U\+DA stream to perform the operations in \\
+\hline
+{\em target\+\_\+cells\+\_\+per\+\_\+partition} & the average number of cells in each partition \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a7e462cb6cd5b62d3435b02e9502899f2}\label{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a7e462cb6cd5b62d3435b02e9502899f2}} 
+\index{traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily output\+\_\+type traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{cell\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{cells,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{cell\+\_\+module\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{modules }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Callable operator for clusterization algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em cells} & a collection of cells \\
+\hline
+{\em modules} & a collection of modules \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a spacepoint collection (buffer) and a collection (buffer) of links from cells to the spacepoints they belong to. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_aae7cd0352bdf93b6d8ceb0f67d13d418}\label{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_aae7cd0352bdf93b6d8ceb0f67d13d418}} 
+\index{traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}!m\_copy@{m\_copy}}
+\index{m\_copy@{m\_copy}!traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_copy}{m\_copy}}
+{\footnotesize\ttfamily vecmem\+::copy\& traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+::m\+\_\+copy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The copy object to use. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a9e269ccc5cae3eecd9eb30735c812f0c}\label{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_a9e269ccc5cae3eecd9eb30735c812f0c}} 
+\index{traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The memory resource(s) to use. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_ae0a9f7fb782be5ff192812f3c50b8a39}\label{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_ae0a9f7fb782be5ff192812f3c50b8a39}} 
+\index{traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}!m\_stream@{m\_stream}}
+\index{m\_stream@{m\_stream}!traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_stream}{m\_stream}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}}\& traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+::m\+\_\+stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The C\+U\+DA stream to use. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_aa43e744aae92625fd39ff1b564f7c6bd}\label{classtraccc_1_1cuda_1_1experimental_1_1clusterization__algorithm_aa43e744aae92625fd39ff1b564f7c6bd}} 
+\index{traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}!m\_target\_cells\_per\_partition@{m\_target\_cells\_per\_partition}}
+\index{m\_target\_cells\_per\_partition@{m\_target\_cells\_per\_partition}!traccc::cuda::experimental::clusterization\_algorithm@{traccc::cuda::experimental::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_target\_cells\_per\_partition}{m\_target\_cells\_per\_partition}}
+{\footnotesize\ttfamily unsigned short traccc\+::cuda\+::experimental\+::clusterization\+\_\+algorithm\+::m\+\_\+target\+\_\+cells\+\_\+per\+\_\+partition\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The average number of cells in each partition. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/cuda/include/traccc/cuda/clusterization/experimental/\mbox{\hyperlink{device_2cuda_2include_2traccc_2cuda_2clusterization_2experimental_2clusterization__algorithm_8hpp}{clusterization\+\_\+algorithm.\+hpp}}\end{DoxyCompactItemize}

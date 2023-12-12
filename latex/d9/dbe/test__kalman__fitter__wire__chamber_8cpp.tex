@@ -1,0 +1,224 @@
+\hypertarget{test__kalman__fitter__wire__chamber_8cpp}{}\doxysection{tests/cpu/test\+\_\+kalman\+\_\+fitter\+\_\+wire\+\_\+chamber.cpp File Reference}
+\label{test__kalman__fitter__wire__chamber_8cpp}\index{tests/cpu/test\_kalman\_fitter\_wire\_chamber.cpp@{tests/cpu/test\_kalman\_fitter\_wire\_chamber.cpp}}
+{\ttfamily \#include \char`\"{}traccc/edm/track\+\_\+state.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/fitting/fitting\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/resolution/fitting\+\_\+performance\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/measurement\+\_\+smearer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/simulator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/smearing\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/utils/ranges.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/utils/seed\+\_\+generator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests/kalman\+\_\+fitting\+\_\+wire\+\_\+chamber\+\_\+test.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/simulation/event\+\_\+generator/track\+\_\+generators.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for test\+\_\+kalman\+\_\+fitter\+\_\+wire\+\_\+chamber.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df5/test__kalman__fitter__wire__chamber_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__kalman__fitter__wire__chamber_8cpp_a3317e2abf454aa82f2c09a890c063b63}{T\+E\+S\+T\+\_\+P}} (\mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}, Run)
+\item 
+\mbox{\hyperlink{test__kalman__fitter__wire__chamber_8cpp_a7a3a01bfd9f8fe5afa58101fe8312ef2}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Kalman\+Fit\+Wire\+Chamber\+Validation0, \mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+2\+\_\+\+Ge\+V\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{2.f, 2.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, -\/1.f, 100, 100)))
+\item 
+\mbox{\hyperlink{test__kalman__fitter__wire__chamber_8cpp_a6fa9f8093d0421525ca085d4d1f3a161}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Kalman\+Fit\+Wire\+Chamber\+Validation1, \mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+10\+\_\+\+Ge\+V\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{10.f, 10.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, -\/1.f, 100, 100)))
+\item 
+\mbox{\hyperlink{test__kalman__fitter__wire__chamber_8cpp_a43a73ebb4e81beb94a257036e5b23ca2}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Kalman\+Fit\+Wire\+Chamber\+Validation2, \mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+100\+\_\+\+Ge\+V\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{100.f, 100.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, -\/1.f, 100, 100)))
+\item 
+\mbox{\hyperlink{test__kalman__fitter__wire__chamber_8cpp_a46e76be641788004493790011c26d2c5}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P}} (Kalman\+Fit\+Wire\+Chamber\+Validation3, \mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}, \+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+2\+\_\+\+Ge\+V\+\_\+anti\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{2.f, 2.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, 1.f, 100, 100)))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__kalman__fitter__wire__chamber_8cpp_a7a3a01bfd9f8fe5afa58101fe8312ef2}\label{test__kalman__fitter__wire__chamber_8cpp_a7a3a01bfd9f8fe5afa58101fe8312ef2}} 
+\index{test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Kalman\+Fit\+Wire\+Chamber\+Validation0}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+2\+\_\+\+Ge\+V\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{2.f, 2.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, -\/1.f, 100, 100))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__kalman__fitter__wire__chamber_8cpp_a6fa9f8093d0421525ca085d4d1f3a161}\label{test__kalman__fitter__wire__chamber_8cpp_a6fa9f8093d0421525ca085d4d1f3a161}} 
+\index{test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Kalman\+Fit\+Wire\+Chamber\+Validation1}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+10\+\_\+\+Ge\+V\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{10.f, 10.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, -\/1.f, 100, 100))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__kalman__fitter__wire__chamber_8cpp_a43a73ebb4e81beb94a257036e5b23ca2}\label{test__kalman__fitter__wire__chamber_8cpp_a43a73ebb4e81beb94a257036e5b23ca2}} 
+\index{test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Kalman\+Fit\+Wire\+Chamber\+Validation2}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+100\+\_\+\+Ge\+V\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{100.f, 100.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, -\/1.f, 100, 100))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__kalman__fitter__wire__chamber_8cpp_a46e76be641788004493790011c26d2c5}\label{test__kalman__fitter__wire__chamber_8cpp_a46e76be641788004493790011c26d2c5}} 
+\index{test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}!INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}}
+\index{INSTANTIATE\_TEST\_SUITE\_P@{INSTANTIATE\_TEST\_SUITE\_P}!test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}}
+\doxysubsubsection{\texorpdfstring{INSTANTIATE\_TEST\_SUITE\_P()}{INSTANTIATE\_TEST\_SUITE\_P()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+E\+\_\+P (\begin{DoxyParamCaption}\item[{Kalman\+Fit\+Wire\+Chamber\+Validation3}]{,  }\item[{\mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}}]{,  }\item[{\+::testing\+::\+Values(std\+::make\+\_\+tuple(\char`\"{}wire\+\_\+2\+\_\+\+Ge\+V\+\_\+anti\+\_\+muon\char`\"{}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 3u $>$\{0.f, 0.f, 0.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{2.f, 2.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{-\/1.f, 1.f\}, std\+::array$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, 2u $>$\{0.f, 2.\+0f $\ast$detray\+::constant$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$\+::pi\}, 1.f, 100, 100))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__kalman__fitter__wire__chamber_8cpp_a3317e2abf454aa82f2c09a890c063b63}\label{test__kalman__fitter__wire__chamber_8cpp_a3317e2abf454aa82f2c09a890c063b63}} 
+\index{test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}!TEST\_P@{TEST\_P}}
+\index{TEST\_P@{TEST\_P}!test\_kalman\_fitter\_wire\_chamber.cpp@{test\_kalman\_fitter\_wire\_chamber.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_P()}{TEST\_P()}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+P (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests}{Kalman\+Fitting\+Wire\+Chamber\+Tests}}}]{,  }\item[{Run}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                            \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{comment}{// Get the parameters}}
+\DoxyCodeLine{40     \textcolor{keyword}{const} std::string name = std::get<0>(GetParam());}
+\DoxyCodeLine{41     \textcolor{keyword}{const} std::array<scalar, 3u> origin = std::get<1>(GetParam());}
+\DoxyCodeLine{42     \textcolor{keyword}{const} std::array<scalar, 3u> origin\_stddev = std::get<2>(GetParam());}
+\DoxyCodeLine{43     \textcolor{keyword}{const} std::array<scalar, 2u> mom\_range = std::get<3>(GetParam());}
+\DoxyCodeLine{44     \textcolor{keyword}{const} std::array<scalar, 2u> eta\_range = std::get<4>(GetParam());}
+\DoxyCodeLine{45     \textcolor{keyword}{const} std::array<scalar, 2u> theta\_range = \mbox{\hyperlink{namespacetraccc_a2e4564fb128521e2b616cd390e972c06}{eta\_to\_theta\_range}}(eta\_range);}
+\DoxyCodeLine{46     \textcolor{keyword}{const} std::array<scalar, 2u> phi\_range = std::get<5>(GetParam());}
+\DoxyCodeLine{47     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} charge = std::get<6>(GetParam());}
+\DoxyCodeLine{48     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_truth\_tracks = std::get<7>(GetParam());}
+\DoxyCodeLine{49     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_events = std::get<8>(GetParam());}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// Performance writer}}
+\DoxyCodeLine{52     \mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{traccc::fitting\_performance\_writer::config}} fit\_writer\_cfg;}
+\DoxyCodeLine{53     fit\_writer\_cfg.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_aa7ac2a11d51ba6bcd1a98dc769725a84}{file\_path}} = \textcolor{stringliteral}{"performance\_track\_fitting\_"} + name + \textcolor{stringliteral}{".root"};}
+\DoxyCodeLine{54     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer}{traccc::fitting\_performance\_writer}} fit\_performance\_writer(fit\_writer\_cfg);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{comment}{    /*****************************}}
+\DoxyCodeLine{57 \textcolor{comment}{     * Build a drift chamber}}
+\DoxyCodeLine{58 \textcolor{comment}{     *****************************/}}
+\DoxyCodeLine{59     \textcolor{comment}{// Memory resources used by the application.}}
+\DoxyCodeLine{60     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{comment}{// Read back detector file}}
+\DoxyCodeLine{63     \textcolor{keyword}{const} std::string path = name + \textcolor{stringliteral}{"/"};}
+\DoxyCodeLine{64     detray::io::detector\_reader\_config reader\_cfg\{\};}
+\DoxyCodeLine{65     reader\_cfg.add\_file(path + \textcolor{stringliteral}{"wire\_chamber\_geometry.json"})}
+\DoxyCodeLine{66         .add\_file(path + \textcolor{stringliteral}{"wire\_chamber\_homogeneous\_material.json"})}
+\DoxyCodeLine{67         \textcolor{comment}{//.add\_file(path + "wire\_chamber\_surface\_grids.json")}}
+\DoxyCodeLine{68         .do\_check(\textcolor{keyword}{true});}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{keyword}{const} \textcolor{keyword}{auto} [host\_det, names] =}
+\DoxyCodeLine{71         detray::io::read\_detector<host\_detector\_type>(host\_mr, reader\_cfg);}
+\DoxyCodeLine{72     \textcolor{keyword}{auto} field = detray::bfield::create\_const\_field(B);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{comment}{    /***************************}}
+\DoxyCodeLine{75 \textcolor{comment}{     * Generate simulation data}}
+\DoxyCodeLine{76 \textcolor{comment}{     ***************************/}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{comment}{// Track generator}}
+\DoxyCodeLine{79     \textcolor{keyword}{using} generator\_type =}
+\DoxyCodeLine{80         detray::random\_track\_generator<\mbox{\hyperlink{namespacetraccc_a50d288f62d4a051cca68e9071c6318e8}{traccc::free\_track\_parameters}},}
+\DoxyCodeLine{81                                        uniform\_gen\_t>;}
+\DoxyCodeLine{82     generator\_type::configuration gen\_cfg\{\};}
+\DoxyCodeLine{83     gen\_cfg.n\_tracks(n\_truth\_tracks);}
+\DoxyCodeLine{84     gen\_cfg.origin(origin);}
+\DoxyCodeLine{85     gen\_cfg.origin\_stddev(origin\_stddev);}
+\DoxyCodeLine{86     gen\_cfg.phi\_range(phi\_range[0], phi\_range[1]);}
+\DoxyCodeLine{87     gen\_cfg.theta\_range(theta\_range[0], theta\_range[1]);}
+\DoxyCodeLine{88     gen\_cfg.mom\_range(mom\_range[0], mom\_range[1]);}
+\DoxyCodeLine{89     gen\_cfg.charge(charge);}
+\DoxyCodeLine{90     generator\_type generator(gen\_cfg);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{comment}{// Smearing value for measurements}}
+\DoxyCodeLine{93     \mbox{\hyperlink{structtraccc_1_1measurement__smearer}{traccc::measurement\_smearer<transform3>}} meas\_smearer(smearing[0],}
+\DoxyCodeLine{94                                                          smearing[1]);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{keyword}{using} writer\_type =}
+\DoxyCodeLine{97         \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc::smearing\_writer<traccc::measurement\_smearer<transform3>}}>;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \textcolor{keyword}{typename} writer\_type::config smearer\_writer\_cfg\{meas\_smearer\};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     \textcolor{comment}{// Run simulator}}
+\DoxyCodeLine{102     \textcolor{keyword}{const} std::string full\_path = \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}{io::data\_directory}}() + path;}
+\DoxyCodeLine{103     std::filesystem::create\_directories(full\_path);}
+\DoxyCodeLine{104     \textcolor{keyword}{auto} sim = \mbox{\hyperlink{structtraccc_1_1simulator}{traccc::simulator}}<host\_detector\_type, b\_field\_t, generator\_type,}
+\DoxyCodeLine{105                                  writer\_type>(}
+\DoxyCodeLine{106         n\_events, host\_det, field, std::move(generator),}
+\DoxyCodeLine{107         std::move(smearer\_writer\_cfg), full\_path);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{comment}{// Set constrained step size to 2 mm}}
+\DoxyCodeLine{110     sim.\mbox{\hyperlink{structtraccc_1_1simulator_a7692d409a08f9d6bcad077939784c27c}{get\_config}}().\mbox{\hyperlink{structtraccc_1_1simulator_1_1config_aab33c45d2c2bd351ecab0ce3ab489f9f}{step\_constraint}} = step\_constraint;}
+\DoxyCodeLine{111     sim.get\_config().overstep\_tolerance = overstep\_tolerance;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     sim.run();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{comment}{    /***************}}
+\DoxyCodeLine{116 \textcolor{comment}{     * Run fitting}}
+\DoxyCodeLine{117 \textcolor{comment}{     ***************/}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{comment}{// Seed generator}}
+\DoxyCodeLine{120     \mbox{\hyperlink{structtraccc_1_1seed__generator}{seed\_generator<host\_detector\_type>}} sg(host\_det, stddevs);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{comment}{// Fitting algorithm object}}
+\DoxyCodeLine{123     \textcolor{keyword}{typename} \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{traccc::fitting\_algorithm<host\_fitter\_type>::config\_type}} fit\_cfg;}
+\DoxyCodeLine{124     fit\_cfg.step\_constraint = step\_constraint;}
+\DoxyCodeLine{125     fit\_cfg.overstep\_tolerance = overstep\_tolerance;}
+\DoxyCodeLine{126     fit\_cfg.mask\_tolerance = mask\_tolerance;}
+\DoxyCodeLine{127     \mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{fitting\_algorithm<host\_fitter\_type>}} fitting(fit\_cfg);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     \textcolor{comment}{// Iterate over events}}
+\DoxyCodeLine{130     \textcolor{keywordflow}{for} (std::size\_t i\_evt = 0; i\_evt < n\_events; i\_evt++) \{}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132         \textcolor{comment}{// Event map}}
+\DoxyCodeLine{133         \mbox{\hyperlink{structtraccc_1_1event__map2}{traccc::event\_map2}} evt\_map(i\_evt, path, path, path);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135         \textcolor{comment}{// Truth Track Candidates}}
+\DoxyCodeLine{136         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_candidate\_container\_types::host}} track\_candidates =}
+\DoxyCodeLine{137             evt\_map.generate\_truth\_candidates(sg, host\_mr);}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139         \textcolor{comment}{// n\_trakcs = 100}}
+\DoxyCodeLine{140         ASSERT\_EQ(track\_candidates.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}(), n\_truth\_tracks);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142         \textcolor{comment}{// Run fitting}}
+\DoxyCodeLine{143         \textcolor{keyword}{auto} track\_states = fitting(host\_det, field, track\_candidates);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145         \textcolor{comment}{// Iterator over tracks}}
+\DoxyCodeLine{146         \textcolor{keyword}{const} std::size\_t n\_tracks = track\_states.size();}
+\DoxyCodeLine{147         ASSERT\_EQ(n\_tracks, n\_truth\_tracks);}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149         \textcolor{keywordflow}{for} (std::size\_t i\_trk = 0; i\_trk < n\_tracks; i\_trk++) \{}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& fit\_info = track\_states[i\_trk].header;}
+\DoxyCodeLine{152             \textcolor{keyword}{const} \textcolor{keyword}{auto}\& track\_states\_per\_track = track\_states[i\_trk].items;}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154             consistency\_tests(track\_states\_per\_track);}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156             ndf\_tests(fit\_info, track\_states\_per\_track);}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158             fit\_performance\_writer.write(track\_states\_per\_track, fit\_info,}
+\DoxyCodeLine{159                                          host\_det, evt\_map);}
+\DoxyCodeLine{160         \}}
+\DoxyCodeLine{161     \}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     fit\_performance\_writer.finalize();}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \textcolor{comment}{    /********************}}
+\DoxyCodeLine{166 \textcolor{comment}{     * Pull value test}}
+\DoxyCodeLine{167 \textcolor{comment}{     ********************/}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169     \textcolor{keyword}{static} \textcolor{keyword}{const} std::vector<std::string> pull\_names\{}
+\DoxyCodeLine{170         \textcolor{stringliteral}{"pull\_d0"}, \textcolor{stringliteral}{"pull\_z0"}, \textcolor{stringliteral}{"pull\_phi"}, \textcolor{stringliteral}{"pull\_theta"}, \textcolor{stringliteral}{"pull\_qop"}\};}
+\DoxyCodeLine{171     pull\_value\_tests(fit\_writer\_cfg.\mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config_aa7ac2a11d51ba6bcd1a98dc769725a84}{file\_path}}, pull\_names);}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 \textcolor{comment}{    /********************}}
+\DoxyCodeLine{174 \textcolor{comment}{     * Success rate test}}
+\DoxyCodeLine{175 \textcolor{comment}{     ********************/}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} success\_rate =}
+\DoxyCodeLine{178         \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(n\_success) / (n\_truth\_tracks * n\_events);}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180     ASSERT\_GE(success\_rate, 0.99f);}
+\DoxyCodeLine{181     ASSERT\_LE(success\_rate, 1.00f);}
+\DoxyCodeLine{182 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::tests\+::data\+\_\+test\+::data\+\_\+directory, traccc\+::eta\+\_\+to\+\_\+theta\+\_\+range(), traccc\+::fitting\+\_\+performance\+\_\+writer\+::config\+::file\+\_\+path, traccc\+::fitting\+\_\+performance\+\_\+writer\+::finalize(), traccc\+::event\+\_\+map2\+::generate\+\_\+truth\+\_\+candidates(), traccc\+::simulator$<$ detector\+\_\+t, bfield\+\_\+t, track\+\_\+generator\+\_\+t, writer\+\_\+t $>$\+::get\+\_\+config(), traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::size(), traccc\+::simulator$<$ detector\+\_\+t, bfield\+\_\+t, track\+\_\+generator\+\_\+t, writer\+\_\+t $>$\+::config\+::step\+\_\+constraint, and traccc\+::fitting\+\_\+performance\+\_\+writer\+::write().
+

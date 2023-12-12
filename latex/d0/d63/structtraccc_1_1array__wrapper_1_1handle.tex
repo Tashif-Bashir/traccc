@@ -1,0 +1,226 @@
+\hypertarget{structtraccc_1_1array__wrapper_1_1handle}{}\doxysection{traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle Struct Reference}
+\label{structtraccc_1_1array__wrapper_1_1handle}\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+
+
+{\ttfamily \#include $<$array\+\_\+wrapper.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{da/d5d/structtraccc_1_1array__wrapper_1_1handle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_ad82f616617bf1926ce1039876dc4055c}{handle\+\_\+t}} = typename \mbox{\hyperlink{structtraccc_1_1details_1_1functor_1_1reapply}{details\+::functor\+::reapply}}$<$ F, typename T$<$ \mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a108e35663db879761263ae7eb9fdf893}{details\+::functor\+::identity}} $>$\+::tuple\+\_\+t $>$\+::type\+::handle
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_aba857db2860a9b9a8b5b6c408cc3908e}{handle}} (const \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1owner}{owner}} \&o)
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a375480863da8d3e23bc599e32b009c6e}{size}} () const
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t I$>$ }\\constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto \& \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a16eb427af88ed2df76dedacc2530d7eb}{get}} (std\+::size\+\_\+t i)
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t I$>$ }\\constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a5deef785053701b9e4f1f3efaab2ef03}{get}} (std\+::size\+\_\+t i) const
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t... Ns$>$ }\\constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$ \mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a108e35663db879761263ae7eb9fdf893}{details\+::functor\+::identity}} $>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a622e7343ec36c8b490a8784685839de8}{\+\_\+construct\+\_\+helper\+\_\+identity}} (std\+::index\+\_\+sequence$<$ Ns... $>$, std\+::size\+\_\+t i) const
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t... Ns$>$ }\\constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$ \mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a729d1c4d3f6b76331d75c6386e395c51}{details\+::functor\+::reference}} $>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a93430a5fe19391c845d73408b398481d}{\+\_\+construct\+\_\+helper\+\_\+reference}} (std\+::index\+\_\+sequence$<$ Ns... $>$, std\+::size\+\_\+t i)
+\item 
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$ \mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a108e35663db879761263ae7eb9fdf893}{details\+::functor\+::identity}} $>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a7b593e7d0138e8ad955032885a4aef90}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t i) const
+\item 
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$ \mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a729d1c4d3f6b76331d75c6386e395c51}{details\+::functor\+::reference}} $>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a6730ca658d2701cbc3e12a8e5c97541e}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t i)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_ad82f616617bf1926ce1039876dc4055c}{handle\+\_\+t}} \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a394b4d78ac902aa5475752276923e066}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_ad82f616617bf1926ce1039876dc4055c}\label{structtraccc_1_1array__wrapper_1_1handle_ad82f616617bf1926ce1039876dc4055c}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!handle\_t@{handle\_t}}
+\index{handle\_t@{handle\_t}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{handle\_t}{handle\_t}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::\mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_ad82f616617bf1926ce1039876dc4055c}{handle\+::handle\+\_\+t}} =  typename \mbox{\hyperlink{structtraccc_1_1details_1_1functor_1_1reapply}{details\+::functor\+::reapply}}$<$ F, typename T$<$\mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a108e35663db879761263ae7eb9fdf893}{details\+::functor\+::identity}}$>$\+::tuple\+\_\+t$>$\+::type\+::handle}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_aba857db2860a9b9a8b5b6c408cc3908e}\label{structtraccc_1_1array__wrapper_1_1handle_aba857db2860a9b9a8b5b6c408cc3908e}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!handle@{handle}}
+\index{handle@{handle}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+\mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::handle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1owner}{owner}} \&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79 : \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a394b4d78ac902aa5475752276923e066}{data}}(o.data) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a622e7343ec36c8b490a8784685839de8}\label{structtraccc_1_1array__wrapper_1_1handle_a622e7343ec36c8b490a8784685839de8}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!\_construct\_helper\_identity@{\_construct\_helper\_identity}}
+\index{\_construct\_helper\_identity@{\_construct\_helper\_identity}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{\_construct\_helper\_identity()}{\_construct\_helper\_identity()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+template$<$std\+::size\+\_\+t... Ns$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$\mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a108e35663db879761263ae7eb9fdf893}{details\+::functor\+::identity}}$>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::\+\_\+construct\+\_\+helper\+\_\+identity (\begin{DoxyParamCaption}\item[{std\+::index\+\_\+sequence$<$ Ns... $>$}]{,  }\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                       \{}
+\DoxyCodeLine{97             \textcolor{keywordflow}{return} T<details::functor::identity>\{get<Ns>(i)...\};}
+\DoxyCodeLine{98         \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::operator\mbox{[}$\,$\mbox{]}().
+
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a93430a5fe19391c845d73408b398481d}\label{structtraccc_1_1array__wrapper_1_1handle_a93430a5fe19391c845d73408b398481d}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!\_construct\_helper\_reference@{\_construct\_helper\_reference}}
+\index{\_construct\_helper\_reference@{\_construct\_helper\_reference}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{\_construct\_helper\_reference()}{\_construct\_helper\_reference()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+template$<$std\+::size\+\_\+t... Ns$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$\mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a729d1c4d3f6b76331d75c6386e395c51}{details\+::functor\+::reference}}$>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::\+\_\+construct\+\_\+helper\+\_\+reference (\begin{DoxyParamCaption}\item[{std\+::index\+\_\+sequence$<$ Ns... $>$}]{,  }\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                                            \{}
+\DoxyCodeLine{103             \textcolor{keywordflow}{return} T<details::functor::reference>\{get<Ns>(i)...\};}
+\DoxyCodeLine{104         \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::operator\mbox{[}$\,$\mbox{]}().
+
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a16eb427af88ed2df76dedacc2530d7eb}\label{structtraccc_1_1array__wrapper_1_1handle_a16eb427af88ed2df76dedacc2530d7eb}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!get@{get}}
+\index{get@{get}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+template$<$std\+::size\+\_\+t I$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto\& \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::get (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                                                             \{}
+\DoxyCodeLine{85             \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a394b4d78ac902aa5475752276923e066}{data}}.get<I>(i);}
+\DoxyCodeLine{86         \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::data.
+
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a5deef785053701b9e4f1f3efaab2ef03}\label{structtraccc_1_1array__wrapper_1_1handle_a5deef785053701b9e4f1f3efaab2ef03}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!get@{get}}
+\index{get@{get}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+template$<$std\+::size\+\_\+t I$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} auto \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::get (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                                                  \{}
+\DoxyCodeLine{90             \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a394b4d78ac902aa5475752276923e066}{data}}.get<I>(i);}
+\DoxyCodeLine{91         \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::data.
+
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a6730ca658d2701cbc3e12a8e5c97541e}\label{structtraccc_1_1array__wrapper_1_1handle_a6730ca658d2701cbc3e12a8e5c97541e}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$\mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a729d1c4d3f6b76331d75c6386e395c51}{details\+::functor\+::reference}}$>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115                          \{}
+\DoxyCodeLine{116             \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a93430a5fe19391c845d73408b398481d}{\_construct\_helper\_reference}}(}
+\DoxyCodeLine{117                 std::make\_index\_sequence<std::tuple\_size\_v<}
+\DoxyCodeLine{118                     \textcolor{keyword}{typename} T<details::functor::identity>::tuple\_t>>(),}
+\DoxyCodeLine{119                 i);}
+\DoxyCodeLine{120         \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::\+\_\+construct\+\_\+helper\+\_\+reference().
+
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a7b593e7d0138e8ad955032885a4aef90}\label{structtraccc_1_1array__wrapper_1_1handle_a7b593e7d0138e8ad955032885a4aef90}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+constexpr \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} T$<$\mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a108e35663db879761263ae7eb9fdf893}{details\+::functor\+::identity}}$>$ \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107                                \{}
+\DoxyCodeLine{108             \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a622e7343ec36c8b490a8784685839de8}{\_construct\_helper\_identity}}(}
+\DoxyCodeLine{109                 std::make\_index\_sequence<std::tuple\_size\_v<}
+\DoxyCodeLine{110                     \textcolor{keyword}{typename} T<details::functor::identity>::tuple\_t>>(),}
+\DoxyCodeLine{111                 i);}
+\DoxyCodeLine{112         \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::\+\_\+construct\+\_\+helper\+\_\+identity().
+
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a375480863da8d3e23bc599e32b009c6e}\label{structtraccc_1_1array__wrapper_1_1handle_a375480863da8d3e23bc599e32b009c6e}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!size@{size}}
+\index{size@{size}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_a394b4d78ac902aa5475752276923e066}{data}}.size(); \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::data.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1array__wrapper_1_1handle_a394b4d78ac902aa5475752276923e066}\label{structtraccc_1_1array__wrapper_1_1handle_a394b4d78ac902aa5475752276923e066}} 
+\index{traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}!data@{data}}
+\index{data@{data}!traccc::array\_wrapper$<$ F, T $>$::handle@{traccc::array\_wrapper$<$ F, T $>$::handle}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename F, template$<$ template$<$ typename $>$ typename $>$ typename T$>$ \\
+\mbox{\hyperlink{structtraccc_1_1array__wrapper_1_1handle_ad82f616617bf1926ce1039876dc4055c}{handle\+\_\+t}} \mbox{\hyperlink{structtraccc_1_1array__wrapper}{traccc\+::array\+\_\+wrapper}}$<$ F, T $>$\+::handle\+::data}
+
+
+
+Referenced by traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::get(), and traccc\+::array\+\_\+wrapper$<$ F, T $>$\+::handle\+::size().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/utils/\mbox{\hyperlink{array__wrapper_8hpp}{array\+\_\+wrapper.\+hpp}}\end{DoxyCompactItemize}

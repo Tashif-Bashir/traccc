@@ -1,0 +1,55 @@
+\hypertarget{structtraccc_1_1eff__plot__tool_1_1config}{}\doxysection{traccc\+::eff\+\_\+plot\+\_\+tool\+::config Struct Reference}
+\label{structtraccc_1_1eff__plot__tool_1_1config}\index{traccc::eff\_plot\_tool::config@{traccc::eff\_plot\_tool::config}}
+
+
+The nested configuration struct.  
+
+
+
+
+{\ttfamily \#include $<$eff\+\_\+plot\+\_\+tool.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::eff\+\_\+plot\+\_\+tool\+::config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{da/d07/structtraccc_1_1eff__plot__tool_1_1config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{structtraccc_1_1plot__helpers_1_1binning}{plot\+\_\+helpers\+::binning}} $>$ \mbox{\hyperlink{structtraccc_1_1eff__plot__tool_1_1config_a2a5031d778c3951c042fc93d047dd052}{var\+\_\+binning}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The nested configuration struct. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1eff__plot__tool_1_1config_a2a5031d778c3951c042fc93d047dd052}\label{structtraccc_1_1eff__plot__tool_1_1config_a2a5031d778c3951c042fc93d047dd052}} 
+\index{traccc::eff\_plot\_tool::config@{traccc::eff\_plot\_tool::config}!var\_binning@{var\_binning}}
+\index{var\_binning@{var\_binning}!traccc::eff\_plot\_tool::config@{traccc::eff\_plot\_tool::config}}
+\doxysubsubsection{\texorpdfstring{var\_binning}{var\_binning}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{structtraccc_1_1plot__helpers_1_1binning}{plot\+\_\+helpers\+::binning}}$>$ traccc\+::eff\+\_\+plot\+\_\+tool\+::config\+::var\+\_\+binning}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{            \{\textcolor{stringliteral}{"Eta"}, plot\_helpers::binning(\textcolor{stringliteral}{"\#eta"}, 40, -\/4, 4)\},}
+\DoxyCodeLine{            \{\textcolor{stringliteral}{"Phi"}, plot\_helpers::binning(\textcolor{stringliteral}{"\#phi"}, 100, -\/3.15, 3.15)\},}
+\DoxyCodeLine{            \{\textcolor{stringliteral}{"Pt"}, plot\_helpers::binning(\textcolor{stringliteral}{"pT [GeV/c]"}, 40, 0, 100)\}\}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::eff\+\_\+plot\+\_\+tool\+::book().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+performance/src/efficiency/\mbox{\hyperlink{eff__plot__tool_8hpp}{eff\+\_\+plot\+\_\+tool.\+hpp}}\end{DoxyCompactItemize}

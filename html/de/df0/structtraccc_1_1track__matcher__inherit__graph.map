@@ -1,0 +1,5 @@
+<map id="traccc::track_matcher" name="traccc::track_matcher">
+<area shape="rect" id="node1" title="Abstract track matching descriptor." alt="" coords="71,5,233,112"/>
+<area shape="rect" id="node2" href="$d6/da3/structtraccc_1_1exact.html" title="Matcher requiring exact particle matching." alt="" coords="5,160,117,267"/>
+<area shape="rect" id="node3" href="$dd/d08/structtraccc_1_1stepped__percentage.html" title="Matcher based on minimum majority size." alt="" coords="142,160,343,267"/>
+</map>

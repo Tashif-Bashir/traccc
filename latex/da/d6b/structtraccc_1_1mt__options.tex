@@ -1,0 +1,117 @@
+\hypertarget{structtraccc_1_1mt__options}{}\doxysection{traccc\+::mt\+\_\+options Struct Reference}
+\label{structtraccc_1_1mt__options}\index{traccc::mt\_options@{traccc::mt\_options}}
+
+
+Options for multi-\/threaded code execution.  
+
+
+
+
+{\ttfamily \#include $<$mt\+\_\+options.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::mt\+\_\+options\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d2/dfb/structtraccc_1_1mt__options__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1mt__options_afe223f1fe9a85ac7e0eddbeede8dba03}{mt\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&desc)
+\item 
+void \mbox{\hyperlink{structtraccc_1_1mt__options_af0495bc99c160842fb6cd70ba0995fdc}{read}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1mt__options_a55086a91807721eed8ef34fb243b2fc8}{threads}} = 1
+\begin{DoxyCompactList}\small\item\em The number of threads to use for the data processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Options for multi-\/threaded code execution. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1mt__options_afe223f1fe9a85ac7e0eddbeede8dba03}\label{structtraccc_1_1mt__options_afe223f1fe9a85ac7e0eddbeede8dba03}} 
+\index{traccc::mt\_options@{traccc::mt\_options}!mt\_options@{mt\_options}}
+\index{mt\_options@{mt\_options}!traccc::mt\_options@{traccc::mt\_options}}
+\doxysubsubsection{\texorpdfstring{mt\_options()}{mt\_options()}}
+{\footnotesize\ttfamily traccc\+::mt\+\_\+options\+::mt\+\_\+options (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{desc }\end{DoxyParamCaption})}
+
+Constructor on top of a common {\ttfamily program\+\_\+options} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & The program options to add to \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                     \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     desc.add\_options()(}
+\DoxyCodeLine{20         \textcolor{stringliteral}{"threads"},}
+\DoxyCodeLine{21         boost::program\_options::value<std::size\_t>()-\/>default\_value(1),}
+\DoxyCodeLine{22         \textcolor{stringliteral}{"The number of CPU threads to use"});}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1mt__options_af0495bc99c160842fb6cd70ba0995fdc}\label{structtraccc_1_1mt__options_af0495bc99c160842fb6cd70ba0995fdc}} 
+\index{traccc::mt\_options@{traccc::mt\_options}!read@{read}}
+\index{read@{read}!traccc::mt\_options@{traccc::mt\_options}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void traccc\+::mt\+\_\+options\+::read (\begin{DoxyParamCaption}\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})}
+
+Read the command line options
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm} & The command line options to interpret/read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                                                  \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \mbox{\hyperlink{structtraccc_1_1mt__options_a55086a91807721eed8ef34fb243b2fc8}{threads}} = vm[\textcolor{stringliteral}{"threads"}].as<std::size\_t>();}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structtraccc_1_1mt__options_a55086a91807721eed8ef34fb243b2fc8}{threads}} == 0) \{}
+\DoxyCodeLine{29         \textcolor{keywordflow}{throw} std::invalid\_argument\{\textcolor{stringliteral}{"Must use threads>0"}\};}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+
+
+References threads.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1mt__options_a55086a91807721eed8ef34fb243b2fc8}\label{structtraccc_1_1mt__options_a55086a91807721eed8ef34fb243b2fc8}} 
+\index{traccc::mt\_options@{traccc::mt\_options}!threads@{threads}}
+\index{threads@{threads}!traccc::mt\_options@{traccc::mt\_options}}
+\doxysubsubsection{\texorpdfstring{threads}{threads}}
+{\footnotesize\ttfamily std\+::size\+\_\+t traccc\+::mt\+\_\+options\+::threads = 1}
+
+
+
+The number of threads to use for the data processing. 
+
+
+
+Referenced by traccc\+::operator$<$$<$(), and read().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/options/include/traccc/options/\mbox{\hyperlink{mt__options_8hpp}{mt\+\_\+options.\+hpp}}\item 
+examples/options/src/options/\mbox{\hyperlink{mt__options_8cpp}{mt\+\_\+options.\+cpp}}\end{DoxyCompactItemize}

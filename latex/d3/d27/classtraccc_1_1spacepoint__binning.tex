@@ -1,0 +1,172 @@
+\hypertarget{classtraccc_1_1spacepoint__binning}{}\doxysection{traccc\+::spacepoint\+\_\+binning Class Reference}
+\label{classtraccc_1_1spacepoint__binning}\index{traccc::spacepoint\_binning@{traccc::spacepoint\_binning}}
+
+
+spacepoint binning  
+
+
+
+
+{\ttfamily \#include $<$spacepoint\+\_\+binning.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d2/d20/classtraccc_1_1spacepoint__binning__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/ddd/classtraccc_1_1spacepoint__binning__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1spacepoint__binning_aa2f599e78e7b97acd3dd4227114885af}{spacepoint\+\_\+binning}} (const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&config, const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&grid\+\_\+config, vecmem\+::memory\+\_\+resource \&mr)
+\item 
+output\+\_\+type \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_acb17629f43e02890ed20642a4caef981}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&sp\+\_\+collection) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a3fff4106c18d56b7b4983dcbc4667ba6}{m\+\_\+config}}
+\item 
+\mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_ac4104196a1ead6fa47bfc1e81201590e}{m\+\_\+grid\+\_\+config}}
+\item 
+std\+::pair$<$ output\+\_\+type\+::axis\+\_\+p0\+\_\+type, output\+\_\+type\+::axis\+\_\+p1\+\_\+type $>$ \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a9e72834fb6dab49772bbd937686e71ff}{m\+\_\+axes}}
+\item 
+std\+::reference\+\_\+wrapper$<$ vecmem\+::memory\+\_\+resource $>$ \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_ab69cf9df983a3c06f8778f7f2e3a4885}{m\+\_\+mr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+spacepoint binning 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1spacepoint__binning_aa2f599e78e7b97acd3dd4227114885af}\label{classtraccc_1_1spacepoint__binning_aa2f599e78e7b97acd3dd4227114885af}} 
+\index{traccc::spacepoint\_binning@{traccc::spacepoint\_binning}!spacepoint\_binning@{spacepoint\_binning}}
+\index{spacepoint\_binning@{spacepoint\_binning}!traccc::spacepoint\_binning@{traccc::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{spacepoint\_binning()}{spacepoint\_binning()}}
+{\footnotesize\ttfamily traccc\+::spacepoint\+\_\+binning\+::spacepoint\+\_\+binning (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&}]{grid\+\_\+config,  }\item[{vecmem\+::memory\+\_\+resource \&}]{mr }\end{DoxyParamCaption})}
+
+Constructor for the spacepoint binning
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & is seed finder configuration parameters \\
+\hline
+{\em grid\+\_\+config} & is for spacepoint grid parameter \\
+\hline
+{\em mr} & is the vecmem memory resource \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19     : \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a3fff4106c18d56b7b4983dcbc4667ba6}{m\_config}}(config),}
+\DoxyCodeLine{20       \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_ac4104196a1ead6fa47bfc1e81201590e}{m\_grid\_config}}(grid\_config),}
+\DoxyCodeLine{21       \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a9e72834fb6dab49772bbd937686e71ff}{m\_axes}}(\mbox{\hyperlink{namespacetraccc_aaca8347dbd25b3fdfd7c864a7f90368a}{get\_axes}}(grid\_config, mr)),}
+\DoxyCodeLine{22       \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_ab69cf9df983a3c06f8778f7f2e3a4885}{m\_mr}}(mr) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1spacepoint__binning_acb17629f43e02890ed20642a4caef981}\label{classtraccc_1_1spacepoint__binning_acb17629f43e02890ed20642a4caef981}} 
+\index{traccc::spacepoint\_binning@{traccc::spacepoint\_binning}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::spacepoint\_binning@{traccc::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily spacepoint\+\_\+binning\+::output\+\_\+type traccc\+::spacepoint\+\_\+binning\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&}]{sp\+\_\+collection }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Operator executing the algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp\+\_\+collection} & All of the spacepoints of the event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The spacepoints arranged in a Phi-\/Z grid 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                                                 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     output\_type g2(\mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a9e72834fb6dab49772bbd937686e71ff}{m\_axes}}.first, \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a9e72834fb6dab49772bbd937686e71ff}{m\_axes}}.second, \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_ab69cf9df983a3c06f8778f7f2e3a4885}{m\_mr}}.get());}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keyword}{auto}\& phi\_axis = g2.axis\_p0();}
+\DoxyCodeLine{30     \textcolor{keyword}{auto}\& z\_axis = g2.axis\_p1();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < sp\_collection.size(); i++) \{}
+\DoxyCodeLine{33         \textcolor{keyword}{const} spacepoint\& sp = sp\_collection[i];}
+\DoxyCodeLine{34         internal\_spacepoint<spacepoint> isp(sp, i, \mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a3fff4106c18d56b7b4983dcbc4667ba6}{m\_config}}.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_ad5a0905e9ce28b8501fa21bad52520bd}{beamPos}});}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36         \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacetraccc_a4e12ff4b9f7297ad771d4fe8ecc17304}{is\_valid\_sp}}(\mbox{\hyperlink{classtraccc_1_1spacepoint__binning_a3fff4106c18d56b7b4983dcbc4667ba6}{m\_config}}, sp) !=}
+\DoxyCodeLine{37             detray::detail::invalid\_value<size\_t>()) \{}
+\DoxyCodeLine{38             \textcolor{keyword}{const} std::size\_t bin\_index =}
+\DoxyCodeLine{39                 phi\_axis.bin(isp.phi()) + phi\_axis.bins() * z\_axis.bin(isp.z());}
+\DoxyCodeLine{40             g2.bin(bin\_index).push\_back(std::move(isp));}
+\DoxyCodeLine{41         \}}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} g2;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::seedfinder\+\_\+config\+::beam\+Pos, traccc\+::is\+\_\+valid\+\_\+sp(), m\+\_\+axes, m\+\_\+config, m\+\_\+mr, traccc\+::internal\+\_\+spacepoint$<$ spacepoint\+\_\+t $>$\+::phi(), and traccc\+::internal\+\_\+spacepoint$<$ spacepoint\+\_\+t $>$\+::z().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1spacepoint__binning_a9e72834fb6dab49772bbd937686e71ff}\label{classtraccc_1_1spacepoint__binning_a9e72834fb6dab49772bbd937686e71ff}} 
+\index{traccc::spacepoint\_binning@{traccc::spacepoint\_binning}!m\_axes@{m\_axes}}
+\index{m\_axes@{m\_axes}!traccc::spacepoint\_binning@{traccc::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_axes}{m\_axes}}
+{\footnotesize\ttfamily std\+::pair$<$output\+\_\+type\+::axis\+\_\+p0\+\_\+type, output\+\_\+type\+::axis\+\_\+p1\+\_\+type$>$ traccc\+::spacepoint\+\_\+binning\+::m\+\_\+axes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1spacepoint__binning_a3fff4106c18d56b7b4983dcbc4667ba6}\label{classtraccc_1_1spacepoint__binning_a3fff4106c18d56b7b4983dcbc4667ba6}} 
+\index{traccc::spacepoint\_binning@{traccc::spacepoint\_binning}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!traccc::spacepoint\_binning@{traccc::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_config}{m\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} traccc\+::spacepoint\+\_\+binning\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1spacepoint__binning_ac4104196a1ead6fa47bfc1e81201590e}\label{classtraccc_1_1spacepoint__binning_ac4104196a1ead6fa47bfc1e81201590e}} 
+\index{traccc::spacepoint\_binning@{traccc::spacepoint\_binning}!m\_grid\_config@{m\_grid\_config}}
+\index{m\_grid\_config@{m\_grid\_config}!traccc::spacepoint\_binning@{traccc::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_grid\_config}{m\_grid\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} traccc\+::spacepoint\+\_\+binning\+::m\+\_\+grid\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtraccc_1_1spacepoint__binning_ab69cf9df983a3c06f8778f7f2e3a4885}\label{classtraccc_1_1spacepoint__binning_ab69cf9df983a3c06f8778f7f2e3a4885}} 
+\index{traccc::spacepoint\_binning@{traccc::spacepoint\_binning}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::spacepoint\_binning@{traccc::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily std\+::reference\+\_\+wrapper$<$vecmem\+::memory\+\_\+resource$>$ traccc\+::spacepoint\+\_\+binning\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/\mbox{\hyperlink{core_2include_2traccc_2seeding_2spacepoint__binning_8hpp}{spacepoint\+\_\+binning.\+hpp}}\item 
+core/src/seeding/\mbox{\hyperlink{core_2src_2seeding_2spacepoint__binning_8cpp}{spacepoint\+\_\+binning.\+cpp}}\end{DoxyCompactItemize}

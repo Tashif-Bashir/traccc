@@ -1,0 +1,83 @@
+\hypertarget{structtraccc_1_1fitting__config}{}\doxysection{traccc\+::fitting\+\_\+config$<$ scalar\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1fitting__config}\index{traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}}
+
+
+Configuration struct for track fitting.  
+
+
+
+
+{\ttfamily \#include $<$fitting\+\_\+config.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::fitting\+\_\+config$<$ scalar\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d0/d8a/structtraccc_1_1fitting__config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config_a80c4f6e42ca7051bc8b0288a1d2fc873}{n\+\_\+iterations}} = 1
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config_abdc020afd6f146c2f0e706b989fd8da0}{pathlimit}} = std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config_afd8698f31ccef8607dfa6cdcb2e8844f}{overstep\+\_\+tolerance}} = -\/10 $\ast$ detray\+::unit$<$scalar\+\_\+t$>$\+::um
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config_a61f77e1c1593ed937317df655c45c93c}{step\+\_\+constraint}} = std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config_a64a16ee7db279734ec7fb13ad6f0cc85}{mask\+\_\+tolerance}} = 15.f $\ast$ detray\+::unit$<$scalar\+\_\+t$>$\+::um
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t$>$\newline
+struct traccc\+::fitting\+\_\+config$<$ scalar\+\_\+t $>$}
+
+Configuration struct for track fitting. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1fitting__config_a64a16ee7db279734ec7fb13ad6f0cc85}\label{structtraccc_1_1fitting__config_a64a16ee7db279734ec7fb13ad6f0cc85}} 
+\index{traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}!mask\_tolerance@{mask\_tolerance}}
+\index{mask\_tolerance@{mask\_tolerance}!traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{mask\_tolerance}{mask\_tolerance}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config}{traccc\+::fitting\+\_\+config}}$<$ scalar\+\_\+t $>$\+::mask\+\_\+tolerance = 15.f $\ast$ detray\+::unit$<$scalar\+\_\+t$>$\+::um}
+
+\mbox{\Hypertarget{structtraccc_1_1fitting__config_a80c4f6e42ca7051bc8b0288a1d2fc873}\label{structtraccc_1_1fitting__config_a80c4f6e42ca7051bc8b0288a1d2fc873}} 
+\index{traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}!n\_iterations@{n\_iterations}}
+\index{n\_iterations@{n\_iterations}!traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{n\_iterations}{n\_iterations}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config}{traccc\+::fitting\+\_\+config}}$<$ scalar\+\_\+t $>$\+::n\+\_\+iterations = 1}
+
+\mbox{\Hypertarget{structtraccc_1_1fitting__config_afd8698f31ccef8607dfa6cdcb2e8844f}\label{structtraccc_1_1fitting__config_afd8698f31ccef8607dfa6cdcb2e8844f}} 
+\index{traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}!overstep\_tolerance@{overstep\_tolerance}}
+\index{overstep\_tolerance@{overstep\_tolerance}!traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{overstep\_tolerance}{overstep\_tolerance}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config}{traccc\+::fitting\+\_\+config}}$<$ scalar\+\_\+t $>$\+::overstep\+\_\+tolerance = -\/10 $\ast$ detray\+::unit$<$scalar\+\_\+t$>$\+::um}
+
+\mbox{\Hypertarget{structtraccc_1_1fitting__config_abdc020afd6f146c2f0e706b989fd8da0}\label{structtraccc_1_1fitting__config_abdc020afd6f146c2f0e706b989fd8da0}} 
+\index{traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}!pathlimit@{pathlimit}}
+\index{pathlimit@{pathlimit}!traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{pathlimit}{pathlimit}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config}{traccc\+::fitting\+\_\+config}}$<$ scalar\+\_\+t $>$\+::pathlimit = std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()}
+
+\mbox{\Hypertarget{structtraccc_1_1fitting__config_a61f77e1c1593ed937317df655c45c93c}\label{structtraccc_1_1fitting__config_a61f77e1c1593ed937317df655c45c93c}} 
+\index{traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}!step\_constraint@{step\_constraint}}
+\index{step\_constraint@{step\_constraint}!traccc::fitting\_config$<$ scalar\_t $>$@{traccc::fitting\_config$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{step\_constraint}{step\_constraint}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1fitting__config}{traccc\+::fitting\+\_\+config}}$<$ scalar\+\_\+t $>$\+::step\+\_\+constraint = std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/fitting/\mbox{\hyperlink{fitting__config_8hpp}{fitting\+\_\+config.\+hpp}}\end{DoxyCompactItemize}

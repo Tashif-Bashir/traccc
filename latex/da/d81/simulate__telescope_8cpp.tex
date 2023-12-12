@@ -1,0 +1,206 @@
+\hypertarget{simulate__telescope_8cpp}{}\doxysection{examples/simulation/simulate\+\_\+telescope.cpp File Reference}
+\label{simulate__telescope_8cpp}\index{examples/simulation/simulate\_telescope.cpp@{examples/simulation/simulate\_telescope.cpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/primitives.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/track\+\_\+parameters.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/common\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/handle\+\_\+argument\+\_\+errors.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/particle\+\_\+gen\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/propagation\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/telescope\+\_\+detector\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/measurement\+\_\+smearer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/simulator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/simulation/smearing\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/bfield.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/create\+\_\+telescope\+\_\+detector.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/io/common/detector\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/masks/unbounded.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/simulation/event\+\_\+generator/track\+\_\+generators.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
+Include dependency graph for simulate\+\_\+telescope.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dfa/simulate__telescope_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{simulate__telescope_8cpp_ae26067fb6dbf37dacfdedc666fb8ef82}{simulate}} (std\+::string output\+\_\+directory, unsigned int events, const \mbox{\hyperlink{structtraccc_1_1particle__gen__options}{traccc\+::particle\+\_\+gen\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&pg\+\_\+opts, const \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&propagation\+\_\+opts, const \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&telescope\+\_\+opts)
+\item 
+int \mbox{\hyperlink{simulate__telescope_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{simulate__telescope_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{simulate__telescope_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{simulate\_telescope.cpp@{simulate\_telescope.cpp}!main@{main}}
+\index{main@{main}!simulate\_telescope.cpp@{simulate\_telescope.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{147                                  \{}
+\DoxyCodeLine{148     \textcolor{comment}{// Set up the program options}}
+\DoxyCodeLine{149     po::options\_description desc(\textcolor{stringliteral}{"Allowed options"});}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{comment}{// Add options}}
+\DoxyCodeLine{152     desc.add\_options()(\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"Give some help with the program's options"});}
+\DoxyCodeLine{153     desc.add\_options()(\textcolor{stringliteral}{"output\_directory"}, po::value<std::string>()-\/>required(),}
+\DoxyCodeLine{154                        \textcolor{stringliteral}{"specify the directory of output data"});}
+\DoxyCodeLine{155     desc.add\_options()(\textcolor{stringliteral}{"events"}, po::value<unsigned int>()-\/>required(),}
+\DoxyCodeLine{156                        \textcolor{stringliteral}{"number of events"});}
+\DoxyCodeLine{157     \mbox{\hyperlink{structtraccc_1_1particle__gen__options}{traccc::particle\_gen\_options<scalar>}} pg\_opts(desc);}
+\DoxyCodeLine{158     \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc::propagation\_options<scalar>}} propagation\_opts(desc);}
+\DoxyCodeLine{159     \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc::telescope\_detector\_options<scalar>}} telescope\_opts(desc);}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161     po::variables\_map vm;}
+\DoxyCodeLine{162     po::store(po::parse\_command\_line(argc, argv, desc), vm);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{comment}{// Check errors}}
+\DoxyCodeLine{165     \mbox{\hyperlink{namespacetraccc_a018e1f5ae8dbab3e118c08cfb905be01}{traccc::handle\_argument\_errors}}(vm, desc);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167     \textcolor{comment}{// Read options}}
+\DoxyCodeLine{168     \textcolor{keyword}{auto} output\_directory = vm[\textcolor{stringliteral}{"output\_directory"}].as<std::string>();}
+\DoxyCodeLine{169     \textcolor{keyword}{auto} events = vm[\textcolor{stringliteral}{"events"}].as<\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{170     pg\_opts.read(vm);}
+\DoxyCodeLine{171     propagation\_opts.read(vm);}
+\DoxyCodeLine{172     telescope\_opts.read(vm);}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174     std::cout << \textcolor{stringliteral}{"Running "} << argv[0] << \textcolor{stringliteral}{" "} << output\_directory << \textcolor{stringliteral}{" "}}
+\DoxyCodeLine{175               << events << std::endl;}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \textcolor{keywordflow}{return} \mbox{\hyperlink{simulate__telescope_8cpp_ae26067fb6dbf37dacfdedc666fb8ef82}{simulate}}(output\_directory, events, pg\_opts, propagation\_opts,}
+\DoxyCodeLine{178                     telescope\_opts);}
+\DoxyCodeLine{179 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::handle\+\_\+argument\+\_\+errors(), traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{simulate__telescope_8cpp_ae26067fb6dbf37dacfdedc666fb8ef82}\label{simulate__telescope_8cpp_ae26067fb6dbf37dacfdedc666fb8ef82}} 
+\index{simulate\_telescope.cpp@{simulate\_telescope.cpp}!simulate@{simulate}}
+\index{simulate@{simulate}!simulate\_telescope.cpp@{simulate\_telescope.cpp}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily int simulate (\begin{DoxyParamCaption}\item[{std\+::string}]{output\+\_\+directory,  }\item[{unsigned int}]{events,  }\item[{const \mbox{\hyperlink{structtraccc_1_1particle__gen__options}{traccc\+::particle\+\_\+gen\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&}]{pg\+\_\+opts,  }\item[{const \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&}]{propagation\+\_\+opts,  }\item[{const \mbox{\hyperlink{structtraccc_1_1telescope__detector__options}{traccc\+::telescope\+\_\+detector\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$ \&}]{telescope\+\_\+opts }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                                                              \{}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{// Use deterministic random number generator for testing}}
+\DoxyCodeLine{44     \textcolor{keyword}{using} uniform\_gen\_t =}
+\DoxyCodeLine{45         detray::random\_numbers<scalar, std::uniform\_real\_distribution<scalar>,}
+\DoxyCodeLine{46                                std::seed\_seq>;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// Memory resource}}
+\DoxyCodeLine{49     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{comment}{    /*****************************}}
+\DoxyCodeLine{52 \textcolor{comment}{     * Build a telescope geometry}}
+\DoxyCodeLine{53 \textcolor{comment}{     *****************************/}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// Plane alignment direction (aligned to z-\/axis)}}
+\DoxyCodeLine{56     detray::detail::ray<transform3> traj\{\{0, 0, 0\}, 0, \{0, 0, 1\}, -\/1\};}
+\DoxyCodeLine{57     \textcolor{comment}{// Position of planes (in mm unit)}}
+\DoxyCodeLine{58     std::vector<scalar> plane\_positions;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a09277ecba4eb25a191a6a154c98d8902}{n\_planes}}; i++) \{}
+\DoxyCodeLine{61         plane\_positions.push\_back((i + 1) * telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a167b4592c86c19a29ef656946783041b}{spacing}});}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{comment}{// B field value and its type}}
+\DoxyCodeLine{65     \textcolor{keyword}{using} b\_field\_t = covfie::field<detray::bfield::const\_bknd\_t>;}
+\DoxyCodeLine{66     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{vector3}} B\{0, 0, 2 * detray::unit<scalar>::T\};}
+\DoxyCodeLine{67     \textcolor{keyword}{auto} field = detray::bfield::create\_const\_field(B);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{comment}{// Set material and thickness}}
+\DoxyCodeLine{70     detray::material<scalar> mat;}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if} (!telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_af89585a358f8c48371eefa797a8554ca}{empty\_material}}) \{}
+\DoxyCodeLine{72         mat = detray::silicon<scalar>();}
+\DoxyCodeLine{73     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{74         mat = detray::vacuum<scalar>();}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} thickness = telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_ae6b02ee068d751ee31287bd8b95880b2}{thickness}};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{comment}{// Use rectangle surfaces}}
+\DoxyCodeLine{80     detray::mask<detray::rectangle2D<>> rectangle\{}
+\DoxyCodeLine{81         0u, telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a4479fcc1e1cd46595c78d5e428c41ff4}{half\_length}}, telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a4479fcc1e1cd46595c78d5e428c41ff4}{half\_length}}\};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     detray::tel\_det\_config<> tel\_cfg\{rectangle\};}
+\DoxyCodeLine{84     tel\_cfg.positions(plane\_positions);}
+\DoxyCodeLine{85     tel\_cfg.module\_material(mat);}
+\DoxyCodeLine{86     tel\_cfg.mat\_thickness(thickness);}
+\DoxyCodeLine{87     tel\_cfg.pilot\_track(traj);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keyword}{const} \textcolor{keyword}{auto} [det, name\_map] = create\_telescope\_detector(host\_mr, tel\_cfg);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{comment}{    /***************************}}
+\DoxyCodeLine{92 \textcolor{comment}{     * Generate simulation data}}
+\DoxyCodeLine{93 \textcolor{comment}{     ***************************/}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \textcolor{comment}{// Origin of particles}}
+\DoxyCodeLine{96     \textcolor{keyword}{using} generator\_type =}
+\DoxyCodeLine{97         detray::random\_track\_generator<\mbox{\hyperlink{namespacetraccc_a50d288f62d4a051cca68e9071c6318e8}{traccc::free\_track\_parameters}},}
+\DoxyCodeLine{98                                        uniform\_gen\_t>;}
+\DoxyCodeLine{99     generator\_type::configuration gen\_cfg\{\};}
+\DoxyCodeLine{100     gen\_cfg.n\_tracks(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a64c75be067ccd8dc80b0fc27aeb9d393}{gen\_nparticles}});}
+\DoxyCodeLine{101     gen\_cfg.origin(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_ac38a5b741ebfbc54202462636ce9b1e5}{vertex}});}
+\DoxyCodeLine{102     gen\_cfg.origin\_stddev(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_afcd35dc9f84ab7b8828aa4aa1a751cef}{vertex\_stddev}});}
+\DoxyCodeLine{103     gen\_cfg.phi\_range(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a9d237379538712ce502b2e834a1bb7e0}{phi\_range}}[0], pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a9d237379538712ce502b2e834a1bb7e0}{phi\_range}}[1]);}
+\DoxyCodeLine{104     gen\_cfg.theta\_range(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a2863ed45c256807e1793c58dba6efbd4}{theta\_range}}[0], pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_a2863ed45c256807e1793c58dba6efbd4}{theta\_range}}[1]);}
+\DoxyCodeLine{105     gen\_cfg.mom\_range(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_ab35fe8fdc227ce81bad09745df5fea8f}{mom\_range}}[0], pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_ab35fe8fdc227ce81bad09745df5fea8f}{mom\_range}}[1]);}
+\DoxyCodeLine{106     gen\_cfg.charge(pg\_opts.\mbox{\hyperlink{structtraccc_1_1particle__gen__options_abd499f0091c634a75a14500831b35382}{charge}});}
+\DoxyCodeLine{107     generator\_type generator(gen\_cfg);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{comment}{// Smearing value for measurements}}
+\DoxyCodeLine{110     \mbox{\hyperlink{structtraccc_1_1measurement__smearer}{traccc::measurement\_smearer<transform3>}} meas\_smearer(}
+\DoxyCodeLine{111         telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a1619557418f86b4a74e0b8c87b9c065b}{smearing}}, telescope\_opts.\mbox{\hyperlink{structtraccc_1_1telescope__detector__options_a1619557418f86b4a74e0b8c87b9c065b}{smearing}});}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{comment}{// Type declarations}}
+\DoxyCodeLine{114     \textcolor{keyword}{using} detector\_type = decltype(det);}
+\DoxyCodeLine{115     \textcolor{keyword}{using} generator\_type = decltype(generator);}
+\DoxyCodeLine{116     \textcolor{keyword}{using} writer\_type =}
+\DoxyCodeLine{117         \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc::smearing\_writer<traccc::measurement\_smearer<transform3>}}>;}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{comment}{// Writer config}}
+\DoxyCodeLine{120     \textcolor{keyword}{typename} writer\_type::config smearer\_writer\_cfg\{meas\_smearer\};}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{comment}{// Run simulator}}
+\DoxyCodeLine{123     \textcolor{keyword}{const} std::string full\_path = \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}{io::data\_directory}}() + output\_directory;}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     boost::filesystem::create\_directories(full\_path);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{keyword}{auto} sim = \mbox{\hyperlink{structtraccc_1_1simulator}{traccc::simulator}}<detector\_type, b\_field\_t, generator\_type,}
+\DoxyCodeLine{128                                  writer\_type>(}
+\DoxyCodeLine{129         events, det, field, std::move(generator), std::move(smearer\_writer\_cfg),}
+\DoxyCodeLine{130         full\_path);}
+\DoxyCodeLine{131     sim.\mbox{\hyperlink{structtraccc_1_1simulator_a7692d409a08f9d6bcad077939784c27c}{get\_config}}().\mbox{\hyperlink{structtraccc_1_1simulator_1_1config_aab33c45d2c2bd351ecab0ce3ab489f9f}{step\_constraint}} = propagation\_opts.\mbox{\hyperlink{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}{step\_constraint}};}
+\DoxyCodeLine{132     sim.get\_config().overstep\_tolerance = propagation\_opts.\mbox{\hyperlink{structtraccc_1_1propagation__options_acba9ecace5891ed986671a4235d80e56}{overstep\_tolerance}};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     sim.run();}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \textcolor{comment}{// Create detector file}}
+\DoxyCodeLine{137     \textcolor{keyword}{auto} writer\_cfg = detray::io::detector\_writer\_config\{\}}
+\DoxyCodeLine{138                           .format(\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daade8883fdae97f32ca2381bf112bccc14}{detray::io::format::json}})}
+\DoxyCodeLine{139                           .replace\_files(\textcolor{keyword}{true});}
+\DoxyCodeLine{140     detray::io::write\_detector(det, name\_map, writer\_cfg);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::charge, traccc\+::tests\+::data\+\_\+test\+::data\+\_\+directory, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::empty\+\_\+material, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::gen\+\_\+nparticles, traccc\+::simulator$<$ detector\+\_\+t, bfield\+\_\+t, track\+\_\+generator\+\_\+t, writer\+\_\+t $>$\+::get\+\_\+config(), traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::half\+\_\+length, traccc\+::json, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::mom\+\_\+range, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::n\+\_\+planes, traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::overstep\+\_\+tolerance, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::phi\+\_\+range, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::smearing, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::spacing, traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::step\+\_\+constraint, traccc\+::simulator$<$ detector\+\_\+t, bfield\+\_\+t, track\+\_\+generator\+\_\+t, writer\+\_\+t $>$\+::config\+::step\+\_\+constraint, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::theta\+\_\+range, traccc\+::telescope\+\_\+detector\+\_\+options$<$ scalar\+\_\+t $>$\+::thickness, traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::vertex, and traccc\+::particle\+\_\+gen\+\_\+options$<$ scalar\+\_\+t $>$\+::vertex\+\_\+stddev.
+
+
+
+Referenced by main().
+

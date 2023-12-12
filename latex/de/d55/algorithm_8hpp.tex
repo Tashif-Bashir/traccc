@@ -1,0 +1,43 @@
+\hypertarget{algorithm_8hpp}{}\doxysection{core/include/traccc/utils/algorithm.hpp File Reference}
+\label{algorithm_8hpp}\index{core/include/traccc/utils/algorithm.hpp@{core/include/traccc/utils/algorithm.hpp}}
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for algorithm.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{d9/d4b/algorithm_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d61/algorithm_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtraccc_1_1algorithm}{traccc\+::algorithm$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classtraccc_1_1algorithm_3_01R_07A_8_8_8_08_4}{traccc\+::algorithm$<$ R(\+A...)$>$}}
+\begin{DoxyCompactList}\small\item\em Unified algorithm semantics which convert an input to an output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacetraccc_ad4816592d0bf1c077ca472330090b13c}{traccc\+::rvalue\+\_\+or\+\_\+const\+\_\+lvalue}} = std\+::disjunction$<$ std\+::is\+\_\+rvalue\+\_\+reference$<$ T $>$, std\+::conjunction$<$ std\+::is\+\_\+lvalue\+\_\+reference$<$ T $>$, std\+::is\+\_\+const$<$ std\+::remove\+\_\+reference\+\_\+t$<$ T $>$ $>$$>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename A , typename B , typename C , typename... R$>$ }\\auto \mbox{\hyperlink{namespacetraccc_ad611d42e46621f9b17dab86be79b9284}{traccc\+::compose}} (std\+::function$<$ std\+::remove\+\_\+const\+\_\+t$<$ std\+::remove\+\_\+reference\+\_\+t$<$ B $>$$>$(A)$>$ f, std\+::function$<$ C(B)$>$ g, R... rs)
+\item 
+{\footnotesize template$<$typename A , typename B , typename C $>$ }\\std\+::function$<$ B(A \&\&)$>$ \mbox{\hyperlink{namespacetraccc_ad5891cb05d7c5f52a92d1dbbfab04a98}{traccc\+::side\+\_\+effect}} (std\+::function$<$ B(A)$>$ f, std\+::function$<$ void(const C \&)$>$ s)
+\end{DoxyCompactItemize}

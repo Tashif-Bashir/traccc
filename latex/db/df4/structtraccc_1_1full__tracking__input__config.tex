@@ -1,0 +1,101 @@
+\hypertarget{structtraccc_1_1full__tracking__input__config}{}\doxysection{traccc\+::full\+\_\+tracking\+\_\+input\+\_\+config Struct Reference}
+\label{structtraccc_1_1full__tracking__input__config}\index{traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}}
+
+
+{\ttfamily \#include $<$full\+\_\+tracking\+\_\+input\+\_\+options.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::full\+\_\+tracking\+\_\+input\+\_\+config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{d6/d24/structtraccc_1_1full__tracking__input__config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1full__tracking__input__config_a7acf923eab1d5c3f3e7efcbc7d224cd3}{full\+\_\+tracking\+\_\+input\+\_\+config}} (po\+::options\+\_\+description \&desc)
+\item 
+void \mbox{\hyperlink{structtraccc_1_1full__tracking__input__config_acccd9e15ddc7570d52c982246d207330}{read}} (const po\+::variables\+\_\+map \&vm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structtraccc_1_1full__tracking__input__config_ab4724a02497953f3523794b7644de09f}{detector\+\_\+file}}
+\item 
+std\+::string \mbox{\hyperlink{structtraccc_1_1full__tracking__input__config_a9d09f5ae4422abd2074ffbdcd1de81f4}{digitization\+\_\+config\+\_\+file}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1full__tracking__input__config_a7acf923eab1d5c3f3e7efcbc7d224cd3}\label{structtraccc_1_1full__tracking__input__config_a7acf923eab1d5c3f3e7efcbc7d224cd3}} 
+\index{traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}!full\_tracking\_input\_config@{full\_tracking\_input\_config}}
+\index{full\_tracking\_input\_config@{full\_tracking\_input\_config}!traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}}
+\doxysubsubsection{\texorpdfstring{full\_tracking\_input\_config()}{full\_tracking\_input\_config()}}
+{\footnotesize\ttfamily traccc\+::full\+\_\+tracking\+\_\+input\+\_\+config\+::full\+\_\+tracking\+\_\+input\+\_\+config (\begin{DoxyParamCaption}\item[{po\+::options\+\_\+description \&}]{desc }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12                                  \{}
+\DoxyCodeLine{13     desc.add\_options()(\textcolor{stringliteral}{"digitization\_config\_file"},}
+\DoxyCodeLine{14                        po::value<std::string>()-\/>required(),}
+\DoxyCodeLine{15                        \textcolor{stringliteral}{"specify the digitization configuration file"});}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1full__tracking__input__config_acccd9e15ddc7570d52c982246d207330}\label{structtraccc_1_1full__tracking__input__config_acccd9e15ddc7570d52c982246d207330}} 
+\index{traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}!read@{read}}
+\index{read@{read}!traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void traccc\+::full\+\_\+tracking\+\_\+input\+\_\+config\+::read (\begin{DoxyParamCaption}\item[{const po\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                                                      \{}
+\DoxyCodeLine{19     \mbox{\hyperlink{structtraccc_1_1full__tracking__input__config_a9d09f5ae4422abd2074ffbdcd1de81f4}{digitization\_config\_file}} = vm[\textcolor{stringliteral}{"digitization\_config\_file"}].as<std::string>();}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+
+
+Referenced by main().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1full__tracking__input__config_ab4724a02497953f3523794b7644de09f}\label{structtraccc_1_1full__tracking__input__config_ab4724a02497953f3523794b7644de09f}} 
+\index{traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}!detector\_file@{detector\_file}}
+\index{detector\_file@{detector\_file}!traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}}
+\doxysubsubsection{\texorpdfstring{detector\_file}{detector\_file}}
+{\footnotesize\ttfamily std\+::string traccc\+::full\+\_\+tracking\+\_\+input\+\_\+config\+::detector\+\_\+file}
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{structtraccc_1_1full__tracking__input__config_a9d09f5ae4422abd2074ffbdcd1de81f4}\label{structtraccc_1_1full__tracking__input__config_a9d09f5ae4422abd2074ffbdcd1de81f4}} 
+\index{traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}!digitization\_config\_file@{digitization\_config\_file}}
+\index{digitization\_config\_file@{digitization\_config\_file}!traccc::full\_tracking\_input\_config@{traccc::full\_tracking\_input\_config}}
+\doxysubsubsection{\texorpdfstring{digitization\_config\_file}{digitization\_config\_file}}
+{\footnotesize\ttfamily std\+::string traccc\+::full\+\_\+tracking\+\_\+input\+\_\+config\+::digitization\+\_\+config\+\_\+file}
+
+
+
+Referenced by seq\+\_\+run().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/options/include/traccc/options/\mbox{\hyperlink{full__tracking__input__options_8hpp}{full\+\_\+tracking\+\_\+input\+\_\+options.\+hpp}}\item 
+examples/options/src/options/\mbox{\hyperlink{full__tracking__input__options_8cpp}{full\+\_\+tracking\+\_\+input\+\_\+options.\+cpp}}\end{DoxyCompactItemize}

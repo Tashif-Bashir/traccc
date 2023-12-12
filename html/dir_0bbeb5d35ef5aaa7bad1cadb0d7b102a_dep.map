@@ -1,0 +1,10 @@
+<map id="device/sycl/include/traccc/sycl/seeding" name="device/sycl/include/traccc/sycl/seeding">
+<area shape="rect" id="node2" href="dir_bc6187ec157b0da5480bfd8f81ce745c.html" title="experimental" alt="" coords="37,63,147,111"/>
+<area shape="rect" id="node3" href="dir_4270bfced15e0e73154b13468c7c9ad9.html" title="core" alt="" coords="55,255,127,303"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000075_000000.html" title="4" alt="" coords="87,228,96,242"/>
+<area shape="rect" id="node4" href="dir_2e5db78ce0d4cc0afa88765a3ecd5b2b.html" title="utils" alt="" coords="92,159,164,207"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000075_000118.html" title="1" alt="" coords="116,131,125,146"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000118_000000.html" title="2" alt="" coords="110,233,119,248"/>
+<area shape="rect" id="clust2" href="dir_0bbeb5d35ef5aaa7bad1cadb0d7b102a.html" alt="" coords="27,52,256,121"/>
+<area shape="rect" id="clust1" href="dir_a223bb77edbd7ac7e5aacae86da50b55.html" title="sycl" alt="" coords="16,16,267,132"/>
+</map>

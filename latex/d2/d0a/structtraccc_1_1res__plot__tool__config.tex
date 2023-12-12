@@ -1,0 +1,106 @@
+\hypertarget{structtraccc_1_1res__plot__tool__config}{}\doxysection{traccc\+::res\+\_\+plot\+\_\+tool\+\_\+config Struct Reference}
+\label{structtraccc_1_1res__plot__tool__config}\index{traccc::res\_plot\_tool\_config@{traccc::res\_plot\_tool\_config}}
+
+
+Configuration structure for {\ttfamily \mbox{\hyperlink{classtraccc_1_1res__plot__tool}{traccc\+::res\+\_\+plot\+\_\+tool}}}.  
+
+
+
+
+{\ttfamily \#include $<$res\+\_\+plot\+\_\+tool\+\_\+config.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::res\+\_\+plot\+\_\+tool\+\_\+config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{dc/df2/structtraccc_1_1res__plot__tool__config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structtraccc_1_1res__plot__tool__config_ab0c72126f1aff2aa9e0d9f0c56a215d6}{param\+\_\+names}}
+\begin{DoxyCompactList}\small\item\em parameter sets to do plots \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{structtraccc_1_1plot__helpers_1_1binning}{plot\+\_\+helpers\+::binning}} $>$ \mbox{\hyperlink{structtraccc_1_1res__plot__tool__config_a1b09806d17611deb2e9bbee63639972e}{var\+\_\+binning}}
+\begin{DoxyCompactList}\small\item\em Binning setups. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configuration structure for {\ttfamily \mbox{\hyperlink{classtraccc_1_1res__plot__tool}{traccc\+::res\+\_\+plot\+\_\+tool}}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1res__plot__tool__config_ab0c72126f1aff2aa9e0d9f0c56a215d6}\label{structtraccc_1_1res__plot__tool__config_ab0c72126f1aff2aa9e0d9f0c56a215d6}} 
+\index{traccc::res\_plot\_tool\_config@{traccc::res\_plot\_tool\_config}!param\_names@{param\_names}}
+\index{param\_names@{param\_names}!traccc::res\_plot\_tool\_config@{traccc::res\_plot\_tool\_config}}
+\doxysubsubsection{\texorpdfstring{param\_names}{param\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ traccc\+::res\+\_\+plot\+\_\+tool\+\_\+config\+::param\+\_\+names}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\textcolor{stringliteral}{"d0"},  \textcolor{stringliteral}{"z0"}, \textcolor{stringliteral}{"phi"}, \textcolor{stringliteral}{"theta"},}
+\DoxyCodeLine{                                            \textcolor{stringliteral}{"qop"}, \textcolor{stringliteral}{"t"},  \textcolor{stringliteral}{"qopT"}\}}
+
+\end{DoxyCode}
+
+
+parameter sets to do plots 
+
+
+
+Referenced by traccc\+::res\+\_\+plot\+\_\+tool\+::book(), and traccc\+::res\+\_\+plot\+\_\+tool\+::fill().
+
+\mbox{\Hypertarget{structtraccc_1_1res__plot__tool__config_a1b09806d17611deb2e9bbee63639972e}\label{structtraccc_1_1res__plot__tool__config_a1b09806d17611deb2e9bbee63639972e}} 
+\index{traccc::res\_plot\_tool\_config@{traccc::res\_plot\_tool\_config}!var\_binning@{var\_binning}}
+\index{var\_binning@{var\_binning}!traccc::res\_plot\_tool\_config@{traccc::res\_plot\_tool\_config}}
+\doxysubsubsection{\texorpdfstring{var\_binning}{var\_binning}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{structtraccc_1_1plot__helpers_1_1binning}{plot\+\_\+helpers\+::binning}}$>$ traccc\+::res\+\_\+plot\+\_\+tool\+\_\+config\+::var\+\_\+binning}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"pull"}, plot\_helpers::binning(\textcolor{stringliteral}{"pull"}, 100, -\/5, 5)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"residual\_d0"}, plot\_helpers::binning(\textcolor{stringliteral}{"r\_\{d0\} [mm]"}, 100, -\/0.5, 0.5)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"residual\_z0"}, plot\_helpers::binning(\textcolor{stringliteral}{"r\_\{z0\} [mm]"}, 100, -\/0.5, 0.5)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"residual\_phi"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"r\_\{\#phi\} [rad]"}, 100, -\/0.01, 0.01)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"residual\_theta"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"r\_\{\#theta\} [rad]"}, 100, -\/0.01, 0.01)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"residual\_qop"}, plot\_helpers::binning(\textcolor{stringliteral}{"r\_\{q/p\} [c/GeV]"}, 100, -\/1, 1)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"residual\_t"}, plot\_helpers::binning(\textcolor{stringliteral}{"r\_\{t\} [s]"}, 100, -\/1000, 1000)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"residual\_qopT"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"r\_\{q/p\_\{T\}\} [c/GeV]"}, 100, -\/1, 1)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"resolution\_d0"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"\#sigma\_\{d0\} [mm]"}, 100, 0, 0.5)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"resolution\_z0"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"\#sigma\_\{z0\} [mm]"}, 100, 0, 0.5)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"resolution\_phi"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"\#sigma\_\{\#phi\} [rad]"}, 100, 0, 0.01)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"resolution\_theta"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"\#sigma\_\{\#theta\} [rad]"}, 100, 0, 0.01)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"resolution\_qop"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"\#sigma\_\{q/p\} [c/GeV]"}, 100, 0, 0.1)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"resolution\_t"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"\#sigma\_\{t\} [s]"}, 100, -\/1000, 1000)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"resolution\_qopT"},}
+\DoxyCodeLine{         plot\_helpers::binning(\textcolor{stringliteral}{"\#sigma\_\{q/p\_\{T\}\} [c/GeV]"}, 100, 0, 0.1)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"Eta"}, plot\_helpers::binning(\textcolor{stringliteral}{"\#eta"}, 40, -\/4, 4)\},}
+\DoxyCodeLine{        \{\textcolor{stringliteral}{"Pt"}, plot\_helpers::binning(\textcolor{stringliteral}{"p\_\{T\} [GeV/c]"}, 40, 0, 100)\},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Binning setups. 
+
+
+
+Referenced by traccc\+::res\+\_\+plot\+\_\+tool\+::book(), and traccc\+::res\+\_\+plot\+\_\+tool\+::write().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/resolution/\mbox{\hyperlink{res__plot__tool__config_8hpp}{res\+\_\+plot\+\_\+tool\+\_\+config.\+hpp}}\end{DoxyCompactItemize}

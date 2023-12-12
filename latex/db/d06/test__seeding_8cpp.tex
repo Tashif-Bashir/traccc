@@ -1,0 +1,136 @@
+\hypertarget{test__seeding_8cpp}{}\doxysection{tests/cpu/test\+\_\+seeding.cpp File Reference}
+\label{test__seeding_8cpp}\index{tests/cpu/test\_seeding.cpp@{tests/cpu/test\_seeding.cpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/spacepoint.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/seeding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/track\+\_\+params\+\_\+estimation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/create\+\_\+toy\+\_\+geometry.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for test\+\_\+seeding.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/test__seeding_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__seeding_8cpp_ac3c31cecc448200b4b29c236d91ed7d8}{T\+E\+ST}} (seeding, case1)
+\item 
+\mbox{\hyperlink{test__seeding_8cpp_afe6f33b52d41574b53e7e35ad197ae39}{T\+E\+ST}} (seeding, case2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__seeding_8cpp_ac3c31cecc448200b4b29c236d91ed7d8}\label{test__seeding_8cpp_ac3c31cecc448200b4b29c236d91ed7d8}} 
+\index{test\_seeding.cpp@{test\_seeding.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_seeding.cpp@{test\_seeding.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{seeding}]{,  }\item[{case1}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                      \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{comment}{// Config objects}}
+\DoxyCodeLine{40     \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{traccc::seedfinder\_config}} finder\_config;}
+\DoxyCodeLine{41     \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{traccc::spacepoint\_grid\_config}} grid\_config(finder\_config);}
+\DoxyCodeLine{42     \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{traccc::seedfilter\_config}} filter\_config;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{comment}{// Adjust parameters}}
+\DoxyCodeLine{45     finder\_config.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_aa9e8949c92ef98aaa6e909bde5f8a5a1}{deltaRMax}} = 100. * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::mm}};}
+\DoxyCodeLine{46     finder\_config.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_ad046300d5d4e45fbc90bf5fdc767c436}{maxPtScattering}} = 0.5 * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::GeV}};}
+\DoxyCodeLine{47     \mbox{\hyperlink{classtraccc_1_1seeding__algorithm}{traccc::seeding\_algorithm}} sa(finder\_config, grid\_config, filter\_config,}
+\DoxyCodeLine{48                                  host\_mr);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\_collection\_types::host}} spacepoints;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{comment}{// Spacepoints from 16.62 GeV muon}}
+\DoxyCodeLine{53     spacepoints.push\_back(\{\{36.6706, 10.6472, 104.131\}, \{\}\});}
+\DoxyCodeLine{54     spacepoints.push\_back(\{\{94.2191, 29.6699, 113.628\}, \{\}\});}
+\DoxyCodeLine{55     spacepoints.push\_back(\{\{149.805, 47.9518, 122.979\}, \{\}\});}
+\DoxyCodeLine{56     spacepoints.push\_back(\{\{218.514, 70.3049, 134.029\}, \{\}\});}
+\DoxyCodeLine{57     spacepoints.push\_back(\{\{275.359, 88.668, 143.378\}, \{\}\});}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{// Run seeding}}
+\DoxyCodeLine{60     \textcolor{keyword}{auto} seeds = sa(spacepoints);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{comment}{// The number of seeds should be eqaul to one}}
+\DoxyCodeLine{63     ASSERT\_EQ(seeds.size(), 1u);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \mbox{\hyperlink{classtraccc_1_1track__params__estimation}{traccc::track\_params\_estimation}} tp(host\_mr);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keyword}{auto} bound\_params = tp(spacepoints, seeds, B);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{comment}{// The number of bound track parameters should be eqaul to one}}
+\DoxyCodeLine{70     ASSERT\_EQ(bound\_params.size(), 1u);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{comment}{// Make sure that we have reasonable estimation on momentum}}
+\DoxyCodeLine{73     \textcolor{comment}{/* Currently disabled}}
+\DoxyCodeLine{74 \textcolor{comment}{    EXPECT\_NEAR(bound\_params[0].p(), 16.62 * unit<scalar>::GeV,}}
+\DoxyCodeLine{75 \textcolor{comment}{                0.1 * unit<scalar>::GeV);}}
+\DoxyCodeLine{76 \textcolor{comment}{    */}}
+\DoxyCodeLine{77 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::seedfinder\+\_\+config\+::delta\+R\+Max, and traccc\+::seedfinder\+\_\+config\+::max\+Pt\+Scattering.
+
+\mbox{\Hypertarget{test__seeding_8cpp_afe6f33b52d41574b53e7e35ad197ae39}\label{test__seeding_8cpp_afe6f33b52d41574b53e7e35ad197ae39}} 
+\index{test\_seeding.cpp@{test\_seeding.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_seeding.cpp@{test\_seeding.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{seeding}]{,  }\item[{case2}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                      \{}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{comment}{// Config objects}}
+\DoxyCodeLine{82     \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{traccc::seedfinder\_config}} finder\_config;}
+\DoxyCodeLine{83     \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{traccc::spacepoint\_grid\_config}} grid\_config(finder\_config);}
+\DoxyCodeLine{84     \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{traccc::seedfilter\_config}} filter\_config;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{comment}{// Adjust parameters}}
+\DoxyCodeLine{87     finder\_config.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_aa9e8949c92ef98aaa6e909bde5f8a5a1}{deltaRMax}} = 100. * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::mm}};}
+\DoxyCodeLine{88     finder\_config.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_ad046300d5d4e45fbc90bf5fdc767c436}{maxPtScattering}} = 0.5 * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{unit<scalar>::GeV}};}
+\DoxyCodeLine{89     \mbox{\hyperlink{classtraccc_1_1seeding__algorithm}{traccc::seeding\_algorithm}} sa(finder\_config, grid\_config, filter\_config,}
+\DoxyCodeLine{90                                  host\_mr);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\_collection\_types::host}} spacepoints;}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{comment}{// Spacepoints from 1.85 GeV muon}}
+\DoxyCodeLine{95     spacepoints.push\_back(\{\{36.301, 13.1197, 106.83\}, \{\}\});}
+\DoxyCodeLine{96     spacepoints.push\_back(\{\{93.9366, 33.7101, 120.978\}, \{\}\});}
+\DoxyCodeLine{97     spacepoints.push\_back(\{\{149.192, 52.0562, 134.678\}, \{\}\});}
+\DoxyCodeLine{98     spacepoints.push\_back(\{\{218.398, 73.1025, 151.979\}, \{\}\});}
+\DoxyCodeLine{99     spacepoints.push\_back(\{\{275.322, 89.0663, 166.229\}, \{\}\});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     \textcolor{comment}{// Run seeding}}
+\DoxyCodeLine{102     \textcolor{keyword}{auto} seeds = sa(spacepoints);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{comment}{// The number of seeds should be eqaul to one}}
+\DoxyCodeLine{105     ASSERT\_EQ(seeds.size(), 1u);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107     \mbox{\hyperlink{classtraccc_1_1track__params__estimation}{traccc::track\_params\_estimation}} tp(host\_mr);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{keyword}{auto} bound\_params = tp(spacepoints, seeds, B);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     \textcolor{comment}{// The number of bound track parameters should be eqaul to one}}
+\DoxyCodeLine{112     ASSERT\_EQ(bound\_params.size(), 1u);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \textcolor{comment}{// Make sure that we have reasonable estimation on momentum}}
+\DoxyCodeLine{115     \textcolor{comment}{/* Currently disabled}}
+\DoxyCodeLine{116 \textcolor{comment}{    EXPECT\_NEAR(bound\_params[0].p(), 1.85 * unit<scalar>::GeV,}}
+\DoxyCodeLine{117 \textcolor{comment}{                0.1 * unit<scalar>::GeV);}}
+\DoxyCodeLine{118 \textcolor{comment}{    */}}
+\DoxyCodeLine{119 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::seedfinder\+\_\+config\+::delta\+R\+Max, and traccc\+::seedfinder\+\_\+config\+::max\+Pt\+Scattering.
+

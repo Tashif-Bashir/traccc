@@ -1,0 +1,278 @@
+\hypertarget{classtraccc_1_1KalmanFittingTests}{}\doxysection{traccc\+::Kalman\+Fitting\+Tests Class Reference}
+\label{classtraccc_1_1KalmanFittingTests}\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+
+
+{\ttfamily \#include $<$kalman\+\_\+fitting\+\_\+test.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::Kalman\+Fitting\+Tests\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd3/classtraccc_1_1KalmanFittingTests__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::Kalman\+Fitting\+Tests\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{df/dfb/classtraccc_1_1KalmanFittingTests__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a6469478b8ddee148d285f3264bb4ff43}{host\+\_\+detector\+\_\+type}} = detray\+::detector$<$ detray\+::default\+\_\+metadata, detray\+::host\+\_\+container\+\_\+types $>$
+\begin{DoxyCompactList}\small\item\em Type declarations. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a2495d44979932dc87ef33b918620ce83}{device\+\_\+detector\+\_\+type}} = detray\+::detector$<$ detray\+::default\+\_\+metadata, detray\+::device\+\_\+container\+\_\+types $>$
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_ae03e5cf87d8b90ee3596ef6b06f06743}{b\+\_\+field\+\_\+t}} = covfie\+::field$<$ detray\+::bfield\+::const\+\_\+bknd\+\_\+t $>$
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}{rk\+\_\+stepper\+\_\+type}} = detray\+::rk\+\_\+stepper$<$ b\+\_\+field\+\_\+t\+::view\+\_\+t, \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}}, detray\+::constrained\+\_\+step$<$$>$ $>$
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a291755d268bf0eda073fff6e47f4ed5f}{host\+\_\+navigator\+\_\+type}} = detray\+::navigator$<$ const \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a6469478b8ddee148d285f3264bb4ff43}{host\+\_\+detector\+\_\+type}} $>$
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a0b412b1517540b2ee7b143e59631a024}{host\+\_\+fitter\+\_\+type}} = \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{kalman\+\_\+fitter}}$<$ \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}{rk\+\_\+stepper\+\_\+type}}, \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a291755d268bf0eda073fff6e47f4ed5f}{host\+\_\+navigator\+\_\+type}} $>$
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_ab742bb9a68477ea3778e21abe7bd6e9e}{device\+\_\+navigator\+\_\+type}} = detray\+::navigator$<$ const \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a2495d44979932dc87ef33b918620ce83}{device\+\_\+detector\+\_\+type}} $>$
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_aa1a4b2aab90a30ecc78a70026251ca84}{device\+\_\+fitter\+\_\+type}} = \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{kalman\+\_\+fitter}}$<$ \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}{rk\+\_\+stepper\+\_\+type}}, \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_ab742bb9a68477ea3778e21abe7bd6e9e}{device\+\_\+navigator\+\_\+type}} $>$
+\item 
+using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a27d00f4720a7f2d15f2e8deebd0ed902}{uniform\+\_\+gen\+\_\+t}} = detray\+::random\+\_\+numbers$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, std\+::uniform\+\_\+real\+\_\+distribution$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} $>$, std\+::seed\+\_\+seq $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_af9afba78ce80a346b0d1955181d8aaa4}{pull\+\_\+value\+\_\+tests}} (std\+::string\+\_\+view file\+\_\+name, const std\+::vector$<$ std\+::string $>$ \&hist\+\_\+names) const
+\item 
+void \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a7008aa59ca3e2d08be9c87257fbb20b0}{ndf\+\_\+tests}} (const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&fit\+\_\+info, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&track\+\_\+states\+\_\+per\+\_\+track)
+\item 
+virtual void \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a7a89c37e1bd0b669fd93b113621711b4}{consistency\+\_\+tests}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&track\+\_\+states\+\_\+per\+\_\+track) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a05490b03c16eca576b71343ad2dcdeac}{n\+\_\+success}} \{0u\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kalman Fitting Test with Telescope Geometry
+
+Test parameters\+: (1) name (2) origin (3) origin stddev (4) momentum range (5) eta range (6) phi range (7) charge (8) number of tracks per event (9) number of events 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_ae03e5cf87d8b90ee3596ef6b06f06743}\label{classtraccc_1_1KalmanFittingTests_ae03e5cf87d8b90ee3596ef6b06f06743}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!b\_field\_t@{b\_field\_t}}
+\index{b\_field\_t@{b\_field\_t}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{b\_field\_t}{b\_field\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_ae03e5cf87d8b90ee3596ef6b06f06743}{traccc\+::\+Kalman\+Fitting\+Tests\+::b\+\_\+field\+\_\+t}} =  covfie\+::field$<$detray\+::bfield\+::const\+\_\+bknd\+\_\+t$>$}
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a2495d44979932dc87ef33b918620ce83}\label{classtraccc_1_1KalmanFittingTests_a2495d44979932dc87ef33b918620ce83}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!device\_detector\_type@{device\_detector\_type}}
+\index{device\_detector\_type@{device\_detector\_type}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{device\_detector\_type}{device\_detector\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a2495d44979932dc87ef33b918620ce83}{traccc\+::\+Kalman\+Fitting\+Tests\+::device\+\_\+detector\+\_\+type}} =  detray\+::detector$<$detray\+::default\+\_\+metadata, detray\+::device\+\_\+container\+\_\+types$>$}
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_aa1a4b2aab90a30ecc78a70026251ca84}\label{classtraccc_1_1KalmanFittingTests_aa1a4b2aab90a30ecc78a70026251ca84}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!device\_fitter\_type@{device\_fitter\_type}}
+\index{device\_fitter\_type@{device\_fitter\_type}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{device\_fitter\_type}{device\_fitter\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_aa1a4b2aab90a30ecc78a70026251ca84}{traccc\+::\+Kalman\+Fitting\+Tests\+::device\+\_\+fitter\+\_\+type}} =  \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{kalman\+\_\+fitter}}$<$\mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}{rk\+\_\+stepper\+\_\+type}}, \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_ab742bb9a68477ea3778e21abe7bd6e9e}{device\+\_\+navigator\+\_\+type}}$>$}
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_ab742bb9a68477ea3778e21abe7bd6e9e}\label{classtraccc_1_1KalmanFittingTests_ab742bb9a68477ea3778e21abe7bd6e9e}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!device\_navigator\_type@{device\_navigator\_type}}
+\index{device\_navigator\_type@{device\_navigator\_type}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{device\_navigator\_type}{device\_navigator\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_ab742bb9a68477ea3778e21abe7bd6e9e}{traccc\+::\+Kalman\+Fitting\+Tests\+::device\+\_\+navigator\+\_\+type}} =  detray\+::navigator$<$const \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a2495d44979932dc87ef33b918620ce83}{device\+\_\+detector\+\_\+type}}$>$}
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a6469478b8ddee148d285f3264bb4ff43}\label{classtraccc_1_1KalmanFittingTests_a6469478b8ddee148d285f3264bb4ff43}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!host\_detector\_type@{host\_detector\_type}}
+\index{host\_detector\_type@{host\_detector\_type}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{host\_detector\_type}{host\_detector\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a6469478b8ddee148d285f3264bb4ff43}{traccc\+::\+Kalman\+Fitting\+Tests\+::host\+\_\+detector\+\_\+type}} =  detray\+::detector$<$detray\+::default\+\_\+metadata, detray\+::host\+\_\+container\+\_\+types$>$}
+
+
+
+Type declarations. 
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a0b412b1517540b2ee7b143e59631a024}\label{classtraccc_1_1KalmanFittingTests_a0b412b1517540b2ee7b143e59631a024}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!host\_fitter\_type@{host\_fitter\_type}}
+\index{host\_fitter\_type@{host\_fitter\_type}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{host\_fitter\_type}{host\_fitter\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a0b412b1517540b2ee7b143e59631a024}{traccc\+::\+Kalman\+Fitting\+Tests\+::host\+\_\+fitter\+\_\+type}} =  \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{kalman\+\_\+fitter}}$<$\mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}{rk\+\_\+stepper\+\_\+type}}, \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a291755d268bf0eda073fff6e47f4ed5f}{host\+\_\+navigator\+\_\+type}}$>$}
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a291755d268bf0eda073fff6e47f4ed5f}\label{classtraccc_1_1KalmanFittingTests_a291755d268bf0eda073fff6e47f4ed5f}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!host\_navigator\_type@{host\_navigator\_type}}
+\index{host\_navigator\_type@{host\_navigator\_type}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{host\_navigator\_type}{host\_navigator\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a291755d268bf0eda073fff6e47f4ed5f}{traccc\+::\+Kalman\+Fitting\+Tests\+::host\+\_\+navigator\+\_\+type}} =  detray\+::navigator$<$const \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a6469478b8ddee148d285f3264bb4ff43}{host\+\_\+detector\+\_\+type}}$>$}
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}\label{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!rk\_stepper\_type@{rk\_stepper\_type}}
+\index{rk\_stepper\_type@{rk\_stepper\_type}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{rk\_stepper\_type}{rk\_stepper\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a95a22a0031454ee3f54a2921083dbf0d}{traccc\+::\+Kalman\+Fitting\+Tests\+::rk\+\_\+stepper\+\_\+type}} =  detray\+::rk\+\_\+stepper$<$b\+\_\+field\+\_\+t\+::view\+\_\+t, \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}}, detray\+::constrained\+\_\+step$<$$>$ $>$}
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a27d00f4720a7f2d15f2e8deebd0ed902}\label{classtraccc_1_1KalmanFittingTests_a27d00f4720a7f2d15f2e8deebd0ed902}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!uniform\_gen\_t@{uniform\_gen\_t}}
+\index{uniform\_gen\_t@{uniform\_gen\_t}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{uniform\_gen\_t}{uniform\_gen\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a27d00f4720a7f2d15f2e8deebd0ed902}{traccc\+::\+Kalman\+Fitting\+Tests\+::uniform\+\_\+gen\+\_\+t}} =  detray\+::random\+\_\+numbers$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}, std\+::uniform\+\_\+real\+\_\+distribution$<$\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}$>$, std\+::seed\+\_\+seq$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a7a89c37e1bd0b669fd93b113621711b4}\label{classtraccc_1_1KalmanFittingTests_a7a89c37e1bd0b669fd93b113621711b4}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!consistency\_tests@{consistency\_tests}}
+\index{consistency\_tests@{consistency\_tests}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{consistency\_tests()}{consistency\_tests()}}
+{\footnotesize\ttfamily virtual void traccc\+::\+Kalman\+Fitting\+Tests\+::consistency\+\_\+tests (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&}]{track\+\_\+states\+\_\+per\+\_\+track }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtraccc_1_1KalmanFittingWireChamberTests_a59ab4ffcd65d71b3d553824a48855b76}{traccc\+::\+Kalman\+Fitting\+Wire\+Chamber\+Tests}}, and \mbox{\hyperlink{classtraccc_1_1KalmanFittingTelescopeTests_aa40ec7f84f1772df1287f356a4af4e16}{traccc\+::\+Kalman\+Fitting\+Telescope\+Tests}}.
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a7008aa59ca3e2d08be9c87257fbb20b0}\label{classtraccc_1_1KalmanFittingTests_a7008aa59ca3e2d08be9c87257fbb20b0}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!ndf\_tests@{ndf\_tests}}
+\index{ndf\_tests@{ndf\_tests}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{ndf\_tests()}{ndf\_tests()}}
+{\footnotesize\ttfamily void traccc\+::\+Kalman\+Fitting\+Tests\+::ndf\+\_\+tests (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&}]{fit\+\_\+info,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{track\+\_\+state\+\_\+collection\+\_\+types\+::host}} \&}]{track\+\_\+states\+\_\+per\+\_\+track }\end{DoxyParamCaption})}
+
+Validadte the N\+DF
+
+
+\begin{DoxyParams}{Parameters}
+{\em host\+\_\+det} & Detector object \\
+\hline
+{\em fit\+\_\+info} & Fitting statistics result of a track \\
+\hline
+{\em track\+\_\+candidates\+\_\+per\+\_\+track} & Track candidates of a track \\
+\hline
+{\em track\+\_\+states\+\_\+per\+\_\+track} & Track states of a track \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                                                     \{}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} dim\_sum = 0;}
+\DoxyCodeLine{89     std::size\_t n\_effective\_states = 0;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& state : track\_states\_per\_track) \{}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{keywordflow}{if} (!state.is\_hole) \{}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95             dim\_sum += state.get\_measurement().meas\_dim;}
+\DoxyCodeLine{96             n\_effective\_states++;}
+\DoxyCodeLine{97         \}}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{comment}{// Check if the number of degree of freedoms is equal to (the sum of}}
+\DoxyCodeLine{101     \textcolor{comment}{// measurement dimensions -\/ 5)}}
+\DoxyCodeLine{102     ASSERT\_FLOAT\_EQ(fit\_info.ndf, dim\_sum -\/ 5.f);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{comment}{// The number of track states is supposed to be eqaul to the number}}
+\DoxyCodeLine{105     \textcolor{comment}{// of measurements unless KF failes in the middle of propagation}}
+\DoxyCodeLine{106     \textcolor{keywordflow}{if} (n\_effective\_states == track\_states\_per\_track.size()) \{}
+\DoxyCodeLine{107         \mbox{\hyperlink{classtraccc_1_1KalmanFittingTests_a05490b03c16eca576b71343ad2dcdeac}{n\_success}}++;}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109 \}}
+
+\end{DoxyCode}
+
+
+References n\+\_\+success, and traccc\+::fitter\+\_\+info$<$ algebra\+\_\+t $>$\+::ndf.
+
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_af9afba78ce80a346b0d1955181d8aaa4}\label{classtraccc_1_1KalmanFittingTests_af9afba78ce80a346b0d1955181d8aaa4}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!pull\_value\_tests@{pull\_value\_tests}}
+\index{pull\_value\_tests@{pull\_value\_tests}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{pull\_value\_tests()}{pull\_value\_tests()}}
+{\footnotesize\ttfamily void traccc\+::\+Kalman\+Fitting\+Tests\+::pull\+\_\+value\+\_\+tests (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file\+\_\+name,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{hist\+\_\+names }\end{DoxyParamCaption}) const}
+
+Verify that pull distribtions follow the normal distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & The name of the file holding the distributions \\
+\hline
+{\em hist\+\_\+names} & The names of the histograms to process \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                   \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{comment}{// Avoid unused variable warnings when building the code without ROOT.}}
+\DoxyCodeLine{37     (void)file\_name;}
+\DoxyCodeLine{38     (void)hist\_names;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifdef TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{41     \textcolor{comment}{// Open the file with the histograms.}}
+\DoxyCodeLine{42     std::unique\_ptr<TFile> ifile(TFile::Open(file\_name.data(), \textcolor{stringliteral}{"READ"}));}
+\DoxyCodeLine{43     \textcolor{keywordflow}{if} ((!ifile) || ifile-\/>IsZombie()) \{}
+\DoxyCodeLine{44         \textcolor{keywordflow}{throw} std::runtime\_error(std::string(\textcolor{stringliteral}{"Could not open file \(\backslash\)""}) +}
+\DoxyCodeLine{45                                  file\_name.data() + \textcolor{stringliteral}{"\(\backslash\)""});}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{comment}{// Process every (requested) histogram from the file.}}
+\DoxyCodeLine{49     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} std::string\& hname : hist\_names) \{}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{comment}{// Access the histogram.}}
+\DoxyCodeLine{52         TH1* pull\_dist = \textcolor{keyword}{dynamic\_cast<}TH1*\textcolor{keyword}{>}(ifile-\/>Get(hname.c\_str()));}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if} (!pull\_dist) \{}
+\DoxyCodeLine{54             \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Could not access histogram \(\backslash\)""} + hname +}
+\DoxyCodeLine{55                                      \textcolor{stringliteral}{"\(\backslash\)" in file \(\backslash\)""} + file\_name.data() + \textcolor{stringliteral}{"\(\backslash\)""});}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{comment}{// Function used for the fit.}}
+\DoxyCodeLine{59         TF1 gaus\{\textcolor{stringliteral}{"gaus"}, \textcolor{stringliteral}{"gaus"}, -\/5, 5\};}
+\DoxyCodeLine{60         \textcolor{keywordtype}{double} fit\_par[3];}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{comment}{// Set the mean seed to 0}}
+\DoxyCodeLine{63         gaus.SetParameters(1, 0.);}
+\DoxyCodeLine{64         gaus.SetParLimits(1, -\/1., 1.);}
+\DoxyCodeLine{65         \textcolor{comment}{// Set the standard deviation seed to 1}}
+\DoxyCodeLine{66         gaus.SetParameters(2, 1.0);}
+\DoxyCodeLine{67         gaus.SetParLimits(2, 0.5, 2.);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{keyword}{auto} res = pull\_dist-\/>Fit(\textcolor{stringliteral}{"gaus"}, \textcolor{stringliteral}{"Q0S"});}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         gaus.GetParameters(\&fit\_par[0]);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73         \textcolor{comment}{// Mean check}}
+\DoxyCodeLine{74         EXPECT\_NEAR(fit\_par[1], 0, 0.05) << hname << \textcolor{stringliteral}{" mean value error"};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// Sigma check}}
+\DoxyCodeLine{77         EXPECT\_NEAR(fit\_par[2], 1, 0.1) << hname << \textcolor{stringliteral}{" sigma value error"};}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{80     std::cout << \textcolor{stringliteral}{"Pull value tests not performed without ROOT"} << std::endl;}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif  // TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1KalmanFittingTests_a05490b03c16eca576b71343ad2dcdeac}\label{classtraccc_1_1KalmanFittingTests_a05490b03c16eca576b71343ad2dcdeac}} 
+\index{traccc::KalmanFittingTests@{traccc::KalmanFittingTests}!n\_success@{n\_success}}
+\index{n\_success@{n\_success}!traccc::KalmanFittingTests@{traccc::KalmanFittingTests}}
+\doxysubsubsection{\texorpdfstring{n\_success}{n\_success}}
+{\footnotesize\ttfamily std\+::size\+\_\+t traccc\+::\+Kalman\+Fitting\+Tests\+::n\+\_\+success \{0u\}}
+
+
+
+Referenced by ndf\+\_\+tests().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tests/common/tests/\mbox{\hyperlink{kalman__fitting__test_8hpp}{kalman\+\_\+fitting\+\_\+test.\+hpp}}\item 
+tests/common/tests/\mbox{\hyperlink{kalman__fitting__test_8cpp}{kalman\+\_\+fitting\+\_\+test.\+cpp}}\end{DoxyCompactItemize}

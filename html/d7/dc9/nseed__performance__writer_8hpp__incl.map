@@ -1,0 +1,52 @@
+<map id="performance/include/traccc/efficiency/nseed_performance_writer.hpp" name="performance/include/traccc/efficiency/nseed_performance_writer.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="2252,5,2436,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="1787,109,1861,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1885,109,1965,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1989,109,2067,136"/>
+<area shape="rect" id="node5" title=" " alt="" coords="2704,273,2779,300"/>
+<area shape="rect" id="node6" title=" " alt="" coords="2765,109,2808,136"/>
+<area shape="rect" id="node7" href="$d1/d14/core_2include_2traccc_2edm_2measurement_8hpp.html" title=" " alt="" coords="2363,348,2581,375"/>
+<area shape="rect" id="node37" href="$d8/de7/nseed_8hpp.html" title=" " alt="" coords="2091,109,2256,136"/>
+<area shape="rect" id="node39" href="$dc/db6/spacepoint_8hpp.html" title=" " alt="" coords="1996,273,2193,300"/>
+<area shape="rect" id="node41" href="$d7/d36/track__filter_8hpp.html" title=" " alt="" coords="3064,184,3229,225"/>
+<area shape="rect" id="node45" href="$d2/dc5/track__matcher_8hpp.html" title=" " alt="" coords="2831,184,2996,225"/>
+<area shape="rect" id="node47" href="$d1/ddd/event__map_8hpp.html" title=" " alt="" coords="2398,109,2581,136"/>
+<area shape="rect" id="node8" href="$df/df2/primitives_8hpp.html" title=" " alt="" coords="2857,587,2991,628"/>
+<area shape="rect" id="node10" href="$d3/d2a/qualifiers_8hpp.html" title=" " alt="" coords="1733,855,1867,896"/>
+<area shape="rect" id="node11" href="$dc/dfd/track__parametrization_8hpp.html" title=" " alt="" coords="2757,497,2955,539"/>
+<area shape="rect" id="node12" href="$d0/dc0/core_2include_2traccc_2edm_2cell_8hpp.html" title=" " alt="" coords="2205,423,2355,449"/>
+<area shape="rect" id="node15" href="$dc/d6e/container_8hpp.html" title=" " alt="" coords="1289,505,1476,531"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2387,505,2602,531"/>
+<area shape="rect" id="node34" href="$dd/d4a/subspace_8hpp.html" title=" " alt="" coords="2379,423,2565,449"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2589,423,2648,449"/>
+<area shape="rect" id="node9" title=" " alt="" coords="2878,683,2970,710"/>
+<area shape="rect" id="node13" href="$dd/d3a/common_8hpp.html" title=" " alt="" coords="1939,497,2072,539"/>
+<area shape="rect" id="node32" href="$dd/d41/pixel__data_8hpp.html" title=" " alt="" coords="2147,497,2311,539"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1939,587,2075,628"/>
+<area shape="rect" id="node16" href="$d0/d9a/device__container_8hpp.html" title=" " alt="" coords="1062,587,1226,628"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1593,773,1685,799"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1507,676,1706,717"/>
+<area shape="rect" id="node23" href="$d6/d9d/host__container_8hpp.html" title=" " alt="" coords="888,587,1037,628"/>
+<area shape="rect" id="node25" title=" " alt="" coords="437,683,659,710"/>
+<area shape="rect" id="node26" href="$dc/d54/type__traits_8hpp.html" title=" " alt="" coords="1352,594,1547,621"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1571,587,1762,628"/>
+<area shape="rect" id="node28" title=" " alt="" coords="5,587,189,628"/>
+<area shape="rect" id="node29" title=" " alt="" coords="213,587,397,628"/>
+<area shape="rect" id="node30" title=" " alt="" coords="421,587,605,628"/>
+<area shape="rect" id="node31" title=" " alt="" coords="629,587,813,628"/>
+<area shape="rect" id="node17" href="$d0/d0b/container__base_8hpp.html" title=" " alt="" coords="1058,676,1211,717"/>
+<area shape="rect" id="node19" title=" " alt="" coords="985,773,1055,799"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1235,676,1434,717"/>
+<area shape="rect" id="node18" href="$dc/dae/container__element_8hpp.html" title=" " alt="" coords="1236,765,1412,807"/>
+<area shape="rect" id="node24" title=" " alt="" coords="683,676,882,717"/>
+<area shape="rect" id="node35" title=" " alt="" coords="2627,505,2683,531"/>
+<area shape="rect" id="node38" href="$dc/dd1/seed_8hpp.html" title=" " alt="" coords="1991,191,2148,218"/>
+<area shape="rect" id="node40" title=" " alt="" coords="1881,348,1943,375"/>
+<area shape="rect" id="node42" title=" " alt="" coords="3140,273,3199,300"/>
+<area shape="rect" id="node43" href="$de/df4/core_2include_2traccc_2edm_2particle_8hpp.html" title=" " alt="" coords="2803,273,2978,300"/>
+<area shape="rect" id="node44" title=" " alt="" coords="2989,348,3056,375"/>
+<area shape="rect" id="node46" title=" " alt="" coords="3002,273,3065,300"/>
+<area shape="rect" id="node48" href="$df/d13/mapper_8hpp.html" title=" " alt="" coords="2430,191,2589,218"/>
+<area shape="rect" id="node49" title=" " alt="" coords="2483,273,2554,300"/>
+<area shape="rect" id="node50" title=" " alt="" coords="2579,273,2629,300"/>
+</map>

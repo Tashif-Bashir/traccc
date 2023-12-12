@@ -1,0 +1,106 @@
+\hypertarget{structtraccc_1_1cell}{}\doxysection{traccc\+::cell Struct Reference}
+\label{structtraccc_1_1cell}\index{traccc::cell@{traccc::cell}}
+
+
+{\ttfamily \#include $<$cell.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::cell\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{d8/d77/structtraccc_1_1cell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1cell_a305c4edb9b581b9a92e30b07e2a8ed5e}{link\+\_\+type}} = cell\+\_\+module\+\_\+collection\+\_\+types\+::view\+::size\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetraccc_ac9cd1f64237a5da323f13740187b0cb8}{channel\+\_\+id}} \mbox{\hyperlink{structtraccc_1_1cell_a921955d3f678441f9aad6d55ebf0a706}{channel0}} = 0
+\item 
+\mbox{\hyperlink{namespacetraccc_ac9cd1f64237a5da323f13740187b0cb8}{channel\+\_\+id}} \mbox{\hyperlink{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}{channel1}} = 0
+\item 
+\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{structtraccc_1_1cell_a961705010a177a31c0fd1b40d7ec7bc3}{activation}} = 0.
+\item 
+\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{structtraccc_1_1cell_a80202bf4d90ce76911194e65d8ebcc8c}{time}} = 0.
+\item 
+\mbox{\hyperlink{structtraccc_1_1cell_a305c4edb9b581b9a92e30b07e2a8ed5e}{link\+\_\+type}} \mbox{\hyperlink{structtraccc_1_1cell_adeabd2dc0029d6bdbb3147832fbdfd3d}{module\+\_\+link}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition for one detector cell
+
+It comes with two integer channel identifiers, an \char`\"{}activation value\char`\"{}, a time stamp and a link to its module (held in a separate collection). 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1cell_a305c4edb9b581b9a92e30b07e2a8ed5e}\label{structtraccc_1_1cell_a305c4edb9b581b9a92e30b07e2a8ed5e}} 
+\index{traccc::cell@{traccc::cell}!link\_type@{link\_type}}
+\index{link\_type@{link\_type}!traccc::cell@{traccc::cell}}
+\doxysubsubsection{\texorpdfstring{link\_type}{link\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtraccc_1_1cell_a305c4edb9b581b9a92e30b07e2a8ed5e}{traccc\+::cell\+::link\+\_\+type}} =  cell\+\_\+module\+\_\+collection\+\_\+types\+::view\+::size\+\_\+type}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1cell_a961705010a177a31c0fd1b40d7ec7bc3}\label{structtraccc_1_1cell_a961705010a177a31c0fd1b40d7ec7bc3}} 
+\index{traccc::cell@{traccc::cell}!activation@{activation}}
+\index{activation@{activation}!traccc::cell@{traccc::cell}}
+\doxysubsubsection{\texorpdfstring{activation}{activation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} traccc\+::cell\+::activation = 0.}
+
+
+
+Referenced by traccc\+::device\+::aggregate\+\_\+cluster(), traccc\+::detail\+::calc\+\_\+cluster\+\_\+properties(), traccc\+::operator$<$(), and traccc\+::operator==().
+
+\mbox{\Hypertarget{structtraccc_1_1cell_a921955d3f678441f9aad6d55ebf0a706}\label{structtraccc_1_1cell_a921955d3f678441f9aad6d55ebf0a706}} 
+\index{traccc::cell@{traccc::cell}!channel0@{channel0}}
+\index{channel0@{channel0}!traccc::cell@{traccc::cell}}
+\doxysubsubsection{\texorpdfstring{channel0}{channel0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_ac9cd1f64237a5da323f13740187b0cb8}{channel\+\_\+id}} traccc\+::cell\+::channel0 = 0}
+
+
+
+Referenced by traccc\+::detail\+::is\+\_\+adjacent(), traccc\+::operator$<$(), traccc\+::operator==(), and traccc\+::detail\+::position\+\_\+from\+\_\+cell().
+
+\mbox{\Hypertarget{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}\label{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}} 
+\index{traccc::cell@{traccc::cell}!channel1@{channel1}}
+\index{channel1@{channel1}!traccc::cell@{traccc::cell}}
+\doxysubsubsection{\texorpdfstring{channel1}{channel1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_ac9cd1f64237a5da323f13740187b0cb8}{channel\+\_\+id}} traccc\+::cell\+::channel1 = 0}
+
+
+
+Referenced by traccc\+::device\+::aggregate\+\_\+cluster(), traccc\+::detail\+::is\+\_\+adjacent(), traccc\+::detail\+::is\+\_\+far\+\_\+enough(), traccc\+::operator$<$(), traccc\+::operator==(), and traccc\+::detail\+::position\+\_\+from\+\_\+cell().
+
+\mbox{\Hypertarget{structtraccc_1_1cell_adeabd2dc0029d6bdbb3147832fbdfd3d}\label{structtraccc_1_1cell_adeabd2dc0029d6bdbb3147832fbdfd3d}} 
+\index{traccc::cell@{traccc::cell}!module\_link@{module\_link}}
+\index{module\_link@{module\_link}!traccc::cell@{traccc::cell}}
+\doxysubsubsection{\texorpdfstring{module\_link}{module\_link}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1cell_a305c4edb9b581b9a92e30b07e2a8ed5e}{link\+\_\+type}} traccc\+::cell\+::module\+\_\+link}
+
+
+
+Referenced by traccc\+::detail\+::is\+\_\+adjacent(), traccc\+::detail\+::is\+\_\+far\+\_\+enough(), traccc\+::operator$<$(), and traccc\+::operator==().
+
+\mbox{\Hypertarget{structtraccc_1_1cell_a80202bf4d90ce76911194e65d8ebcc8c}\label{structtraccc_1_1cell_a80202bf4d90ce76911194e65d8ebcc8c}} 
+\index{traccc::cell@{traccc::cell}!time@{time}}
+\index{time@{time}!traccc::cell@{traccc::cell}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} traccc\+::cell\+::time = 0.}
+
+
+
+Referenced by traccc\+::operator==().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/edm/\mbox{\hyperlink{core_2include_2traccc_2edm_2cell_8hpp}{cell.\+hpp}}\end{DoxyCompactItemize}

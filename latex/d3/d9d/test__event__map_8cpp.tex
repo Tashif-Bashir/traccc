@@ -1,0 +1,57 @@
+\hypertarget{test__event__map_8cpp}{}\doxysection{tests/io/test\+\_\+event\+\_\+map.cpp File Reference}
+\label{test__event__map_8cpp}\index{tests/io/test\_event\_map.cpp@{tests/io/test\_event\_map.cpp}}
+{\ttfamily \#include \char`\"{}traccc/io/event\+\_\+map2.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for test\+\_\+event\+\_\+map.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d64/test__event__map_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__event__map_8cpp_a12d67e04543d0f96f5bb002642abaf60}{T\+E\+ST}} (event\+\_\+map2, event\+\_\+map2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__event__map_8cpp_a12d67e04543d0f96f5bb002642abaf60}\label{test__event__map_8cpp_a12d67e04543d0f96f5bb002642abaf60}} 
+\index{test\_event\_map.cpp@{test\_event\_map.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_event\_map.cpp@{test\_event\_map.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{event\+\_\+map2}]{,  }\item[{event\+\_\+map2}]{ }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                              \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{const} std::string path =}
+\DoxyCodeLine{18         \textcolor{stringliteral}{"detray\_simulation/telescope/kf\_validation/1\_GeV\_0\_phi/"};}
+\DoxyCodeLine{19     \textcolor{comment}{// Event map}}
+\DoxyCodeLine{20     \mbox{\hyperlink{structtraccc_1_1event__map2}{traccc::event\_map2}} evt\_map(0, path, path, path);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& ptc\_meas\_map = evt\_map.ptc\_meas\_map;}
+\DoxyCodeLine{23     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& meas\_ptc\_map = evt\_map.meas\_ptc\_map;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// Each particle makes 9 measurements in the telescope geometry}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [ptc, measurements] : ptc\_meas\_map) \{}
+\DoxyCodeLine{27         ASSERT\_EQ(measurements.size(), 9u);}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// There is only one contributing particle for the measurement}}
+\DoxyCodeLine{31     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \textcolor{keyword}{const}\& [measurements, ptc] : meas\_ptc\_map) \{}
+\DoxyCodeLine{32         ASSERT\_EQ(ptc.size(), 1u);}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::event\+\_\+map2\+::meas\+\_\+ptc\+\_\+map, and traccc\+::event\+\_\+map2\+::ptc\+\_\+meas\+\_\+map.
+

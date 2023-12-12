@@ -1,0 +1,490 @@
+\hypertarget{namespacetraccc_1_1detail}{}\doxysection{traccc\+::detail Namespace Reference}
+\label{namespacetraccc_1_1detail}\index{traccc::detail@{traccc::detail}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \mbox{\hyperlink{namespacetraccc_1_1detail_ab8b9563129faf8333be30d0895d1a6a6}{signal\+\_\+cell\+\_\+modelling}} (\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} signal\+\_\+in, const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&)
+\begin{DoxyCompactList}\small\item\em Function used for retrieving the cell signal based on the module id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{namespacetraccc_a16e06fd0693301b9faf4035881a39e39}{vector2}} \mbox{\hyperlink{namespacetraccc_1_1detail_a7a2d59fbc63350abdfe5e2af688d24ad}{position\+\_\+from\+\_\+cell}} (const \mbox{\hyperlink{structtraccc_1_1cell}{cell}} \&\mbox{\hyperlink{structtraccc_1_1cell}{cell}}, const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&module)
+\begin{DoxyCompactList}\small\item\em Function for pixel segmentation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename cell\+\_\+collection\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{namespacetraccc_1_1detail_a443cee67b2e17edc5fc1bd807ebabe1b}{calc\+\_\+cluster\+\_\+properties}} (const cell\+\_\+collection\+\_\+t \&cluster, const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&module, \mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} \&mean, \mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} \&var, \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&total\+Weight)
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{namespacetraccc_1_1detail_aaae24bc1a48341492ebe910a3a4f7d6a}{fill\+\_\+measurement}} (\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{measurement\+\_\+collection\+\_\+types\+::host}} \&measurements, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+collection\+\_\+types\+::host}} \&cluster, const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&module, const unsigned int module\+\_\+link)
+\item 
+{\footnotesize template$<$typename ccl\+\_\+vector\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} unsigned int \mbox{\hyperlink{namespacetraccc_1_1detail_a2cc570dad6f7e51358ae6ac68141224a}{find\+\_\+root}} (const ccl\+\_\+vector\+\_\+t \&L, unsigned int e)
+\item 
+{\footnotesize template$<$typename ccl\+\_\+vector\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} unsigned int \mbox{\hyperlink{namespacetraccc_1_1detail_a2d62c4c94353cc5f119df6c467b0f912}{make\+\_\+union}} (ccl\+\_\+vector\+\_\+t \&L, unsigned int e1, unsigned int e2)
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool \mbox{\hyperlink{namespacetraccc_1_1detail_a3bfb80319b0864c5584e19ee3b1104e1}{is\+\_\+adjacent}} (\mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}} a, \mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}} b)
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool \mbox{\hyperlink{namespacetraccc_1_1detail_a7f06e2d9ddda2d2788a393b41e9b0312}{is\+\_\+far\+\_\+enough}} (\mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}} a, \mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}} b)
+\item 
+{\footnotesize template$<$typename cell\+\_\+collection\+\_\+t , typename ccl\+\_\+vector\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} unsigned int \mbox{\hyperlink{namespacetraccc_1_1detail_a2c647ebd48d182362b23dbff96d8737d}{sparse\+\_\+ccl}} (const cell\+\_\+collection\+\_\+t \&cells, ccl\+\_\+vector\+\_\+t \&L)
+\item 
+{\footnotesize template$<$typename value\+\_\+t , typename converter\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacetraccc_1_1detail_ae476db57bbfc32c633d41a484a902d87}{parse\+\_\+variable}} (std\+::istream \&is, std\+::vector$<$ value\+\_\+t $>$ \&values, converter\+\_\+t \&\&convert)
+\item 
+{\footnotesize template$<$typename value\+\_\+t , typename converter\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacetraccc_1_1detail_a48fded5eaa22ebec5814eb0ed9e0f93c}{parse\+\_\+fixed}} (std\+::istream \&is, size\+\_\+t size, value\+\_\+t $\ast$values, converter\+\_\+t \&\&convert)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2021-\/2023 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0
+
+Implemementation of Sparse\+C\+CL, following \mbox{[}D\+OI\+: 10.\+1109/\+D\+A\+S\+I\+P48288.2019.\+9049184\mbox{]}
+
+Requires cells to be sorted in column major 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a443cee67b2e17edc5fc1bd807ebabe1b}\label{namespacetraccc_1_1detail_a443cee67b2e17edc5fc1bd807ebabe1b}} 
+\index{traccc::detail@{traccc::detail}!calc\_cluster\_properties@{calc\_cluster\_properties}}
+\index{calc\_cluster\_properties@{calc\_cluster\_properties}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{calc\_cluster\_properties()}{calc\_cluster\_properties()}}
+{\footnotesize\ttfamily template$<$typename cell\+\_\+collection\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void traccc\+::detail\+::calc\+\_\+cluster\+\_\+properties (\begin{DoxyParamCaption}\item[{const cell\+\_\+collection\+\_\+t \&}]{cluster,  }\item[{const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&}]{module,  }\item[{\mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} \&}]{mean,  }\item[{\mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} \&}]{var,  }\item[{\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&}]{total\+Weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function used for calculating the properties of the cluster during measurement creation
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cluster} & The vector of cells describing the identified cluster \\
+\hline
+\mbox{\texttt{ in}}  & {\em module} & The cell module \\
+\hline
+\mbox{\texttt{ out}}  & {\em mean} & The mean position of the cluster/measurement \\
+\hline
+\mbox{\texttt{ out}}  & {\em var} & The variation on the mean position of the cluster/measurement \\
+\hline
+\mbox{\texttt{ out}}  & {\em total\+Weight} & The total weight of the cluster/measurement \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                       \{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{comment}{// Loop over the cells of the cluster.}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} cell\& cell : cluster) \{}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{comment}{// Translate the cell readout value into a weight.}}
+\DoxyCodeLine{53         \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} weight = \mbox{\hyperlink{namespacetraccc_1_1detail_ab8b9563129faf8333be30d0895d1a6a6}{signal\_cell\_modelling}}(cell.activation, module);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{comment}{// Only consider cells over a minimum threshold.}}
+\DoxyCodeLine{56         \textcolor{keywordflow}{if} (weight > module.threshold) \{}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58             \textcolor{comment}{// Update all output properties with this cell.}}
+\DoxyCodeLine{59             totalWeight += cell.activation;}
+\DoxyCodeLine{60             \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} cell\_position = \mbox{\hyperlink{namespacetraccc_1_1detail_a7a2d59fbc63350abdfe5e2af688d24ad}{position\_from\_cell}}(cell, module);}
+\DoxyCodeLine{61             \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} prev = mean;}
+\DoxyCodeLine{62             \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} diff = cell\_position -\/ prev;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64             mean = prev + (weight / totalWeight) * diff;}
+\DoxyCodeLine{65             \textcolor{keywordflow}{for} (std::size\_t i = 0; i < 2; ++i) \{}
+\DoxyCodeLine{66                 var[i] =}
+\DoxyCodeLine{67                     var[i] + weight * (diff[i]) * (cell\_position[i] -\/ mean[i]);}
+\DoxyCodeLine{68             \}}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::cell\+::activation, position\+\_\+from\+\_\+cell(), signal\+\_\+cell\+\_\+modelling(), and traccc\+::cell\+\_\+module\+::threshold.
+
+
+
+Referenced by fill\+\_\+measurement().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_aaae24bc1a48341492ebe910a3a4f7d6a}\label{namespacetraccc_1_1detail_aaae24bc1a48341492ebe910a3a4f7d6a}} 
+\index{traccc::detail@{traccc::detail}!fill\_measurement@{fill\_measurement}}
+\index{fill\_measurement@{fill\_measurement}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{fill\_measurement()}{fill\_measurement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void traccc\+::detail\+::fill\+\_\+measurement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{measurement\+\_\+collection\+\_\+types\+::host}} \&}]{measurements,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+collection\+\_\+types\+::host}} \&}]{cluster,  }\item[{const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&}]{module,  }\item[{const unsigned int}]{module\+\_\+link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function used for calculating the properties of the cluster during measurement creation
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em measurements} & is the measurement collection where the measurement object will be filled \\
+\hline
+\mbox{\texttt{ in}}  & {\em cluster} & is the input cell vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em module} & is the cell module where the cluster belongs to \\
+\hline
+\mbox{\texttt{ in}}  & {\em module\+\_\+link} & is the module index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                     \{}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{comment}{// To calculate the mean and variance with high numerical stability}}
+\DoxyCodeLine{88     \textcolor{comment}{// we use a weighted variant of Welford's algorithm. This is a}}
+\DoxyCodeLine{89     \textcolor{comment}{// single-\/pass online algorithm that works well for large numbers}}
+\DoxyCodeLine{90     \textcolor{comment}{// of samples, as well as samples with very high values.}}
+\DoxyCodeLine{91     \textcolor{comment}{//}}
+\DoxyCodeLine{92     \textcolor{comment}{// To learn more about this algorithm please refer to:}}
+\DoxyCodeLine{93     \textcolor{comment}{// [1] https://doi.org/10.1080/00401706.1962.10490022}}
+\DoxyCodeLine{94     \textcolor{comment}{// [2] The Art of Computer Programming, Donald E. Knuth, second}}
+\DoxyCodeLine{95     \textcolor{comment}{//     edition, chapter 4.2.2.}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{comment}{// Calculate the cluster properties}}
+\DoxyCodeLine{98     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} totalWeight = 0.;}
+\DoxyCodeLine{99     \mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}} mean\{0., 0.\}, var\{0., 0.\};}
+\DoxyCodeLine{100     \mbox{\hyperlink{namespacetraccc_1_1detail_a443cee67b2e17edc5fc1bd807ebabe1b}{detail::calc\_cluster\_properties}}(cluster, module, mean, var, totalWeight);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \textcolor{keywordflow}{if} (totalWeight > 0.) \{}
+\DoxyCodeLine{103         measurement m;}
+\DoxyCodeLine{104         m.module\_link = module\_link;}
+\DoxyCodeLine{105         m.surface\_link = module.surface\_link;}
+\DoxyCodeLine{106         \textcolor{comment}{// normalize the cell position}}
+\DoxyCodeLine{107         m.local = mean;}
+\DoxyCodeLine{108         \textcolor{comment}{// normalize the variance}}
+\DoxyCodeLine{109         m.variance[0] = var[0] / totalWeight;}
+\DoxyCodeLine{110         m.variance[1] = var[1] / totalWeight;}
+\DoxyCodeLine{111         \textcolor{comment}{// plus pitch\string^2 / 12}}
+\DoxyCodeLine{112         \textcolor{keyword}{const} \textcolor{keyword}{auto} pitch = module.pixel.get\_pitch();}
+\DoxyCodeLine{113         m.variance =}
+\DoxyCodeLine{114             m.variance + \mbox{\hyperlink{namespacetraccc_a83ee72b67d3c03df43280e5bc169ac7a}{point2}}\{pitch[0] * pitch[0] / \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(12.),}
+\DoxyCodeLine{115                                 pitch[1] * pitch[1] / \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(12.)\};}
+\DoxyCodeLine{116         \textcolor{comment}{// @todo add variance estimation}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118         measurements.push\_back(std::move(m));}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120 \}}
+
+\end{DoxyCode}
+
+
+References calc\+\_\+cluster\+\_\+properties(), traccc\+::pixel\+\_\+data\+::get\+\_\+pitch(), traccc\+::measurement\+::local, traccc\+::measurement\+::module\+\_\+link, traccc\+::cell\+\_\+module\+::pixel, traccc\+::cell\+\_\+module\+::surface\+\_\+link, traccc\+::measurement\+::surface\+\_\+link, and traccc\+::measurement\+::variance.
+
+
+
+Referenced by traccc\+::measurement\+\_\+creation\+::operator()().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a2cc570dad6f7e51358ae6ac68141224a}\label{namespacetraccc_1_1detail_a2cc570dad6f7e51358ae6ac68141224a}} 
+\index{traccc::detail@{traccc::detail}!find\_root@{find\_root}}
+\index{find\_root@{find\_root}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{find\_root()}{find\_root()}}
+{\footnotesize\ttfamily template$<$typename ccl\+\_\+vector\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} unsigned int traccc\+::detail\+::find\+\_\+root (\begin{DoxyParamCaption}\item[{const ccl\+\_\+vector\+\_\+t \&}]{L,  }\item[{unsigned int}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find root of the tree for entry
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+{\em L} & an equivalance table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the root of
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                                  \{}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} r = e;}
+\DoxyCodeLine{38     assert(r < L.size());}
+\DoxyCodeLine{39     \textcolor{keywordflow}{while} (L[r] != r) \{}
+\DoxyCodeLine{40         r = L[r];}
+\DoxyCodeLine{41         assert(r < L.size());}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+Referenced by sparse\+\_\+ccl().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a3bfb80319b0864c5584e19ee3b1104e1}\label{namespacetraccc_1_1detail_a3bfb80319b0864c5584e19ee3b1104e1}} 
+\index{traccc::detail@{traccc::detail}!is\_adjacent@{is\_adjacent}}
+\index{is\_adjacent@{is\_adjacent}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{is\_adjacent()}{is\_adjacent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool traccc\+::detail\+::is\+\_\+adjacent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}}}]{a,  }\item[{\mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Helper method to find adjacent cells
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first cell \\
+\hline
+{\em b} & the second cell\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolan to indicate 8-\/cell connectivity 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                                                        \{}
+\DoxyCodeLine{76     \textcolor{keywordflow}{return} (a.\mbox{\hyperlink{structtraccc_1_1cell_a921955d3f678441f9aad6d55ebf0a706}{channel0}} -\/ b.\mbox{\hyperlink{structtraccc_1_1cell_a921955d3f678441f9aad6d55ebf0a706}{channel0}}) * (a.\mbox{\hyperlink{structtraccc_1_1cell_a921955d3f678441f9aad6d55ebf0a706}{channel0}} -\/ b.\mbox{\hyperlink{structtraccc_1_1cell_a921955d3f678441f9aad6d55ebf0a706}{channel0}}) <= 1 and}
+\DoxyCodeLine{77            (a.\mbox{\hyperlink{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}{channel1}} -\/ b.\mbox{\hyperlink{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}{channel1}}) * (a.\mbox{\hyperlink{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}{channel1}} -\/ b.\mbox{\hyperlink{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}{channel1}}) <= 1 and}
+\DoxyCodeLine{78            a.\mbox{\hyperlink{structtraccc_1_1cell_adeabd2dc0029d6bdbb3147832fbdfd3d}{module\_link}} == b.\mbox{\hyperlink{structtraccc_1_1cell_adeabd2dc0029d6bdbb3147832fbdfd3d}{module\_link}};}
+\DoxyCodeLine{79 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::cell\+::channel0, traccc\+::cell\+::channel1, and traccc\+::cell\+::module\+\_\+link.
+
+
+
+Referenced by sparse\+\_\+ccl().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a7f06e2d9ddda2d2788a393b41e9b0312}\label{namespacetraccc_1_1detail_a7f06e2d9ddda2d2788a393b41e9b0312}} 
+\index{traccc::detail@{traccc::detail}!is\_far\_enough@{is\_far\_enough}}
+\index{is\_far\_enough@{is\_far\_enough}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{is\_far\_enough()}{is\_far\_enough()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool traccc\+::detail\+::is\+\_\+far\+\_\+enough (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}}}]{a,  }\item[{\mbox{\hyperlink{structtraccc_1_1cell}{traccc\+::cell}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Helper method to find define distance, does not need abs, as channels are sorted in column major
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first cell \\
+\hline
+{\em b} & the second cell\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolan to indicate !8-\/cell connectivity 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                                                          \{}
+\DoxyCodeLine{90     \textcolor{keywordflow}{return} (a.\mbox{\hyperlink{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}{channel1}} -\/ b.\mbox{\hyperlink{structtraccc_1_1cell_a59bd8e0f6c1562c21d74f7e12eae49e9}{channel1}}) > 1 || a.\mbox{\hyperlink{structtraccc_1_1cell_adeabd2dc0029d6bdbb3147832fbdfd3d}{module\_link}} != b.\mbox{\hyperlink{structtraccc_1_1cell_adeabd2dc0029d6bdbb3147832fbdfd3d}{module\_link}};}
+\DoxyCodeLine{91 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::cell\+::channel1, and traccc\+::cell\+::module\+\_\+link.
+
+
+
+Referenced by sparse\+\_\+ccl().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a2d62c4c94353cc5f119df6c467b0f912}\label{namespacetraccc_1_1detail_a2d62c4c94353cc5f119df6c467b0f912}} 
+\index{traccc::detail@{traccc::detail}!make\_union@{make\_union}}
+\index{make\_union@{make\_union}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{make\_union()}{make\_union()}}
+{\footnotesize\ttfamily template$<$typename ccl\+\_\+vector\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} unsigned int traccc\+::detail\+::make\+\_\+union (\begin{DoxyParamCaption}\item[{ccl\+\_\+vector\+\_\+t \&}]{L,  }\item[{unsigned int}]{e1,  }\item[{unsigned int}]{e2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a union of two entries
+\begin{DoxyParams}{Parameters}
+{\em e1} & and\\
+\hline
+{\em e2} & \\
+\hline
+{\em L} & an equivalance table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the rleast common ancestor of the entries 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                                                    \{}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} e;}
+\DoxyCodeLine{57     \textcolor{keywordflow}{if} (e1 < e2) \{}
+\DoxyCodeLine{58         e = e1;}
+\DoxyCodeLine{59         assert(e2 < L.size());}
+\DoxyCodeLine{60         L[e2] = e;}
+\DoxyCodeLine{61     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{62         e = e2;}
+\DoxyCodeLine{63         assert(e1 < L.size());}
+\DoxyCodeLine{64         L[e1] = e;}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} e;}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+
+
+Referenced by sparse\+\_\+ccl().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a48fded5eaa22ebec5814eb0ed9e0f93c}\label{namespacetraccc_1_1detail_a48fded5eaa22ebec5814eb0ed9e0f93c}} 
+\index{traccc::detail@{traccc::detail}!parse\_fixed@{parse\_fixed}}
+\index{parse\_fixed@{parse\_fixed}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{parse\_fixed()}{parse\_fixed()}}
+{\footnotesize\ttfamily template$<$typename value\+\_\+t , typename converter\+\_\+t $>$ \\
+void traccc\+::detail\+::parse\+\_\+fixed (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{size\+\_\+t}]{size,  }\item[{value\+\_\+t $\ast$}]{values,  }\item[{converter\+\_\+t \&\&}]{convert }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                         \{}
+\DoxyCodeLine{53     \textcolor{comment}{// reserve space for the expected number of values}}
+\DoxyCodeLine{54     std::vector<value\_t> tmp(size, 0);}
+\DoxyCodeLine{55     \mbox{\hyperlink{namespacetraccc_1_1detail_ae476db57bbfc32c633d41a484a902d87}{parse\_variable}}(is, tmp, std::forward<converter\_t>(convert));}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (tmp.size() < size) \{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{throw} std::invalid\_argument(}
+\DoxyCodeLine{58             \textcolor{stringliteral}{"Not enough values for fixed-\/size user option, expected "} +}
+\DoxyCodeLine{59             std::to\_string(size) + \textcolor{stringliteral}{" received "} + std::to\_string(tmp.size()));}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61     \textcolor{keywordflow}{if} (size < tmp.size()) \{}
+\DoxyCodeLine{62         \textcolor{keywordflow}{throw} std::invalid\_argument(}
+\DoxyCodeLine{63             \textcolor{stringliteral}{"Too many values for fixed-\/size user option, expected "} +}
+\DoxyCodeLine{64             std::to\_string(size) + \textcolor{stringliteral}{" received "} + std::to\_string(tmp.size()));}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     std::copy(tmp.begin(), tmp.end(), values);}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+
+
+References parse\+\_\+variable().
+
+
+
+Referenced by traccc\+::operator$>$$>$().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_ae476db57bbfc32c633d41a484a902d87}\label{namespacetraccc_1_1detail_ae476db57bbfc32c633d41a484a902d87}} 
+\index{traccc::detail@{traccc::detail}!parse\_variable@{parse\_variable}}
+\index{parse\_variable@{parse\_variable}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{parse\_variable()}{parse\_variable()}}
+{\footnotesize\ttfamily template$<$typename value\+\_\+t , typename converter\+\_\+t $>$ \\
+void traccc\+::detail\+::parse\+\_\+variable (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{std\+::vector$<$ value\+\_\+t $>$ \&}]{values,  }\item[{converter\+\_\+t \&\&}]{convert }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                            \{}
+\DoxyCodeLine{39     values.clear();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     std::string buf;}
+\DoxyCodeLine{42     is >> buf;}
+\DoxyCodeLine{43     std::vector<std::string> stringValues;}
+\DoxyCodeLine{44     boost::split(stringValues, buf, boost::is\_any\_of(s\_separator));}
+\DoxyCodeLine{45     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} std::string\& stringValue : stringValues) \{}
+\DoxyCodeLine{46         values.push\_back(convert(stringValue));}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+
+
+Referenced by parse\+\_\+fixed().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a7a2d59fbc63350abdfe5e2af688d24ad}\label{namespacetraccc_1_1detail_a7a2d59fbc63350abdfe5e2af688d24ad}} 
+\index{traccc::detail@{traccc::detail}!position\_from\_cell@{position\_from\_cell}}
+\index{position\_from\_cell@{position\_from\_cell}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{position\_from\_cell()}{position\_from\_cell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{namespacetraccc_a16e06fd0693301b9faf4035881a39e39}{vector2}} traccc\+::detail\+::position\+\_\+from\+\_\+cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1cell}{cell}} \&}]{cell,  }\item[{const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&}]{module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function for pixel segmentation. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28                                                                                \{}
+\DoxyCodeLine{29     \textcolor{comment}{// Retrieve the specific values based on module idx}}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} \{module.pixel.min\_center\_x + cell.channel0 * module.pixel.pitch\_x,}
+\DoxyCodeLine{31             module.pixel.min\_center\_y + cell.channel1 * module.pixel.pitch\_y\};}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::cell\+::channel0, traccc\+::cell\+::channel1, traccc\+::pixel\+\_\+data\+::min\+\_\+center\+\_\+x, traccc\+::pixel\+\_\+data\+::min\+\_\+center\+\_\+y, traccc\+::pixel\+\_\+data\+::pitch\+\_\+x, traccc\+::pixel\+\_\+data\+::pitch\+\_\+y, and traccc\+::cell\+\_\+module\+::pixel.
+
+
+
+Referenced by traccc\+::device\+::aggregate\+\_\+cluster(), and calc\+\_\+cluster\+\_\+properties().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_ab8b9563129faf8333be30d0895d1a6a6}\label{namespacetraccc_1_1detail_ab8b9563129faf8333be30d0895d1a6a6}} 
+\index{traccc::detail@{traccc::detail}!signal\_cell\_modelling@{signal\_cell\_modelling}}
+\index{signal\_cell\_modelling@{signal\_cell\_modelling}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{signal\_cell\_modelling()}{signal\_cell\_modelling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} traccc\+::detail\+::signal\+\_\+cell\+\_\+modelling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}}]{signal\+\_\+in,  }\item[{const \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function used for retrieving the cell signal based on the module id. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                                           \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} signal\_in;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::device\+::aggregate\+\_\+cluster(), and calc\+\_\+cluster\+\_\+properties().
+
+\mbox{\Hypertarget{namespacetraccc_1_1detail_a2c647ebd48d182362b23dbff96d8737d}\label{namespacetraccc_1_1detail_a2c647ebd48d182362b23dbff96d8737d}} 
+\index{traccc::detail@{traccc::detail}!sparse\_ccl@{sparse\_ccl}}
+\index{sparse\_ccl@{sparse\_ccl}!traccc::detail@{traccc::detail}}
+\doxysubsubsection{\texorpdfstring{sparse\_ccl()}{sparse\_ccl()}}
+{\footnotesize\ttfamily template$<$typename cell\+\_\+collection\+\_\+t , typename ccl\+\_\+vector\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} unsigned int traccc\+::detail\+::sparse\+\_\+ccl (\begin{DoxyParamCaption}\item[{const cell\+\_\+collection\+\_\+t \&}]{cells,  }\item[{ccl\+\_\+vector\+\_\+t \&}]{L }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sparce C\+CL algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em cells} & is the cell collection \\
+\hline
+{\em L} & is the vector of the output indices (to which cluster a cell belongs to) \\
+\hline
+{\em labels} & is the number of clusters found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of clusters 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                      \{}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} labels = 0;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{comment}{// The number of cells.}}
+\DoxyCodeLine{107     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_cells = cells.size();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{comment}{// first scan: pixel association}}
+\DoxyCodeLine{110     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} start\_j = 0;}
+\DoxyCodeLine{111     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < n\_cells; ++i) \{}
+\DoxyCodeLine{112         L[i] = i;}
+\DoxyCodeLine{113         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ai = i;}
+\DoxyCodeLine{114         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j = start\_j; j < i; ++j) \{}
+\DoxyCodeLine{115             \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacetraccc_1_1detail_a3bfb80319b0864c5584e19ee3b1104e1}{is\_adjacent}}(cells[i], cells[j])) \{}
+\DoxyCodeLine{116                 ai = \mbox{\hyperlink{namespacetraccc_1_1detail_a2d62c4c94353cc5f119df6c467b0f912}{make\_union}}(L, ai, \mbox{\hyperlink{namespacetraccc_1_1detail_a2cc570dad6f7e51358ae6ac68141224a}{find\_root}}(L, j));}
+\DoxyCodeLine{117             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacetraccc_1_1detail_a7f06e2d9ddda2d2788a393b41e9b0312}{is\_far\_enough}}(cells[i], cells[j])) \{}
+\DoxyCodeLine{118                 ++start\_j;}
+\DoxyCodeLine{119             \}}
+\DoxyCodeLine{120         \}}
+\DoxyCodeLine{121     \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \textcolor{comment}{// second scan: transitive closure}}
+\DoxyCodeLine{124     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < n\_cells; ++i) \{}
+\DoxyCodeLine{125         \textcolor{keywordflow}{if} (L[i] == i) \{}
+\DoxyCodeLine{126             L[i] = labels++;}
+\DoxyCodeLine{127         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{128             L[i] = L[L[i]];}
+\DoxyCodeLine{129         \}}
+\DoxyCodeLine{130     \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     \textcolor{keywordflow}{return} labels;}
+\DoxyCodeLine{133 \}}
+
+\end{DoxyCode}
+
+
+References find\+\_\+root(), is\+\_\+adjacent(), is\+\_\+far\+\_\+enough(), and make\+\_\+union().
+
+
+
+Referenced by traccc\+::component\+\_\+connection\+::operator()().
+

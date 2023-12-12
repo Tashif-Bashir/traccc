@@ -1,0 +1,14 @@
+<map id="core/include/traccc/clusterization/spacepoint_formation.hpp" name="core/include/traccc/clusterization/spacepoint_formation.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="693,5,883,61"/>
+<area shape="rect" id="node2" href="$d0/da5/core_2src_2clusterization_2spacepoint__formation_8cpp.html" title=" " alt="" coords="5,109,200,151"/>
+<area shape="rect" id="node3" href="$d5/d0f/cpu_2full__chain__algorithm_8hpp.html" title=" " alt="" coords="224,109,387,151"/>
+<area shape="rect" id="node7" href="$d9/d26/seq__example_8cpp.html" title=" " alt="" coords="411,109,576,151"/>
+<area shape="rect" id="node8" href="$d6/dcf/seq__example__cuda_8cpp.html" title=" " alt="" coords="600,109,773,151"/>
+<area shape="rect" id="node9" href="$d8/d9e/io__dec__par__example_8cpp.html" title=" " alt="" coords="797,109,984,151"/>
+<area shape="rect" id="node10" href="$da/dac/par__example_8cpp.html" title=" " alt="" coords="1008,109,1176,151"/>
+<area shape="rect" id="node11" href="$dc/dff/seq__single__module_8cpp.html" title=" " alt="" coords="1200,109,1355,151"/>
+<area shape="rect" id="node12" href="$d2/da8/test__clusterization__resolution_8cpp.html" title=" " alt="" coords="1379,109,1584,151"/>
+<area shape="rect" id="node4" href="$da/d38/cpu_2full__chain__algorithm_8cpp.html" title=" " alt="" coords="12,199,175,240"/>
+<area shape="rect" id="node5" href="$d4/d4a/cpu_2throughput__mt_8cpp.html" title=" " alt="" coords="199,199,412,240"/>
+<area shape="rect" id="node6" href="$db/dd9/cpu_2throughput__st_8cpp.html" title=" " alt="" coords="436,199,649,240"/>
+</map>

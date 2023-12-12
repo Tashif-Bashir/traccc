@@ -1,0 +1,542 @@
+\hypertarget{seeding__example__cuda_8cpp}{}\doxysection{examples/run/cuda/seeding\+\_\+example\+\_\+cuda.cpp File Reference}
+\label{seeding__example__cuda_8cpp}\index{examples/run/cuda/seeding\_example\_cuda.cpp@{examples/run/cuda/seeding\_example\_cuda.cpp}}
+{\ttfamily \#include \char`\"{}traccc/cuda/finding/finding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/cuda/fitting/fitting\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/cuda/seeding/seeding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/cuda/seeding/track\+\_\+params\+\_\+estimation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/definitions/common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/device/container\+\_\+d2h\+\_\+copy\+\_\+alg.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/device/container\+\_\+h2d\+\_\+copy\+\_\+alg.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/efficiency/finding\+\_\+performance\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/efficiency/nseed\+\_\+performance\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/efficiency/seeding\+\_\+performance\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/efficiency/track\+\_\+filter.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/finding/finding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/fitting/fitting\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+geometry.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+measurements.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/read\+\_\+spacepoints.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/common\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/detector\+\_\+input\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/finding\+\_\+input\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/handle\+\_\+argument\+\_\+errors.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/propagation\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/options/seeding\+\_\+input\+\_\+options.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/performance/collection\+\_\+comparator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/performance/timer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/resolution/fitting\+\_\+performance\+\_\+writer.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/seeding\+\_\+algorithm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/seeding/track\+\_\+params\+\_\+estimation.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/core/detector.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/core/detector\+\_\+metadata.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/detectors/bfield.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/io/common/detector\+\_\+reader.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/propagator/navigator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/propagator/propagator.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/propagator/rk\+\_\+stepper.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/cuda/device\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/memory/cuda/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/memory/cuda/managed\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/utils/cuda/async\+\_\+copy.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/utils/cuda/copy.\+hpp$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for seeding\+\_\+example\+\_\+cuda.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dc7/seeding__example__cuda_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{seeding__example__cuda_8cpp_aa95b8139d916ca81aad42903492b05bb}{seq\+\_\+run}} (const \mbox{\hyperlink{structtraccc_1_1seeding__input__config}{traccc\+::seeding\+\_\+input\+\_\+config}} \&, const \mbox{\hyperlink{structtraccc_1_1finding__input__config}{traccc\+::finding\+\_\+input\+\_\+config}} \&finding\+\_\+cfg, const \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$ \&propagation\+\_\+opts, const \mbox{\hyperlink{structtraccc_1_1common__options}{traccc\+::common\+\_\+options}} \&common\+\_\+opts, const \mbox{\hyperlink{structtraccc_1_1detector__input__options}{traccc\+::detector\+\_\+input\+\_\+options}} \&det\+\_\+opts, bool run\+\_\+cpu)
+\item 
+int \mbox{\hyperlink{seeding__example__cuda_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{seeding__example__cuda_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{seeding__example__cuda_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{seeding\_example\_cuda.cpp@{seeding\_example\_cuda.cpp}!main@{main}}
+\index{main@{main}!seeding\_example\_cuda.cpp@{seeding\_example\_cuda.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{482                                  \{}
+\DoxyCodeLine{483     \textcolor{comment}{// Set up the program options}}
+\DoxyCodeLine{484     po::options\_description desc(\textcolor{stringliteral}{"Allowed options"});}
+\DoxyCodeLine{485 }
+\DoxyCodeLine{486     \textcolor{comment}{// Add options}}
+\DoxyCodeLine{487     desc.add\_options()(\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"Give some help with the program's options"});}
+\DoxyCodeLine{488     \mbox{\hyperlink{structtraccc_1_1common__options}{traccc::common\_options}} common\_opts(desc);}
+\DoxyCodeLine{489     \mbox{\hyperlink{structtraccc_1_1detector__input__options}{traccc::detector\_input\_options}} det\_opts(desc);}
+\DoxyCodeLine{490     \mbox{\hyperlink{structtraccc_1_1seeding__input__config}{traccc::seeding\_input\_config}} seeding\_input\_cfg(desc);}
+\DoxyCodeLine{491     \mbox{\hyperlink{structtraccc_1_1finding__input__config}{traccc::finding\_input\_config}} finding\_input\_cfg(desc);}
+\DoxyCodeLine{492     \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc::propagation\_options<traccc::scalar>}} propagation\_opts(desc);}
+\DoxyCodeLine{493     desc.add\_options()(\textcolor{stringliteral}{"run\_cpu"}, po::value<bool>()-\/>default\_value(\textcolor{keyword}{false}),}
+\DoxyCodeLine{494                        \textcolor{stringliteral}{"run cpu tracking as well"});}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{496     po::variables\_map vm;}
+\DoxyCodeLine{497     po::store(po::parse\_command\_line(argc, argv, desc), vm);}
+\DoxyCodeLine{498 }
+\DoxyCodeLine{499     \textcolor{comment}{// Check errors}}
+\DoxyCodeLine{500     \mbox{\hyperlink{namespacetraccc_a018e1f5ae8dbab3e118c08cfb905be01}{traccc::handle\_argument\_errors}}(vm, desc);}
+\DoxyCodeLine{501 }
+\DoxyCodeLine{502     \textcolor{comment}{// Read options}}
+\DoxyCodeLine{503     common\_opts.read(vm);}
+\DoxyCodeLine{504     det\_opts.read(vm);}
+\DoxyCodeLine{505     seeding\_input\_cfg.read(vm);}
+\DoxyCodeLine{506     finding\_input\_cfg.read(vm);}
+\DoxyCodeLine{507     propagation\_opts.read(vm);}
+\DoxyCodeLine{508     \textcolor{keyword}{auto} run\_cpu = vm[\textcolor{stringliteral}{"run\_cpu"}].as<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{509 }
+\DoxyCodeLine{510     std::cout << \textcolor{stringliteral}{"Running "} << argv[0] << \textcolor{stringliteral}{" "} << det\_opts.detector\_file << \textcolor{stringliteral}{" "}}
+\DoxyCodeLine{511               << common\_opts.input\_directory << \textcolor{stringliteral}{" "} << common\_opts.events}
+\DoxyCodeLine{512               << std::endl;}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{514     \textcolor{keywordflow}{return} \mbox{\hyperlink{seeding__example__cuda_8cpp_aa95b8139d916ca81aad42903492b05bb}{seq\_run}}(seeding\_input\_cfg, finding\_input\_cfg, propagation\_opts,}
+\DoxyCodeLine{515                    common\_opts, det\_opts, run\_cpu);}
+\DoxyCodeLine{516 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::detector\+\_\+input\+\_\+options\+::detector\+\_\+file, traccc\+::common\+\_\+options\+::events, traccc\+::handle\+\_\+argument\+\_\+errors(), traccc\+::common\+\_\+options\+::input\+\_\+directory, traccc\+::seeding\+\_\+input\+\_\+config\+::read(), traccc\+::detector\+\_\+input\+\_\+options\+::read(), traccc\+::finding\+\_\+input\+\_\+config\+::read(), traccc\+::common\+\_\+options\+::read(), traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and seq\+\_\+run().
+
+\mbox{\Hypertarget{seeding__example__cuda_8cpp_aa95b8139d916ca81aad42903492b05bb}\label{seeding__example__cuda_8cpp_aa95b8139d916ca81aad42903492b05bb}} 
+\index{seeding\_example\_cuda.cpp@{seeding\_example\_cuda.cpp}!seq\_run@{seq\_run}}
+\index{seq\_run@{seq\_run}!seeding\_example\_cuda.cpp@{seeding\_example\_cuda.cpp}}
+\doxysubsubsection{\texorpdfstring{seq\_run()}{seq\_run()}}
+{\footnotesize\ttfamily int seq\+\_\+run (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seeding__input__config}{traccc\+::seeding\+\_\+input\+\_\+config}} \&}]{,  }\item[{const \mbox{\hyperlink{structtraccc_1_1finding__input__config}{traccc\+::finding\+\_\+input\+\_\+config}} \&}]{finding\+\_\+cfg,  }\item[{const \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{traccc\+::scalar}} $>$ \&}]{propagation\+\_\+opts,  }\item[{const \mbox{\hyperlink{structtraccc_1_1common__options}{traccc\+::common\+\_\+options}} \&}]{common\+\_\+opts,  }\item[{const \mbox{\hyperlink{structtraccc_1_1detector__input__options}{traccc\+::detector\+\_\+input\+\_\+options}} \&}]{det\+\_\+opts,  }\item[{bool}]{run\+\_\+cpu }\end{DoxyParamCaption})}
+
+Type declarations
+
+C\+U\+DA
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                                                                         \{}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70     \textcolor{keyword}{using} host\_detector\_type = detray::detector<>;}
+\DoxyCodeLine{71     \textcolor{keyword}{using} device\_detector\_type =}
+\DoxyCodeLine{72         detray::detector<detray::default\_metadata,}
+\DoxyCodeLine{73                          detray::device\_container\_types>;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keyword}{using} b\_field\_t = covfie::field<detray::bfield::const\_bknd\_t>;}
+\DoxyCodeLine{76     \textcolor{keyword}{using} rk\_stepper\_type =}
+\DoxyCodeLine{77         detray::rk\_stepper<b\_field\_t::view\_t,}
+\DoxyCodeLine{78                            \textcolor{keyword}{typename} \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{host\_detector\_type::transform3}},}
+\DoxyCodeLine{79                            detray::constrained\_step<>>;}
+\DoxyCodeLine{80     \textcolor{keyword}{using} host\_navigator\_type = detray::navigator<const host\_detector\_type>;}
+\DoxyCodeLine{81     \textcolor{keyword}{using} host\_fitter\_type =}
+\DoxyCodeLine{82         \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc::kalman\_fitter<rk\_stepper\_type, host\_navigator\_type>}};}
+\DoxyCodeLine{83     \textcolor{keyword}{using} device\_navigator\_type = detray::navigator<const device\_detector\_type>;}
+\DoxyCodeLine{84     \textcolor{keyword}{using} device\_fitter\_type =}
+\DoxyCodeLine{85         \mbox{\hyperlink{classtraccc_1_1kalman__fitter}{traccc::kalman\_fitter<rk\_stepper\_type, device\_navigator\_type>}};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{comment}{// Memory resources used by the application.}}
+\DoxyCodeLine{88     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{89     vecmem::cuda::host\_memory\_resource cuda\_host\_mr;}
+\DoxyCodeLine{90     vecmem::cuda::managed\_memory\_resource mng\_mr;}
+\DoxyCodeLine{91     vecmem::cuda::device\_memory\_resource device\_mr;}
+\DoxyCodeLine{92     \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc::memory\_resource}} mr\{device\_mr, \&cuda\_host\_mr\};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{comment}{// Performance writer}}
+\DoxyCodeLine{95     \mbox{\hyperlink{classtraccc_1_1seeding__performance__writer}{traccc::seeding\_performance\_writer}} sd\_performance\_writer(}
+\DoxyCodeLine{96         \mbox{\hyperlink{structtraccc_1_1seeding__performance__writer_1_1config}{traccc::seeding\_performance\_writer::config}}\{\});}
+\DoxyCodeLine{97     \mbox{\hyperlink{classtraccc_1_1finding__performance__writer}{traccc::finding\_performance\_writer}} find\_performance\_writer(}
+\DoxyCodeLine{98         \mbox{\hyperlink{structtraccc_1_1finding__performance__writer_1_1config}{traccc::finding\_performance\_writer::config}}\{\});}
+\DoxyCodeLine{99     \mbox{\hyperlink{classtraccc_1_1fitting__performance__writer}{traccc::fitting\_performance\_writer}} fit\_performance\_writer(}
+\DoxyCodeLine{100         \mbox{\hyperlink{structtraccc_1_1fitting__performance__writer_1_1config}{traccc::fitting\_performance\_writer::config}}\{\});}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \mbox{\hyperlink{classtraccc_1_1nseed__performance__writer}{traccc::nseed\_performance\_writer}} nsd\_performance\_writer(}
+\DoxyCodeLine{103         \textcolor{stringliteral}{"nseed\_performance\_"},}
+\DoxyCodeLine{104         std::make\_unique<traccc::simple\_charged\_eta\_pt\_cut>(}
+\DoxyCodeLine{105             2.7f, 1.f * \mbox{\hyperlink{namespacetraccc_a8e197777a080d13acf75841651ad2b8b}{traccc::unit<traccc::scalar>::GeV}}),}
+\DoxyCodeLine{106         std::make\_unique<traccc::stepped\_percentage>(0.6f));}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     \textcolor{keywordflow}{if} (common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}{check\_performance}}) \{}
+\DoxyCodeLine{109         nsd\_performance\_writer.initialize();}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{comment}{// Output stats}}
+\DoxyCodeLine{113     uint64\_t n\_modules = 0;}
+\DoxyCodeLine{114     uint64\_t n\_spacepoints = 0;}
+\DoxyCodeLine{115     uint64\_t n\_seeds = 0;}
+\DoxyCodeLine{116     uint64\_t n\_seeds\_cuda = 0;}
+\DoxyCodeLine{117     uint64\_t n\_found\_tracks = 0;}
+\DoxyCodeLine{118     uint64\_t n\_found\_tracks\_cuda = 0;}
+\DoxyCodeLine{119     uint64\_t n\_fitted\_tracks = 0;}
+\DoxyCodeLine{120     uint64\_t n\_fitted\_tracks\_cuda = 0;}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{comment}{    /*****************************}}
+\DoxyCodeLine{123 \textcolor{comment}{     * Build a geometry}}
+\DoxyCodeLine{124 \textcolor{comment}{     *****************************/}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     \textcolor{comment}{// B field value and its type}}
+\DoxyCodeLine{127     \textcolor{comment}{// @TODO: Set B field as argument}}
+\DoxyCodeLine{128     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a3e92464c509aa7ac245244b6083357c2}{traccc::vector3}} B\{0, 0, 2 * detray::unit<traccc::scalar>::T\};}
+\DoxyCodeLine{129     \textcolor{keyword}{auto} field = detray::bfield::create\_const\_field(B);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     \textcolor{comment}{// Read the detector}}
+\DoxyCodeLine{132     detray::io::detector\_reader\_config reader\_cfg\{\};}
+\DoxyCodeLine{133     reader\_cfg.add\_file(\mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{traccc::io::data\_directory}}() + det\_opts.\mbox{\hyperlink{structtraccc_1_1detector__input__options_a1121f57fa16a57c9d2cef56f94390bcb}{detector\_file}});}
+\DoxyCodeLine{134     \textcolor{keywordflow}{if} (!det\_opts.\mbox{\hyperlink{structtraccc_1_1detector__input__options_ad25e9f5ede26a98836d89f0fe4592e01}{material\_file}}.empty()) \{}
+\DoxyCodeLine{135         reader\_cfg.add\_file(\mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{traccc::io::data\_directory}}() +}
+\DoxyCodeLine{136                             det\_opts.\mbox{\hyperlink{structtraccc_1_1detector__input__options_ad25e9f5ede26a98836d89f0fe4592e01}{material\_file}});}
+\DoxyCodeLine{137     \}}
+\DoxyCodeLine{138     \textcolor{keywordflow}{if} (!det\_opts.\mbox{\hyperlink{structtraccc_1_1detector__input__options_a5b7ddcb0ffd9af5e0bdd7f841c38d380}{grid\_file}}.empty()) \{}
+\DoxyCodeLine{139         reader\_cfg.add\_file(\mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{traccc::io::data\_directory}}() + det\_opts.\mbox{\hyperlink{structtraccc_1_1detector__input__options_a5b7ddcb0ffd9af5e0bdd7f841c38d380}{grid\_file}});}
+\DoxyCodeLine{140     \}}
+\DoxyCodeLine{141     \textcolor{keyword}{auto} [host\_det, names] =}
+\DoxyCodeLine{142         detray::io::read\_detector<host\_detector\_type>(mng\_mr, reader\_cfg);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \mbox{\hyperlink{classtraccc_1_1module__map}{traccc::geometry}} surface\_transforms =}
+\DoxyCodeLine{145         \mbox{\hyperlink{namespacetraccc_1_1io_a34c4958e67d33997fa0d3c0082169822}{traccc::io::alt\_read\_geometry}}(host\_det);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{comment}{// Detector view object}}
+\DoxyCodeLine{148     \textcolor{keyword}{auto} det\_view = \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{detray::get\_data}}(host\_det);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150     \textcolor{comment}{// Copy objects}}
+\DoxyCodeLine{151     vecmem::cuda::copy copy;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \mbox{\hyperlink{classtraccc_1_1device_1_1container__d2h__copy__alg}{traccc::device::container\_d2h\_copy\_alg}}<}
+\DoxyCodeLine{154         \mbox{\hyperlink{structtraccc_1_1container__types}{traccc::track\_candidate\_container\_types}}>}
+\DoxyCodeLine{155         track\_candidate\_d2h\{mr, copy\};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157     \mbox{\hyperlink{classtraccc_1_1device_1_1container__d2h__copy__alg}{traccc::device::container\_d2h\_copy\_alg<traccc::track\_state\_container\_types>}}}
+\DoxyCodeLine{158         track\_state\_d2h\{mr, copy\};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{comment}{// Seeding algorithm}}
+\DoxyCodeLine{161     \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{traccc::seedfinder\_config}} finder\_config;}
+\DoxyCodeLine{162     \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{traccc::spacepoint\_grid\_config}} grid\_config(finder\_config);}
+\DoxyCodeLine{163     \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{traccc::seedfilter\_config}} filter\_config;}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165     \mbox{\hyperlink{classtraccc_1_1seeding__algorithm}{traccc::seeding\_algorithm}} sa(finder\_config, grid\_config, filter\_config,}
+\DoxyCodeLine{166                                  host\_mr);}
+\DoxyCodeLine{167     \mbox{\hyperlink{classtraccc_1_1track__params__estimation}{traccc::track\_params\_estimation}} tp(host\_mr);}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169     \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{traccc::cuda::stream}} stream;}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171     vecmem::cuda::async\_copy async\_copy\{stream.\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_ad8224b3cebfca8079e035a10a9b1e20f}{cudaStream}}()\};}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173     \mbox{\hyperlink{classtraccc_1_1cuda_1_1seeding__algorithm}{traccc::cuda::seeding\_algorithm}} sa\_cuda\{}
+\DoxyCodeLine{174         finder\_config, grid\_config, filter\_config, mr, async\_copy, stream\};}
+\DoxyCodeLine{175     \mbox{\hyperlink{structtraccc_1_1cuda_1_1track__params__estimation}{traccc::cuda::track\_params\_estimation}} tp\_cuda\{mr, async\_copy, stream\};}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \textcolor{comment}{// Finding algorithm configuration}}
+\DoxyCodeLine{178     \textcolor{keyword}{typename} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc::cuda::finding\_algorithm}}<}
+\DoxyCodeLine{179         rk\_stepper\_type, device\_navigator\_type>::config\_type cfg;}
+\DoxyCodeLine{180     cfg.min\_track\_candidates\_per\_track = finding\_cfg.\mbox{\hyperlink{structtraccc_1_1finding__input__config_a24e62b30ce8ff203040556441f080f16}{track\_candidates\_range}}[0];}
+\DoxyCodeLine{181     cfg.max\_track\_candidates\_per\_track = finding\_cfg.\mbox{\hyperlink{structtraccc_1_1finding__input__config_a24e62b30ce8ff203040556441f080f16}{track\_candidates\_range}}[1];}
+\DoxyCodeLine{182     cfg.constrained\_step\_size = propagation\_opts.\mbox{\hyperlink{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}{step\_constraint}};}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184     \textcolor{comment}{// few tracks (\string~1 out of 1000 tracks) are missed when chi2\_max = 15}}
+\DoxyCodeLine{185     cfg.chi2\_max = 30.f;}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187     \textcolor{comment}{// Finding algorithm object}}
+\DoxyCodeLine{188     \mbox{\hyperlink{classtraccc_1_1finding__algorithm}{traccc::finding\_algorithm<rk\_stepper\_type, host\_navigator\_type>}}}
+\DoxyCodeLine{189         host\_finding(cfg);}
+\DoxyCodeLine{190     \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc::cuda::finding\_algorithm<rk\_stepper\_type, device\_navigator\_type>}}}
+\DoxyCodeLine{191         device\_finding(cfg, mr, async\_copy, stream);}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     \textcolor{comment}{// Fitting algorithm object}}
+\DoxyCodeLine{194     \textcolor{keyword}{typename} \mbox{\hyperlink{classtraccc_1_1fitting__algorithm_acfb92fd90e59587020bacc978ebe275c}{traccc::fitting\_algorithm<host\_fitter\_type>::config\_type}} fit\_cfg;}
+\DoxyCodeLine{195     fit\_cfg.step\_constraint = propagation\_opts.\mbox{\hyperlink{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}{step\_constraint}};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197     \mbox{\hyperlink{classtraccc_1_1fitting__algorithm}{traccc::fitting\_algorithm<host\_fitter\_type>}} host\_fitting(fit\_cfg);}
+\DoxyCodeLine{198     \mbox{\hyperlink{classtraccc_1_1cuda_1_1fitting__algorithm}{traccc::cuda::fitting\_algorithm<device\_fitter\_type>}} device\_fitting(}
+\DoxyCodeLine{199         fit\_cfg, mr, async\_copy, stream);}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201     \mbox{\hyperlink{structtraccc_1_1performance_1_1timing__info}{traccc::performance::timing\_info}} elapsedTimes;}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203     \textcolor{comment}{// Loop over events}}
+\DoxyCodeLine{204     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}} = common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}{skip}};}
+\DoxyCodeLine{205          \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}} < common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_adefc317cdc0b846c7be8db1e5f0c3ef2}{events}} + common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_ac0477bdb9a07bf525e12b006e141e094}{skip}}; ++\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}) \{}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207         \textcolor{comment}{// Instantiate host containers/collections}}
+\DoxyCodeLine{208         \mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{traccc::io::spacepoint\_reader\_output}} sp\_reader\_output(mr.host);}
+\DoxyCodeLine{209         \mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{traccc::io::measurement\_reader\_output}} meas\_reader\_output(mr.host);}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211         traccc::seeding\_algorithm::output\_type seeds;}
+\DoxyCodeLine{212         traccc::track\_params\_estimation::output\_type params;}
+\DoxyCodeLine{213         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_candidate\_container\_types::host}} track\_candidates;}
+\DoxyCodeLine{214         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_state\_container\_types::host}} track\_states;}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216         \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::seed\_collection\_types::buffer}} seeds\_cuda\_buffer(0, *(mr.host));}
+\DoxyCodeLine{217         \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::bound\_track\_parameters\_collection\_types::buffer}}}
+\DoxyCodeLine{218             params\_cuda\_buffer(0, *mr.host);}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220         \mbox{\hyperlink{structtraccc_1_1container__buffer}{traccc::track\_candidate\_container\_types::buffer}}}
+\DoxyCodeLine{221             track\_candidates\_cuda\_buffer\{\{\{\}, *(mr.host)\},}
+\DoxyCodeLine{222                                          \{\{\}, *(mr.host), mr.host\}\};}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224         \mbox{\hyperlink{structtraccc_1_1container__buffer}{traccc::track\_state\_container\_types::buffer}} track\_states\_cuda\_buffer\{}
+\DoxyCodeLine{225             \{\{\}, *(mr.host)\}, \{\{\}, *(mr.host), mr.host\}\};}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         \{  \textcolor{comment}{// Start measuring wall time}}
+\DoxyCodeLine{228             \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} wall\_t(\textcolor{stringliteral}{"Wall time"}, elapsedTimes);}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{231 \textcolor{comment}{            hit file reading}}
+\DoxyCodeLine{232 \textcolor{comment}{            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{233             \{}
+\DoxyCodeLine{234                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Hit reading  (cpu)"},}
+\DoxyCodeLine{235                                              elapsedTimes);}
+\DoxyCodeLine{236                 \textcolor{comment}{// Read the hits from the relevant event file}}
+\DoxyCodeLine{237                 \mbox{\hyperlink{namespacetraccc_1_1io_afe49060da2ab77f49cfcd82308122f84}{traccc::io::read\_spacepoints}}(}
+\DoxyCodeLine{238                     sp\_reader\_output, \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\_directory}},}
+\DoxyCodeLine{239                     surface\_transforms, common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}{input\_data\_format}});}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241                 \textcolor{comment}{// Read measurements}}
+\DoxyCodeLine{242                 \mbox{\hyperlink{namespacetraccc_1_1io_a84e36824b32d23770ed527b25f810307}{traccc::io::read\_measurements}}(meas\_reader\_output, \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}},}
+\DoxyCodeLine{243                                               common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\_directory}},}
+\DoxyCodeLine{244                                               common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_a290ad4675f5a976c73c2a05e35dd1b5c}{input\_data\_format}});}
+\DoxyCodeLine{245             \}  \textcolor{comment}{// stop measuring hit reading timer}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247             \textcolor{keyword}{auto}\& spacepoints\_per\_event = sp\_reader\_output.spacepoints;}
+\DoxyCodeLine{248             \textcolor{keyword}{auto}\& modules\_per\_event = sp\_reader\_output.modules;}
+\DoxyCodeLine{249             \textcolor{keyword}{auto}\& measurements\_per\_event = meas\_reader\_output.measurements;}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{252 \textcolor{comment}{                Seeding algorithm}}
+\DoxyCodeLine{253 \textcolor{comment}{            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257             \textcolor{comment}{// Copy the spacepoint and module data to the device.}}
+\DoxyCodeLine{258             \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::spacepoint\_collection\_types::buffer}} spacepoints\_cuda\_buffer(}
+\DoxyCodeLine{259                 spacepoints\_per\_event.size(), mr.main);}
+\DoxyCodeLine{260             async\_copy(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(spacepoints\_per\_event),}
+\DoxyCodeLine{261                        spacepoints\_cuda\_buffer);}
+\DoxyCodeLine{262             \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::cell\_module\_collection\_types::buffer}} modules\_buffer(}
+\DoxyCodeLine{263                 modules\_per\_event.size(), mr.main);}
+\DoxyCodeLine{264             async\_copy(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(modules\_per\_event), modules\_buffer);}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266             \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{traccc::measurement\_collection\_types::buffer}}}
+\DoxyCodeLine{267                 measurements\_cuda\_buffer(measurements\_per\_event.size(),}
+\DoxyCodeLine{268                                          mr.main);}
+\DoxyCodeLine{269             async\_copy(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(measurements\_per\_event),}
+\DoxyCodeLine{270                        measurements\_cuda\_buffer);}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272             \{}
+\DoxyCodeLine{273                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Seeding (cuda)"}, elapsedTimes);}
+\DoxyCodeLine{274                 \textcolor{comment}{// Reconstruct the spacepoints into seeds.}}
+\DoxyCodeLine{275                 seeds\_cuda\_buffer = sa\_cuda(spacepoints\_cuda\_buffer);}
+\DoxyCodeLine{276                 stream.\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a02822504e0827a6176095e1800d174ad}{synchronize}}();}
+\DoxyCodeLine{277             \}  \textcolor{comment}{// stop measuring seeding cuda timer}}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279             \textcolor{comment}{// CPU}}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281             \textcolor{keywordflow}{if} (run\_cpu) \{}
+\DoxyCodeLine{282                 \{}
+\DoxyCodeLine{283                     \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Seeding  (cpu)"},}
+\DoxyCodeLine{284                                                  elapsedTimes);}
+\DoxyCodeLine{285                     seeds = sa(spacepoints\_per\_event);}
+\DoxyCodeLine{286                 \}}
+\DoxyCodeLine{287             \}  \textcolor{comment}{// stop measuring seeding cpu timer}}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{290 \textcolor{comment}{               Track params estimation}}
+\DoxyCodeLine{291 \textcolor{comment}{            -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293             \textcolor{comment}{// CUDA}}
+\DoxyCodeLine{294             \{}
+\DoxyCodeLine{295                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Track params (cuda)"},}
+\DoxyCodeLine{296                                              elapsedTimes);}
+\DoxyCodeLine{297                 params\_cuda\_buffer =}
+\DoxyCodeLine{298                     tp\_cuda(spacepoints\_cuda\_buffer, seeds\_cuda\_buffer,}
+\DoxyCodeLine{299                             \{0.f, 0.f, finder\_config.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_af3b9be46bd90bb968da94db6ac36bd45}{bFieldInZ}}\});}
+\DoxyCodeLine{300                 stream.\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream_a02822504e0827a6176095e1800d174ad}{synchronize}}();}
+\DoxyCodeLine{301             \}  \textcolor{comment}{// stop measuring track params cuda timer}}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303             \textcolor{comment}{// CPU}}
+\DoxyCodeLine{304             \textcolor{keywordflow}{if} (run\_cpu) \{}
+\DoxyCodeLine{305                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Track params  (cpu)"},}
+\DoxyCodeLine{306                                              elapsedTimes);}
+\DoxyCodeLine{307                 params = tp(spacepoints\_per\_event, seeds,}
+\DoxyCodeLine{308                             \{0.f, 0.f, finder\_config.\mbox{\hyperlink{structtraccc_1_1seedfinder__config_af3b9be46bd90bb968da94db6ac36bd45}{bFieldInZ}}\});}
+\DoxyCodeLine{309             \}  \textcolor{comment}{// stop measuring track params cpu timer}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311             \textcolor{comment}{// Navigation buffer}}
+\DoxyCodeLine{312             \textcolor{keyword}{auto} navigation\_buffer = detray::create\_candidates\_buffer(}
+\DoxyCodeLine{313                 host\_det,}
+\DoxyCodeLine{314                 device\_finding.get\_config().max\_num\_branches\_per\_seed *}
+\DoxyCodeLine{315                     copy.get\_size(seeds\_cuda\_buffer),}
+\DoxyCodeLine{316                 mr.main, mr.host);}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{319 \textcolor{comment}{               Track Finding with CKF}}
+\DoxyCodeLine{320 \textcolor{comment}{              -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322             \{}
+\DoxyCodeLine{323                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Track finding with CKF (cuda)"},}
+\DoxyCodeLine{324                                              elapsedTimes);}
+\DoxyCodeLine{325                 track\_candidates\_cuda\_buffer = device\_finding(}
+\DoxyCodeLine{326                     det\_view, field, navigation\_buffer,}
+\DoxyCodeLine{327                     measurements\_cuda\_buffer, params\_cuda\_buffer);}
+\DoxyCodeLine{328             \}}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330             \textcolor{keywordflow}{if} (run\_cpu) \{}
+\DoxyCodeLine{331                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Track finding with CKF (cpu)"},}
+\DoxyCodeLine{332                                              elapsedTimes);}
+\DoxyCodeLine{333                 track\_candidates = host\_finding(host\_det, field,}
+\DoxyCodeLine{334                                                 measurements\_per\_event, params);}
+\DoxyCodeLine{335             \}}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337             \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{338 \textcolor{comment}{               Track Fitting with KF}}
+\DoxyCodeLine{339 \textcolor{comment}{              -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341             \{}
+\DoxyCodeLine{342                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Track fitting with KF (cuda)"},}
+\DoxyCodeLine{343                                              elapsedTimes);}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345                 track\_states\_cuda\_buffer =}
+\DoxyCodeLine{346                     device\_fitting(det\_view, field, navigation\_buffer,}
+\DoxyCodeLine{347                                    track\_candidates\_cuda\_buffer);}
+\DoxyCodeLine{348             \}}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350             \textcolor{keywordflow}{if} (run\_cpu) \{}
+\DoxyCodeLine{351                 \mbox{\hyperlink{classtraccc_1_1performance_1_1timer}{traccc::performance::timer}} t(\textcolor{stringliteral}{"Track fitting with KF (cpu)"},}
+\DoxyCodeLine{352                                              elapsedTimes);}
+\DoxyCodeLine{353                 track\_states = host\_fitting(host\_det, field, track\_candidates);}
+\DoxyCodeLine{354             \}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356         \}  \textcolor{comment}{// Stop measuring wall time}}
+\DoxyCodeLine{357 }
+\DoxyCodeLine{358         \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{359 \textcolor{comment}{          compare seeds from cpu and cuda}}
+\DoxyCodeLine{360 \textcolor{comment}{          -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362         \textcolor{comment}{// Copy the seeds to the host for comparisons}}
+\DoxyCodeLine{363         \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::seed\_collection\_types::host}} seeds\_cuda;}
+\DoxyCodeLine{364         \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{traccc::bound\_track\_parameters\_collection\_types::host}} params\_cuda;}
+\DoxyCodeLine{365         async\_copy(seeds\_cuda\_buffer, seeds\_cuda)-\/>wait();}
+\DoxyCodeLine{366         async\_copy(params\_cuda\_buffer, params\_cuda)-\/>wait();}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{368         \textcolor{comment}{// Copy track candidates from device to host}}
+\DoxyCodeLine{369         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_candidate\_container\_types::host}} track\_candidates\_cuda =}
+\DoxyCodeLine{370             track\_candidate\_d2h(track\_candidates\_cuda\_buffer);}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372         \textcolor{comment}{// Copy track states from device to host}}
+\DoxyCodeLine{373         \mbox{\hyperlink{classtraccc_1_1host__container}{traccc::track\_state\_container\_types::host}} track\_states\_cuda =}
+\DoxyCodeLine{374             track\_state\_d2h(track\_states\_cuda\_buffer);}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376         \textcolor{keywordflow}{if} (run\_cpu) \{}
+\DoxyCodeLine{377             \textcolor{comment}{// Show which event we are currently presenting the results for.}}
+\DoxyCodeLine{378             std::cout << \textcolor{stringliteral}{"===>>> Event "} << \textcolor{keyword}{event} << \textcolor{stringliteral}{" <<<==="} << std::endl;}
+\DoxyCodeLine{379 }
+\DoxyCodeLine{380             \textcolor{comment}{// Compare the seeds made on the host and on the device}}
+\DoxyCodeLine{381             \mbox{\hyperlink{classtraccc_1_1collection__comparator}{traccc::collection\_comparator<traccc::seed>}} compare\_seeds\{}
+\DoxyCodeLine{382                 \textcolor{stringliteral}{"seeds"}, \mbox{\hyperlink{classtraccc_1_1details_1_1comparator__factory}{traccc::details::comparator\_factory<traccc::seed>}}\{}
+\DoxyCodeLine{383                              \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(sp\_reader\_output.spacepoints),}
+\DoxyCodeLine{384                              \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(sp\_reader\_output.spacepoints)\}\};}
+\DoxyCodeLine{385             compare\_seeds(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(seeds),}
+\DoxyCodeLine{386                           \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(seeds\_cuda));}
+\DoxyCodeLine{387 }
+\DoxyCodeLine{388             \textcolor{comment}{// Compare the track parameters made on the host and on the device.}}
+\DoxyCodeLine{389             \mbox{\hyperlink{classtraccc_1_1collection__comparator}{traccc::collection\_comparator<traccc::bound\_track\_parameters>}}}
+\DoxyCodeLine{390                 compare\_track\_parameters\{\textcolor{stringliteral}{"track parameters"}\};}
+\DoxyCodeLine{391             compare\_track\_parameters(\mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(params),}
+\DoxyCodeLine{392                                      \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(params\_cuda));}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394             \textcolor{comment}{// Compare the track candidates made on the host and on the}}
+\DoxyCodeLine{395             \textcolor{comment}{// device}}
+\DoxyCodeLine{396             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_matches = 0;}
+\DoxyCodeLine{397             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < track\_candidates.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}(); i++) \{}
+\DoxyCodeLine{398                 \textcolor{keyword}{auto} iso = \mbox{\hyperlink{classtraccc_1_1details_1_1is__same__object}{traccc::details::is\_same\_object}}(}
+\DoxyCodeLine{399                     track\_candidates.\mbox{\hyperlink{classtraccc_1_1host__container_a22f19b70178832415310bb4fd17b9d48}{at}}(i).\mbox{\hyperlink{structtraccc_1_1container__element_a7b11224d4a0d42c39758fb2b739014f2}{items}});}
+\DoxyCodeLine{400 }
+\DoxyCodeLine{401                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j = 0; j < track\_candidates\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}();}
+\DoxyCodeLine{402                      j++) \{}
+\DoxyCodeLine{403                     \textcolor{keywordflow}{if} (iso(track\_candidates\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_a22f19b70178832415310bb4fd17b9d48}{at}}(j).\mbox{\hyperlink{structtraccc_1_1container__element_a7b11224d4a0d42c39758fb2b739014f2}{items}})) \{}
+\DoxyCodeLine{404                         n\_matches++;}
+\DoxyCodeLine{405                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{406                     \}}
+\DoxyCodeLine{407                 \}}
+\DoxyCodeLine{408             \}}
+\DoxyCodeLine{409             std::cout << \textcolor{stringliteral}{"Track candidate matching Rate: "}}
+\DoxyCodeLine{410                       << float(n\_matches) / track\_candidates.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}()}
+\DoxyCodeLine{411                       << std::endl;}
+\DoxyCodeLine{412         \}}
+\DoxyCodeLine{413 }
+\DoxyCodeLine{414         \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{415 \textcolor{comment}{             Statistics}}
+\DoxyCodeLine{416 \textcolor{comment}{          -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418         n\_spacepoints += sp\_reader\_output.spacepoints.size();}
+\DoxyCodeLine{419         n\_modules += sp\_reader\_output.modules.size();}
+\DoxyCodeLine{420         n\_seeds\_cuda += seeds\_cuda.size();}
+\DoxyCodeLine{421         n\_seeds += seeds.size();}
+\DoxyCodeLine{422         n\_found\_tracks\_cuda += track\_candidates\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}();}
+\DoxyCodeLine{423         n\_found\_tracks += track\_candidates.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}();}
+\DoxyCodeLine{424         n\_fitted\_tracks\_cuda += track\_states\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}();}
+\DoxyCodeLine{425         n\_fitted\_tracks += track\_states.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}();}
+\DoxyCodeLine{426 }
+\DoxyCodeLine{427         \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{428 \textcolor{comment}{          Writer}}
+\DoxyCodeLine{429 \textcolor{comment}{          -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431         \textcolor{keywordflow}{if} (common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}{check\_performance}}) \{}
+\DoxyCodeLine{432             \mbox{\hyperlink{structtraccc_1_1event__map2}{traccc::event\_map2}} evt\_map(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\_directory}},}
+\DoxyCodeLine{433                                        common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\_directory}},}
+\DoxyCodeLine{434                                        common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_aec17933699762e2feb58124cef53d6b2}{input\_directory}});}
+\DoxyCodeLine{435             sd\_performance\_writer.write(}
+\DoxyCodeLine{436                 \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(seeds\_cuda),}
+\DoxyCodeLine{437                 \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{vecmem::get\_data}}(sp\_reader\_output.spacepoints), evt\_map);}
+\DoxyCodeLine{438 }
+\DoxyCodeLine{439             find\_performance\_writer.write(}
+\DoxyCodeLine{440                 \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{traccc::get\_data}}(track\_candidates\_cuda), evt\_map);}
+\DoxyCodeLine{441 }
+\DoxyCodeLine{442             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < track\_states\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_afb9ec4efd2a4fc601cafb57db9ebe30e}{size}}(); i++) \{}
+\DoxyCodeLine{443                 \textcolor{keyword}{const} \textcolor{keyword}{auto}\& trk\_states\_per\_track =}
+\DoxyCodeLine{444                     track\_states\_cuda.\mbox{\hyperlink{classtraccc_1_1host__container_a22f19b70178832415310bb4fd17b9d48}{at}}(i).\mbox{\hyperlink{structtraccc_1_1container__element_a7b11224d4a0d42c39758fb2b739014f2}{items}};}
+\DoxyCodeLine{445 }
+\DoxyCodeLine{446                 \textcolor{keyword}{const} \textcolor{keyword}{auto}\& fit\_info = track\_states\_cuda[i].header;}
+\DoxyCodeLine{447 }
+\DoxyCodeLine{448                 fit\_performance\_writer.write(trk\_states\_per\_track, fit\_info,}
+\DoxyCodeLine{449                                              host\_det, evt\_map);}
+\DoxyCodeLine{450             \}}
+\DoxyCodeLine{451         \}}
+\DoxyCodeLine{452     \}}
+\DoxyCodeLine{453 }
+\DoxyCodeLine{454     \textcolor{keywordflow}{if} (common\_opts.\mbox{\hyperlink{structtraccc_1_1common__options_a06a875a852f866c6ad5abfaae82cb440}{check\_performance}}) \{}
+\DoxyCodeLine{455         sd\_performance\_writer.finalize();}
+\DoxyCodeLine{456         nsd\_performance\_writer.finalize();}
+\DoxyCodeLine{457         find\_performance\_writer.finalize();}
+\DoxyCodeLine{458         fit\_performance\_writer.finalize();}
+\DoxyCodeLine{459         std::cout << nsd\_performance\_writer.generate\_report\_str();}
+\DoxyCodeLine{460     \}}
+\DoxyCodeLine{461 }
+\DoxyCodeLine{462     std::cout << \textcolor{stringliteral}{"==> Statistics ... "} << std::endl;}
+\DoxyCodeLine{463     std::cout << \textcolor{stringliteral}{"-\/ read    "} << n\_spacepoints << \textcolor{stringliteral}{" spacepoints from "}}
+\DoxyCodeLine{464               << n\_modules << \textcolor{stringliteral}{" modules"} << std::endl;}
+\DoxyCodeLine{465     std::cout << \textcolor{stringliteral}{"-\/ created  (cpu)  "} << n\_seeds << \textcolor{stringliteral}{" seeds"} << std::endl;}
+\DoxyCodeLine{466     std::cout << \textcolor{stringliteral}{"-\/ created (cuda)  "} << n\_seeds\_cuda << \textcolor{stringliteral}{" seeds"} << std::endl;}
+\DoxyCodeLine{467     std::cout << \textcolor{stringliteral}{"-\/ created  (cpu) "} << n\_found\_tracks << \textcolor{stringliteral}{" found tracks"}}
+\DoxyCodeLine{468               << std::endl;}
+\DoxyCodeLine{469     std::cout << \textcolor{stringliteral}{"-\/ created (cuda) "} << n\_found\_tracks\_cuda << \textcolor{stringliteral}{" found tracks"}}
+\DoxyCodeLine{470               << std::endl;}
+\DoxyCodeLine{471     std::cout << \textcolor{stringliteral}{"-\/ created  (cpu) "} << n\_fitted\_tracks << \textcolor{stringliteral}{" fitted tracks"}}
+\DoxyCodeLine{472               << std::endl;}
+\DoxyCodeLine{473     std::cout << \textcolor{stringliteral}{"-\/ created (cuda) "} << n\_fitted\_tracks\_cuda << \textcolor{stringliteral}{" fitted tracks"}}
+\DoxyCodeLine{474               << std::endl;}
+\DoxyCodeLine{475     std::cout << \textcolor{stringliteral}{"==>Elapsed times...\(\backslash\)n"} << elapsedTimes << std::endl;}
+\DoxyCodeLine{476 }
+\DoxyCodeLine{477     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{478 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::io\+::alt\+\_\+read\+\_\+geometry(), traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::at(), traccc\+::seedfinder\+\_\+config\+::b\+Field\+InZ, traccc\+::common\+\_\+options\+::check\+\_\+performance, traccc\+::cuda\+::stream\+::cuda\+Stream(), traccc\+::io\+::data\+\_\+directory(), traccc\+::detector\+\_\+input\+\_\+options\+::detector\+\_\+file, event, traccc\+::common\+\_\+options\+::events, traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::get\+\_\+config(), traccc\+::get\+\_\+data(), traccc\+::detector\+\_\+input\+\_\+options\+::grid\+\_\+file, traccc\+::common\+\_\+options\+::input\+\_\+data\+\_\+format, traccc\+::common\+\_\+options\+::input\+\_\+directory, traccc\+::container\+\_\+element$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::items, traccc\+::detector\+\_\+input\+\_\+options\+::material\+\_\+file, traccc\+::finding\+\_\+config$<$ scalar\+\_\+t $>$\+::max\+\_\+num\+\_\+branches\+\_\+per\+\_\+seed, traccc\+::io\+::measurement\+\_\+reader\+\_\+output\+::measurements, traccc\+::io\+::spacepoint\+\_\+reader\+\_\+output\+::modules, traccc\+::io\+::read\+\_\+measurements(), traccc\+::io\+::read\+\_\+spacepoints(), traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::size(), traccc\+::common\+\_\+options\+::skip, traccc\+::io\+::spacepoint\+\_\+reader\+\_\+output\+::spacepoints, traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::step\+\_\+constraint, traccc\+::cuda\+::stream\+::synchronize(), and traccc\+::finding\+\_\+input\+\_\+config\+::track\+\_\+candidates\+\_\+range.
+
+
+
+Referenced by main().
+

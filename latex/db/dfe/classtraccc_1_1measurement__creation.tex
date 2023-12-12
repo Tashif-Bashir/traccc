@@ -1,0 +1,153 @@
+\hypertarget{classtraccc_1_1measurement__creation}{}\doxysection{traccc\+::measurement\+\_\+creation Class Reference}
+\label{classtraccc_1_1measurement__creation}\index{traccc::measurement\_creation@{traccc::measurement\_creation}}
+
+
+{\ttfamily \#include $<$measurement\+\_\+creation.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::measurement\+\_\+creation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{d9/dc7/classtraccc_1_1measurement__creation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::measurement\+\_\+creation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{d2/dd0/classtraccc_1_1measurement__creation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1measurement__creation_a9bb23bd8d2927f7ba6f29953c19dd2ad}{measurement\+\_\+creation}} (vecmem\+::memory\+\_\+resource \&mr)
+\item 
+output\+\_\+type \mbox{\hyperlink{classtraccc_1_1measurement__creation_a5658b1b19e9e05db32b42cfb681b9b80}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{cluster\+\_\+container\+\_\+types\+::host}} \&clusters, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+module\+\_\+collection\+\_\+types\+::host}} \&modules) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::reference\+\_\+wrapper$<$ vecmem\+::memory\+\_\+resource $>$ \mbox{\hyperlink{classtraccc_1_1measurement__creation_a1a335cf41f149ec7ba10b6c512b7a81e}{m\+\_\+mr}}
+\begin{DoxyCompactList}\small\item\em The memory resource used by the algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Measurement creation out of clusters
+
+This algorithm can create measurements for a single detector module for all of the clusters that were identified in that one detector module. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1measurement__creation_a9bb23bd8d2927f7ba6f29953c19dd2ad}\label{classtraccc_1_1measurement__creation_a9bb23bd8d2927f7ba6f29953c19dd2ad}} 
+\index{traccc::measurement\_creation@{traccc::measurement\_creation}!measurement\_creation@{measurement\_creation}}
+\index{measurement\_creation@{measurement\_creation}!traccc::measurement\_creation@{traccc::measurement\_creation}}
+\doxysubsubsection{\texorpdfstring{measurement\_creation()}{measurement\_creation()}}
+{\footnotesize\ttfamily traccc\+::measurement\+\_\+creation\+::measurement\+\_\+creation (\begin{DoxyParamCaption}\item[{vecmem\+::memory\+\_\+resource \&}]{mr }\end{DoxyParamCaption})}
+
+Measurement\+\_\+creation algorithm constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & The memory resource to use in the algorithm \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17     : \mbox{\hyperlink{classtraccc_1_1measurement__creation_a1a335cf41f149ec7ba10b6c512b7a81e}{m\_mr}}(mr) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1measurement__creation_a5658b1b19e9e05db32b42cfb681b9b80}\label{classtraccc_1_1measurement__creation_a5658b1b19e9e05db32b42cfb681b9b80}} 
+\index{traccc::measurement\_creation@{traccc::measurement\_creation}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::measurement\_creation@{traccc::measurement\_creation}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily measurement\+\_\+creation\+::output\+\_\+type traccc\+::measurement\+\_\+creation\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1container__types_a9585c833c648097a3bdc8f228a78954e}{cluster\+\_\+container\+\_\+types\+::host}} \&}]{clusters,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+module\+\_\+collection\+\_\+types\+::host}} \&}]{modules }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Callable operator for the connected component, based on one single module
+
+
+\begin{DoxyParams}{Parameters}
+{\em clusters} & Container of cells. Each subvector of cells corresponds to a cluster \\
+\hline
+{\em modules} & Collection of detector modules the clusters link to.\\
+\hline
+\end{DoxyParams}
+C++20 piping interface
+
+\begin{DoxyReturn}{Returns}
+a measurement collection -\/ usually same size or sometime slightly smaller than the input 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                                            \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Create the result object.}}
+\DoxyCodeLine{24     output\_type result(\&(\mbox{\hyperlink{classtraccc_1_1measurement__creation_a1a335cf41f149ec7ba10b6c512b7a81e}{m\_mr}}.get()));}
+\DoxyCodeLine{25     result.reserve(clusters.size());}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Process the clusters one-\/by-\/one.}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{for} (std::size\_t i = 0; i < clusters.size(); ++i) \{}
+\DoxyCodeLine{29         \textcolor{comment}{// To calculate the mean and variance with high numerical stability}}
+\DoxyCodeLine{30         \textcolor{comment}{// we use a weighted variant of Welford's algorithm. This is a}}
+\DoxyCodeLine{31         \textcolor{comment}{// single-\/pass online algorithm that works well for large numbers}}
+\DoxyCodeLine{32         \textcolor{comment}{// of samples, as well as samples with very high values.}}
+\DoxyCodeLine{33         \textcolor{comment}{//}}
+\DoxyCodeLine{34         \textcolor{comment}{// To learn more about this algorithm please refer to:}}
+\DoxyCodeLine{35         \textcolor{comment}{// [1] https://doi.org/10.1080/00401706.1962.10490022}}
+\DoxyCodeLine{36         \textcolor{comment}{// [2] The Art of Computer Programming, Donald E. Knuth, second}}
+\DoxyCodeLine{37         \textcolor{comment}{//     edition, chapter 4.2.2.}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{comment}{// Get the cluster.}}
+\DoxyCodeLine{40         \mbox{\hyperlink{namespacetraccc_1_1details_1_1functor_a357582a9a6874cb71ff052105af32ab2}{cluster\_container\_types::host::item\_vector::const\_reference}} cluster =}
+\DoxyCodeLine{41             clusters.at(i).items;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \textcolor{comment}{// A security check.}}
+\DoxyCodeLine{44         assert(cluster.empty() == \textcolor{keyword}{false});}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         \textcolor{comment}{// Get the cell module}}
+\DoxyCodeLine{47         \textcolor{keyword}{const} \textcolor{keyword}{auto} module\_link = cluster.at(0).module\_link;}
+\DoxyCodeLine{48         \textcolor{keyword}{const} \textcolor{keyword}{auto} \&module = modules.at(module\_link);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \textcolor{comment}{// Fill measurement from cluster}}
+\DoxyCodeLine{51         \mbox{\hyperlink{namespacetraccc_1_1detail_aaae24bc1a48341492ebe910a3a4f7d6a}{detail::fill\_measurement}}(result, cluster, module, module\_link);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::at(), traccc\+::detail\+::fill\+\_\+measurement(), traccc\+::container\+\_\+element$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::items, m\+\_\+mr, and traccc\+::host\+\_\+container$<$ header\+\_\+t, item\+\_\+t $>$\+::size().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1measurement__creation_a1a335cf41f149ec7ba10b6c512b7a81e}\label{classtraccc_1_1measurement__creation_a1a335cf41f149ec7ba10b6c512b7a81e}} 
+\index{traccc::measurement\_creation@{traccc::measurement\_creation}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::measurement\_creation@{traccc::measurement\_creation}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily std\+::reference\+\_\+wrapper$<$vecmem\+::memory\+\_\+resource$>$ traccc\+::measurement\+\_\+creation\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The memory resource used by the algorithm. 
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/clusterization/\mbox{\hyperlink{measurement__creation_8hpp}{measurement\+\_\+creation.\+hpp}}\item 
+core/src/clusterization/\mbox{\hyperlink{measurement__creation_8cpp}{measurement\+\_\+creation.\+cpp}}\end{DoxyCompactItemize}

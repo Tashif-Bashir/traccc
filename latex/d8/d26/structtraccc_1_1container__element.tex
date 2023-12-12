@@ -1,0 +1,140 @@
+\hypertarget{structtraccc_1_1container__element}{}\doxysection{traccc\+::container\+\_\+element$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1container__element}\index{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}}
+
+
+View class for an element in a header-\/vector container.  
+
+
+
+
+{\ttfamily \#include $<$container\+\_\+element.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::container\+\_\+element$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{df/d78/structtraccc_1_1container__element__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}{header\+\_\+reference}} = header\+\_\+reference\+\_\+t
+\begin{DoxyCompactList}\small\item\em Header reference type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}{vector\+\_\+reference}} = vector\+\_\+reference\+\_\+t
+\begin{DoxyCompactList}\small\item\em Vector reference type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{structtraccc_1_1container__element_a2fcbe100cb7aaa26db4528034a97f520}{container\+\_\+element}} (\mbox{\hyperlink{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}{header\+\_\+reference}} h, \mbox{\hyperlink{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}{vector\+\_\+reference}} v)
+\begin{DoxyCompactList}\small\item\em Construct a new container element view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}{header\+\_\+reference}} \mbox{\hyperlink{structtraccc_1_1container__element_acabcc54aaa8cd9c56d1f4969189de7d1}{header}}
+\item 
+\mbox{\hyperlink{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}{vector\+\_\+reference}} \mbox{\hyperlink{structtraccc_1_1container__element_a7b11224d4a0d42c39758fb2b739014f2}{items}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename header\+\_\+reference\+\_\+t, typename vector\+\_\+reference\+\_\+t$>$\newline
+struct traccc\+::container\+\_\+element$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$}
+
+View class for an element in a header-\/vector container. 
+
+In order to enforce certain invariants on the {\ttfamily container} header-\/vector type, we access elements (which, of course, are product types of a header and a vector) through this wrapper class. This class provides low-\/overhead access to the struct-\/of-\/arrays container class to emulate an array-\/of-\/structs architecture.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em header\+\_\+reference\+\_\+t} & The type of reference of the header object. \\
+\hline
+{\em vector\+\_\+reference\+\_\+t} & The fully qualified vector reference type. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}\label{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}} 
+\index{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}!header\_reference@{header\_reference}}
+\index{header\_reference@{header\_reference}!traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}}
+\doxysubsubsection{\texorpdfstring{header\_reference}{header\_reference}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+reference\+\_\+t , typename vector\+\_\+reference\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__element}{traccc\+::container\+\_\+element}}$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}{header\+\_\+reference}} =  header\+\_\+reference\+\_\+t}
+
+
+
+Header reference type. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}\label{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}} 
+\index{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}!vector\_reference@{vector\_reference}}
+\index{vector\_reference@{vector\_reference}!traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}}
+\doxysubsubsection{\texorpdfstring{vector\_reference}{vector\_reference}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+reference\+\_\+t , typename vector\+\_\+reference\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__element}{traccc\+::container\+\_\+element}}$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}{vector\+\_\+reference}} =  vector\+\_\+reference\+\_\+t}
+
+
+
+Vector reference type. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1container__element_a2fcbe100cb7aaa26db4528034a97f520}\label{structtraccc_1_1container__element_a2fcbe100cb7aaa26db4528034a97f520}} 
+\index{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}!container\_element@{container\_element}}
+\index{container\_element@{container\_element}!traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}}
+\doxysubsubsection{\texorpdfstring{container\_element()}{container\_element()}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+reference\+\_\+t , typename vector\+\_\+reference\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} \mbox{\hyperlink{structtraccc_1_1container__element}{traccc\+::container\+\_\+element}}$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__element}{container\+\_\+element}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}{header\+\_\+reference}}}]{h,  }\item[{\mbox{\hyperlink{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}{vector\+\_\+reference}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new container element view. 
+
+This constructor is extremely trivial, as it simply takes a reference to a header, a reference to a vector, and saves them in this object\textquotesingle{}s internal state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & The header object reference. \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & The vector object reference. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47         : \mbox{\hyperlink{structtraccc_1_1container__element_acabcc54aaa8cd9c56d1f4969189de7d1}{header}}(h), \mbox{\hyperlink{structtraccc_1_1container__element_a7b11224d4a0d42c39758fb2b739014f2}{items}}(v) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1container__element_acabcc54aaa8cd9c56d1f4969189de7d1}\label{structtraccc_1_1container__element_acabcc54aaa8cd9c56d1f4969189de7d1}} 
+\index{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}!header@{header}}
+\index{header@{header}!traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+reference\+\_\+t , typename vector\+\_\+reference\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__element_a3247fd442c432e1b49528b694abce913}{header\+\_\+reference}} \mbox{\hyperlink{structtraccc_1_1container__element}{traccc\+::container\+\_\+element}}$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::header}
+
+
+
+Referenced by traccc\+::futhark\+::spacepoint\+\_\+formation\+::operator()(), seq\+\_\+run(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{structtraccc_1_1container__element_a7b11224d4a0d42c39758fb2b739014f2}\label{structtraccc_1_1container__element_a7b11224d4a0d42c39758fb2b739014f2}} 
+\index{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}!items@{items}}
+\index{items@{items}!traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$@{traccc::container\_element$<$ header\_reference\_t, vector\_reference\_t $>$}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+reference\+\_\+t , typename vector\+\_\+reference\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__element_a538fb740ebe13eb4a8827451d7b6620b}{vector\+\_\+reference}} \mbox{\hyperlink{structtraccc_1_1container__element}{traccc\+::container\+\_\+element}}$<$ header\+\_\+reference\+\_\+t, vector\+\_\+reference\+\_\+t $>$\+::items}
+
+
+
+Referenced by main(), traccc\+::futhark\+::spacepoint\+\_\+formation\+::operator()(), traccc\+::measurement\+\_\+creation\+::operator()(), seq\+\_\+run(), and traccc\+::finding\+\_\+performance\+\_\+writer\+::write().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/edm/details/\mbox{\hyperlink{container__element_8hpp}{container\+\_\+element.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,273 @@
+\hypertarget{classtraccc_1_1stat__plot__tool}{}\doxysection{traccc\+::stat\+\_\+plot\+\_\+tool Class Reference}
+\label{classtraccc_1_1stat__plot__tool}\index{traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}}
+
+
+{\ttfamily \#include $<$stat\+\_\+plot\+\_\+tool.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::stat\+\_\+plot\+\_\+tool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d9/dfc/classtraccc_1_1stat__plot__tool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}}
+\begin{DoxyCompactList}\small\item\em Nested Cache struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a799d935f8644e11983fe7d80a066fd40}{stat\+\_\+plot\+\_\+tool}} (const \mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config}{stat\+\_\+plot\+\_\+tool\+\_\+config}} \&cfg)
+\item 
+void \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a4be390afb3411e81504467f3af865fb5}{book}} (\mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&cache) const
+\begin{DoxyCompactList}\small\item\em book the statistics plots \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_afd88c5104e93a29615a2e3bf76a52fbe}{fill}} (\mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&cache, const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&fit\+\_\+info) const
+\begin{DoxyCompactList}\small\item\em fill the cache \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_ab895342a34d3b6a67a314d760553308d}{fill}} (\mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&cache, const \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&trk\+\_\+state) const
+\begin{DoxyCompactList}\small\item\em fill the cache \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a60da5c1808a18f615a7744e07a1818cd}{write}} (const \mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&cache) const
+\begin{DoxyCompactList}\small\item\em write the statistics plots into R\+O\+OT \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config}{stat\+\_\+plot\+\_\+tool\+\_\+config}} \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}{m\+\_\+cfg}}
+\begin{DoxyCompactList}\small\item\em The Config class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1stat__plot__tool_a799d935f8644e11983fe7d80a066fd40}\label{classtraccc_1_1stat__plot__tool_a799d935f8644e11983fe7d80a066fd40}} 
+\index{traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}!stat\_plot\_tool@{stat\_plot\_tool}}
+\index{stat\_plot\_tool@{stat\_plot\_tool}!traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}}
+\doxysubsubsection{\texorpdfstring{stat\_plot\_tool()}{stat\_plot\_tool()}}
+{\footnotesize\ttfamily traccc\+::stat\+\_\+plot\+\_\+tool\+::stat\+\_\+plot\+\_\+tool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config}{stat\+\_\+plot\+\_\+tool\+\_\+config}} \&}]{cfg }\end{DoxyParamCaption})}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em cfg} & Configuration struct \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 : \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}{m\_cfg}}(cfg) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1stat__plot__tool_a4be390afb3411e81504467f3af865fb5}\label{classtraccc_1_1stat__plot__tool_a4be390afb3411e81504467f3af865fb5}} 
+\index{traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}!book@{book}}
+\index{book@{book}!traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}}
+\doxysubsubsection{\texorpdfstring{book()}{book()}}
+{\footnotesize\ttfamily void traccc\+::stat\+\_\+plot\+\_\+tool\+::book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&}]{cache }\end{DoxyParamCaption}) const}
+
+
+
+book the statistics plots 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & the cache for statistics plots \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                                       \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// Avoid unused variable warnings when building the code without ROOT.}}
+\DoxyCodeLine{23     (void)cache;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifdef TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{26     plot\_helpers::binning b\_ndf = \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}{var\_binning}}.at(\textcolor{stringliteral}{"ndf"});}
+\DoxyCodeLine{27     plot\_helpers::binning b\_chi2 = \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}{var\_binning}}.at(\textcolor{stringliteral}{"chi2"});}
+\DoxyCodeLine{28     plot\_helpers::binning b\_reduced\_chi2 = \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}{var\_binning}}.at(\textcolor{stringliteral}{"reduced\_chi2"});}
+\DoxyCodeLine{29     plot\_helpers::binning b\_pval = \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}{var\_binning}}.at(\textcolor{stringliteral}{"pval"});}
+\DoxyCodeLine{30     plot\_helpers::binning b\_chi2\_local = \mbox{\hyperlink{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}{m\_cfg}}.\mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config_ac93f32b56ed5eaf2cfd2d9548a56653c}{var\_binning}}.at(\textcolor{stringliteral}{"chi2\_local"});}
+\DoxyCodeLine{31     cache.ndf\_hist = plot\_helpers::book\_histo(\textcolor{stringliteral}{"ndf"}, \textcolor{stringliteral}{"NDF"}, b\_ndf);}
+\DoxyCodeLine{32     cache.chi2\_hist = plot\_helpers::book\_histo(\textcolor{stringliteral}{"chi2"}, \textcolor{stringliteral}{"Chi2"}, b\_chi2);}
+\DoxyCodeLine{33     cache.reduced\_chi2\_hist =}
+\DoxyCodeLine{34         plot\_helpers::book\_histo(\textcolor{stringliteral}{"reduced\_chi2"}, \textcolor{stringliteral}{"Chi2/NDF"}, b\_reduced\_chi2);}
+\DoxyCodeLine{35     cache.pval\_hist = plot\_helpers::book\_histo(\textcolor{stringliteral}{"pval"}, \textcolor{stringliteral}{"p value"}, b\_pval);}
+\DoxyCodeLine{36     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} D = 1u; D <= 2u; D++) \{}
+\DoxyCodeLine{37         cache.chi2\_filtered\_hist[D] = plot\_helpers::book\_histo(}
+\DoxyCodeLine{38             Form(\textcolor{stringliteral}{"chi2\_\%dD\_filtered"}, D),}
+\DoxyCodeLine{39             Form(\textcolor{stringliteral}{"chi2 of \%dD filtered parameters"}, D), b\_chi2\_local);}
+\DoxyCodeLine{40         cache.chi2\_smoothed\_hist[D] = plot\_helpers::book\_histo(}
+\DoxyCodeLine{41             Form(\textcolor{stringliteral}{"chi2\_\%dD\_smoothed"}, D),}
+\DoxyCodeLine{42             Form(\textcolor{stringliteral}{"chi2 of \%dD smoothed parameters"}, D), b\_chi2\_local);}
+\DoxyCodeLine{43         cache.pval\_filtered\_hist[D] = plot\_helpers::book\_histo(}
+\DoxyCodeLine{44             Form(\textcolor{stringliteral}{"pval\_\%dD\_filtered"}, D),}
+\DoxyCodeLine{45             Form(\textcolor{stringliteral}{"p value of \%dD filtered parameters"}, D), b\_pval);}
+\DoxyCodeLine{46         cache.pval\_smoothed\_hist[D] = plot\_helpers::book\_histo(}
+\DoxyCodeLine{47             Form(\textcolor{stringliteral}{"pval\_\%dD\_smoothed"}, D),}
+\DoxyCodeLine{48             Form(\textcolor{stringliteral}{"p value of \%dD smoothed parameters"}, D), b\_pval);}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif  // TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+cfg, and traccc\+::stat\+\_\+plot\+\_\+tool\+\_\+config\+::var\+\_\+binning.
+
+\mbox{\Hypertarget{classtraccc_1_1stat__plot__tool_afd88c5104e93a29615a2e3bf76a52fbe}\label{classtraccc_1_1stat__plot__tool_afd88c5104e93a29615a2e3bf76a52fbe}} 
+\index{traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}!fill@{fill}}
+\index{fill@{fill}!traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void traccc\+::stat\+\_\+plot\+\_\+tool\+::fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&}]{cache,  }\item[{const \mbox{\hyperlink{structtraccc_1_1fitter__info}{fitter\+\_\+info}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&}]{fit\+\_\+info }\end{DoxyParamCaption}) const}
+
+
+
+fill the cache 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & the cache for statistics plots \\
+\hline
+{\em fit\+\_\+info} & fitting information that contains statistics \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                                                          \{}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{comment}{// Avoid unused variable warnings when building the code without ROOT.}}
+\DoxyCodeLine{57     (void)cache;}
+\DoxyCodeLine{58     (void)fit\_info;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#ifdef TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{61     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& ndf = fit\_info.ndf;}
+\DoxyCodeLine{62     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& chi2 = fit\_info.chi2;}
+\DoxyCodeLine{63     cache.ndf\_hist-\/>Fill(ndf);}
+\DoxyCodeLine{64     cache.chi2\_hist-\/>Fill(chi2);}
+\DoxyCodeLine{65     cache.reduced\_chi2\_hist-\/>Fill(chi2 / ndf);}
+\DoxyCodeLine{66     cache.pval\_hist-\/>Fill(ROOT::Math::chisquared\_cdf\_c(chi2, ndf));}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif  // TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{68 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::fitter\+\_\+info$<$ algebra\+\_\+t $>$\+::chi2, and traccc\+::fitter\+\_\+info$<$ algebra\+\_\+t $>$\+::ndf.
+
+\mbox{\Hypertarget{classtraccc_1_1stat__plot__tool_ab895342a34d3b6a67a314d760553308d}\label{classtraccc_1_1stat__plot__tool_ab895342a34d3b6a67a314d760553308d}} 
+\index{traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}!fill@{fill}}
+\index{fill@{fill}!traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void traccc\+::stat\+\_\+plot\+\_\+tool\+::fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&}]{cache,  }\item[{const \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ \mbox{\hyperlink{namespacetraccc_a7d1f91ecd225f32ea85349bf0bc8adb8}{transform3}} $>$ \&}]{trk\+\_\+state }\end{DoxyParamCaption}) const}
+
+
+
+fill the cache 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & the cache for statistics plots \\
+\hline
+{\em trk\+\_\+state} & track state at local measurements \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71                                                                           \{}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{comment}{// Avoid unused variable warnings when building the code without ROOT.}}
+\DoxyCodeLine{74     (void)cache;}
+\DoxyCodeLine{75     (void)trk\_state;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#ifdef TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{78     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} D = trk\_state.get\_measurement().meas\_dim;}
+\DoxyCodeLine{79     \textcolor{keyword}{const} \textcolor{keyword}{auto} filtered\_chi2 = trk\_state.filtered\_chi2();}
+\DoxyCodeLine{80     \textcolor{keyword}{const} \textcolor{keyword}{auto} smoothed\_chi2 = trk\_state.smoothed\_chi2();}
+\DoxyCodeLine{81     cache.chi2\_filtered\_hist[D]-\/>Fill(filtered\_chi2);}
+\DoxyCodeLine{82     cache.chi2\_smoothed\_hist[D]-\/>Fill(smoothed\_chi2);}
+\DoxyCodeLine{83     cache.pval\_filtered\_hist[D]-\/>Fill(}
+\DoxyCodeLine{84         ROOT::Math::chisquared\_cdf\_c(filtered\_chi2, D));}
+\DoxyCodeLine{85     cache.pval\_smoothed\_hist[D]-\/>Fill(}
+\DoxyCodeLine{86         ROOT::Math::chisquared\_cdf\_c(smoothed\_chi2, D));}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif  // TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::filtered\+\_\+chi2(), traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::get\+\_\+measurement(), and traccc\+::track\+\_\+state$<$ algebra\+\_\+t $>$\+::smoothed\+\_\+chi2().
+
+\mbox{\Hypertarget{classtraccc_1_1stat__plot__tool_a60da5c1808a18f615a7744e07a1818cd}\label{classtraccc_1_1stat__plot__tool_a60da5c1808a18f615a7744e07a1818cd}} 
+\index{traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}!write@{write}}
+\index{write@{write}!traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void traccc\+::stat\+\_\+plot\+\_\+tool\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1stat__plot__tool_1_1stat__plot__cache}{stat\+\_\+plot\+\_\+cache}} \&}]{cache }\end{DoxyParamCaption}) const}
+
+
+
+write the statistics plots into R\+O\+OT 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & the cache for statistics plots \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90                                                              \{}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{comment}{// Avoid unused variable warnings when building the code without ROOT.}}
+\DoxyCodeLine{93     (void)cache;}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#ifdef TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{96     cache.ndf\_hist-\/>Write();}
+\DoxyCodeLine{97     cache.chi2\_hist-\/>Write();}
+\DoxyCodeLine{98     cache.reduced\_chi2\_hist-\/>Write();}
+\DoxyCodeLine{99     cache.pval\_hist-\/>Write();}
+\DoxyCodeLine{100     cache.ndf\_hist-\/>Write();}
+\DoxyCodeLine{101     cache.chi2\_hist-\/>Write();}
+\DoxyCodeLine{102     cache.reduced\_chi2\_hist-\/>Write();}
+\DoxyCodeLine{103     cache.pval\_hist-\/>Write();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& flt : cache.chi2\_filtered\_hist) \{}
+\DoxyCodeLine{106         flt.second-\/>Write();}
+\DoxyCodeLine{107     \}}
+\DoxyCodeLine{108     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& smt : cache.chi2\_smoothed\_hist) \{}
+\DoxyCodeLine{109         smt.second-\/>Write();}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& flt : cache.pval\_filtered\_hist) \{}
+\DoxyCodeLine{112         flt.second-\/>Write();}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& smt : cache.pval\_smoothed\_hist) \{}
+\DoxyCodeLine{115         smt.second-\/>Write();}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif  // TRACCC\_HAVE\_ROOT}}
+\DoxyCodeLine{119 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}\label{classtraccc_1_1stat__plot__tool_a7069e27a2b40e46439224a9b4bcb1c4d}} 
+\index{traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}!m\_cfg@{m\_cfg}}
+\index{m\_cfg@{m\_cfg}!traccc::stat\_plot\_tool@{traccc::stat\_plot\_tool}}
+\doxysubsubsection{\texorpdfstring{m\_cfg}{m\_cfg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1stat__plot__tool__config}{stat\+\_\+plot\+\_\+tool\+\_\+config}} traccc\+::stat\+\_\+plot\+\_\+tool\+::m\+\_\+cfg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Config class. 
+
+
+
+Referenced by book().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+performance/src/resolution/\mbox{\hyperlink{stat__plot__tool_8hpp}{stat\+\_\+plot\+\_\+tool.\+hpp}}\item 
+performance/src/resolution/\mbox{\hyperlink{stat__plot__tool_8cpp}{stat\+\_\+plot\+\_\+tool.\+cpp}}\end{DoxyCompactItemize}

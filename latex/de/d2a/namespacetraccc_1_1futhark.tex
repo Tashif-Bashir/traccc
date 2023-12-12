@@ -1,0 +1,103 @@
+\hypertarget{namespacetraccc_1_1futhark}{}\doxysection{traccc\+::futhark Namespace Reference}
+\label{namespacetraccc_1_1futhark}\index{traccc::futhark@{traccc::futhark}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1cells__to__measurements__wrapper}{cells\+\_\+to\+\_\+measurements\+\_\+wrapper}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1component__connection}{component\+\_\+connection}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1futhark__f32__1d__wrapper}{futhark\+\_\+f32\+\_\+1d\+\_\+wrapper}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1futhark__i64__1d__wrapper}{futhark\+\_\+i64\+\_\+1d\+\_\+wrapper}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1futhark__u64__1d__wrapper}{futhark\+\_\+u64\+\_\+1d\+\_\+wrapper}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1measurements__to__spacepoints__wrapper}{measurements\+\_\+to\+\_\+spacepoints\+\_\+wrapper}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1spacepoint__formation}{spacepoint\+\_\+formation}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1wrapper}{wrapper}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1futhark_1_1wrapper_3_01T_00_01std_1_1tuple_3_01IArgs_8_8_8_01_4_00_01std_1_1tuple_3_01OArgs_8_8_8_01_4_01_4}{wrapper$<$ T, std\+::tuple$<$ I\+Args... $>$, std\+::tuple$<$ O\+Args... $>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct futhark\+\_\+context \& \mbox{\hyperlink{namespacetraccc_1_1futhark_ac5d0981072b2bde52eef5139bf0e7d4a}{get\+\_\+context}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static struct futhark\+\_\+context\+\_\+config $\ast$ \mbox{\hyperlink{namespacetraccc_1_1futhark_adfec5f4360d9ae48bad04748a1fe5549}{\+\_\+\+\_\+global\+\_\+futhark\+\_\+config}} = nullptr
+\item 
+static struct futhark\+\_\+context $\ast$ \mbox{\hyperlink{namespacetraccc_1_1futhark_add70f3523050199d6da31d95ddc5398d}{\+\_\+\+\_\+global\+\_\+futhark\+\_\+context}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2021-\/2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetraccc_1_1futhark_ac5d0981072b2bde52eef5139bf0e7d4a}\label{namespacetraccc_1_1futhark_ac5d0981072b2bde52eef5139bf0e7d4a}} 
+\index{traccc::futhark@{traccc::futhark}!get\_context@{get\_context}}
+\index{get\_context@{get\_context}!traccc::futhark@{traccc::futhark}}
+\doxysubsubsection{\texorpdfstring{get\_context()}{get\_context()}}
+{\footnotesize\ttfamily struct futhark\+\_\+context \& traccc\+::futhark\+::get\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                                       \{}
+\DoxyCodeLine{15     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{namespacetraccc_1_1futhark_adfec5f4360d9ae48bad04748a1fe5549}{\_\_global\_futhark\_config}}) \{}
+\DoxyCodeLine{16         \mbox{\hyperlink{namespacetraccc_1_1futhark_adfec5f4360d9ae48bad04748a1fe5549}{\_\_global\_futhark\_config}} = futhark\_context\_config\_new();}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{namespacetraccc_1_1futhark_add70f3523050199d6da31d95ddc5398d}{\_\_global\_futhark\_context}}) \{}
+\DoxyCodeLine{20         \mbox{\hyperlink{namespacetraccc_1_1futhark_add70f3523050199d6da31d95ddc5398d}{\_\_global\_futhark\_context}} = futhark\_context\_new(\mbox{\hyperlink{namespacetraccc_1_1futhark_adfec5f4360d9ae48bad04748a1fe5549}{\_\_global\_futhark\_config}});}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} *\mbox{\hyperlink{namespacetraccc_1_1futhark_add70f3523050199d6da31d95ddc5398d}{\_\_global\_futhark\_context}};}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+
+
+References \+\_\+\+\_\+global\+\_\+futhark\+\_\+config, and \+\_\+\+\_\+global\+\_\+futhark\+\_\+context.
+
+
+
+Referenced by futhark\+Assert(), and traccc\+::futhark\+::wrapper$<$ T, std\+::tuple$<$ I\+Args... $>$, std\+::tuple$<$ O\+Args... $>$ $>$\+::run().
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetraccc_1_1futhark_adfec5f4360d9ae48bad04748a1fe5549}\label{namespacetraccc_1_1futhark_adfec5f4360d9ae48bad04748a1fe5549}} 
+\index{traccc::futhark@{traccc::futhark}!\_\_global\_futhark\_config@{\_\_global\_futhark\_config}}
+\index{\_\_global\_futhark\_config@{\_\_global\_futhark\_config}!traccc::futhark@{traccc::futhark}}
+\doxysubsubsection{\texorpdfstring{\_\_global\_futhark\_config}{\_\_global\_futhark\_config}}
+{\footnotesize\ttfamily struct futhark\+\_\+context\+\_\+config$\ast$ traccc\+::futhark\+::\+\_\+\+\_\+global\+\_\+futhark\+\_\+config = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Referenced by get\+\_\+context().
+
+\mbox{\Hypertarget{namespacetraccc_1_1futhark_add70f3523050199d6da31d95ddc5398d}\label{namespacetraccc_1_1futhark_add70f3523050199d6da31d95ddc5398d}} 
+\index{traccc::futhark@{traccc::futhark}!\_\_global\_futhark\_context@{\_\_global\_futhark\_context}}
+\index{\_\_global\_futhark\_context@{\_\_global\_futhark\_context}!traccc::futhark@{traccc::futhark}}
+\doxysubsubsection{\texorpdfstring{\_\_global\_futhark\_context}{\_\_global\_futhark\_context}}
+{\footnotesize\ttfamily struct futhark\+\_\+context$\ast$ traccc\+::futhark\+::\+\_\+\+\_\+global\+\_\+futhark\+\_\+context = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Referenced by get\+\_\+context().
+

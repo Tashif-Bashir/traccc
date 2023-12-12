@@ -1,0 +1,54 @@
+\hypertarget{structtraccc_1_1measurement__sort__comp}{}\doxysection{traccc\+::measurement\+\_\+sort\+\_\+comp Struct Reference}
+\label{structtraccc_1_1measurement__sort__comp}\index{traccc::measurement\_sort\_comp@{traccc::measurement\_sort\_comp}}
+
+
+Comparator based on detray barcode value.  
+
+
+
+
+{\ttfamily \#include $<$measurement.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::measurement\+\_\+sort\+\_\+comp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{d2/d60/structtraccc_1_1measurement__sort__comp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool \mbox{\hyperlink{structtraccc_1_1measurement__sort__comp_ae041b5334595aa6e1d00a83c82b49340}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&lhs, const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Comparator based on detray barcode value. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1measurement__sort__comp_ae041b5334595aa6e1d00a83c82b49340}\label{structtraccc_1_1measurement__sort__comp_ae041b5334595aa6e1d00a83c82b49340}} 
+\index{traccc::measurement\_sort\_comp@{traccc::measurement\_sort\_comp}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::measurement\_sort\_comp@{traccc::measurement\_sort\_comp}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool traccc\+::measurement\+\_\+sort\+\_\+comp\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{structtraccc_1_1measurement}{measurement}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                                     \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{return} lhs.surface\_link < rhs.surface\_link;}
+\DoxyCodeLine{85     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::measurement\+::surface\+\_\+link.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/edm/\mbox{\hyperlink{core_2include_2traccc_2edm_2measurement_8hpp}{measurement.\+hpp}}\end{DoxyCompactItemize}

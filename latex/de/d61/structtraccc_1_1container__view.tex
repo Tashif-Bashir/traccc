@@ -1,0 +1,158 @@
+\hypertarget{structtraccc_1_1container__view}{}\doxysection{traccc\+::container\+\_\+view$<$ header\+\_\+t, item\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1container__view}\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+
+
+{\ttfamily \#include $<$container.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::container\+\_\+view$<$ header\+\_\+t, item\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{d1/d7c/structtraccc_1_1container__view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1container__view_abbd8382e0dd3937264678abc2ec485e6}{header\+\_\+vector}} = vecmem\+::data\+::vector\+\_\+view$<$ header\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Type for the header vector (view) \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{structtraccc_1_1container__view_aef05d1116636aebcd5c7fd2bd2043c23}{item\+\_\+vector}} = vecmem\+::data\+::jagged\+\_\+vector\+\_\+view$<$ item\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Type for the item vector (view) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename other\+\_\+header\+\_\+t , typename other\+\_\+item\+\_\+t , std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ header\+\_\+t, other\+\_\+header\+\_\+t $>$\+::value, bool $>$  = true, std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ item\+\_\+t, other\+\_\+item\+\_\+t $>$\+::value, bool $>$  = true$>$ }\\\mbox{\hyperlink{structtraccc_1_1container__view_adfd635303b7a3726ff796a35bf4cf45f}{container\+\_\+view}} (const \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}$<$ other\+\_\+header\+\_\+t, other\+\_\+item\+\_\+t $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Constructor from a {\ttfamily \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}} object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename other\+\_\+header\+\_\+t , typename other\+\_\+item\+\_\+t , std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ header\+\_\+t, other\+\_\+header\+\_\+t $>$\+::value, bool $>$  = true, std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ item\+\_\+t, other\+\_\+item\+\_\+t $>$\+::value, bool $>$  = true$>$ }\\\mbox{\hyperlink{structtraccc_1_1container__view_a6089316a5789f2a1ada0a97c56ae72c2}{container\+\_\+view}} (const \mbox{\hyperlink{structtraccc_1_1container__buffer}{container\+\_\+buffer}}$<$ other\+\_\+header\+\_\+t, other\+\_\+item\+\_\+t $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Constructor from a {\ttfamily \mbox{\hyperlink{structtraccc_1_1container__buffer}{container\+\_\+buffer}}} object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename other\+\_\+header\+\_\+t , typename other\+\_\+item\+\_\+t , std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ header\+\_\+t, other\+\_\+header\+\_\+t $>$\+::value, bool $>$  = true, std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ item\+\_\+t, other\+\_\+item\+\_\+t $>$\+::value, bool $>$  = true$>$ }\\\mbox{\hyperlink{structtraccc_1_1container__view_ac88bc1f007a3eb10d258a5c88bceb327}{container\+\_\+view}} (const \mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}}$<$ other\+\_\+header\+\_\+t, other\+\_\+item\+\_\+t $>$ \&parent)
+\begin{DoxyCompactList}\small\item\em Constructor from a non-\/const view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1container__view_abbd8382e0dd3937264678abc2ec485e6}{header\+\_\+vector}} \mbox{\hyperlink{structtraccc_1_1container__view_a7cf3c783f0d455f26a7fd27dd6103a3d}{headers}}
+\begin{DoxyCompactList}\small\item\em View of the data describing the headers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtraccc_1_1container__view_aef05d1116636aebcd5c7fd2bd2043c23}{item\+\_\+vector}} \mbox{\hyperlink{structtraccc_1_1container__view_adff9a4c06f7b708967f08fc558805cd1}{items}}
+\begin{DoxyCompactList}\small\item\em View of the data describing the items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename header\+\_\+t, typename item\+\_\+t$>$\newline
+struct traccc\+::container\+\_\+view$<$ header\+\_\+t, item\+\_\+t $>$}
+
+Structure used to send the data about the container to device code
+
+This is the type that can be passed to device code as-\/is. But since in host code one needs to manage the data describing a {\ttfamily traccc\+::container} either using {\ttfamily \mbox{\hyperlink{structtraccc_1_1container__data}{traccc\+::container\+\_\+data}}} or {\ttfamily \mbox{\hyperlink{structtraccc_1_1container__buffer}{traccc\+::container\+\_\+buffer}}}, it needs to have constructors from both of those types.
+
+In fact it needs to be created from one of those types, as such an object can only function if an instance of one of those types exists alongside it as well. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1container__view_abbd8382e0dd3937264678abc2ec485e6}\label{structtraccc_1_1container__view_abbd8382e0dd3937264678abc2ec485e6}} 
+\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}!header\_vector@{header\_vector}}
+\index{header\_vector@{header\_vector}!traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{header\_vector}{header\_vector}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__view_abbd8382e0dd3937264678abc2ec485e6}{header\+\_\+vector}} =  vecmem\+::data\+::vector\+\_\+view$<$header\+\_\+t$>$}
+
+
+
+Type for the header vector (view) 
+
+\mbox{\Hypertarget{structtraccc_1_1container__view_aef05d1116636aebcd5c7fd2bd2043c23}\label{structtraccc_1_1container__view_aef05d1116636aebcd5c7fd2bd2043c23}} 
+\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}!item\_vector@{item\_vector}}
+\index{item\_vector@{item\_vector}!traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{item\_vector}{item\_vector}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__view_aef05d1116636aebcd5c7fd2bd2043c23}{item\+\_\+vector}} =  vecmem\+::data\+::jagged\+\_\+vector\+\_\+view$<$item\+\_\+t$>$}
+
+
+
+Type for the item vector (view) 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1container__view_adfd635303b7a3726ff796a35bf4cf45f}\label{structtraccc_1_1container__view_adfd635303b7a3726ff796a35bf4cf45f}} 
+\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}!container\_view@{container\_view}}
+\index{container\_view@{container\_view}!traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{container\_view()}{container\_view()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+template$<$typename other\+\_\+header\+\_\+t , typename other\+\_\+item\+\_\+t , std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ header\+\_\+t, other\+\_\+header\+\_\+t $>$\+::value, bool $>$  = true, std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ item\+\_\+t, other\+\_\+item\+\_\+t $>$\+::value, bool $>$  = true$>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}$<$ other\+\_\+header\+\_\+t, other\+\_\+item\+\_\+t $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor from a {\ttfamily \mbox{\hyperlink{structtraccc_1_1container__data}{container\+\_\+data}}} object. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79         : \mbox{\hyperlink{structtraccc_1_1container__view_a7cf3c783f0d455f26a7fd27dd6103a3d}{headers}}(data.headers), \mbox{\hyperlink{structtraccc_1_1container__view_adff9a4c06f7b708967f08fc558805cd1}{items}}(data.items) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtraccc_1_1container__view_a6089316a5789f2a1ada0a97c56ae72c2}\label{structtraccc_1_1container__view_a6089316a5789f2a1ada0a97c56ae72c2}} 
+\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}!container\_view@{container\_view}}
+\index{container\_view@{container\_view}!traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{container\_view()}{container\_view()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+template$<$typename other\+\_\+header\+\_\+t , typename other\+\_\+item\+\_\+t , std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ header\+\_\+t, other\+\_\+header\+\_\+t $>$\+::value, bool $>$  = true, std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ item\+\_\+t, other\+\_\+item\+\_\+t $>$\+::value, bool $>$  = true$>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1container__buffer}{container\+\_\+buffer}}$<$ other\+\_\+header\+\_\+t, other\+\_\+item\+\_\+t $>$ \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor from a {\ttfamily \mbox{\hyperlink{structtraccc_1_1container__buffer}{container\+\_\+buffer}}} object. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89         : \mbox{\hyperlink{structtraccc_1_1container__view_a7cf3c783f0d455f26a7fd27dd6103a3d}{headers}}(buffer.headers), \mbox{\hyperlink{structtraccc_1_1container__view_adff9a4c06f7b708967f08fc558805cd1}{items}}(buffer.items) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structtraccc_1_1container__view_ac88bc1f007a3eb10d258a5c88bceb327}\label{structtraccc_1_1container__view_ac88bc1f007a3eb10d258a5c88bceb327}} 
+\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}!container\_view@{container\_view}}
+\index{container\_view@{container\_view}!traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{container\_view()}{container\_view()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+template$<$typename other\+\_\+header\+\_\+t , typename other\+\_\+item\+\_\+t , std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ header\+\_\+t, other\+\_\+header\+\_\+t $>$\+::value, bool $>$  = true, std\+::enable\+\_\+if\+\_\+t$<$ details\+::is\+\_\+same\+\_\+nc$<$ item\+\_\+t, other\+\_\+item\+\_\+t $>$\+::value, bool $>$  = true$>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1container__view}{container\+\_\+view}}$<$ other\+\_\+header\+\_\+t, other\+\_\+item\+\_\+t $>$ \&}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor from a non-\/const view. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99         : \mbox{\hyperlink{structtraccc_1_1container__view_a7cf3c783f0d455f26a7fd27dd6103a3d}{headers}}(parent.headers), \mbox{\hyperlink{structtraccc_1_1container__view_adff9a4c06f7b708967f08fc558805cd1}{items}}(parent.items) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1container__view_a7cf3c783f0d455f26a7fd27dd6103a3d}\label{structtraccc_1_1container__view_a7cf3c783f0d455f26a7fd27dd6103a3d}} 
+\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}!headers@{headers}}
+\index{headers@{headers}!traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{headers}{headers}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__view_abbd8382e0dd3937264678abc2ec485e6}{header\+\_\+vector}} \mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$\+::headers}
+
+
+
+View of the data describing the headers. 
+
+\mbox{\Hypertarget{structtraccc_1_1container__view_adff9a4c06f7b708967f08fc558805cd1}\label{structtraccc_1_1container__view_adff9a4c06f7b708967f08fc558805cd1}} 
+\index{traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}!items@{items}}
+\index{items@{items}!traccc::container\_view$<$ header\_t, item\_t $>$@{traccc::container\_view$<$ header\_t, item\_t $>$}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily template$<$typename header\+\_\+t , typename item\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__view_aef05d1116636aebcd5c7fd2bd2043c23}{item\+\_\+vector}} \mbox{\hyperlink{structtraccc_1_1container__view}{traccc\+::container\+\_\+view}}$<$ header\+\_\+t, item\+\_\+t $>$\+::items}
+
+
+
+View of the data describing the items. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/edm/\mbox{\hyperlink{container_8hpp}{container.\+hpp}}\end{DoxyCompactItemize}

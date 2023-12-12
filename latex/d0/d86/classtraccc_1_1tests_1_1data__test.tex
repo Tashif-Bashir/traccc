@@ -1,0 +1,110 @@
+\hypertarget{classtraccc_1_1tests_1_1data__test}{}\doxysection{traccc\+::tests\+::data\+\_\+test Class Reference}
+\label{classtraccc_1_1tests_1_1data__test}\index{traccc::tests::data\_test@{traccc::tests::data\_test}}
+
+
+Test fixture base class for accessing the data directory.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+test.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::tests\+::data\+\_\+test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{dc/daf/classtraccc_1_1tests_1_1data__test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::tests\+::data\+\_\+test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{de/db8/classtraccc_1_1tests_1_1data__test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_a7dc85ecc81e4ce218ab29a2f7c110c13}{Set\+Up}} () override
+\item 
+std\+::string \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_a0eb370e5c97d3678bbcec029676b0282}{get\+\_\+datafile}} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}{data\+\_\+directory}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test fixture base class for accessing the data directory. 
+
+We have a lot of tests which need to access data from the data directory, which is set via the T\+R\+A\+C\+C\+C\+\_\+\+T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+D\+IR environment variable. This raises a lot of boilerplate code though, so we can abstract some of this away by defining a fixture base class which automatically grabs the data directory.
+
+\begin{DoxyWarning}{Warning}
+If you need to write a fixture which subclasses this class and you need a custom Set\+Up function, make sure to mark it as {\ttfamily override} and make sure to call {\ttfamily \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_a7dc85ecc81e4ce218ab29a2f7c110c13}{data\+\_\+test\+::\+Set\+Up()}}} at the start of it. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1tests_1_1data__test_a0eb370e5c97d3678bbcec029676b0282}\label{classtraccc_1_1tests_1_1data__test_a0eb370e5c97d3678bbcec029676b0282}} 
+\index{traccc::tests::data\_test@{traccc::tests::data\_test}!get\_datafile@{get\_datafile}}
+\index{get\_datafile@{get\_datafile}!traccc::tests::data\_test@{traccc::tests::data\_test}}
+\doxysubsubsection{\texorpdfstring{get\_datafile()}{get\_datafile()}}
+{\footnotesize\ttfamily std\+::string traccc\+::tests\+::data\+\_\+test\+::get\+\_\+datafile (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}{data\_directory}} + name; \}}
+
+\end{DoxyCode}
+
+
+References data\+\_\+directory.
+
+
+
+Referenced by Connected\+Component\+Analysis\+Tests\+::test\+\_\+connected\+\_\+component\+\_\+analysis().
+
+\mbox{\Hypertarget{classtraccc_1_1tests_1_1data__test_a7dc85ecc81e4ce218ab29a2f7c110c13}\label{classtraccc_1_1tests_1_1data__test_a7dc85ecc81e4ce218ab29a2f7c110c13}} 
+\index{traccc::tests::data\_test@{traccc::tests::data\_test}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!traccc::tests::data\_test@{traccc::tests::data\_test}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily virtual void traccc\+::tests\+::data\+\_\+test\+::\+Set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                   \{}
+\DoxyCodeLine{38         \mbox{\hyperlink{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}{data\_directory}} = \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{traccc::io::data\_directory}}();}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::io\+::data\+\_\+directory(), and data\+\_\+directory.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}\label{classtraccc_1_1tests_1_1data__test_af6b7f5d32e3d14efb3d61b8489ca822d}} 
+\index{traccc::tests::data\_test@{traccc::tests::data\_test}!data\_directory@{data\_directory}}
+\index{data\_directory@{data\_directory}!traccc::tests::data\_test@{traccc::tests::data\_test}}
+\doxysubsubsection{\texorpdfstring{data\_directory}{data\_directory}}
+{\footnotesize\ttfamily std\+::string traccc\+::tests\+::data\+\_\+test\+::data\+\_\+directory\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by traccc\+::event\+\_\+map2\+::event\+\_\+map2(), traccc\+::generate\+\_\+hit\+\_\+cell\+\_\+map(), traccc\+::generate\+\_\+hit\+\_\+map(), traccc\+::generate\+\_\+hit\+\_\+particle\+\_\+map(), traccc\+::generate\+\_\+particle\+\_\+map(), get\+\_\+datafile(), main(), Set\+Up(), simulate(), and T\+E\+S\+T\+\_\+\+P().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/common/tests/\mbox{\hyperlink{data__test_8hpp}{data\+\_\+test.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+\hypertarget{structtraccc_1_1cuda_1_1details_1_1opaque__stream}{}\doxysection{traccc\+::cuda\+::details\+::opaque\+\_\+stream Struct Reference}
+\label{structtraccc_1_1cuda_1_1details_1_1opaque__stream}\index{traccc::cuda::details::opaque\_stream@{traccc::cuda::details::opaque\_stream}}
+
+
+{\ttfamily \#include $<$opaque\+\_\+stream.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::cuda\+::details\+::opaque\+\_\+stream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{dd/d63/structtraccc_1_1cuda_1_1details_1_1opaque__stream__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream_ad38bd971515ab252d4af20c2da49818d}{opaque\+\_\+stream}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream_abcaaac35b520136e872a032feb95bab7}{$\sim$opaque\+\_\+stream}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cuda\+Stream\+\_\+t \mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream_a8a36f599ba5d18d65ae99020a7842eeb}{m\+\_\+stream}}
+\begin{DoxyCompactList}\small\item\em Stream managed by the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+R\+A\+II wrapper around {\ttfamily cuda\+Stream\+\_\+t} 
+
+It is used only internally by the C\+U\+DA library, so it does not need to provide any nice interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1cuda_1_1details_1_1opaque__stream_ad38bd971515ab252d4af20c2da49818d}\label{structtraccc_1_1cuda_1_1details_1_1opaque__stream_ad38bd971515ab252d4af20c2da49818d}} 
+\index{traccc::cuda::details::opaque\_stream@{traccc::cuda::details::opaque\_stream}!opaque\_stream@{opaque\_stream}}
+\index{opaque\_stream@{opaque\_stream}!traccc::cuda::details::opaque\_stream@{traccc::cuda::details::opaque\_stream}}
+\doxysubsubsection{\texorpdfstring{opaque\_stream()}{opaque\_stream()}}
+{\footnotesize\ttfamily traccc\+::cuda\+::details\+::opaque\+\_\+stream\+::opaque\+\_\+stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                              : \mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream_a8a36f599ba5d18d65ae99020a7842eeb}{m\_stream}}(\textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \mbox{\hyperlink{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a924e9e2dee296776f46a6c0814e27eda}{CUDA\_ERROR\_CHECK}}(cudaStreamCreate(\&\mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream_a8a36f599ba5d18d65ae99020a7842eeb}{m\_stream}}));}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+References C\+U\+D\+A\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+H\+E\+CK, and m\+\_\+stream.
+
+\mbox{\Hypertarget{structtraccc_1_1cuda_1_1details_1_1opaque__stream_abcaaac35b520136e872a032feb95bab7}\label{structtraccc_1_1cuda_1_1details_1_1opaque__stream_abcaaac35b520136e872a032feb95bab7}} 
+\index{traccc::cuda::details::opaque\_stream@{traccc::cuda::details::opaque\_stream}!````~opaque\_stream@{$\sim$opaque\_stream}}
+\index{````~opaque\_stream@{$\sim$opaque\_stream}!traccc::cuda::details::opaque\_stream@{traccc::cuda::details::opaque\_stream}}
+\doxysubsubsection{\texorpdfstring{$\sim$opaque\_stream()}{~opaque\_stream()}}
+{\footnotesize\ttfamily traccc\+::cuda\+::details\+::opaque\+\_\+stream\+::$\sim$opaque\+\_\+stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                               \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// Don't check the return value of the stream destruction. This is because}}
+\DoxyCodeLine{23     \textcolor{comment}{// if the holder of this opaque stream is only destroyed during the}}
+\DoxyCodeLine{24     \textcolor{comment}{// termination of the application in which it was created, the CUDA runtime}}
+\DoxyCodeLine{25     \textcolor{comment}{// may have already deleted all streams by the time that this function would}}
+\DoxyCodeLine{26     \textcolor{comment}{// try to delete it.}}
+\DoxyCodeLine{27     \textcolor{comment}{//}}
+\DoxyCodeLine{28     \textcolor{comment}{// This is not the most robust thing ever, but detecting reliably when this}}
+\DoxyCodeLine{29     \textcolor{comment}{// destructor is executed as part of the final operations of an application,}}
+\DoxyCodeLine{30     \textcolor{comment}{// would be too platform specific and fragile of an operation.}}
+\DoxyCodeLine{31     cudaStreamDestroy(\mbox{\hyperlink{structtraccc_1_1cuda_1_1details_1_1opaque__stream_a8a36f599ba5d18d65ae99020a7842eeb}{m\_stream}});}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+stream.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1cuda_1_1details_1_1opaque__stream_a8a36f599ba5d18d65ae99020a7842eeb}\label{structtraccc_1_1cuda_1_1details_1_1opaque__stream_a8a36f599ba5d18d65ae99020a7842eeb}} 
+\index{traccc::cuda::details::opaque\_stream@{traccc::cuda::details::opaque\_stream}!m\_stream@{m\_stream}}
+\index{m\_stream@{m\_stream}!traccc::cuda::details::opaque\_stream@{traccc::cuda::details::opaque\_stream}}
+\doxysubsubsection{\texorpdfstring{m\_stream}{m\_stream}}
+{\footnotesize\ttfamily cuda\+Stream\+\_\+t traccc\+::cuda\+::details\+::opaque\+\_\+stream\+::m\+\_\+stream}
+
+
+
+Stream managed by the object. 
+
+
+
+Referenced by opaque\+\_\+stream(), and $\sim$opaque\+\_\+stream().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+device/cuda/src/utils/\mbox{\hyperlink{opaque__stream_8hpp}{opaque\+\_\+stream.\+hpp}}\item 
+device/cuda/src/utils/\mbox{\hyperlink{opaque__stream_8cpp}{opaque\+\_\+stream.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\hypertarget{structtraccc_1_1propagation__options}{}\doxysection{traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1propagation__options}\index{traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}}
+
+
+{\ttfamily \#include $<$propagation\+\_\+options.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{da/d8d/structtraccc_1_1propagation__options__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1propagation__options_a899b8716c484543e93f0e6e5e66a4b94}{propagation\+\_\+options}} (po\+::options\+\_\+description \&desc)
+\item 
+void \mbox{\hyperlink{structtraccc_1_1propagation__options_acb642cccda5fbe10d105e96a8c2074d8}{read}} (const po\+::variables\+\_\+map \&vm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}{step\+\_\+constraint}} \{std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()\}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1propagation__options_acba9ecace5891ed986671a4235d80e56}{overstep\+\_\+tolerance}} \{-\/10.f $\ast$ detray\+::unit$<$scalar\+\_\+t$>$\+::um\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1propagation__options_a899b8716c484543e93f0e6e5e66a4b94}\label{structtraccc_1_1propagation__options_a899b8716c484543e93f0e6e5e66a4b94}} 
+\index{traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}!propagation\_options@{propagation\_options}}
+\index{propagation\_options@{propagation\_options}!traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{propagation\_options()}{propagation\_options()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ scalar\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1propagation__options}{propagation\+\_\+options}} (\begin{DoxyParamCaption}\item[{po\+::options\+\_\+description \&}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                                      \{}
+\DoxyCodeLine{32         desc.add\_options()(\textcolor{stringliteral}{"constraint-\/step-\/size-\/mm"},}
+\DoxyCodeLine{33                            po::value<scalar\_t>()-\/>default\_value(}
+\DoxyCodeLine{34                                std::numeric\_limits<scalar>::max()),}
+\DoxyCodeLine{35                            \textcolor{stringliteral}{"The constrained step size [mm]"});}
+\DoxyCodeLine{36         desc.add\_options()(\textcolor{stringliteral}{"overstep-\/tolerance-\/um"},}
+\DoxyCodeLine{37                            po::value<scalar\_t>()-\/>default\_value(-\/10.f),}
+\DoxyCodeLine{38                            \textcolor{stringliteral}{"The overstep tolerance [um]"});}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1propagation__options_acb642cccda5fbe10d105e96a8c2074d8}\label{structtraccc_1_1propagation__options_acb642cccda5fbe10d105e96a8c2074d8}} 
+\index{traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}!read@{read}}
+\index{read@{read}!traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+void \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ scalar\+\_\+t $>$\+::read (\begin{DoxyParamCaption}\item[{const po\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                          \{}
+\DoxyCodeLine{42         \mbox{\hyperlink{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}{step\_constraint}} = vm[\textcolor{stringliteral}{"constraint-\/step-\/size-\/mm"}].as<scalar\_t>() *}
+\DoxyCodeLine{43                           detray::unit<scalar\_t>::mm;}
+\DoxyCodeLine{44         \mbox{\hyperlink{structtraccc_1_1propagation__options_acba9ecace5891ed986671a4235d80e56}{overstep\_tolerance}} = vm[\textcolor{stringliteral}{"overstep-\/tolerance-\/um"}].as<scalar\_t>() *}
+\DoxyCodeLine{45                              detray::unit<scalar\_t>::um;}
+\DoxyCodeLine{46     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::overstep\+\_\+tolerance, and traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::step\+\_\+constraint.
+
+
+
+Referenced by main().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtraccc_1_1propagation__options_acba9ecace5891ed986671a4235d80e56}\label{structtraccc_1_1propagation__options_acba9ecace5891ed986671a4235d80e56}} 
+\index{traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}!overstep\_tolerance@{overstep\_tolerance}}
+\index{overstep\_tolerance@{overstep\_tolerance}!traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{overstep\_tolerance}{overstep\_tolerance}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ scalar\+\_\+t $>$\+::overstep\+\_\+tolerance \{-\/10.f $\ast$ detray\+::unit$<$scalar\+\_\+t$>$\+::um\}}
+
+
+
+Referenced by main(), traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), and simulate().
+
+\mbox{\Hypertarget{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}\label{structtraccc_1_1propagation__options_a81f0edca06f98598f6be3deef96e07f0}} 
+\index{traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}!step\_constraint@{step\_constraint}}
+\index{step\_constraint@{step\_constraint}!traccc::propagation\_options$<$ scalar\_t $>$@{traccc::propagation\_options$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{step\_constraint}{step\_constraint}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{structtraccc_1_1propagation__options}{traccc\+::propagation\+\_\+options}}$<$ scalar\+\_\+t $>$\+::step\+\_\+constraint \{std\+::numeric\+\_\+limits$<$scalar\+\_\+t$>$\+::max()\}}
+
+
+
+Referenced by main(), traccc\+::propagation\+\_\+options$<$ scalar\+\_\+t $>$\+::read(), seq\+\_\+run(), and simulate().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/options/include/traccc/options/\mbox{\hyperlink{propagation__options_8hpp}{propagation\+\_\+options.\+hpp}}\end{DoxyCompactItemize}

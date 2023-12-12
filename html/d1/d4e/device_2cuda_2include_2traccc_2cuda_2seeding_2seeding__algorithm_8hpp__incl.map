@@ -1,0 +1,52 @@
+<map id="device/cuda/include/traccc/cuda/seeding/seeding_algorithm.hpp" name="device/cuda/include/traccc/cuda/seeding/seeding_algorithm.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="2601,5,2775,61"/>
+<area shape="rect" id="node2" href="$d8/de6/device_2cuda_2include_2traccc_2cuda_2seeding_2seed__finding_8hpp.html" title=" " alt="" coords="2518,109,2669,151"/>
+<area shape="rect" id="node3" href="$d9/d0f/stream_8hpp.html" title=" " alt="" coords="2229,206,2435,233"/>
+<area shape="rect" id="node5" href="$dc/dd1/seed_8hpp.html" title=" " alt="" coords="1472,206,1629,233"/>
+<area shape="rect" id="node33" href="$dc/db6/spacepoint_8hpp.html" title=" " alt="" coords="1533,295,1731,322"/>
+<area shape="rect" id="node45" href="$de/d55/algorithm_8hpp.html" title=" " alt="" coords="2845,206,3033,233"/>
+<area shape="rect" id="node48" href="$d6/d49/memory__resource_8hpp.html" title=" " alt="" coords="3305,199,3457,240"/>
+<area shape="rect" id="node49" title=" " alt="" coords="3109,206,3281,233"/>
+<area shape="rect" id="node50" href="$df/d3b/device_2cuda_2include_2traccc_2cuda_2seeding_2spacepoint__binning_8hpp.html" title=" " alt="" coords="2706,109,2886,151"/>
+<area shape="rect" id="node35" href="$d7/d5f/seeding__config_8hpp.html" title=" " alt="" coords="2068,452,2225,493"/>
+<area shape="rect" id="node36" href="$d0/da5/spacepoint__grid_8hpp.html" title=" " alt="" coords="2511,199,2668,240"/>
+<area shape="rect" id="node46" title=" " alt="" coords="2985,295,3071,322"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1805,295,1883,322"/>
+<area shape="rect" id="node6" href="$dc/d6e/container_8hpp.html" title=" " alt="" coords="1167,549,1353,575"/>
+<area shape="rect" id="node23" href="$d1/d14/core_2include_2traccc_2edm_2measurement_8hpp.html" title=" " alt="" coords="1209,377,1426,404"/>
+<area shape="rect" id="node7" href="$d3/d2a/qualifiers_8hpp.html" title=" " alt="" coords="1192,809,1325,851"/>
+<area shape="rect" id="node8" href="$d0/d9a/device__container_8hpp.html" title=" " alt="" coords="1585,631,1749,672"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1893,817,1985,843"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1602,720,1801,761"/>
+<area shape="rect" id="node15" href="$d6/d9d/host__container_8hpp.html" title=" " alt="" coords="301,631,451,672"/>
+<area shape="rect" id="node16" title=" " alt="" coords="154,727,377,754"/>
+<area shape="rect" id="node17" href="$dc/d54/type__traits_8hpp.html" title=" " alt="" coords="475,638,669,665"/>
+<area shape="rect" id="node18" title=" " alt="" coords="694,631,885,672"/>
+<area shape="rect" id="node19" title=" " alt="" coords="960,631,1144,672"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1168,631,1352,672"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1376,631,1560,672"/>
+<area shape="rect" id="node22" title=" " alt="" coords="93,631,277,672"/>
+<area shape="rect" id="node9" href="$d0/d0b/container__base_8hpp.html" title=" " alt="" coords="1202,720,1355,761"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1079,817,1148,843"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1379,720,1578,761"/>
+<area shape="rect" id="node10" title=" " alt="" coords="2528,809,2725,851"/>
+<area shape="rect" id="node24" href="$df/df2/primitives_8hpp.html" title=" " alt="" coords="1976,631,2109,672"/>
+<area shape="rect" id="node26" href="$dc/dfd/track__parametrization_8hpp.html" title=" " alt="" coords="1653,541,1851,583"/>
+<area shape="rect" id="node27" href="$d0/dc0/core_2include_2traccc_2edm_2cell_8hpp.html" title=" " alt="" coords="1277,459,1427,486"/>
+<area shape="rect" id="node30" title=" " alt="" coords="927,549,1142,575"/>
+<area shape="rect" id="node31" href="$dd/d4a/subspace_8hpp.html" title=" " alt="" coords="1552,459,1739,486"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1144,459,1203,486"/>
+<area shape="rect" id="node25" title=" " alt="" coords="1997,727,2089,754"/>
+<area shape="rect" id="node28" href="$dd/d3a/common_8hpp.html" title=" " alt="" coords="1976,541,2109,583"/>
+<area shape="rect" id="node29" title=" " alt="" coords="2133,631,2269,672"/>
+<area shape="rect" id="node34" title=" " alt="" coords="1838,377,1901,404"/>
+<area shape="rect" id="node37" href="$da/dd4/internal__spacepoint_8hpp.html" title=" " alt="" coords="2393,452,2541,493"/>
+<area shape="rect" id="node40" title=" " alt="" coords="2349,288,2485,329"/>
+<area shape="rect" id="node41" title=" " alt="" coords="2510,295,2669,322"/>
+<area shape="rect" id="node42" title=" " alt="" coords="2693,295,2859,322"/>
+<area shape="rect" id="node43" title=" " alt="" coords="1907,295,2101,322"/>
+<area shape="rect" id="node44" title=" " alt="" coords="2125,295,2325,322"/>
+<area shape="rect" id="node38" title=" " alt="" coords="2395,541,2539,583"/>
+<area shape="rect" id="node39" title=" " alt="" coords="2563,549,2762,575"/>
+<area shape="rect" id="node47" title=" " alt="" coords="3147,295,3207,322"/>
+</map>

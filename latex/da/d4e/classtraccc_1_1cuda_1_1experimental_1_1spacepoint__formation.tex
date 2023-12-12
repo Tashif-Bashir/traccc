@@ -1,0 +1,134 @@
+\hypertarget{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{}\doxysection{traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$ Class Template Reference}
+\label{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}\index{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+
+
+{\ttfamily \#include $<$spacepoint\+\_\+formation.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{df/dc6/classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d5a/classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_a8d2b2441fa7668a8593864fc023db85b}{spacepoint\+\_\+formation}} (const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&mr, vecmem\+::copy \&copy, \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&str)
+\item 
+\mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{spacepoint\+\_\+collection\+\_\+types\+::buffer}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_afa98b735d82bb82e6955a49f6ad19ca6}{operator()}} (const typename detector\+\_\+t\+::view\+\_\+type \&det\+\_\+view, const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{measurement\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&measurements\+\_\+view) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_af585c396af9974ab3213f86003b62fae}{m\+\_\+mr}}
+\begin{DoxyCompactList}\small\item\em Memory resource used by the algorithm. \end{DoxyCompactList}\item 
+vecmem\+::copy \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_af7ec299d692a3c366b6317c5098c54f4}{m\+\_\+copy}}
+\begin{DoxyCompactList}\small\item\em The copy object to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_a9d5b8c1401dc3a295964130dc3120c98}{m\+\_\+stream}}
+\begin{DoxyCompactList}\small\item\em The C\+U\+DA stream to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename detector\+\_\+t$>$\newline
+class traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation$<$ detector\+\_\+t $>$}
+
+Algorithm forming space points out of measurements
+
+This algorithm performs the local-\/to-\/global transformation of the 2D measurements made on every detector module, into 3D spacepoint coordinates. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_a8d2b2441fa7668a8593864fc023db85b}\label{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_a8d2b2441fa7668a8593864fc023db85b}} 
+\index{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}!spacepoint\_formation@{spacepoint\_formation}}
+\index{spacepoint\_formation@{spacepoint\_formation}!traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{spacepoint\_formation()}{spacepoint\_formation()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{spacepoint\+\_\+formation}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&}]{mr,  }\item[{vecmem\+::copy \&}]{copy,  }\item[{\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&}]{str }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{spacepoint\+\_\+formation}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & the memory resource \\
+\hline
+{\em copy} & vecmem copy object \\
+\hline
+{\em str} & cuda stream \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_afa98b735d82bb82e6955a49f6ad19ca6}\label{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_afa98b735d82bb82e6955a49f6ad19ca6}} 
+\index{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{spacepoint\+\_\+collection\+\_\+types\+::buffer}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const typename detector\+\_\+t\+::view\+\_\+type \&}]{det\+\_\+view,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{measurement\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{measurements\+\_\+view }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Callable operator for spacepoint formation
+
+
+\begin{DoxyParams}{Parameters}
+{\em det\+\_\+view} & a detector view object \\
+\hline
+{\em measurements} & a collection of measurements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a spacepoint collection (buffer) 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_af7ec299d692a3c366b6317c5098c54f4}\label{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_af7ec299d692a3c366b6317c5098c54f4}} 
+\index{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}!m\_copy@{m\_copy}}
+\index{m\_copy@{m\_copy}!traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_copy}{m\_copy}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+vecmem\+::copy\& \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::m\+\_\+copy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The copy object to use. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_af585c396af9974ab3213f86003b62fae}\label{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_af585c396af9974ab3213f86003b62fae}} 
+\index{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Memory resource used by the algorithm. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_a9d5b8c1401dc3a295964130dc3120c98}\label{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation_a9d5b8c1401dc3a295964130dc3120c98}} 
+\index{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}!m\_stream@{m\_stream}}
+\index{m\_stream@{m\_stream}!traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$@{traccc::cuda::experimental::spacepoint\_formation$<$ detector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_stream}{m\_stream}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}}\& \mbox{\hyperlink{classtraccc_1_1cuda_1_1experimental_1_1spacepoint__formation}{traccc\+::cuda\+::experimental\+::spacepoint\+\_\+formation}}$<$ detector\+\_\+t $>$\+::m\+\_\+stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The C\+U\+DA stream to use. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/cuda/include/traccc/cuda/seeding/experimental/\mbox{\hyperlink{device_2cuda_2include_2traccc_2cuda_2seeding_2experimental_2spacepoint__formation_8hpp}{spacepoint\+\_\+formation.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,290 @@
+\hypertarget{classtraccc_1_1cuda_1_1finding__algorithm}{}\doxysection{traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$ Class Template Reference}
+\label{classtraccc_1_1cuda_1_1finding__algorithm}\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+
+
+Track Finding algorithm for a set of tracks.  
+
+
+
+
+{\ttfamily \#include $<$finding\+\_\+algorithm.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{df/d77/classtraccc_1_1cuda_1_1finding__algorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d13/classtraccc_1_1cuda_1_1finding__algorithm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}{config\+\_\+type}} = \mbox{\hyperlink{structtraccc_1_1finding__config}{finding\+\_\+config}}$<$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}{scalar\+\_\+type}} $>$
+\begin{DoxyCompactList}\small\item\em Configuration type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3cf69a4a73958588ec846565c4cbb24c}{finding\+\_\+algorithm}} (const \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}{config\+\_\+type}} \&cfg, const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&mr, vecmem\+::copy \&copy, \mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&str)
+\item 
+const \mbox{\hyperlink{structtraccc_1_1finding__config}{finding\+\_\+config}}$<$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}{scalar\+\_\+type}} $>$ \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_af16bcbf69597fb3cfb2423276beb2cb3}{get\+\_\+config}} () const
+\begin{DoxyCompactList}\small\item\em Get config object (const access) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtraccc_1_1container__types_af4001ea1a859d8f3df8cc138f3bf9d5c}{track\+\_\+candidate\+\_\+container\+\_\+types\+::buffer}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_abfc18cb8fdc06236800d3dd8377e94e2}{operator()}} (const typename detector\+\_\+type\+::view\+\_\+type \&det\+\_\+view, const \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_ad1020c27f52514b942e61aa562bff411}{bfield\+\_\+type}} \&field\+\_\+view, const vecmem\+::data\+::jagged\+\_\+vector\+\_\+view$<$ typename navigator\+\_\+t\+::intersection\+\_\+type $>$ \&navigation\+\_\+buffer, const typename \mbox{\hyperlink{structtraccc_1_1collection__types_a81f48fe7d1fbbd487c3dbdad322b1142}{measurement\+\_\+collection\+\_\+types\+::view}} \&measurements, const \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{bound\+\_\+track\+\_\+parameters\+\_\+collection\+\_\+types\+::buffer}} \&seeds) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}{transform3\+\_\+type}} = typename stepper\+\_\+t\+::transform3\+\_\+type
+\begin{DoxyCompactList}\small\item\em Transform3 type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a2542735468a65641c4cf7e0915d8d5bd}{detector\+\_\+type}} = typename navigator\+\_\+t\+::detector\+\_\+type
+\begin{DoxyCompactList}\small\item\em Detector type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_ad1020c27f52514b942e61aa562bff411}{bfield\+\_\+type}} = typename stepper\+\_\+t\+::magnetic\+\_\+field\+\_\+type
+\begin{DoxyCompactList}\small\item\em Field type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}{interactor}} = detray\+::pointwise\+\_\+material\+\_\+interactor$<$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}{transform3\+\_\+type}} $>$
+\begin{DoxyCompactList}\small\item\em Actor types. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}{scalar\+\_\+type}} = typename transform3\+\_\+type\+::scalar\+\_\+type
+\begin{DoxyCompactList}\small\item\em scalar type \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a41a8be0569999b9a9c8c618e91e94df8}{actor\+\_\+type}} = detray\+::actor\+\_\+chain$<$ std\+::tuple, detray\+::pathlimit\+\_\+aborter, detray\+::parameter\+\_\+transporter$<$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}{transform3\+\_\+type}} $>$, \mbox{\hyperlink{structtraccc_1_1interaction__register}{interaction\+\_\+register}}$<$ \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}{interactor}} $>$, \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}{interactor}}, detray\+::next\+\_\+surface\+\_\+aborter $>$
+\begin{DoxyCompactList}\small\item\em Actor chain for propagate to the next surface and its propagator type. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aec724ee1b57a25cf15b049b146768769}{propagator\+\_\+type}} = detray\+::propagator$<$ stepper\+\_\+t, navigator\+\_\+t, \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a41a8be0569999b9a9c8c618e91e94df8}{actor\+\_\+type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}{config\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_ada8aeb39ecca246eb96ee62fdc2ee047}{m\+\_\+cfg}}
+\begin{DoxyCompactList}\small\item\em Config object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a383dd58d5ae87d6f6c02a41deb531c17}{m\+\_\+mr}}
+\begin{DoxyCompactList}\small\item\em Memory resource used by the algorithm. \end{DoxyCompactList}\item 
+vecmem\+::copy \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3bba2fe6ed501a050f0fa180c6a6b990}{m\+\_\+copy}}
+\begin{DoxyCompactList}\small\item\em The copy object to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \& \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aab6ce12c3ee0b377b3e6a12c0b4bb33b}{m\+\_\+stream}}
+\begin{DoxyCompactList}\small\item\em The C\+U\+DA stream to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename stepper\+\_\+t, typename navigator\+\_\+t$>$\newline
+class traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$}
+
+Track Finding algorithm for a set of tracks. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a41a8be0569999b9a9c8c618e91e94df8}\label{classtraccc_1_1cuda_1_1finding__algorithm_a41a8be0569999b9a9c8c618e91e94df8}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!actor\_type@{actor\_type}}
+\index{actor\_type@{actor\_type}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{actor\_type}{actor\_type}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a41a8be0569999b9a9c8c618e91e94df8}{actor\+\_\+type}} =  detray\+::actor\+\_\+chain$<$std\+::tuple, detray\+::pathlimit\+\_\+aborter, detray\+::parameter\+\_\+transporter$<$\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}{transform3\+\_\+type}}$>$, \mbox{\hyperlink{structtraccc_1_1interaction__register}{interaction\+\_\+register}}$<$\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}{interactor}}$>$, \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}{interactor}}, detray\+::next\+\_\+surface\+\_\+aborter$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Actor chain for propagate to the next surface and its propagator type. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_ad1020c27f52514b942e61aa562bff411}\label{classtraccc_1_1cuda_1_1finding__algorithm_ad1020c27f52514b942e61aa562bff411}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!bfield\_type@{bfield\_type}}
+\index{bfield\_type@{bfield\_type}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{bfield\_type}{bfield\_type}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_ad1020c27f52514b942e61aa562bff411}{bfield\+\_\+type}} =  typename stepper\+\_\+t\+::magnetic\+\_\+field\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Field type. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}\label{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!config\_type@{config\_type}}
+\index{config\_type@{config\_type}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{config\_type}{config\_type}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}{config\+\_\+type}} =  \mbox{\hyperlink{structtraccc_1_1finding__config}{finding\+\_\+config}}$<$\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}{scalar\+\_\+type}}$>$}
+
+
+
+Configuration type. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a2542735468a65641c4cf7e0915d8d5bd}\label{classtraccc_1_1cuda_1_1finding__algorithm_a2542735468a65641c4cf7e0915d8d5bd}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!detector\_type@{detector\_type}}
+\index{detector\_type@{detector\_type}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{detector\_type}{detector\_type}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a2542735468a65641c4cf7e0915d8d5bd}{detector\+\_\+type}} =  typename navigator\+\_\+t\+::detector\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Detector type. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}\label{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!interactor@{interactor}}
+\index{interactor@{interactor}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{interactor}{interactor}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a857869e88b9bd66ab1c8db4e20e27811}{interactor}} =  detray\+::pointwise\+\_\+material\+\_\+interactor$<$\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}{transform3\+\_\+type}}$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Actor types. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_aec724ee1b57a25cf15b049b146768769}\label{classtraccc_1_1cuda_1_1finding__algorithm_aec724ee1b57a25cf15b049b146768769}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!propagator\_type@{propagator\_type}}
+\index{propagator\_type@{propagator\_type}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{propagator\_type}{propagator\_type}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aec724ee1b57a25cf15b049b146768769}{propagator\+\_\+type}} =  detray\+::propagator$<$stepper\+\_\+t, navigator\+\_\+t, \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a41a8be0569999b9a9c8c618e91e94df8}{actor\+\_\+type}}$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}\label{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!scalar\_type@{scalar\_type}}
+\index{scalar\_type@{scalar\_type}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{scalar\_type}{scalar\_type}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}{scalar\+\_\+type}} =  typename transform3\+\_\+type\+::scalar\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+scalar type 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}\label{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!transform3\_type@{transform3\_type}}
+\index{transform3\_type@{transform3\_type}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{transform3\_type}{transform3\_type}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+using \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a89dd9fc585868e5f81eba1b58a8e6799}{transform3\+\_\+type}} =  typename stepper\+\_\+t\+::transform3\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Transform3 type. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a3cf69a4a73958588ec846565c4cbb24c}\label{classtraccc_1_1cuda_1_1finding__algorithm_a3cf69a4a73958588ec846565c4cbb24c}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!finding\_algorithm@{finding\_algorithm}}
+\index{finding\_algorithm@{finding\_algorithm}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{finding\_algorithm()}{finding\_algorithm()}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{finding\+\_\+algorithm}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}{config\+\_\+type}} \&}]{cfg,  }\item[{const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&}]{mr,  }\item[{vecmem\+::copy \&}]{copy,  }\item[{\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}} \&}]{str }\end{DoxyParamCaption})}
+
+Constructor for the finding algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em cfg} & Configuration object \\
+\hline
+{\em mr} & The memory resource to use \\
+\hline
+{\em copy} & Copy object \\
+\hline
+{\em str} & Cuda stream object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_af16bcbf69597fb3cfb2423276beb2cb3}\label{classtraccc_1_1cuda_1_1finding__algorithm_af16bcbf69597fb3cfb2423276beb2cb3}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!get\_config@{get\_config}}
+\index{get\_config@{get\_config}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{get\_config()}{get\_config()}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+const \mbox{\hyperlink{structtraccc_1_1finding__config}{finding\+\_\+config}}$<$\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_aa63a878f956ded1d4a91a60c6f06042e}{scalar\+\_\+type}}$>$\& \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::get\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get config object (const access) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_ada8aeb39ecca246eb96ee62fdc2ee047}{m\_cfg}}; \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::m\+\_\+cfg.
+
+
+
+Referenced by seq\+\_\+run(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_abfc18cb8fdc06236800d3dd8377e94e2}\label{classtraccc_1_1cuda_1_1finding__algorithm_abfc18cb8fdc06236800d3dd8377e94e2}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1container__types_af4001ea1a859d8f3df8cc138f3bf9d5c}{track\+\_\+candidate\+\_\+container\+\_\+types\+::buffer}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const typename detector\+\_\+type\+::view\+\_\+type \&}]{det\+\_\+view,  }\item[{const \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_ad1020c27f52514b942e61aa562bff411}{bfield\+\_\+type}} \&}]{field\+\_\+view,  }\item[{const vecmem\+::data\+::jagged\+\_\+vector\+\_\+view$<$ typename navigator\+\_\+t\+::intersection\+\_\+type $>$ \&}]{navigation\+\_\+buffer,  }\item[{const typename \mbox{\hyperlink{structtraccc_1_1collection__types_a81f48fe7d1fbbd487c3dbdad322b1142}{measurement\+\_\+collection\+\_\+types\+::view}} \&}]{measurements,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_af1bd16700947e48e7e095b96e552aba2}{bound\+\_\+track\+\_\+parameters\+\_\+collection\+\_\+types\+::buffer}} \&}]{seeds }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Run the algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em det\+\_\+view} & Detector view object \\
+\hline
+{\em navigation\+\_\+buffer} & Buffer for navigation candidates \\
+\hline
+{\em seeds} & Input seeds \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_ada8aeb39ecca246eb96ee62fdc2ee047}\label{classtraccc_1_1cuda_1_1finding__algorithm_ada8aeb39ecca246eb96ee62fdc2ee047}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!m\_cfg@{m\_cfg}}
+\index{m\_cfg@{m\_cfg}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_cfg}{m\_cfg}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm_a3e1d7babefb083f83e02a96b18104cad}{config\+\_\+type}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::m\+\_\+cfg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Config object. 
+
+
+
+Referenced by traccc\+::cuda\+::finding\+\_\+algorithm$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::get\+\_\+config().
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a3bba2fe6ed501a050f0fa180c6a6b990}\label{classtraccc_1_1cuda_1_1finding__algorithm_a3bba2fe6ed501a050f0fa180c6a6b990}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!m\_copy@{m\_copy}}
+\index{m\_copy@{m\_copy}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_copy}{m\_copy}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+vecmem\+::copy\& \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::m\+\_\+copy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The copy object to use. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_a383dd58d5ae87d6f6c02a41deb531c17}\label{classtraccc_1_1cuda_1_1finding__algorithm_a383dd58d5ae87d6f6c02a41deb531c17}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Memory resource used by the algorithm. 
+
+\mbox{\Hypertarget{classtraccc_1_1cuda_1_1finding__algorithm_aab6ce12c3ee0b377b3e6a12c0b4bb33b}\label{classtraccc_1_1cuda_1_1finding__algorithm_aab6ce12c3ee0b377b3e6a12c0b4bb33b}} 
+\index{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}!m\_stream@{m\_stream}}
+\index{m\_stream@{m\_stream}!traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$@{traccc::cuda::finding\_algorithm$<$ stepper\_t, navigator\_t $>$}}
+\doxysubsubsection{\texorpdfstring{m\_stream}{m\_stream}}
+{\footnotesize\ttfamily template$<$typename stepper\+\_\+t , typename navigator\+\_\+t $>$ \\
+\mbox{\hyperlink{classtraccc_1_1cuda_1_1stream}{stream}}\& \mbox{\hyperlink{classtraccc_1_1cuda_1_1finding__algorithm}{traccc\+::cuda\+::finding\+\_\+algorithm}}$<$ stepper\+\_\+t, navigator\+\_\+t $>$\+::m\+\_\+stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The C\+U\+DA stream to use. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/cuda/include/traccc/cuda/finding/\mbox{\hyperlink{device_2cuda_2include_2traccc_2cuda_2finding_2finding__algorithm_8hpp}{finding\+\_\+algorithm.\+hpp}}\end{DoxyCompactItemize}

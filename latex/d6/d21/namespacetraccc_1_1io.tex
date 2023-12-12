@@ -1,0 +1,778 @@
+\hypertarget{namespacetraccc_1_1io}{}\doxysection{traccc\+::io Namespace Reference}
+\label{namespacetraccc_1_1io}\index{traccc::io@{traccc::io}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv}{csv}}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1io_1_1details}{details}}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1io_1_1json}{json}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{cell\+\_\+reader\+\_\+output}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{measurement\+\_\+reader\+\_\+output}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{spacepoint\+\_\+reader\+\_\+output}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_a2f9fb1ae8316ac655feafb1575bd1f02}{read}} (\mbox{\hyperlink{namespacetraccc_a6e17f4a1fd3b062b9fecc4a22ce47e8a}{demonstrator\+\_\+input}} \&out, std\+::size\+\_\+t events, std\+::string\+\_\+view directory, std\+::string\+\_\+view \mbox{\hyperlink{test__mapper_8cpp_a902d72422a60bd9a079e899a54f552c1}{detector\+\_\+file}}, std\+::string\+\_\+view \mbox{\hyperlink{test__mapper_8cpp_a5a453e9bf94f17c28f4cd86724b542a3}{digi\+\_\+config\+\_\+file}}, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv)
+\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}{read\+\_\+cells}} (\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{cell\+\_\+reader\+\_\+output}} \&out, std\+::size\+\_\+t \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, std\+::string\+\_\+view directory, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv, const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} $\ast$geom=nullptr, const \mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} $\ast$dconfig=nullptr)
+\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_a10d7b3328f56287206634d68953391b3}{read\+\_\+cells}} (\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{cell\+\_\+reader\+\_\+output}} \&out, std\+::string\+\_\+view filename, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv, const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} $\ast$geom=nullptr, const \mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} $\ast$dconfig=nullptr)
+\item 
+\mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} \mbox{\hyperlink{namespacetraccc_1_1io_aa6519a2968b73b699f1aee456d80c190}{read\+\_\+digitization\+\_\+config}} (std\+::string\+\_\+view filename, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::json)
+\item 
+\mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} \mbox{\hyperlink{namespacetraccc_1_1io_a5a6c904c086473a05b85a0bf060bfa8d}{read\+\_\+geometry}} (std\+::string\+\_\+view filename, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv)
+\item 
+{\footnotesize template$<$typename detector\+\_\+t $>$ }\\\mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} \mbox{\hyperlink{namespacetraccc_1_1io_a34c4958e67d33997fa0d3c0082169822}{alt\+\_\+read\+\_\+geometry}} (const detector\+\_\+t \&det)
+\begin{DoxyCompactList}\small\item\em Read in the detector geometry description from a detector object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_a84e36824b32d23770ed527b25f810307}{read\+\_\+measurements}} (\mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{measurement\+\_\+reader\+\_\+output}} \&out, std\+::size\+\_\+t \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, std\+::string\+\_\+view directory, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv)
+\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_ad82af7bc95307030241d0b8c122c78aa}{read\+\_\+measurements}} (\mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{measurement\+\_\+reader\+\_\+output}} \&out, std\+::string\+\_\+view filename, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv)
+\item 
+\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{particle\+\_\+collection\+\_\+types\+::host}} \mbox{\hyperlink{namespacetraccc_1_1io_a5a3d8b24e28cd4722ab500e3ade6ea1c}{read\+\_\+particles}} (std\+::size\+\_\+t \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, std\+::string\+\_\+view directory, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv, vecmem\+::memory\+\_\+resource $\ast$mr=nullptr)
+\item 
+\mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{particle\+\_\+collection\+\_\+types\+::host}} \mbox{\hyperlink{namespacetraccc_1_1io_a0a0bd62c8a62750a0d5f1dff33d393e6}{read\+\_\+particles}} (std\+::string\+\_\+view filename, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv, vecmem\+::memory\+\_\+resource $\ast$mr=nullptr)
+\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_afe49060da2ab77f49cfcd82308122f84}{read\+\_\+spacepoints}} (\mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{spacepoint\+\_\+reader\+\_\+output}} \&out, std\+::size\+\_\+t \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, std\+::string\+\_\+view directory, const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} \&geom, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv)
+\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_ad83b00cf07bb72a0ae333f52c511e74d}{read\+\_\+spacepoints}} (\mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{spacepoint\+\_\+reader\+\_\+output}} \&out, std\+::string\+\_\+view filename, std\+::string\+\_\+view meas\+\_\+filename, std\+::string\+\_\+view meas\+\_\+hit\+\_\+map\+\_\+filename, const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} \&geom, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}} format=data\+\_\+format\+::csv)
+\item 
+const std\+::string \& \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\+\_\+directory}} ()
+\item 
+std\+::string \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\+\_\+event\+\_\+filename}} (std\+::size\+\_\+t \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, std\+::string\+\_\+view suffix)
+\item 
+void \mbox{\hyperlink{namespacetraccc_1_1io_ac5ecbcf7382458f8a937e4b93d27c5fe}{write}} (std\+::size\+\_\+t \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, std\+::string\+\_\+view directory, \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{traccc\+::data\+\_\+format}} format, \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{traccc\+::cell\+\_\+collection\+\_\+types\+::const\+\_\+view}} cells, \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{traccc\+::cell\+\_\+module\+\_\+collection\+\_\+types\+::const\+\_\+view}} modules)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2021-\/2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2023 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetraccc_1_1io_a34c4958e67d33997fa0d3c0082169822}\label{namespacetraccc_1_1io_a34c4958e67d33997fa0d3c0082169822}} 
+\index{traccc::io@{traccc::io}!alt\_read\_geometry@{alt\_read\_geometry}}
+\index{alt\_read\_geometry@{alt\_read\_geometry}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{alt\_read\_geometry()}{alt\_read\_geometry()}}
+{\footnotesize\ttfamily template$<$typename detector\+\_\+t $>$ \\
+\mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} traccc\+::io\+::alt\+\_\+read\+\_\+geometry (\begin{DoxyParamCaption}\item[{const detector\+\_\+t \&}]{det }\end{DoxyParamCaption})}
+
+
+
+Read in the detector geometry description from a detector object. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                   \{}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{const} \textcolor{keyword}{auto} transforms = det.transform\_store();}
+\DoxyCodeLine{38     \textcolor{keyword}{const} \textcolor{keyword}{auto} surfaces = det.surface\_lookup();}
+\DoxyCodeLine{39     std::map<traccc::geometry\_id, traccc::transform3> maps;}
+\DoxyCodeLine{40     \textcolor{keyword}{using} cxt\_t = \textcolor{keyword}{typename} detector\_t::geometry\_context;}
+\DoxyCodeLine{41     \textcolor{keyword}{const} cxt\_t ctx0\{\};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& sf\_desc : surfaces) \{}
+\DoxyCodeLine{44         \textcolor{keyword}{const} detray::surface<detector\_t> sf\{det, sf\_desc.barcode()\};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         maps.insert(\{sf.barcode().value(), sf.transform(ctx0)\});}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} maps;}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+Referenced by seq\+\_\+run().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}\label{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}} 
+\index{traccc::io@{traccc::io}!data\_directory@{data\_directory}}
+\index{data\_directory@{data\_directory}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{data\_directory()}{data\_directory()}}
+{\footnotesize\ttfamily const std\+::string \& traccc\+::io\+::data\+\_\+directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data directory to use in the application
+
+\begin{DoxyReturn}{Returns}
+The directory name to find data files in 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                   \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{comment}{// Establish the directory name only once for the application.}}
+\DoxyCodeLine{21     \textcolor{keyword}{static} \textcolor{keyword}{const} std::string data\_dir = [] \{}
+\DoxyCodeLine{22         \textcolor{comment}{// Look for an environment variable specifying the directory name.}}
+\DoxyCodeLine{23         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* env\_dir = std::getenv(\textcolor{stringliteral}{"TRACCC\_TEST\_DATA\_DIR"});}
+\DoxyCodeLine{24         \textcolor{keywordflow}{if} (env\_dir == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{25             \textcolor{comment}{// If an environment variable is not set, rely on the definition}}
+\DoxyCodeLine{26             \textcolor{comment}{// coming from the build system.}}
+\DoxyCodeLine{27             \textcolor{keywordflow}{return} std::string(TRACCC\_TEST\_DATA\_DIR) + \textcolor{stringliteral}{"/"};}
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29         \textcolor{comment}{// Initialise the directory name using the environment variable.}}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} std::string(env\_dir) + \textcolor{stringliteral}{"/"};}
+\DoxyCodeLine{31     \}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Return the previously initialised variable.}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} data\_dir;}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+Referenced by main(), read\+\_\+cells(), read\+\_\+digitization\+\_\+config(), read\+\_\+geometry(), read\+\_\+measurements(), read\+\_\+particles(), read\+\_\+spacepoints(), seq\+\_\+run(), traccc\+::tests\+::data\+\_\+test\+::\+Set\+Up(), T\+E\+S\+T(), and write().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}\label{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}} 
+\index{traccc::io@{traccc::io}!get\_event\_filename@{get\_event\_filename}}
+\index{get\_event\_filename@{get\_event\_filename}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{get\_event\_filename()}{get\_event\_filename()}}
+{\footnotesize\ttfamily std\+::string traccc\+::io\+::get\+\_\+event\+\_\+filename (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{event,  }\item[{std\+::string\+\_\+view}]{suffix }\end{DoxyParamCaption})}
+
+Get the name of a data file for a specific event ID
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event number to get the file name for \\
+\hline
+{\em suffix} & A suffix for the file name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A standardized name for a data file to use as input. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                                      \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     std::ostringstream stream;}
+\DoxyCodeLine{40     stream << \textcolor{stringliteral}{"event"} << std::setfill(\textcolor{charliteral}{'0'}) << std::setw(9) << \textcolor{keyword}{event} << suffix;}
+\DoxyCodeLine{41     \textcolor{keywordflow}{return} stream.str();}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::event\+\_\+map2\+::event\+\_\+map2(), traccc\+::generate\+\_\+hit\+\_\+cell\+\_\+map(), traccc\+::generate\+\_\+hit\+\_\+map(), traccc\+::generate\+\_\+hit\+\_\+particle\+\_\+map(), traccc\+::generate\+\_\+particle\+\_\+map(), G\+T\+E\+S\+T\+\_\+\+T\+E\+S\+T(), read\+\_\+cells(), read\+\_\+measurements(), read\+\_\+particles(), read\+\_\+spacepoints(), T\+E\+S\+T(), T\+E\+S\+T\+\_\+\+P(), and write().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a2f9fb1ae8316ac655feafb1575bd1f02}\label{namespacetraccc_1_1io_a2f9fb1ae8316ac655feafb1575bd1f02}} 
+\index{traccc::io@{traccc::io}!read@{read}}
+\index{read@{read}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void traccc\+::io\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetraccc_a6e17f4a1fd3b062b9fecc4a22ce47e8a}{demonstrator\+\_\+input}} \&}]{out,  }\item[{std\+::size\+\_\+t}]{events,  }\item[{std\+::string\+\_\+view}]{directory,  }\item[{std\+::string\+\_\+view}]{detector\+\_\+file,  }\item[{std\+::string\+\_\+view}]{digi\+\_\+config\+\_\+file,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv} }\end{DoxyParamCaption})}
+
+Read input data for a specified number of events
+
+This function can read data about multiple events into memory at the same time. Even using (Open\+MP) parallelism for the reading if possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & An object with the requested events worth of input \\
+\hline
+{\em events} & The number of events to read input data for \\
+\hline
+{\em directory} & The directory to read the cell data from \\
+\hline
+{\em detector\+\_\+file} & The file describing the detector geometry \\
+\hline
+{\em digi\+\_\+config\+\_\+file} & The file describing the detector digitization \\
+\hline
+{\em format} & The format of the event file(s) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                                                \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Read in the detector configuration.}}
+\DoxyCodeLine{27     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} geom = \mbox{\hyperlink{namespacetraccc_1_1io_a5a6c904c086473a05b85a0bf060bfa8d}{io::read\_geometry}}(\mbox{\hyperlink{test__mapper_8cpp_a902d72422a60bd9a079e899a54f552c1}{detector\_file}});}
+\DoxyCodeLine{28     \textcolor{keyword}{const} \mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\_config}} digi\_cfg =}
+\DoxyCodeLine{29         \mbox{\hyperlink{namespacetraccc_1_1io_aa6519a2968b73b699f1aee456d80c190}{io::read\_digitization\_config}}(\mbox{\hyperlink{test__mapper_8cpp_a5a453e9bf94f17c28f4cd86724b542a3}{digi\_config\_file}});}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     assert(out.size() >= events);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Read in the cell data for all events. In parallel if possible.}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#pragma omp parallel for}}
+\DoxyCodeLine{35     \textcolor{keywordflow}{for} (std::size\_t \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}} = 0; \textcolor{keyword}{event} < events; ++\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}) \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}{io::read\_cells}}(out[\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}], \mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, directory, format, \&geom, \&digi\_cfg);}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+
+
+References detector\+\_\+file, digi\+\_\+config\+\_\+file, event, read\+\_\+cells(), read\+\_\+digitization\+\_\+config(), and read\+\_\+geometry().
+
+
+
+Referenced by traccc\+::throughput\+\_\+mt(), and traccc\+::throughput\+\_\+st().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}\label{namespacetraccc_1_1io_a4141a99f877738d68d63f85ed5642462}} 
+\index{traccc::io@{traccc::io}!read\_cells@{read\_cells}}
+\index{read\_cells@{read\_cells}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_cells()}{read\_cells()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void traccc\+::io\+::read\+\_\+cells (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{cell\+\_\+reader\+\_\+output}} \&}]{out,  }\item[{std\+::size\+\_\+t}]{event,  }\item[{std\+::string\+\_\+view}]{directory,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv},  }\item[{const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} $\ast$}]{geom = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} $\ast$}]{dconfig = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Read cell data into memory
+
+The file to read is selected according the naming conventions used in our data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & A cell \& a \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} (host) collections \\
+\hline
+{\em event} & The event ID to read in the cells for \\
+\hline
+{\em directory} & The directory holding the cell data files \\
+\hline
+{\em format} & The format of the cell data files (to read) \\
+\hline
+{\em geom} & The description of the detector geometry \\
+\hline
+{\em dconfig} & The detector\textquotesingle{}s digitization configuration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                                           \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}: \{}
+\DoxyCodeLine{23             \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a705f60cbf8cb352c49a54f991294a0f9}{read\_cells}}(out,}
+\DoxyCodeLine{24                        \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{25                            \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/cells.csv"}),}
+\DoxyCodeLine{26                        format, geom, dconfig);}
+\DoxyCodeLine{27             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{data\_format::binary}}: \{}
+\DoxyCodeLine{30             details::read\_binary\_collection<cell\_collection\_types::host>(}
+\DoxyCodeLine{31                 out.cells, \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{32                                \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/cells.dat"}));}
+\DoxyCodeLine{33             details::read\_binary\_collection<cell\_module\_collection\_types::host>(}
+\DoxyCodeLine{34                 out.modules, \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{35                                  \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/modules.dat"}));}
+\DoxyCodeLine{36             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{39             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary, traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::cells, traccc\+::csv, data\+\_\+directory(), event, get\+\_\+event\+\_\+filename(), and traccc\+::io\+::cell\+\_\+reader\+\_\+output\+::modules.
+
+
+
+Referenced by create\+\_\+binaries(), traccc\+::generate\+\_\+measurement\+\_\+cell\+\_\+map(), main(), par\+\_\+run(), read(), seq\+\_\+run(), T\+E\+S\+T(), Connected\+Component\+Analysis\+Tests\+::test\+\_\+connected\+\_\+component\+\_\+analysis(), T\+E\+S\+T\+\_\+\+F(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a10d7b3328f56287206634d68953391b3}\label{namespacetraccc_1_1io_a10d7b3328f56287206634d68953391b3}} 
+\index{traccc::io@{traccc::io}!read\_cells@{read\_cells}}
+\index{read\_cells@{read\_cells}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_cells()}{read\_cells()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void traccc\+::io\+::read\+\_\+cells (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1io_1_1cell__reader__output}{cell\+\_\+reader\+\_\+output}} \&}]{out,  }\item[{std\+::string\+\_\+view}]{filename,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv},  }\item[{const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} $\ast$}]{geom = {\ttfamily nullptr},  }\item[{const \mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} $\ast$}]{dconfig = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Read cell data into memory
+
+The file name is selected explicitly by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & A cell \& a \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} (host) collections \\
+\hline
+{\em filename} & The file to read the cell data from \\
+\hline
+{\em format} & The format of the cell data files (to read) \\
+\hline
+{\em geom} & The description of the detector geometry \\
+\hline
+{\em dconfig} & The detector\textquotesingle{}s digitization configuration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                     \{}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}:}
+\DoxyCodeLine{49             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a705f60cbf8cb352c49a54f991294a0f9}{csv::read\_cells}}(out, filename, geom, dconfig);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{52             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, and traccc\+::io\+::csv\+::read\+\_\+cells().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_aa6519a2968b73b699f1aee456d80c190}\label{namespacetraccc_1_1io_aa6519a2968b73b699f1aee456d80c190}} 
+\index{traccc::io@{traccc::io}!read\_digitization\_config@{read\_digitization\_config}}
+\index{read\_digitization\_config@{read\_digitization\_config}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_digitization\_config()}{read\_digitization\_config()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_a49d32a4a500a84b0d0a13e18568e18e7}{digitization\+\_\+config}} traccc\+::io\+::read\+\_\+digitization\+\_\+config (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:json} }\end{DoxyParamCaption})}
+
+Read the detector digitization configuration from an input file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to read the data from \\
+\hline
+{\em format} & The format of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An object describing the digitization configuration of the detector 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                                  \{}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{comment}{// Construct the full filename.}}
+\DoxyCodeLine{67     std::string full\_filename = \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + filename.data();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{comment}{// Decide how to read the file.}}
+\DoxyCodeLine{70     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daade8883fdae97f32ca2381bf112bccc14}{data\_format::json}}:}
+\DoxyCodeLine{72             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1json_a18db814f0e01bb8c02c749b31709bd4f}{json::read\_digitization\_config}}(full\_filename);}
+\DoxyCodeLine{73         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{74             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{75     \}}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+
+
+References data\+\_\+directory(), traccc\+::json, and traccc\+::io\+::json\+::read\+\_\+digitization\+\_\+config().
+
+
+
+Referenced by create\+\_\+binaries(), traccc\+::generate\+\_\+measurement\+\_\+cell\+\_\+map(), par\+\_\+run(), read(), seq\+\_\+run(), T\+E\+S\+T(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a5a6c904c086473a05b85a0bf060bfa8d}\label{namespacetraccc_1_1io_a5a6c904c086473a05b85a0bf060bfa8d}} 
+\index{traccc::io@{traccc::io}!read\_geometry@{read\_geometry}}
+\index{read\_geometry@{read\_geometry}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_geometry()}{read\_geometry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} traccc\+::io\+::read\+\_\+geometry (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv} }\end{DoxyParamCaption})}
+
+Read in the detector geometry description from an input file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the input file to read \\
+\hline
+{\em format} & The format of the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A description of the detector modules 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                                                     \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{comment}{// Construct the full file name.}}
+\DoxyCodeLine{19     \textcolor{keyword}{const} std::string full\_filename = \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + filename.data();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{// Read the file using another function. Relying on the auto-\/conversion of}}
+\DoxyCodeLine{22     \textcolor{comment}{// the output type of that other function.}}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a0a0bd7ed4c0a9dec6a1975ab2632980a}{details::read\_surfaces}}(full\_filename, format);}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+
+
+References data\+\_\+directory(), and traccc\+::io\+::details\+::read\+\_\+surfaces().
+
+
+
+Referenced by create\+\_\+binaries(), traccc\+::generate\+\_\+measurement\+\_\+cell\+\_\+map(), traccc\+::generate\+\_\+measurement\+\_\+particle\+\_\+map(), par\+\_\+run(), read(), seq\+\_\+run(), T\+E\+S\+T(), T\+E\+S\+T\+\_\+\+F(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a84e36824b32d23770ed527b25f810307}\label{namespacetraccc_1_1io_a84e36824b32d23770ed527b25f810307}} 
+\index{traccc::io@{traccc::io}!read\_measurements@{read\_measurements}}
+\index{read\_measurements@{read\_measurements}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_measurements()}{read\_measurements()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void traccc\+::io\+::read\+\_\+measurements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{measurement\+\_\+reader\+\_\+output}} \&}]{out,  }\item[{std\+::size\+\_\+t}]{event,  }\item[{std\+::string\+\_\+view}]{directory,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv} }\end{DoxyParamCaption})}
+
+Read measurement data into memory
+
+The file to read is selected according the naming conventions used in our data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & A measurement \& a \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} (host) collections \\
+\hline
+{\em event} & The event ID to read in the cells for \\
+\hline
+{\em directory} & The directory holding the cell data files \\
+\hline
+{\em format} & The format of the cell data files (to read) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                                                      \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{21         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}: \{}
+\DoxyCodeLine{22             \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a936624d8e25bb46b8971d90208395cf6}{read\_measurements}}(}
+\DoxyCodeLine{23                 out,}
+\DoxyCodeLine{24                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{25                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/measurements.csv"}),}
+\DoxyCodeLine{26                 format);}
+\DoxyCodeLine{27             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{data\_format::binary}}: \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31             details::read\_binary\_collection<measurement\_collection\_types::host>(}
+\DoxyCodeLine{32                 out.measurements,}
+\DoxyCodeLine{33                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{34                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/measurements.dat"}));}
+\DoxyCodeLine{35             details::read\_binary\_collection<cell\_module\_collection\_types::host>(}
+\DoxyCodeLine{36                 out.modules, \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{37                                  \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/modules.dat"}));}
+\DoxyCodeLine{38             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{39         \}}
+\DoxyCodeLine{40         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{41             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary, traccc\+::csv, data\+\_\+directory(), event, get\+\_\+event\+\_\+filename(), traccc\+::io\+::measurement\+\_\+reader\+\_\+output\+::measurements, and traccc\+::io\+::measurement\+\_\+reader\+\_\+output\+::modules.
+
+
+
+Referenced by create\+\_\+binaries(), seq\+\_\+run(), T\+E\+S\+T(), T\+E\+S\+T\+\_\+\+F(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_ad82af7bc95307030241d0b8c122c78aa}\label{namespacetraccc_1_1io_ad82af7bc95307030241d0b8c122c78aa}} 
+\index{traccc::io@{traccc::io}!read\_measurements@{read\_measurements}}
+\index{read\_measurements@{read\_measurements}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_measurements()}{read\_measurements()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void traccc\+::io\+::read\+\_\+measurements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1io_1_1measurement__reader__output}{measurement\+\_\+reader\+\_\+output}} \&}]{out,  }\item[{std\+::string\+\_\+view}]{filename,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv} }\end{DoxyParamCaption})}
+
+Read measurement data into memory
+
+The file name is selected explicitly by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & A measurement \& a \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} (host) collections \\
+\hline
+{\em filename} & The file to read the cell data from \\
+\hline
+{\em format} & The format of the cell data files (to read) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                                                     \{}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{49         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}:}
+\DoxyCodeLine{50             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a936624d8e25bb46b8971d90208395cf6}{csv::read\_measurements}}(out, filename);}
+\DoxyCodeLine{51         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{52             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, and traccc\+::io\+::csv\+::read\+\_\+measurements().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a5a3d8b24e28cd4722ab500e3ade6ea1c}\label{namespacetraccc_1_1io_a5a3d8b24e28cd4722ab500e3ade6ea1c}} 
+\index{traccc::io@{traccc::io}!read\_particles@{read\_particles}}
+\index{read\_particles@{read\_particles}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_particles()}{read\_particles()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{particle\+\_\+collection\+\_\+types\+::host}} traccc\+::io\+::read\+\_\+particles (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{event,  }\item[{std\+::string\+\_\+view}]{directory,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv},  }\item[{vecmem\+::memory\+\_\+resource $\ast$}]{mr = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Read particle data into memory
+
+The file to read is selected according the naming conventions used in our data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event ID to read in the cells for \\
+\hline
+{\em directory} & The directory holding the particle data files \\
+\hline
+{\em format} & The format of the particle data files (to read) \\
+\hline
+{\em mr} & The memory resource to create the host collection with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A particle (host) collection 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                                           \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}:}
+\DoxyCodeLine{23             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a64b48f13e5957c7085e5e3ee6eb255e9}{read\_particles}}(}
+\DoxyCodeLine{24                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{25                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/particles.csv"}),}
+\DoxyCodeLine{26                 format, mr);}
+\DoxyCodeLine{27         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{28             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, data\+\_\+directory(), event, and get\+\_\+event\+\_\+filename().
+
+
+
+Referenced by T\+E\+S\+T\+\_\+\+F().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_a0a0bd62c8a62750a0d5f1dff33d393e6}\label{namespacetraccc_1_1io_a0a0bd62c8a62750a0d5f1dff33d393e6}} 
+\index{traccc::io@{traccc::io}!read\_particles@{read\_particles}}
+\index{read\_particles@{read\_particles}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_particles()}{read\_particles()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{particle\+\_\+collection\+\_\+types\+::host}} traccc\+::io\+::read\+\_\+particles (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv},  }\item[{vecmem\+::memory\+\_\+resource $\ast$}]{mr = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Read particle data into memory
+
+The file name is selected explicitly by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The file to read the particle data from \\
+\hline
+{\em format} & The format of the particle data files (to read) \\
+\hline
+{\em mr} & The memory resource to create the host collection with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A particle (host) collection 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                                           \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}:}
+\DoxyCodeLine{38             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a64b48f13e5957c7085e5e3ee6eb255e9}{csv::read\_particles}}(filename, mr);}
+\DoxyCodeLine{39         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{40             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, and traccc\+::io\+::csv\+::read\+\_\+particles().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_afe49060da2ab77f49cfcd82308122f84}\label{namespacetraccc_1_1io_afe49060da2ab77f49cfcd82308122f84}} 
+\index{traccc::io@{traccc::io}!read\_spacepoints@{read\_spacepoints}}
+\index{read\_spacepoints@{read\_spacepoints}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_spacepoints()}{read\_spacepoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void traccc\+::io\+::read\+\_\+spacepoints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{spacepoint\+\_\+reader\+\_\+output}} \&}]{out,  }\item[{std\+::size\+\_\+t}]{event,  }\item[{std\+::string\+\_\+view}]{directory,  }\item[{const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} \&}]{geom,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv} }\end{DoxyParamCaption})}
+
+Read spacepoint data into memory
+
+The file to read is selected according the naming conventions used in our data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & A spacepoint \& a \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} (host) collections \\
+\hline
+{\em event} & The event ID to read in the cells for \\
+\hline
+{\em directory} & The directory holding the cell data files \\
+\hline
+{\em geom} & The description of the detector geometry \\
+\hline
+{\em format} & The format of the cell data files (to read) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                           \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}: \{}
+\DoxyCodeLine{23             \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a29a923a41cfa524bf507a92860f0a9d7}{read\_spacepoints}}(}
+\DoxyCodeLine{24                 out,}
+\DoxyCodeLine{25                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{26                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/hits.csv"}),}
+\DoxyCodeLine{27                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{28                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/measurements.csv"}),}
+\DoxyCodeLine{29                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{30                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/measurement-\/simhit-\/map.csv"}),}
+\DoxyCodeLine{31                 geom, format);}
+\DoxyCodeLine{32             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{data\_format::binary}}: \{}
+\DoxyCodeLine{35             details::read\_binary\_collection<spacepoint\_collection\_types::host>(}
+\DoxyCodeLine{36                 out.spacepoints, \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{37                                      \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/hits.dat"}));}
+\DoxyCodeLine{38             details::read\_binary\_collection<cell\_module\_collection\_types::host>(}
+\DoxyCodeLine{39                 out.modules, \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{40                                  \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/modules.dat"}));}
+\DoxyCodeLine{41             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{44             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary, traccc\+::csv, data\+\_\+directory(), event, get\+\_\+event\+\_\+filename(), traccc\+::io\+::spacepoint\+\_\+reader\+\_\+output\+::modules, and traccc\+::io\+::spacepoint\+\_\+reader\+\_\+output\+::spacepoints.
+
+
+
+Referenced by create\+\_\+binaries(), traccc\+::generate\+\_\+measurement\+\_\+particle\+\_\+map(), seq\+\_\+run(), T\+E\+S\+T(), T\+E\+S\+T\+\_\+\+F(), and T\+E\+S\+T\+\_\+\+P().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_ad83b00cf07bb72a0ae333f52c511e74d}\label{namespacetraccc_1_1io_ad83b00cf07bb72a0ae333f52c511e74d}} 
+\index{traccc::io@{traccc::io}!read\_spacepoints@{read\_spacepoints}}
+\index{read\_spacepoints@{read\_spacepoints}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{read\_spacepoints()}{read\_spacepoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void traccc\+::io\+::read\+\_\+spacepoints (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1io_1_1spacepoint__reader__output}{spacepoint\+\_\+reader\+\_\+output}} \&}]{out,  }\item[{std\+::string\+\_\+view}]{filename,  }\item[{std\+::string\+\_\+view}]{meas\+\_\+filename,  }\item[{std\+::string\+\_\+view}]{meas\+\_\+hit\+\_\+map\+\_\+filename,  }\item[{const \mbox{\hyperlink{namespacetraccc_aa72ada2d62d62e47ad400d82e42f13b2}{geometry}} \&}]{geom,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{data\+\_\+format}}}]{format = {\ttfamily data\+\_\+format\+:\+:csv} }\end{DoxyParamCaption})}
+
+Read spacepoint data into memory
+
+The file name is selected explicitly by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & A spacepoint \& a \mbox{\hyperlink{structtraccc_1_1cell__module}{cell\+\_\+module}} (host) collections \\
+\hline
+{\em filename} & The file to read the cell data from \\
+\hline
+{\em geom} & The description of the detector geometry \\
+\hline
+{\em format} & The format of the cell data files (to read) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                                                 \{}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{54         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daaad4c20898046609aa6860e412b43c422}{data\_format::csv}}:}
+\DoxyCodeLine{55             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacetraccc_1_1io_1_1csv_a29a923a41cfa524bf507a92860f0a9d7}{csv::read\_spacepoints}}(out, filename, meas\_filename,}
+\DoxyCodeLine{56                                          meas\_hit\_map\_filename, geom);}
+\DoxyCodeLine{57         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{58             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::csv, and traccc\+::io\+::csv\+::read\+\_\+spacepoints().
+
+\mbox{\Hypertarget{namespacetraccc_1_1io_ac5ecbcf7382458f8a937e4b93d27c5fe}\label{namespacetraccc_1_1io_ac5ecbcf7382458f8a937e4b93d27c5fe}} 
+\index{traccc::io@{traccc::io}!write@{write}}
+\index{write@{write}!traccc::io@{traccc::io}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void traccc\+::io\+::write (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{event,  }\item[{std\+::string\+\_\+view}]{directory,  }\item[{\mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83da}{traccc\+::data\+\_\+format}}}]{format,  }\item[{\mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{traccc\+::cell\+\_\+collection\+\_\+types\+::const\+\_\+view}}}]{cells,  }\item[{\mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{traccc\+::cell\+\_\+module\+\_\+collection\+\_\+types\+::const\+\_\+view}}}]{modules }\end{DoxyParamCaption})}
+
+Function for cell file writing
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & is the event index \\
+\hline
+{\em directory} & is the directory for the output cell file \\
+\hline
+{\em format} & is the data format (e.\+g. csv or binary) of output file \\
+\hline
+{\em cells} & is the cell collection to write \\
+\hline
+{\em modules} & is the module collection to write\\
+\hline
+\end{DoxyParams}
+Function for hit file writing
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & is the event index \\
+\hline
+{\em directory} & is the directory for the output spacepoint file \\
+\hline
+{\em format} & is the data format (e.\+g. csv or binary) of output file \\
+\hline
+{\em spacepoints} & is the spacepoint collection to write \\
+\hline
+{\em modules} & is the module collection to write\\
+\hline
+\end{DoxyParams}
+Function for measurement file writing
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & is the event index \\
+\hline
+{\em directory} & is the directory for the output measurement file \\
+\hline
+{\em format} & is the data format (e.\+g. csv or binary) of output file \\
+\hline
+{\em measurements} & is the measurement collection to write \\
+\hline
+{\em modules} & is the module collection to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                                  \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordflow}{switch} (format) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetraccc_af412a9ab8cc2a30a664acd9f62bb83daab5442023e55597c0c524502feb4da989}{data\_format::binary}}:}
+\DoxyCodeLine{23             \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a8ea47a248eca15083f492748bebab0aa}{details::write\_binary\_collection}}(}
+\DoxyCodeLine{24                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{25                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/cells.dat"}),}
+\DoxyCodeLine{26                 \mbox{\hyperlink{structtraccc_1_1collection__types_a2c17f74f33da865b1fb58c83e44ecb71}{traccc::cell\_collection\_types::const\_device}}\{cells\});}
+\DoxyCodeLine{27             \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a8ea47a248eca15083f492748bebab0aa}{details::write\_binary\_collection}}(}
+\DoxyCodeLine{28                 \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{data\_directory}}() + directory.data() +}
+\DoxyCodeLine{29                     \mbox{\hyperlink{namespacetraccc_1_1io_a50a83a33d8433ae43e01677765651ffb}{get\_event\_filename}}(\mbox{\hyperlink{test__mapper_8cpp_aa79e3eff1ed8e629ebc8e3268c4805f9}{event}}, \textcolor{stringliteral}{"-\/modules.dat"}),}
+\DoxyCodeLine{30                 \mbox{\hyperlink{structtraccc_1_1collection__types_a2c17f74f33da865b1fb58c83e44ecb71}{traccc::cell\_module\_collection\_types::const\_device}}\{modules\});}
+\DoxyCodeLine{31             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{32         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{33             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unsupported data format"});}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::binary, data\+\_\+directory(), event, get\+\_\+event\+\_\+filename(), and traccc\+::io\+::details\+::write\+\_\+binary\+\_\+collection().
+
+
+
+Referenced by create\+\_\+binaries(), and T\+E\+S\+T().
+

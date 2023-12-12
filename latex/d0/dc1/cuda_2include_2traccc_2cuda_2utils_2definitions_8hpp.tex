@@ -1,0 +1,80 @@
+\hypertarget{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp}{}\doxysection{device/cuda/include/traccc/cuda/utils/definitions.hpp File Reference}
+\label{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp}\index{device/cuda/include/traccc/cuda/utils/definitions.hpp@{device/cuda/include/traccc/cuda/utils/definitions.hpp}}
+{\ttfamily \#include $<$cuda.\+h$>$}\newline
+{\ttfamily \#include $<$cuda\+\_\+runtime.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for definitions.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d3e/cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/de0/cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a9ea0293fb7dcba88f071c44fd145819e}{W\+A\+R\+P\+\_\+\+S\+I\+ZE}}~32
+\begin{DoxyCompactList}\small\item\em Number of threads per Warp. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a924e9e2dee296776f46a6c0814e27eda}{C\+U\+D\+A\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+H\+E\+CK}}(ans)~\{ \mbox{\hyperlink{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_ae933bd4f1164f1568937cac7321e72b8}{cuda\+Assert}}((ans), \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+); \}
+\begin{DoxyCompactList}\small\item\em Helper macro used for checking {\ttfamily cuda\+Error\+\_\+t} type return values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_ae933bd4f1164f1568937cac7321e72b8}{cuda\+Assert}} (cuda\+Error\+\_\+t code, const char $\ast$file, int line, bool abort=true)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a924e9e2dee296776f46a6c0814e27eda}\label{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a924e9e2dee296776f46a6c0814e27eda}} 
+\index{definitions.hpp@{definitions.hpp}!CUDA\_ERROR\_CHECK@{CUDA\_ERROR\_CHECK}}
+\index{CUDA\_ERROR\_CHECK@{CUDA\_ERROR\_CHECK}!definitions.hpp@{definitions.hpp}}
+\doxysubsubsection{\texorpdfstring{CUDA\_ERROR\_CHECK}{CUDA\_ERROR\_CHECK}}
+{\footnotesize\ttfamily \#define C\+U\+D\+A\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{ans }\end{DoxyParamCaption})~\{ \mbox{\hyperlink{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_ae933bd4f1164f1568937cac7321e72b8}{cuda\+Assert}}((ans), \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+); \}}
+
+
+
+Helper macro used for checking {\ttfamily cuda\+Error\+\_\+t} type return values. 
+
+\mbox{\Hypertarget{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a9ea0293fb7dcba88f071c44fd145819e}\label{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_a9ea0293fb7dcba88f071c44fd145819e}} 
+\index{definitions.hpp@{definitions.hpp}!WARP\_SIZE@{WARP\_SIZE}}
+\index{WARP\_SIZE@{WARP\_SIZE}!definitions.hpp@{definitions.hpp}}
+\doxysubsubsection{\texorpdfstring{WARP\_SIZE}{WARP\_SIZE}}
+{\footnotesize\ttfamily \#define W\+A\+R\+P\+\_\+\+S\+I\+ZE~32}
+
+
+
+Number of threads per Warp. 
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2021 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_ae933bd4f1164f1568937cac7321e72b8}\label{cuda_2include_2traccc_2cuda_2utils_2definitions_8hpp_ae933bd4f1164f1568937cac7321e72b8}} 
+\index{definitions.hpp@{definitions.hpp}!cudaAssert@{cudaAssert}}
+\index{cudaAssert@{cudaAssert}!definitions.hpp@{definitions.hpp}}
+\doxysubsubsection{\texorpdfstring{cudaAssert()}{cudaAssert()}}
+{\footnotesize\ttfamily void cuda\+Assert (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{code,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{bool}]{abort = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                           \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{if} (code != cudaSuccess) \{}
+\DoxyCodeLine{24         fprintf(stderr, \textcolor{stringliteral}{"CUDAassert: \%s \%s \%d\(\backslash\)n"}, cudaGetErrorString(code),}
+\DoxyCodeLine{25                 file, line);}
+\DoxyCodeLine{26         \textcolor{keywordflow}{if} (abort)}
+\DoxyCodeLine{27             exit(code);}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}

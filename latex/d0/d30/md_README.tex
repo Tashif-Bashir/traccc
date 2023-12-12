@@ -1,0 +1,391 @@
+Demonstrator tracking chain for accelerators.\hypertarget{md_README_autotoc_md15}{}\doxysection{Features}\label{md_README_autotoc_md15}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Category }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Algorithms }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ C\+PU }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ C\+U\+DA }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+Y\+CL }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Futhark  }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Category }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Algorithms }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ C\+PU }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ C\+U\+DA }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ S\+Y\+CL }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Futhark  }\\\cline{1-6}
+\endhead
+{\bfseries{Clusterization}} &C\+CL &✅ &✅ &✅ &✅  \\\cline{1-6}
+&Measurement creation &✅ &✅ &✅ &✅  \\\cline{1-6}
+{\bfseries{Seeding}} &Spacepoint formation &✅ &✅ &✅ &⚪  \\\cline{1-6}
+&Spacepoint binning &✅ &✅ &✅ &⚪  \\\cline{1-6}
+&Seed finding &✅ &✅ &✅ &⚪  \\\cline{1-6}
+&Track param estimation &✅ &✅ &✅ &⚪  \\\cline{1-6}
+{\bfseries{Track finding}} &Combinatorial KF &✅ &✅ &🟡 &⚪  \\\cline{1-6}
+{\bfseries{Track fitting}} &KF &✅ &✅ &✅ &⚪  \\\cline{1-6}
+\end{longtabu}
+
+
+✅\+: exists, 🟡\+: work started, ⚪\+: work not started yet
+
+The relations between datatypes and algorithms is given in the (approximately commutative) diagram shown below. Black lines indicate C\+PU algorithms, green lines indicate C\+U\+DA algorithms, blue lines indicate S\+Y\+CL algorithms, and brown lines indicate Futhark algorithms. Solid algorithms are ready for use, dashed algorithms are in development or future goals. Data types for different heterogeneous platforms are contracted for legibility, and identities are hidden.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{flowchart LR}
+\DoxyCodeLine{    subgraph clusterization [<a href='https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/clusterization/clusterization\_algorithm.hpp'>Clusterization</a>]}
+\DoxyCodeLine{        direction TB}
+\DoxyCodeLine{        cell(Cells);}
+\DoxyCodeLine{        cluster(Clusters);}
+\DoxyCodeLine{        meas(Measurements);}
+\DoxyCodeLine{    end}
+\DoxyCodeLine{}
+\DoxyCodeLine{    subgraph trkfinding [Track Finding]}
+\DoxyCodeLine{        sp(Spacepoints);}
+\DoxyCodeLine{        bin(Bins);}
+\DoxyCodeLine{        seed(Seeds);}
+\DoxyCodeLine{        ptrack(Prototracks);}
+\DoxyCodeLine{    end}
+\DoxyCodeLine{}
+\DoxyCodeLine{    subgraph trkfitting [Track Fitting]}
+\DoxyCodeLine{        track(Track);}
+\DoxyCodeLine{    end}
+\DoxyCodeLine{}
+\DoxyCodeLine{    click cell href "https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/edm/cell.hpp";}
+\DoxyCodeLine{    click cluster href "https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/edm/cluster.hpp";}
+\DoxyCodeLine{    click meas href "https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/edm/measurement.hpp";}
+\DoxyCodeLine{    click sp href "https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/edm/spacepoint.hpp";}
+\DoxyCodeLine{    click seed href "https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/edm/seed.hpp";}
+\DoxyCodeLine{    click ptrack href "https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/edm/track\_parameters.hpp";}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU CCL algorithm}
+\DoxyCodeLine{    cell -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/clusterization/component\_connection.hpp'>CCL</a>| cluster;}
+\DoxyCodeLine{    linkStyle 0 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% SYCL CCL algorithm}
+\DoxyCodeLine{    cell -\/-\/>|CCL| cluster;}
+\DoxyCodeLine{    linkStyle 1 stroke: blue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA CCL algorithm}
+\DoxyCodeLine{    cell -\/-\/>|CCL| cluster;}
+\DoxyCodeLine{    linkStyle 2 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU clusterization}
+\DoxyCodeLine{    cluster -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/clusterization/measurement\_creation.hpp'>Agg.</a>| meas;}
+\DoxyCodeLine{    linkStyle 3 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% SYCL clusterization}
+\DoxyCodeLine{    cluster -\/-\/>|Agg.| meas;}
+\DoxyCodeLine{    linkStyle 4 stroke: blue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA clusterization}
+\DoxyCodeLine{    cluster -\/-\/>|Agg.| meas;}
+\DoxyCodeLine{    linkStyle 5 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA CCA}
+\DoxyCodeLine{    cell -\/-\/>|CCA| meas;}
+\DoxyCodeLine{    linkStyle 6 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU local to global}
+\DoxyCodeLine{    meas -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/clusterization/spacepoint\_formation.hpp'>L2G</a>| sp;}
+\DoxyCodeLine{    linkStyle 7 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% SYCL local to global}
+\DoxyCodeLine{    meas -\/-\/>|L2G| sp;}
+\DoxyCodeLine{    linkStyle 8 stroke: blue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA local to global}
+\DoxyCodeLine{    meas -\/-\/>|L2G| sp;}
+\DoxyCodeLine{    linkStyle 9 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU binning}
+\DoxyCodeLine{    sp -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/seeding/spacepoint\_binning.hpp'>Binning</a>| bin;}
+\DoxyCodeLine{    linkStyle 10 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA binning}
+\DoxyCodeLine{    sp -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/cuda/include/traccc/cuda/seeding/spacepoint\_binning.hpp'>Binning</a>| bin;}
+\DoxyCodeLine{    linkStyle 11 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU seeding}
+\DoxyCodeLine{    bin -\/-\/>|Seeding| seed;}
+\DoxyCodeLine{    linkStyle 12 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% SYCL seeding}
+\DoxyCodeLine{    bin -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/sycl/include/traccc/sycl/seeding/seed\_finding.hpp'>Seeding</a>| seed;}
+\DoxyCodeLine{    linkStyle 13 stroke: blue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA seeding}
+\DoxyCodeLine{    bin -\/-\/>|<a href='https://github.com/acts-\/project/traccc/tree/main/device/cuda/include/traccc/cuda/seeding'>Seeding</a>| seed;}
+\DoxyCodeLine{    linkStyle 14 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA binless seeding}
+\DoxyCodeLine{    sp -\/.-\/>|Seeding| seed;}
+\DoxyCodeLine{    linkStyle 15 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU param est.}
+\DoxyCodeLine{    seed -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/seeding/track\_params\_estimation.hpp'>Param. Est.</a>| ptrack;}
+\DoxyCodeLine{    linkStyle 16 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA param est.}
+\DoxyCodeLine{    seed -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/cuda/include/traccc/cuda/seeding/track\_params\_estimation.hpp'>Param. Est.</a>| ptrack;}
+\DoxyCodeLine{    linkStyle 17 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU CKF}
+\DoxyCodeLine{    ptrack -\/.-\/>|CKF| track;}
+\DoxyCodeLine{    linkStyle 18 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CPU Kalman filter}
+\DoxyCodeLine{    track -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/core/include/traccc/fitting/fitting\_algorithm.hpp'>Kalman filter</a>| track;}
+\DoxyCodeLine{    linkStyle 19 stroke: black;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA Kalman filter}
+\DoxyCodeLine{    track -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/cuda/include/traccc/cuda/fitting/fitting\_algorithm.hpp'>Kalman filter</a>| track;}
+\DoxyCodeLine{    linkStyle 20 stroke: green;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% SYCL binning}
+\DoxyCodeLine{    sp -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/sycl/include/traccc/sycl/seeding/spacepoint\_binning.hpp'>Binning</a>| bin;}
+\DoxyCodeLine{    linkStyle 21 stroke: blue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% SYCL track parameter est.}
+\DoxyCodeLine{    seed -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/sycl/include/traccc/sycl/seeding/track\_params\_estimation.hpp'>Param. Est.</a>| ptrack;}
+\DoxyCodeLine{    linkStyle 22 stroke: blue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% Futhark measurement creation}
+\DoxyCodeLine{    cell -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/futhark/src/measurement\_creation.fut'>CCA</a>| meas;}
+\DoxyCodeLine{    linkStyle 23 stroke: brown;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% Futhark spacepoint creation}
+\DoxyCodeLine{    meas -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/futhark/src/spacepoint\_formation.fut'>L2G</a>| sp;}
+\DoxyCodeLine{    linkStyle 24 stroke: brown;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% SYCL Kalman filter}
+\DoxyCodeLine{    track -\/-\/>|<a href='https://github.com/acts-\/project/traccc/blob/main/device/sycl/include/traccc/sycl/fitting/fitting\_algorithm.hpp'>Kalman filter</a>| track;}
+\DoxyCodeLine{    linkStyle 25 stroke: blue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \%\% CUDA CKF}
+\DoxyCodeLine{    ptrack -\/.-\/>|CKF| track;}
+\DoxyCodeLine{    linkStyle 26 stroke: green;}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md16}{}\doxysection{Requirements and dependencies}\label{md_README_autotoc_md16}
+\hypertarget{md_README_autotoc_md17}{}\doxysubsection{O\+S \& compilers\+:}\label{md_README_autotoc_md17}
+Please note that due to the complexity of this software and its build system, it may be somewhat fragile in the face of compiler version changes. The following are general guidelines for getting {\itshape traccc} to compile\+:
+
+
+\begin{DoxyItemize}
+\item The C++ compiler must support C++17
+\end{DoxyItemize}
+
+In addition, the following requirements hold when C\+U\+DA is enabled\+:
+
+
+\begin{DoxyItemize}
+\item The C\+U\+DA Toolkit version must be greater than major version 11
+\item The C\+U\+DA Toolkit must not be minor version 11.\+3 due to a \href{https://github.com/acts-project/traccc/issues/115}{\texttt{ bug}} in the front-\/end compiler of that version
+\item Ensure that the C\+U\+DA host compiler supports C++17 and is compatible with the {\ttfamily nvcc} compiler driver
+\end{DoxyItemize}
+
+The following table lists currently combinations of builds, compilers, and toolchains that are currently known to work (last updated 2022/01/24)\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Build }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ OS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ gcc }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ C\+U\+DA }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ comment  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Build }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ OS }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ gcc }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ C\+U\+DA }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ comment  }\\\cline{1-5}
+\endhead
+C\+U\+DA &Ubuntu 20.\+04 &9.\+3.\+0 &11.\+5 &runs on CI  \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md18}{}\doxysubsection{Dependencies}\label{md_README_autotoc_md18}
+
+\begin{DoxyItemize}
+\item \href{https://www.boost.org/}{\texttt{ Boost}}\+: program\+\_\+options
+\item \href{https://cmake.org/}{\texttt{ C\+Make}}
+\item (Optional) \href{https://root.cern/}{\texttt{ R\+O\+OT}}\+: R\+IO, Hist, Tree
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md19}{}\doxysection{Getting started}\label{md_README_autotoc_md19}
+\hypertarget{md_README_autotoc_md20}{}\doxysubsection{Clone the repository}\label{md_README_autotoc_md20}
+Clone the repository and setup the data directory.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone git@github.com:acts-\/project/traccc.git}
+\DoxyCodeLine{cd traccc}
+\DoxyCodeLine{./data/traccc\_data\_get\_files.sh}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md21}{}\doxysubsection{Build the project}\label{md_README_autotoc_md21}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/S . -\/B <build\_directory>}
+\DoxyCodeLine{cmake -\/-\/build <build\_directory> <options>}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md22}{}\doxysubsection{Build options}\label{md_README_autotoc_md22}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Option }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Option }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description  }\\\cline{1-2}
+\endhead
+T\+R\+A\+C\+C\+C\+\_\+\+B\+U\+I\+L\+D\+\_\+\+C\+U\+DA &Build the C\+U\+DA sources included in traccc  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+B\+U\+I\+L\+D\+\_\+\+S\+Y\+CL &Build the S\+Y\+CL sources included in traccc  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+B\+U\+I\+L\+D\+\_\+\+T\+E\+S\+T\+I\+NG &Build the (unit) tests of traccc  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+B\+U\+I\+L\+D\+\_\+\+E\+X\+A\+M\+P\+L\+ES &Build the examples of traccc  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+V\+E\+C\+M\+EM &Pick up an existing installation of Vec\+Mem from the build environment  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+E\+I\+G\+E\+N3 &Pick up an existing installation of Eigen3 from the build environment  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+L\+G\+E\+B\+R\+A\+\_\+\+P\+L\+U\+G\+I\+NS &Pick up an existing installation of Algebra Plugins from the build environment  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+D\+F\+E\+L\+I\+BS &Pick up an existing installation of dfelibs from the build environment  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+D\+E\+T\+R\+AY &Pick up an existing installation of Detray from the build environment  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+C\+TS &Pick up an existing installation of \mbox{\hyperlink{namespaceActs}{Acts}} from the build environment  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+G\+O\+O\+G\+L\+E\+T\+E\+ST &Pick up an existing installation of Google\+Test from the build environment  \\\cline{1-2}
+T\+R\+A\+C\+C\+C\+\_\+\+U\+S\+E\+\_\+\+R\+O\+OT &Build physics performance analysis code using an existing installation of R\+O\+OT from the build environment  \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md23}{}\doxysection{Examples}\label{md_README_autotoc_md23}
+\hypertarget{md_README_autotoc_md24}{}\doxysubsection{C\+P\+U reconstruction chain}\label{md_README_autotoc_md24}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_seq\_example -\/-\/detector\_file=tml\_detector/trackml-\/detector.csv -\/-\/digitization\_config\_file=tml\_detector/default-\/geometric-\/config-\/generic.json -\/-\/input\_directory=tml\_pixels/ -\/-\/events=10}
+\DoxyCodeLine{}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_throughput\_mt -\/-\/detector\_file=tml\_detector/trackml-\/detector.csv -\/-\/digitization\_config\_file=tml\_detector/default-\/geometric-\/config-\/generic.json -\/-\/input\_directory=tml\_pixels/  -\/-\/cold\_run\_events=100 -\/-\/processed\_events=1000 -\/-\/threads=1}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md25}{}\doxysubsection{C\+U\+D\+A reconstruction chain}\label{md_README_autotoc_md25}
+
+\begin{DoxyItemize}
+\item Users can generate C\+U\+DA examples by adding {\ttfamily -\/D\+T\+R\+A\+C\+C\+C\+\_\+\+B\+U\+I\+L\+D\+\_\+\+C\+U\+DA=ON} to cmake options
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_seq\_example\_cuda -\/-\/detector\_file=tml\_detector/trackml-\/detector.csv -\/-\/digitization\_config\_file=tml\_detector/default-\/geometric-\/config-\/generic.json -\/-\/input\_directory=tml\_pixels/ -\/-\/events=10 -\/-\/run\_cpu=1}
+\DoxyCodeLine{}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_throughput\_mt\_cuda -\/-\/detector\_file=tml\_detector/trackml-\/detector.csv -\/-\/digitization\_config\_file=tml\_detector/default-\/geometric-\/config-\/generic.json -\/-\/input\_directory=tml\_pixels/  -\/-\/cold\_run\_events=100 -\/-\/processed\_events=1000 -\/-\/threads=1}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Toy geometry examples}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_simulate\_toy\_detector -\/-\/gen-\/vertex-\/xyz-\/mm=0:0:0 -\/-\/gen-\/vertex-\/xyz-\/std-\/mm=0:0:0 -\/-\/gen-\/mom-\/gev=100:100 -\/-\/gen-\/phi-\/degree=0:360 -\/-\/events=10 -\/-\/gen-\/nparticles=2000 -\/-\/output\_directory=detray\_simulation/toy\_detector/n\_particles\_2000/ -\/-\/gen-\/eta=-\/3:3 -\/-\/constraint-\/step-\/size-\/mm=1}
+\DoxyCodeLine{}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_seeding\_example\_cuda -\/-\/input\_directory=detray\_simulation/toy\_detector/n\_particles\_2000/ -\/-\/check\_performance=true -\/-\/detector\_file=<detector\_directory>/toy\_detector\_geometry.json -\/-\/material\_file=<detector\_directory>/toy\_detector\_homogeneous\_material.json -\/-\/grid\_file=<detector\_directory>/toy\_detector\_surface\_grids.json -\/-\/event=1 -\/-\/track\_candidates\_range=3:30 -\/-\/constraint-\/step-\/size-\/mm=1000 -\/-\/run\_cpu=1}
+\DoxyCodeLine{}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_truth\_finding\_example\_cuda -\/-\/input\_directory=detray\_simulation/toy\_detector/n\_particles\_2000/ -\/-\/check\_performance=true -\/-\/detector\_file=<detector\_directory>/toy\_detector\_geometry.json -\/-\/material\_file=<detector\_directory>/toy\_detector\_homogeneous\_material.json -\/-\/grid\_file=<detector\_directory>/toy\_detector\_surface\_grids.json -\/-\/event=1 -\/-\/track\_candidates\_range=3:30 -\/-\/constraint-\/step-\/size-\/mm=1 -\/-\/run\_cpu=1}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Wire chamber examples}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_simulate\_wire\_chamber -\/-\/gen-\/vertex-\/xyz-\/mm=0:0:0 -\/-\/gen-\/vertex-\/xyz-\/std-\/mm=0:0:0 -\/-\/gen-\/mom-\/gev=2:2 -\/-\/gen-\/phi-\/degree=0:360 -\/-\/events=10 -\/-\/gen-\/nparticles=1000 -\/-\/output\_directory=detray\_simulation/wire\_chamber/n\_particles\_1000/ -\/-\/gen-\/eta=-\/1:1 -\/-\/constraint-\/step-\/size-\/mm=1}
+\DoxyCodeLine{}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_truth\_finding\_example\_cuda -\/-\/input\_directory=detray\_simulation/wire\_chamber/n\_particles\_1000/ -\/-\/check\_performance=true -\/-\/detector\_file=<detector\_directory>/wire\_chamber\_geometry.json -\/-\/material\_file=<detector\_directory>/wire\_chamber\_homogeneous\_material.json -\/-\/grid\_file=<detector\_directory>/wire\_chamber\_surface\_grids.json  -\/-\/event=10 -\/-\/track\_candidates\_range=6:30 -\/-\/constraint-\/step-\/size-\/mm=1}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md26}{}\doxysubsection{S\+Y\+C\+L reconstruction chain}\label{md_README_autotoc_md26}
+
+\begin{DoxyItemize}
+\item Users can generate S\+Y\+CL examples by adding {\ttfamily -\/D\+T\+R\+A\+C\+C\+C\+\_\+\+B\+U\+I\+L\+D\+\_\+\+S\+Y\+CL=ON} to cmake options
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_seq\_example\_sycl -\/-\/detector\_file=tml\_detector/trackml-\/detector.csv -\/-\/digitization\_config\_file=tml\_detector/default-\/geometric-\/config-\/generic.json -\/-\/input\_directory=tml\_pixels/ -\/-\/events=10 -\/-\/run\_cpu=1}
+\DoxyCodeLine{}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_throughput\_mt\_sycl -\/-\/detector\_file=tml\_detector/trackml-\/detector.csv -\/-\/digitization\_config\_file=tml\_detector/default-\/geometric-\/config-\/generic.json -\/-\/input\_directory=tml\_pixels/  -\/-\/cold\_run\_events=100 -\/-\/processed\_events=1000 -\/-\/threads=1}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md27}{}\doxysubsection{Running a partial chain with simplified simulation data}\label{md_README_autotoc_md27}
+Users can generate muon-\/like particle simulation data with the pre-\/built detray geometries\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Generate telescope geometry data}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_simulate\_telescope -\/-\/gen-\/vertex-\/xyz-\/mm=0:0:0 -\/-\/gen-\/vertex-\/xyz-\/std-\/mm=0:0:0 -\/-\/gen-\/mom-\/gev=100:100 -\/-\/gen-\/phi-\/degree=0:0 -\/-\/events=10 -\/-\/gen-\/nparticles=2000 -\/-\/output\_directory=detray\_simulation/telescope\_detector/n\_particles\_2000/ -\/-\/gen-\/eta=1:3 }
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Generate toy geometry data}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_simulate\_toy\_detector -\/-\/gen-\/vertex-\/xyz-\/mm=0:0:0 -\/-\/gen-\/vertex-\/xyz-\/std-\/mm=0:0:0 -\/-\/gen-\/mom-\/gev=100:100 -\/-\/gen-\/phi-\/degree=0:360 -\/-\/events=10 -\/-\/gen-\/nparticles=2000 -\/-\/output\_directory=detray\_simulation/toy\_detector/n\_particles\_2000/ -\/-\/gen-\/eta=-\/3:3 -\/-\/constraint-\/step-\/size-\/mm=1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Generate drift chamber data}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_simulate\_wire\_chamber -\/-\/gen-\/vertex-\/xyz-\/mm=0:0:0 -\/-\/gen-\/vertex-\/xyz-\/std-\/mm=0:0:0 -\/-\/gen-\/mom-\/gev=2:2 -\/-\/gen-\/phi-\/degree=0:360 -\/-\/events=10 -\/-\/gen-\/nparticles=100 -\/-\/output\_directory=detray\_simulation/wire\_chamber/n\_particles\_100/ -\/-\/gen-\/eta=-\/1:1 -\/-\/constraint-\/step-\/size-\/mm=1}
+\end{DoxyCode}
+
+
+The simulation will also generate the detector json files (geometry, material and surface\+\_\+grid) in the current directory. It is user\textquotesingle{}s responsibility to move them to an appropriate place (e.\+g. {\ttfamily $<$detector\+\_\+directory$>$}) and match them to the input file arguments of reconstruction chains.
+
+If users have a geometry json file already, it is also possible to run simulation with {\ttfamily traccc\+\_\+simulate} application
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Given that users have a geometry json file}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_simulate  -\/-\/output\_directory=<output\_directory>  -\/-\/detector\_file=<geometry\_file> -\/-\/material\_file=<material\_file> -\/-\/grid\_file=<grid\_file>  -\/-\/event=10 -\/-\/constraint-\/step-\/size-\/mm=1}
+\end{DoxyCode}
+
+
+There are three types of partial reconstruction chain users can operate\+: {\ttfamily seeding\+\_\+example}, {\ttfamily truth\+\_\+finding\+\_\+example}, and {\ttfamily truth\+\_\+fitting\+\_\+example} where their algorithm coverages are shown in the table below. Each of them starts from truth measurements, truth seeds, and truth tracks, respectively.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Category }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Clusterization }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Seeding }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Track finding }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Track fitting  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Category }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Clusterization }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Seeding }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Track finding }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Track fitting  }\\\cline{1-5}
+\endhead
+{\ttfamily seeding\+\_\+example} &&✅ &✅ &✅  \\\cline{1-5}
+{\ttfamily truth\+\_\+finding\+\_\+example} &&&✅ &✅  \\\cline{1-5}
+{\ttfamily truth\+\_\+fitting\+\_\+example} &&&&✅  \\\cline{1-5}
+\end{longtabu}
+
+
+The dirft chamber will not produce meaningful results with {\ttfamily seeding\+\_\+example} as the current seeding algorithm is only designed for 2D measurement objects. Truth finding works OK in general but the combinatoric explosion can occur for a few unlucky events, leading to poor pull value distributions. The followings are example commands\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Run cuda seeding example for toy geometry}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_seeding\_example\_cuda -\/-\/input\_directory=detray\_simulation/toy\_detector/n\_particles\_2000/ -\/-\/check\_performance=true -\/-\/detector\_file=<detector\_directory>/toy\_detector\_geometry.json -\/-\/material\_file=<detector\_directory>/toy\_detector\_homogeneous\_material.json -\/-\/grid\_file=<detector\_directory>/toy\_detector\_surface\_grids.json -\/-\/event=1 -\/-\/track\_candidates\_range=3:30 -\/-\/constraint-\/step-\/size-\/mm=1000 -\/-\/run\_cpu=1}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Run cuda truth finding example for toy geometry}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_truth\_finding\_example\_cuda -\/-\/input\_directory=detray\_simulation/toy\_detector/n\_particles\_2000/ -\/-\/check\_performance=true -\/-\/detector\_file=<detector\_directory>/toy\_detector\_geometry.json -\/-\/material\_file=<detector\_directory>/toy\_detector\_homogeneous\_material.json -\/-\/grid\_file=<detector\_directory>/toy\_detector\_surface\_grids.json -\/-\/event=1 -\/-\/track\_candidates\_range=3:30 -\/-\/constraint-\/step-\/size-\/mm=1000 -\/-\/run\_cpu=1}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Run cuda truth finding example for drift chamber}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_truth\_finding\_example\_cuda -\/-\/input\_directory=detray\_simulation/wire\_chamber/n\_particles\_100/ -\/-\/check\_performance=true -\/-\/detector\_file=<detector\_directory>/wire\_chamber\_geometry.json -\/-\/material\_file=<detector\_directory>/wire\_chamber\_homogeneous\_material.json -\/-\/grid\_file=<detector\_directory>/wire\_chamber\_surface\_grids.json  -\/-\/event=10 -\/-\/track\_candidates\_range=6:30 -\/-\/constraint-\/step-\/size-\/mm=1 -\/-\/run\_cpu=1}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Run cpu truth fitting example for drift chamber}
+\DoxyCodeLine{<build\_directory>/bin/traccc\_truth\_fitting\_example -\/-\/input\_directory=detray\_simulation/wire\_chamber/n\_particles\_2000\_100GeV/ -\/-\/check\_performance=true -\/-\/detector\_file=<detector\_directory>/wire\_chamber\_geometry.json -\/-\/material\_file=<detector\_directory>/wire\_chamber\_homogeneous\_material.json -\/-\/grid\_file=<detector\_directory>/wire\_chamber\_surface\_grids.json -\/-\/event=10 -\/-\/constraint-\/step-\/size-\/mm=1}
+\end{DoxyCode}
+
+
+Users can open the performance root files (with {\ttfamily -\/-\/check\+\_\+performance=true}) and draw the histograms.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ root -\/l performance\_track\_finding.root }
+\DoxyCodeLine{root [0] }
+\DoxyCodeLine{Attaching file performance\_track\_finding.root as \_file0...}
+\DoxyCodeLine{(TFile *) 0x3871910}
+\DoxyCodeLine{root [1] finding\_trackeff\_vs\_eta-\/>Draw()}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md28}{}\doxysection{Troubleshooting}\label{md_README_autotoc_md28}
+The following are potentially useful instructions for troubleshooting various problems with your build\+:\hypertarget{md_README_autotoc_md29}{}\doxysubsection{C\+U\+DA}\label{md_README_autotoc_md29}
+\hypertarget{md_README_autotoc_md30}{}\doxysubsubsection{Incompatible host compiler}\label{md_README_autotoc_md30}
+You may experience errors being issued about standard library features, for example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/usr/include/c++/11/bits/std\_function.h:435:145: note:         ‘\_ArgTypes’}
+\DoxyCodeLine{/usr/include/c++/11/bits/std\_function.h:530:146: error: parameter packs not expanded with ‘...’:}
+\DoxyCodeLine{  530 |         operator=(\_Functor\&\& \_\_f)}
+\end{DoxyCode}
+
+
+In this case, your {\ttfamily nvcc} host compiler is most likely incompatible with your C\+U\+DA toolkit. Consider installing a supported version and selecting it through the {\ttfamily C\+U\+D\+A\+H\+O\+S\+T\+C\+XX} environment variable at build-\/time. 

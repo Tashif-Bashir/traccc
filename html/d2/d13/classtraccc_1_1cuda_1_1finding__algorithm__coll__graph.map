@@ -1,0 +1,7 @@
+<map id="traccc::cuda::finding_algorithm&lt; stepper_t, navigator_t &gt;" name="traccc::cuda::finding_algorithm&lt; stepper_t, navigator_t &gt;">
+<area shape="rect" id="node1" title="Track Finding algorithm for a set of tracks." alt="" coords="511,336,683,472"/>
+<area shape="rect" id="node2" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="5,35,339,244"/>
+<area shape="rect" id="node3" href="$de/daf/structtraccc_1_1finding__config.html" title=" " alt="" coords="363,5,597,273"/>
+<area shape="rect" id="node4" href="$dc/db2/structtraccc_1_1memory__resource.html" title=" " alt="" coords="621,93,808,185"/>
+<area shape="rect" id="node5" href="$de/df0/classtraccc_1_1cuda_1_1stream.html" title=" " alt="" coords="832,57,987,222"/>
+</map>

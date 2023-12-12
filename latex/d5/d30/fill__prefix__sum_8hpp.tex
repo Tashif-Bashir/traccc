@@ -1,0 +1,43 @@
+\hypertarget{fill__prefix__sum_8hpp}{}\doxysection{device/common/include/traccc/device/fill\+\_\+prefix\+\_\+sum.hpp File Reference}
+\label{fill__prefix__sum_8hpp}\index{device/common/include/traccc/device/fill\_prefix\_sum.hpp@{device/common/include/traccc/device/fill\_prefix\_sum.hpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/qualifiers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/container.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$vecmem/utils/copy.\+hpp$>$}\newline
+{\ttfamily \#include $<$thrust/pair.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}traccc/device/impl/fill\+\_\+prefix\+\_\+sum.\+ipp\char`\"{}}\newline
+Include dependency graph for fill\+\_\+prefix\+\_\+sum.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d0c/fill__prefix__sum_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d86/fill__prefix__sum_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1device}{traccc\+::device}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef thrust\+::pair$<$ std\+::size\+\_\+t, std\+::size\+\_\+t $>$ \mbox{\hyperlink{namespacetraccc_1_1device_aec5610a925cef95697843cc4e8b38bcb}{traccc\+::device\+::prefix\+\_\+sum\+\_\+element\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Type for the individual elements in the prefix sum vector. \end{DoxyCompactList}\item 
+typedef vecmem\+::vector$<$ prefix\+\_\+sum\+\_\+element\+\_\+t $>$ \mbox{\hyperlink{namespacetraccc_1_1device_aa455dcfea1cafcf634e98d29957158c1}{traccc\+::device\+::prefix\+\_\+sum\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Convenience type definition for the return value of the helper function. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacetraccc_1_1device_ade298ff55a1bdb496e412262cdb66433}{traccc\+::device\+::prefix\+\_\+sum\+\_\+size\+\_\+t}} = vecmem\+::data\+::vector\+\_\+view$<$ int $>$\+::size\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{namespacetraccc_1_1device_a7c2b528a06357f0ac89eae726d2b31ca}{traccc\+::device\+::fill\+\_\+prefix\+\_\+sum}} (const std\+::size\+\_\+t global\+Index, const vecmem\+::data\+::vector\+\_\+view$<$ const prefix\+\_\+sum\+\_\+size\+\_\+t $>$ \&sizes\+\_\+view, vecmem\+::data\+::vector\+\_\+view$<$ prefix\+\_\+sum\+\_\+element\+\_\+t $>$ ps\+\_\+view)
+\end{DoxyCompactItemize}

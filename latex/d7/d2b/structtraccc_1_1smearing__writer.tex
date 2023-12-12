@@ -1,0 +1,181 @@
+\hypertarget{structtraccc_1_1smearing__writer}{}\doxysection{traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1smearing__writer}\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+
+
+{\ttfamily \#include $<$smearing\+\_\+writer.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d9/d55/structtraccc_1_1smearing__writer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{db/dca/structtraccc_1_1smearing__writer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1smearing__writer_1_1config}{config}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1smearing__writer_1_1measurement__kernel}{measurement\+\_\+kernel}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1smearing__writer_1_1state}{state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer_a493aca8979189b76bfcfbb15e683f00a}{transform3\+\_\+type}} = typename smearer\+\_\+t\+::transform3\+\_\+type
+\item 
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer_ae4e9d4c5ef601c12bf5506d23d8d1615}{scalar\+\_\+type}} = typename transform3\+\_\+type\+::scalar\+\_\+type
+\item 
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer_a2004b687294982c2776d6db1ae395498}{measurement\+\_\+hit\+\_\+id\+\_\+writer}} = dfe\+::\+Named\+Tuple\+Csv\+Writer$<$ \mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1measurement__hit__id}{io\+::csv\+::measurement\+\_\+hit\+\_\+id}} $>$
+\item 
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer_ac95a49d6c03cdd58750ed768f4abdd40}{measurement\+\_\+writer}} = dfe\+::\+Named\+Tuple\+Csv\+Writer$<$ \mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1measurement}{io\+::csv\+::measurement}} $>$
+\item 
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer_a45dadc639eb0b3c1bebda7ce76cf067d}{hit\+\_\+writer}} = dfe\+::\+Named\+Tuple\+Csv\+Writer$<$ \mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1hit}{io\+::csv\+::hit}} $>$
+\item 
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer_a9ad052f1e768b371e6cdcdf08111313b}{particle\+\_\+writer}} = dfe\+::\+Named\+Tuple\+Csv\+Writer$<$ \mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1particle}{io\+::csv\+::particle}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename propagator\+\_\+state\+\_\+t $>$ }\\void \mbox{\hyperlink{structtraccc_1_1smearing__writer_ac79e13945daf88fa169a47aad835ff39}{operator()}} (\mbox{\hyperlink{structtraccc_1_1smearing__writer_1_1state}{state}} \&writer\+\_\+state, propagator\+\_\+state\+\_\+t \&propagation) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1smearing__writer_a45dadc639eb0b3c1bebda7ce76cf067d}\label{structtraccc_1_1smearing__writer_a45dadc639eb0b3c1bebda7ce76cf067d}} 
+\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}!hit\_writer@{hit\_writer}}
+\index{hit\_writer@{hit\_writer}!traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+\doxysubsubsection{\texorpdfstring{hit\_writer}{hit\_writer}}
+{\footnotesize\ttfamily template$<$typename smearer\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc\+::smearing\+\_\+writer}}$<$ smearer\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1smearing__writer_a45dadc639eb0b3c1bebda7ce76cf067d}{hit\+\_\+writer}} =  dfe\+::\+Named\+Tuple\+Csv\+Writer$<$\mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1hit}{io\+::csv\+::hit}}$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1smearing__writer_a2004b687294982c2776d6db1ae395498}\label{structtraccc_1_1smearing__writer_a2004b687294982c2776d6db1ae395498}} 
+\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}!measurement\_hit\_id\_writer@{measurement\_hit\_id\_writer}}
+\index{measurement\_hit\_id\_writer@{measurement\_hit\_id\_writer}!traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+\doxysubsubsection{\texorpdfstring{measurement\_hit\_id\_writer}{measurement\_hit\_id\_writer}}
+{\footnotesize\ttfamily template$<$typename smearer\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc\+::smearing\+\_\+writer}}$<$ smearer\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1smearing__writer_a2004b687294982c2776d6db1ae395498}{measurement\+\_\+hit\+\_\+id\+\_\+writer}} =  dfe\+::\+Named\+Tuple\+Csv\+Writer$<$\mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1measurement__hit__id}{io\+::csv\+::measurement\+\_\+hit\+\_\+id}}$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1smearing__writer_ac95a49d6c03cdd58750ed768f4abdd40}\label{structtraccc_1_1smearing__writer_ac95a49d6c03cdd58750ed768f4abdd40}} 
+\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}!measurement\_writer@{measurement\_writer}}
+\index{measurement\_writer@{measurement\_writer}!traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+\doxysubsubsection{\texorpdfstring{measurement\_writer}{measurement\_writer}}
+{\footnotesize\ttfamily template$<$typename smearer\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc\+::smearing\+\_\+writer}}$<$ smearer\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1smearing__writer_ac95a49d6c03cdd58750ed768f4abdd40}{measurement\+\_\+writer}} =  dfe\+::\+Named\+Tuple\+Csv\+Writer$<$\mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1measurement}{io\+::csv\+::measurement}}$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1smearing__writer_a9ad052f1e768b371e6cdcdf08111313b}\label{structtraccc_1_1smearing__writer_a9ad052f1e768b371e6cdcdf08111313b}} 
+\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}!particle\_writer@{particle\_writer}}
+\index{particle\_writer@{particle\_writer}!traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+\doxysubsubsection{\texorpdfstring{particle\_writer}{particle\_writer}}
+{\footnotesize\ttfamily template$<$typename smearer\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc\+::smearing\+\_\+writer}}$<$ smearer\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1smearing__writer_a9ad052f1e768b371e6cdcdf08111313b}{particle\+\_\+writer}} =  dfe\+::\+Named\+Tuple\+Csv\+Writer$<$\mbox{\hyperlink{structtraccc_1_1io_1_1csv_1_1particle}{io\+::csv\+::particle}}$>$}
+
+\mbox{\Hypertarget{structtraccc_1_1smearing__writer_ae4e9d4c5ef601c12bf5506d23d8d1615}\label{structtraccc_1_1smearing__writer_ae4e9d4c5ef601c12bf5506d23d8d1615}} 
+\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}!scalar\_type@{scalar\_type}}
+\index{scalar\_type@{scalar\_type}!traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+\doxysubsubsection{\texorpdfstring{scalar\_type}{scalar\_type}}
+{\footnotesize\ttfamily template$<$typename smearer\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc\+::smearing\+\_\+writer}}$<$ smearer\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1smearing__writer_ae4e9d4c5ef601c12bf5506d23d8d1615}{scalar\+\_\+type}} =  typename transform3\+\_\+type\+::scalar\+\_\+type}
+
+\mbox{\Hypertarget{structtraccc_1_1smearing__writer_a493aca8979189b76bfcfbb15e683f00a}\label{structtraccc_1_1smearing__writer_a493aca8979189b76bfcfbb15e683f00a}} 
+\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}!transform3\_type@{transform3\_type}}
+\index{transform3\_type@{transform3\_type}!traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+\doxysubsubsection{\texorpdfstring{transform3\_type}{transform3\_type}}
+{\footnotesize\ttfamily template$<$typename smearer\+\_\+t $>$ \\
+using \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc\+::smearing\+\_\+writer}}$<$ smearer\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1smearing__writer_a493aca8979189b76bfcfbb15e683f00a}{transform3\+\_\+type}} =  typename smearer\+\_\+t\+::transform3\+\_\+type}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1smearing__writer_ac79e13945daf88fa169a47aad835ff39}\label{structtraccc_1_1smearing__writer_ac79e13945daf88fa169a47aad835ff39}} 
+\index{traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::smearing\_writer$<$ smearer\_t $>$@{traccc::smearing\_writer$<$ smearer\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename smearer\+\_\+t $>$ \\
+template$<$typename propagator\+\_\+state\+\_\+t $>$ \\
+void \mbox{\hyperlink{structtraccc_1_1smearing__writer}{traccc\+::smearing\+\_\+writer}}$<$ smearer\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1smearing__writer_1_1state}{state}} \&}]{writer\+\_\+state,  }\item[{propagator\+\_\+state\+\_\+t \&}]{propagation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111                                                            \{}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113         \textcolor{keyword}{auto}\& navigation = propagation.\_navigation;}
+\DoxyCodeLine{114         \textcolor{keyword}{auto}\& stepping = propagation.\_stepping;}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116         \textcolor{comment}{// triggered only for sensitive surfaces}}
+\DoxyCodeLine{117         \textcolor{keywordflow}{if} (navigation.is\_on\_sensitive()) \{}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119             \textcolor{comment}{// Write hits}}
+\DoxyCodeLine{120             io::csv::hit hit;}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122             \textcolor{keyword}{const} \textcolor{keyword}{auto} track = stepping();}
+\DoxyCodeLine{123             \textcolor{keyword}{const} \textcolor{keyword}{auto} pos = track.pos();}
+\DoxyCodeLine{124             \textcolor{keyword}{const} \textcolor{keyword}{auto} mom = track.mom();}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126             \textcolor{keyword}{const} \textcolor{keyword}{auto} sf = navigation.get\_surface();}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128             hit.particle\_id = writer\_state.particle\_id;}
+\DoxyCodeLine{129             hit.geometry\_id = sf.barcode().value();}
+\DoxyCodeLine{130             hit.tx = pos[0];}
+\DoxyCodeLine{131             hit.ty = pos[1];}
+\DoxyCodeLine{132             hit.tz = pos[2];}
+\DoxyCodeLine{133             hit.tt = track.time();}
+\DoxyCodeLine{134             hit.tpx = mom[0];}
+\DoxyCodeLine{135             hit.tpy = mom[1];}
+\DoxyCodeLine{136             hit.tpz = mom[2];}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138             writer\_state.m\_hit\_writer.append(hit);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140             \textcolor{comment}{// Write measurements}}
+\DoxyCodeLine{141             io::csv::measurement meas;}
+\DoxyCodeLine{142             \textcolor{keyword}{const} \textcolor{keyword}{auto} bound\_params = stepping.\_bound\_params;}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144             meas.measurement\_id = writer\_state.m\_hit\_count;}
+\DoxyCodeLine{145             meas.geometry\_id = hit.geometry\_id;}
+\DoxyCodeLine{146             \textcolor{keyword}{auto} stddev\_0 = writer\_state.m\_meas\_smearer.stddev[0];}
+\DoxyCodeLine{147             \textcolor{keyword}{auto} stddev\_1 = writer\_state.m\_meas\_smearer.stddev[1];}
+\DoxyCodeLine{148             meas.var\_local0 = stddev\_0 * stddev\_0;}
+\DoxyCodeLine{149             meas.var\_local1 = stddev\_1 * stddev\_1;}
+\DoxyCodeLine{150             meas.phi = bound\_params.phi();}
+\DoxyCodeLine{151             meas.theta = bound\_params.theta();}
+\DoxyCodeLine{152             meas.time = bound\_params.time();}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154             \textcolor{comment}{// Set local\_key and smeared\_local}}
+\DoxyCodeLine{155             sf.template visit\_mask<measurement\_kernel>(}
+\DoxyCodeLine{156                 bound\_params, writer\_state.m\_meas\_smearer, meas);}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158             writer\_state.m\_meas\_writer.append(meas);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160             \textcolor{comment}{// Write hit measurement map}}
+\DoxyCodeLine{161             io::csv::measurement\_hit\_id measurement\_hit\_id;}
+\DoxyCodeLine{162             measurement\_hit\_id.hit\_id = writer\_state.m\_hit\_count;}
+\DoxyCodeLine{163             measurement\_hit\_id.measurement\_id = writer\_state.m\_hit\_count;}
+\DoxyCodeLine{164             writer\_state.m\_measurement\_hit\_id\_writer.append(measurement\_hit\_id);}
+\DoxyCodeLine{165             writer\_state.m\_hit\_count++;}
+\DoxyCodeLine{166         \}}
+\DoxyCodeLine{167     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::io\+::csv\+::hit\+::geometry\+\_\+id, traccc\+::io\+::csv\+::measurement\+::geometry\+\_\+id, traccc\+::io\+::csv\+::measurement\+\_\+hit\+\_\+id\+::hit\+\_\+id, traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+::state\+::m\+\_\+hit\+\_\+count, traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+::state\+::m\+\_\+hit\+\_\+writer, traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+::state\+::m\+\_\+meas\+\_\+smearer, traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+::state\+::m\+\_\+meas\+\_\+writer, traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+::state\+::m\+\_\+measurement\+\_\+hit\+\_\+id\+\_\+writer, traccc\+::io\+::csv\+::measurement\+\_\+hit\+\_\+id\+::measurement\+\_\+id, traccc\+::io\+::csv\+::measurement\+::measurement\+\_\+id, traccc\+::io\+::csv\+::hit\+::particle\+\_\+id, traccc\+::smearing\+\_\+writer$<$ smearer\+\_\+t $>$\+::state\+::particle\+\_\+id, traccc\+::io\+::csv\+::measurement\+::phi, traccc\+::io\+::csv\+::measurement\+::theta, traccc\+::io\+::csv\+::measurement\+::time, traccc\+::io\+::csv\+::hit\+::tpx, traccc\+::io\+::csv\+::hit\+::tpy, traccc\+::io\+::csv\+::hit\+::tpz, traccc\+::io\+::csv\+::hit\+::tt, traccc\+::io\+::csv\+::hit\+::tx, traccc\+::io\+::csv\+::hit\+::ty, traccc\+::io\+::csv\+::hit\+::tz, traccc\+::io\+::csv\+::measurement\+::var\+\_\+local0, and traccc\+::io\+::csv\+::measurement\+::var\+\_\+local1.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+simulation/include/traccc/simulation/\mbox{\hyperlink{smearing__writer_8hpp}{smearing\+\_\+writer.\+hpp}}\end{DoxyCompactItemize}

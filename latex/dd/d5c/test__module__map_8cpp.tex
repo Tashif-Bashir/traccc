@@ -1,0 +1,242 @@
+\hypertarget{test__module__map_8cpp}{}\doxysection{tests/core/test\+\_\+module\+\_\+map.cpp File Reference}
+\label{test__module__map_8cpp}\index{tests/core/test\_module\_map.cpp@{tests/core/test\_module\_map.cpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/primitives.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/geometry/module\+\_\+map.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/details/read\+\_\+surfaces.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/io/utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for test\+\_\+module\+\_\+map.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d5a/test__module__map_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__module__map_8cpp_ab340a66e353a98cb63d0855dfbdfd9a9}{T\+E\+ST}} (geometry, module\+\_\+map\+\_\+simple)
+\item 
+\mbox{\hyperlink{test__module__map_8cpp_a6a7673f36cf3299c54299d825f05f37a}{T\+E\+ST}} (geometry, module\+\_\+map\+\_\+operator\+\_\+eq)
+\item 
+\mbox{\hyperlink{test__module__map_8cpp_a6083834bc36a670e87253d56c741cbe5}{T\+E\+ST}} (geometry, module\+\_\+map\+\_\+empty)
+\item 
+\mbox{\hyperlink{test__module__map_8cpp_aa93c6ed29fe77ebc1390e233171fa9e2}{T\+E\+ST}} (geometry, module\+\_\+map\+\_\+contains)
+\item 
+\mbox{\hyperlink{test__module__map_8cpp_ae32c68000d6ebfec1de33ab2745ac43d}{T\+E\+ST}} (geometry, module\+\_\+map\+\_\+failure)
+\item 
+\mbox{\hyperlink{test__module__map_8cpp_a7e279a358969a503eab08d554b353509}{T\+E\+ST}} (geometry, module\+\_\+map\+\_\+read\+\_\+trackml)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__module__map_8cpp_aa93c6ed29fe77ebc1390e233171fa9e2}\label{test__module__map_8cpp_aa93c6ed29fe77ebc1390e233171fa9e2}} 
+\index{test\_module\_map.cpp@{test\_module\_map.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_module\_map.cpp@{test\_module\_map.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{geometry}]{,  }\item[{module\+\_\+map\+\_\+contains}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                     \{}
+\DoxyCodeLine{92     std::map<std::size\_t, std::string> inp\{\{0, \textcolor{stringliteral}{"zero"}\},    \{1, \textcolor{stringliteral}{"one"}\},}
+\DoxyCodeLine{93                                            \{2, \textcolor{stringliteral}{"two"}\},     \{5, \textcolor{stringliteral}{"five"}\},}
+\DoxyCodeLine{94                                            \{11, \textcolor{stringliteral}{"eleven"}\}, \{21, \textcolor{stringliteral}{"twenty-\/one"}\}\};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{comment}{/*}}
+\DoxyCodeLine{97 \textcolor{comment}{     * Convert the old-\/style map to a module map.}}
+\DoxyCodeLine{98 \textcolor{comment}{     */}}
+\DoxyCodeLine{99     \mbox{\hyperlink{classtraccc_1_1module__map}{traccc::module\_map<std::size\_t, std::string>}} map(inp);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     ASSERT\_TRUE(map.contains(0));}
+\DoxyCodeLine{102     ASSERT\_TRUE(map.contains(1));}
+\DoxyCodeLine{103     ASSERT\_TRUE(map.contains(2));}
+\DoxyCodeLine{104     ASSERT\_TRUE(map.contains(5));}
+\DoxyCodeLine{105     ASSERT\_TRUE(map.contains(11));}
+\DoxyCodeLine{106     ASSERT\_TRUE(map.contains(21));}
+\DoxyCodeLine{107     ASSERT\_FALSE(map.contains(3));}
+\DoxyCodeLine{108     ASSERT\_FALSE(map.contains(4));}
+\DoxyCodeLine{109     ASSERT\_FALSE(map.contains(6));}
+\DoxyCodeLine{110     ASSERT\_FALSE(map.contains(15));}
+\DoxyCodeLine{111     ASSERT\_FALSE(map.contains(510482));}
+\DoxyCodeLine{112 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::contains().
+
+\mbox{\Hypertarget{test__module__map_8cpp_a6083834bc36a670e87253d56c741cbe5}\label{test__module__map_8cpp_a6083834bc36a670e87253d56c741cbe5}} 
+\index{test\_module\_map.cpp@{test\_module\_map.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_module\_map.cpp@{test\_module\_map.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{geometry}]{,  }\item[{module\+\_\+map\+\_\+empty}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                  \{}
+\DoxyCodeLine{76     std::map<std::size\_t, std::string> inp\{\{0, \textcolor{stringliteral}{"zero"}\},    \{1, \textcolor{stringliteral}{"one"}\},}
+\DoxyCodeLine{77                                            \{2, \textcolor{stringliteral}{"two"}\},     \{5, \textcolor{stringliteral}{"five"}\},}
+\DoxyCodeLine{78                                            \{11, \textcolor{stringliteral}{"eleven"}\}, \{21, \textcolor{stringliteral}{"twenty-\/one"}\}\};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{comment}{/*}}
+\DoxyCodeLine{81 \textcolor{comment}{     * Convert the old-\/style map to a module map.}}
+\DoxyCodeLine{82 \textcolor{comment}{     */}}
+\DoxyCodeLine{83     \mbox{\hyperlink{classtraccc_1_1module__map}{traccc::module\_map<std::size\_t, std::string>}} map(inp);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     ASSERT\_FALSE(map.empty());}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::empty().
+
+\mbox{\Hypertarget{test__module__map_8cpp_ae32c68000d6ebfec1de33ab2745ac43d}\label{test__module__map_8cpp_ae32c68000d6ebfec1de33ab2745ac43d}} 
+\index{test\_module\_map.cpp@{test\_module\_map.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_module\_map.cpp@{test\_module\_map.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{geometry}]{,  }\item[{module\+\_\+map\+\_\+failure}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                    \{}
+\DoxyCodeLine{118     std::map<std::size\_t, std::string> inp\{\{0, \textcolor{stringliteral}{"zero"}\}, \{1, \textcolor{stringliteral}{"one"}\}, \{2, \textcolor{stringliteral}{"two"}\}\};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{comment}{/*}}
+\DoxyCodeLine{121 \textcolor{comment}{     * Convert the old-\/style map to a module map.}}
+\DoxyCodeLine{122 \textcolor{comment}{     */}}
+\DoxyCodeLine{123     \mbox{\hyperlink{classtraccc_1_1module__map}{traccc::module\_map<std::size\_t, std::string>}} map(inp);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{comment}{/*}}
+\DoxyCodeLine{126 \textcolor{comment}{     * This value is not in the map, so it should throw.}}
+\DoxyCodeLine{127 \textcolor{comment}{     */}}
+\DoxyCodeLine{128     ASSERT\_THROW(map.at(100), std::out\_of\_range);}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::at().
+
+\mbox{\Hypertarget{test__module__map_8cpp_a6a7673f36cf3299c54299d825f05f37a}\label{test__module__map_8cpp_a6a7673f36cf3299c54299d825f05f37a}} 
+\index{test\_module\_map.cpp@{test\_module\_map.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_module\_map.cpp@{test\_module\_map.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{geometry}]{,  }\item[{module\+\_\+map\+\_\+operator\+\_\+eq}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                                        \{}
+\DoxyCodeLine{52     std::map<std::size\_t, std::string> inp\{\{0, \textcolor{stringliteral}{"zero"}\},    \{1, \textcolor{stringliteral}{"one"}\},}
+\DoxyCodeLine{53                                            \{2, \textcolor{stringliteral}{"two"}\},     \{5, \textcolor{stringliteral}{"five"}\},}
+\DoxyCodeLine{54                                            \{11, \textcolor{stringliteral}{"eleven"}\}, \{21, \textcolor{stringliteral}{"twenty-\/one"}\}\};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{comment}{/*}}
+\DoxyCodeLine{57 \textcolor{comment}{     * Convert the old-\/style map to a module map.}}
+\DoxyCodeLine{58 \textcolor{comment}{     */}}
+\DoxyCodeLine{59     \mbox{\hyperlink{classtraccc_1_1module__map}{traccc::module\_map<std::size\_t, std::string>}} map(inp);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{comment}{/*}}
+\DoxyCodeLine{62 \textcolor{comment}{     * Check if these are all the same.}}
+\DoxyCodeLine{63 \textcolor{comment}{     */}}
+\DoxyCodeLine{64     ASSERT\_EQ(map.at(0), map[0]);}
+\DoxyCodeLine{65     ASSERT\_EQ(map.at(1), map[1]);}
+\DoxyCodeLine{66     ASSERT\_EQ(map.at(2), map[2]);}
+\DoxyCodeLine{67     ASSERT\_EQ(map.at(5), map[5]);}
+\DoxyCodeLine{68     ASSERT\_EQ(map.at(11), map[11]);}
+\DoxyCodeLine{69     ASSERT\_EQ(map.at(21), map[21]);}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::at().
+
+\mbox{\Hypertarget{test__module__map_8cpp_a7e279a358969a503eab08d554b353509}\label{test__module__map_8cpp_a7e279a358969a503eab08d554b353509}} 
+\index{test\_module\_map.cpp@{test\_module\_map.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_module\_map.cpp@{test\_module\_map.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{geometry}]{,  }\item[{module\+\_\+map\+\_\+read\+\_\+trackml}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                                         \{}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     \textcolor{keyword}{const} std::string file =}
+\DoxyCodeLine{139         \mbox{\hyperlink{namespacetraccc_1_1io_adc4b3b42d06cb8ec657cdc35dec6a58f}{traccc::io::data\_directory}}() + \textcolor{stringliteral}{"tml\_detector/trackml-\/detector.csv"};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \textcolor{comment}{/*}}
+\DoxyCodeLine{142 \textcolor{comment}{     * Next, we read the surfaces from the TrackML data file, and we get back a}}
+\DoxyCodeLine{143 \textcolor{comment}{     * std::map.}}
+\DoxyCodeLine{144 \textcolor{comment}{     */}}
+\DoxyCodeLine{145     std::map<traccc::geometry\_id, traccc::transform3> inp =}
+\DoxyCodeLine{146         \mbox{\hyperlink{namespacetraccc_1_1io_1_1details_a0a0bd7ed4c0a9dec6a1975ab2632980a}{traccc::io::details::read\_surfaces}}(file);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{comment}{/*}}
+\DoxyCodeLine{149 \textcolor{comment}{     * Convert the old-\/style map to a module map.}}
+\DoxyCodeLine{150 \textcolor{comment}{     */}}
+\DoxyCodeLine{151     \mbox{\hyperlink{classtraccc_1_1module__map}{traccc::module\_map}} map(inp);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \textcolor{comment}{/*}}
+\DoxyCodeLine{154 \textcolor{comment}{     * Obviously, the two maps need to be the same size!}}
+\DoxyCodeLine{155 \textcolor{comment}{     */}}
+\DoxyCodeLine{156     ASSERT\_EQ(map.size(), inp.size());}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158     \textcolor{comment}{/*}}
+\DoxyCodeLine{159 \textcolor{comment}{     * Next, iterate over all geometry IDs in the old map, and check whether}}
+\DoxyCodeLine{160 \textcolor{comment}{     * the two maps return exactly the same result.}}
+\DoxyCodeLine{161 \textcolor{comment}{     */}}
+\DoxyCodeLine{162     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} std::map<traccc::geometry\_id, traccc::transform3>::value\_type}
+\DoxyCodeLine{163              \&i : inp) \{}
+\DoxyCodeLine{164         ASSERT\_EQ(map.at(i.first), i.second);}
+\DoxyCodeLine{165     \}}
+\DoxyCodeLine{166 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::at(), traccc\+::io\+::data\+\_\+directory(), traccc\+::io\+::details\+::read\+\_\+surfaces(), and traccc\+::module\+\_\+map$<$ K, V $>$\+::size().
+
+\mbox{\Hypertarget{test__module__map_8cpp_ab340a66e353a98cb63d0855dfbdfd9a9}\label{test__module__map_8cpp_ab340a66e353a98cb63d0855dfbdfd9a9}} 
+\index{test\_module\_map.cpp@{test\_module\_map.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_module\_map.cpp@{test\_module\_map.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{geometry}]{,  }\item[{module\+\_\+map\+\_\+simple}]{ }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2021-\/2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                   \{}
+\DoxyCodeLine{26     std::map<std::size\_t, std::string> inp\{\{0, \textcolor{stringliteral}{"zero"}\},    \{1, \textcolor{stringliteral}{"one"}\},}
+\DoxyCodeLine{27                                            \{2, \textcolor{stringliteral}{"two"}\},     \{5, \textcolor{stringliteral}{"five"}\},}
+\DoxyCodeLine{28                                            \{11, \textcolor{stringliteral}{"eleven"}\}, \{21, \textcolor{stringliteral}{"twenty-\/one"}\}\};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{/*}}
+\DoxyCodeLine{31 \textcolor{comment}{     * Convert the old-\/style map to a module map.}}
+\DoxyCodeLine{32 \textcolor{comment}{     */}}
+\DoxyCodeLine{33     \mbox{\hyperlink{classtraccc_1_1module__map}{traccc::module\_map<std::size\_t, std::string>}} map(inp);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{/*}}
+\DoxyCodeLine{36 \textcolor{comment}{     * Check whether the two maps are the same size!}}
+\DoxyCodeLine{37 \textcolor{comment}{     */}}
+\DoxyCodeLine{38     ASSERT\_EQ(map.size(), inp.size());}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     ASSERT\_EQ(map.at(0), \textcolor{stringliteral}{"zero"});}
+\DoxyCodeLine{41     ASSERT\_EQ(map.at(1), \textcolor{stringliteral}{"one"});}
+\DoxyCodeLine{42     ASSERT\_EQ(map.at(2), \textcolor{stringliteral}{"two"});}
+\DoxyCodeLine{43     ASSERT\_EQ(map.at(5), \textcolor{stringliteral}{"five"});}
+\DoxyCodeLine{44     ASSERT\_EQ(map.at(11), \textcolor{stringliteral}{"eleven"});}
+\DoxyCodeLine{45     ASSERT\_EQ(map.at(21), \textcolor{stringliteral}{"twenty-\/one"});}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::module\+\_\+map$<$ K, V $>$\+::at(), and traccc\+::module\+\_\+map$<$ K, V $>$\+::size().
+

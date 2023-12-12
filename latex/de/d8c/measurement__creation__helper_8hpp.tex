@@ -1,0 +1,39 @@
+\hypertarget{measurement__creation__helper_8hpp}{}\doxysection{core/include/traccc/clusterization/detail/measurement\+\_\+creation\+\_\+helper.hpp File Reference}
+\label{measurement__creation__helper_8hpp}\index{core/include/traccc/clusterization/detail/measurement\_creation\_helper.hpp@{core/include/traccc/clusterization/detail/measurement\_creation\_helper.hpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/primitives.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/definitions/qualifiers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/cell.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/cluster.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/measurement.\+hpp\char`\"{}}\newline
+Include dependency graph for measurement\+\_\+creation\+\_\+helper.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dae/measurement__creation__helper_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/da1/measurement__creation__helper_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1detail}{traccc\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} scalar \mbox{\hyperlink{namespacetraccc_1_1detail_ab8b9563129faf8333be30d0895d1a6a6}{traccc\+::detail\+::signal\+\_\+cell\+\_\+modelling}} (scalar signal\+\_\+in, const cell\+\_\+module \&)
+\begin{DoxyCompactList}\small\item\em Function used for retrieving the cell signal based on the module id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} vector2 \mbox{\hyperlink{namespacetraccc_1_1detail_a7a2d59fbc63350abdfe5e2af688d24ad}{traccc\+::detail\+::position\+\_\+from\+\_\+cell}} (const cell \&cell, const cell\+\_\+module \&module)
+\begin{DoxyCompactList}\small\item\em Function for pixel segmentation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename cell\+\_\+collection\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{namespacetraccc_1_1detail_a443cee67b2e17edc5fc1bd807ebabe1b}{traccc\+::detail\+::calc\+\_\+cluster\+\_\+properties}} (const cell\+\_\+collection\+\_\+t \&cluster, const cell\+\_\+module \&module, point2 \&mean, point2 \&var, scalar \&total\+Weight)
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a95b39033664ff24e9b2f42ef43041ad0}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+ST}} void \mbox{\hyperlink{namespacetraccc_1_1detail_aaae24bc1a48341492ebe910a3a4f7d6a}{traccc\+::detail\+::fill\+\_\+measurement}} (measurement\+\_\+collection\+\_\+types\+::host \&measurements, const cell\+\_\+collection\+\_\+types\+::host \&cluster, const cell\+\_\+module \&module, const unsigned int module\+\_\+link)
+\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{space__point_8hpp}{}\doxysection{tests/common/tests/space\+\_\+point.hpp File Reference}
+\label{space__point_8hpp}\index{tests/common/tests/space\_point.hpp@{tests/common/tests/space\_point.hpp}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{d6/d79/space__point_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSpacePoint}{Space\+Point}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{space__point_8hpp_a0aec30ee6936a8d4e9eaaab3148f3852}{operator==}} (\mbox{\hyperlink{structSpacePoint}{Space\+Point}} a, \mbox{\hyperlink{structSpacePoint}{Space\+Point}} b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{space__point_8hpp_a0aec30ee6936a8d4e9eaaab3148f3852}\label{space__point_8hpp_a0aec30ee6936a8d4e9eaaab3148f3852}} 
+\index{space\_point.hpp@{space\_point.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!space\_point.hpp@{space\_point.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSpacePoint}{Space\+Point}}}]{a,  }\item[{\mbox{\hyperlink{structSpacePoint}{Space\+Point}}}]{b }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                             \{}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (fabs(a.\mbox{\hyperlink{structSpacePoint_ac17658d1d898aa5c68798330bd7fb5a9}{m\_x}} -\/ b.\mbox{\hyperlink{structSpacePoint_ac17658d1d898aa5c68798330bd7fb5a9}{m\_x}}) < 1e-\/6 \&\& fabs(a.\mbox{\hyperlink{structSpacePoint_aa1a242f19504d9adb20692d7de3f51df}{m\_y}} -\/ b.\mbox{\hyperlink{structSpacePoint_aa1a242f19504d9adb20692d7de3f51df}{m\_y}}) < 1e-\/6 \&\&}
+\DoxyCodeLine{27         fabs(a.\mbox{\hyperlink{structSpacePoint_a1e030bb5ddf66f1a1b61306212abfa90}{m\_z}} -\/ b.\mbox{\hyperlink{structSpacePoint_a1e030bb5ddf66f1a1b61306212abfa90}{m\_z}}) < 1e-\/6) \{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{29     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+
+
+References Space\+Point\+::m\+\_\+x, Space\+Point\+::m\+\_\+y, and Space\+Point\+::m\+\_\+z.
+

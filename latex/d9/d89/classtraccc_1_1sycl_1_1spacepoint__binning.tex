@@ -1,0 +1,122 @@
+\hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning}{}\doxysection{traccc\+::sycl\+::spacepoint\+\_\+binning Class Reference}
+\label{classtraccc_1_1sycl_1_1spacepoint__binning}\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+
+
+Spacepoing binning executed on a S\+Y\+CL device.  
+
+
+
+
+{\ttfamily \#include $<$spacepoint\+\_\+binning.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::sycl\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{df/d04/classtraccc_1_1sycl_1_1spacepoint__binning__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::sycl\+::spacepoint\+\_\+binning\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d99/classtraccc_1_1sycl_1_1spacepoint__binning__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1sycl_1_1spacepoint__binning_a0194ea337ebc25c60b1201bc37e26825}{spacepoint\+\_\+binning}} (const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&config, const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&grid\+\_\+config, const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&mr, vecmem\+::copy \&copy, \mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}} queue)
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetraccc_a6f3edb21be66a15213280ee97867bf8c}{sp\+\_\+grid\+\_\+buffer}} \mbox{\hyperlink{classtraccc_1_1sycl_1_1spacepoint__binning_ab68d410409aae75a7d542fb8a0b5c7d7}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&spacepoints\+\_\+view) const override
+\begin{DoxyCompactList}\small\item\em Function executing the algorithm with a a view of spacepoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \mbox{\hyperlink{classtraccc_1_1sycl_1_1spacepoint__binning_a1c63d8acf3a082f59ef4803c4cd5bcca}{m\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Member variables. \end{DoxyCompactList}\item 
+std\+::pair$<$ sp\+\_\+grid\+::axis\+\_\+p0\+\_\+type, sp\+\_\+grid\+::axis\+\_\+p1\+\_\+type $>$ \mbox{\hyperlink{classtraccc_1_1sycl_1_1spacepoint__binning_a68e0e9b5d230d200ad80054ddb324f31}{m\+\_\+axes}}
+\item 
+\mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \mbox{\hyperlink{classtraccc_1_1sycl_1_1spacepoint__binning_a6ea030cc81d980936d2d597ae8998ff1}{m\+\_\+mr}}
+\item 
+\mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}} \mbox{\hyperlink{classtraccc_1_1sycl_1_1spacepoint__binning_a66bf13c71d5083502937d583b72f5cab}{m\+\_\+queue}}
+\item 
+vecmem\+::copy \& \mbox{\hyperlink{classtraccc_1_1sycl_1_1spacepoint__binning_aa96efc4ddcfbc60a0aa7811894a55c81}{m\+\_\+copy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Spacepoing binning executed on a S\+Y\+CL device. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning_a0194ea337ebc25c60b1201bc37e26825}\label{classtraccc_1_1sycl_1_1spacepoint__binning_a0194ea337ebc25c60b1201bc37e26825}} 
+\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}!spacepoint\_binning@{spacepoint\_binning}}
+\index{spacepoint\_binning@{spacepoint\_binning}!traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{spacepoint\_binning()}{spacepoint\_binning()}}
+{\footnotesize\ttfamily traccc\+::sycl\+::spacepoint\+\_\+binning\+::spacepoint\+\_\+binning (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&}]{grid\+\_\+config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} \&}]{mr,  }\item[{vecmem\+::copy \&}]{copy,  }\item[{\mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}}}]{queue }\end{DoxyParamCaption})}
+
+
+
+Constructor for the algorithm. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning_ab68d410409aae75a7d542fb8a0b5c7d7}\label{classtraccc_1_1sycl_1_1spacepoint__binning_ab68d410409aae75a7d542fb8a0b5c7d7}} 
+\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetraccc_a6f3edb21be66a15213280ee97867bf8c}{sp\+\_\+grid\+\_\+buffer}} traccc\+::sycl\+::spacepoint\+\_\+binning\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_a6ef00cb04070f8f7954499bdaa71ddf0}{spacepoint\+\_\+collection\+\_\+types\+::const\+\_\+view}} \&}]{spacepoints\+\_\+view }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Function executing the algorithm with a a view of spacepoints. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning_a68e0e9b5d230d200ad80054ddb324f31}\label{classtraccc_1_1sycl_1_1spacepoint__binning_a68e0e9b5d230d200ad80054ddb324f31}} 
+\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}!m\_axes@{m\_axes}}
+\index{m\_axes@{m\_axes}!traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_axes}{m\_axes}}
+{\footnotesize\ttfamily std\+::pair$<$sp\+\_\+grid\+::axis\+\_\+p0\+\_\+type, sp\+\_\+grid\+::axis\+\_\+p1\+\_\+type$>$ traccc\+::sycl\+::spacepoint\+\_\+binning\+::m\+\_\+axes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning_a1c63d8acf3a082f59ef4803c4cd5bcca}\label{classtraccc_1_1sycl_1_1spacepoint__binning_a1c63d8acf3a082f59ef4803c4cd5bcca}} 
+\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}!m\_config@{m\_config}}
+\index{m\_config@{m\_config}!traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_config}{m\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} traccc\+::sycl\+::spacepoint\+\_\+binning\+::m\+\_\+config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Member variables. 
+
+\mbox{\Hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning_aa96efc4ddcfbc60a0aa7811894a55c81}\label{classtraccc_1_1sycl_1_1spacepoint__binning_aa96efc4ddcfbc60a0aa7811894a55c81}} 
+\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}!m\_copy@{m\_copy}}
+\index{m\_copy@{m\_copy}!traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_copy}{m\_copy}}
+{\footnotesize\ttfamily vecmem\+::copy\& traccc\+::sycl\+::spacepoint\+\_\+binning\+::m\+\_\+copy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning_a6ea030cc81d980936d2d597ae8998ff1}\label{classtraccc_1_1sycl_1_1spacepoint__binning_a6ea030cc81d980936d2d597ae8998ff1}} 
+\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtraccc_1_1memory__resource}{traccc\+::memory\+\_\+resource}} traccc\+::sycl\+::spacepoint\+\_\+binning\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtraccc_1_1sycl_1_1spacepoint__binning_a66bf13c71d5083502937d583b72f5cab}\label{classtraccc_1_1sycl_1_1spacepoint__binning_a66bf13c71d5083502937d583b72f5cab}} 
+\index{traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}!m\_queue@{m\_queue}}
+\index{m\_queue@{m\_queue}!traccc::sycl::spacepoint\_binning@{traccc::sycl::spacepoint\_binning}}
+\doxysubsubsection{\texorpdfstring{m\_queue}{m\_queue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1sycl_1_1queue__wrapper}{queue\+\_\+wrapper}} traccc\+::sycl\+::spacepoint\+\_\+binning\+::m\+\_\+queue\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+device/sycl/include/traccc/sycl/seeding/\mbox{\hyperlink{device_2sycl_2include_2traccc_2sycl_2seeding_2spacepoint__binning_8hpp}{spacepoint\+\_\+binning.\+hpp}}\end{DoxyCompactItemize}

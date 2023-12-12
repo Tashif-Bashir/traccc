@@ -1,0 +1,104 @@
+\hypertarget{structtraccc_1_1track__filter}{}\doxysection{traccc\+::track\+\_\+filter Struct Reference}
+\label{structtraccc_1_1track__filter}\index{traccc::track\_filter@{traccc::track\_filter}}
+
+
+Abstract track filtering descriptor.  
+
+
+
+
+{\ttfamily \#include $<$track\+\_\+filter.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::track\+\_\+filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{d4/d0b/structtraccc_1_1track__filter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::track\+\_\+filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d4/da0/structtraccc_1_1track__filter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{structtraccc_1_1track__filter_ac0bf49925caf6b8e66abf5e6d366f71c}{get\+\_\+name}} () const =0
+\begin{DoxyCompactList}\small\item\em Return a human-\/readable name for this filtering method. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{structtraccc_1_1track__filter_ab848ab3073ec1bc16dd456f4ab4cd76d}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1particle}{particle}} \&p) const =0
+\begin{DoxyCompactList}\small\item\em Determine whether a given particle is relevant to tracking. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structtraccc_1_1track__filter_a5de45431473d854516f453e41da879ea}{$\sim$track\+\_\+filter}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract track filtering descriptor. 
+
+This abstract class represents a methodology for selecting particles that are relevant to the current track reconstruction. Allows irrelevant tracks to be omitted from efficiency calculations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtraccc_1_1track__filter_a5de45431473d854516f453e41da879ea}\label{structtraccc_1_1track__filter_a5de45431473d854516f453e41da879ea}} 
+\index{traccc::track\_filter@{traccc::track\_filter}!````~track\_filter@{$\sim$track\_filter}}
+\index{````~track\_filter@{$\sim$track\_filter}!traccc::track\_filter@{traccc::track\_filter}}
+\doxysubsubsection{\texorpdfstring{$\sim$track\_filter()}{~track\_filter()}}
+{\footnotesize\ttfamily virtual traccc\+::track\+\_\+filter\+::$\sim$track\+\_\+filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1track__filter_ac0bf49925caf6b8e66abf5e6d366f71c}\label{structtraccc_1_1track__filter_ac0bf49925caf6b8e66abf5e6d366f71c}} 
+\index{traccc::track\_filter@{traccc::track\_filter}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!traccc::track\_filter@{traccc::track\_filter}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily virtual std\+::string traccc\+::track\+\_\+filter\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Return a human-\/readable name for this filtering method. 
+
+
+
+Implemented in \mbox{\hyperlink{structtraccc_1_1simple__charged__eta__pt__cut_aca01d8aaae6cccca47f9525671585602}{traccc\+::simple\+\_\+charged\+\_\+eta\+\_\+pt\+\_\+cut}}.
+
+\mbox{\Hypertarget{structtraccc_1_1track__filter_ab848ab3073ec1bc16dd456f4ab4cd76d}\label{structtraccc_1_1track__filter_ab848ab3073ec1bc16dd456f4ab4cd76d}} 
+\index{traccc::track\_filter@{traccc::track\_filter}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::track\_filter@{traccc::track\_filter}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual bool traccc\+::track\+\_\+filter\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1particle}{particle}} \&}]{p }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Determine whether a given particle is relevant to tracking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The particle in question.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the particle passes the cut. 
+
+false if the particle does not pass the cut. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{structtraccc_1_1simple__charged__eta__pt__cut_af8c7f67904a94a9eb03c65d4d66d207f}{traccc\+::simple\+\_\+charged\+\_\+eta\+\_\+pt\+\_\+cut}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+performance/include/traccc/efficiency/\mbox{\hyperlink{track__filter_8hpp}{track\+\_\+filter.\+hpp}}\end{DoxyCompactItemize}

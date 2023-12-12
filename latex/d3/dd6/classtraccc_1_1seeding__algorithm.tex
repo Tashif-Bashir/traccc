@@ -1,0 +1,138 @@
+\hypertarget{classtraccc_1_1seeding__algorithm}{}\doxysection{traccc\+::seeding\+\_\+algorithm Class Reference}
+\label{classtraccc_1_1seeding__algorithm}\index{traccc::seeding\_algorithm@{traccc::seeding\_algorithm}}
+
+
+Main algorithm for performing the track seeding on the C\+PU.  
+
+
+
+
+{\ttfamily \#include $<$seeding\+\_\+algorithm.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::seeding\+\_\+algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d3/de1/classtraccc_1_1seeding__algorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::seeding\+\_\+algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d96/classtraccc_1_1seeding__algorithm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1seeding__algorithm_a3a8a2124c2c29bf50a25a765fb71c7bb}{seeding\+\_\+algorithm}} (const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&finder\+\_\+config, const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&grid\+\_\+config, const \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} \&filter\+\_\+config, vecmem\+::memory\+\_\+resource \&mr)
+\item 
+output\+\_\+type \mbox{\hyperlink{classtraccc_1_1seeding__algorithm_aa11d99b1b1480a20e678278415d4f097}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&spacepoints) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1spacepoint__binning}{spacepoint\+\_\+binning}} \mbox{\hyperlink{classtraccc_1_1seeding__algorithm_a0c8fccc408ca795af44cd7b12a52704f}{m\+\_\+spacepoint\+\_\+binning}}
+\begin{DoxyCompactList}\small\item\em Sub-\/algorithm performing the spacepoint binning. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1seed__finding}{seed\+\_\+finding}} \mbox{\hyperlink{classtraccc_1_1seeding__algorithm_ae3afc14d9839bdc0c34cffd4fe7622e8}{m\+\_\+seed\+\_\+finding}}
+\begin{DoxyCompactList}\small\item\em Sub-\/algorithm performing the seed finding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main algorithm for performing the track seeding on the C\+PU. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seeding__algorithm_a3a8a2124c2c29bf50a25a765fb71c7bb}\label{classtraccc_1_1seeding__algorithm_a3a8a2124c2c29bf50a25a765fb71c7bb}} 
+\index{traccc::seeding\_algorithm@{traccc::seeding\_algorithm}!seeding\_algorithm@{seeding\_algorithm}}
+\index{seeding\_algorithm@{seeding\_algorithm}!traccc::seeding\_algorithm@{traccc::seeding\_algorithm}}
+\doxysubsubsection{\texorpdfstring{seeding\_algorithm()}{seeding\_algorithm()}}
+{\footnotesize\ttfamily traccc\+::seeding\+\_\+algorithm\+::seeding\+\_\+algorithm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{finder\+\_\+config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1spacepoint__grid__config}{spacepoint\+\_\+grid\+\_\+config}} \&}]{grid\+\_\+config,  }\item[{const \mbox{\hyperlink{structtraccc_1_1seedfilter__config}{seedfilter\+\_\+config}} \&}]{filter\+\_\+config,  }\item[{vecmem\+::memory\+\_\+resource \&}]{mr }\end{DoxyParamCaption})}
+
+Constructor for the seed finding algorithm
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & The memory resource to use \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23     : \mbox{\hyperlink{classtraccc_1_1seeding__algorithm_a0c8fccc408ca795af44cd7b12a52704f}{m\_spacepoint\_binning}}(finder\_config, grid\_config, mr),}
+\DoxyCodeLine{24       \mbox{\hyperlink{classtraccc_1_1seeding__algorithm_ae3afc14d9839bdc0c34cffd4fe7622e8}{m\_seed\_finding}}(finder\_config, filter\_config) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seeding__algorithm_aa11d99b1b1480a20e678278415d4f097}\label{classtraccc_1_1seeding__algorithm_aa11d99b1b1480a20e678278415d4f097}} 
+\index{traccc::seeding\_algorithm@{traccc::seeding\_algorithm}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::seeding\_algorithm@{traccc::seeding\_algorithm}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily seeding\+\_\+algorithm\+::output\+\_\+type traccc\+::seeding\+\_\+algorithm\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{spacepoint\+\_\+collection\+\_\+types\+::host}} \&}]{spacepoints }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Operator executing the algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em spacepoint} & All spacepoints in the event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The track seeds reconstructed from the spacepoints 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                                                               \{}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1seeding__algorithm_ae3afc14d9839bdc0c34cffd4fe7622e8}{m\_seed\_finding}}(spacepoints, \mbox{\hyperlink{classtraccc_1_1seeding__algorithm_a0c8fccc408ca795af44cd7b12a52704f}{m\_spacepoint\_binning}}(spacepoints));}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+seed\+\_\+finding, and m\+\_\+spacepoint\+\_\+binning.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1seeding__algorithm_ae3afc14d9839bdc0c34cffd4fe7622e8}\label{classtraccc_1_1seeding__algorithm_ae3afc14d9839bdc0c34cffd4fe7622e8}} 
+\index{traccc::seeding\_algorithm@{traccc::seeding\_algorithm}!m\_seed\_finding@{m\_seed\_finding}}
+\index{m\_seed\_finding@{m\_seed\_finding}!traccc::seeding\_algorithm@{traccc::seeding\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_seed\_finding}{m\_seed\_finding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1seed__finding}{seed\+\_\+finding}} traccc\+::seeding\+\_\+algorithm\+::m\+\_\+seed\+\_\+finding\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sub-\/algorithm performing the seed finding. 
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1seeding__algorithm_a0c8fccc408ca795af44cd7b12a52704f}\label{classtraccc_1_1seeding__algorithm_a0c8fccc408ca795af44cd7b12a52704f}} 
+\index{traccc::seeding\_algorithm@{traccc::seeding\_algorithm}!m\_spacepoint\_binning@{m\_spacepoint\_binning}}
+\index{m\_spacepoint\_binning@{m\_spacepoint\_binning}!traccc::seeding\_algorithm@{traccc::seeding\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_spacepoint\_binning}{m\_spacepoint\_binning}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1spacepoint__binning}{spacepoint\+\_\+binning}} traccc\+::seeding\+\_\+algorithm\+::m\+\_\+spacepoint\+\_\+binning\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sub-\/algorithm performing the spacepoint binning. 
+
+
+
+Referenced by operator()().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/\mbox{\hyperlink{core_2include_2traccc_2seeding_2seeding__algorithm_8hpp}{seeding\+\_\+algorithm.\+hpp}}\item 
+core/src/seeding/\mbox{\hyperlink{core_2src_2seeding_2seeding__algorithm_8cpp}{seeding\+\_\+algorithm.\+cpp}}\end{DoxyCompactItemize}

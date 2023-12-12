@@ -1,0 +1,78 @@
+\hypertarget{test__copy_8cpp}{}\doxysection{tests/cpu/test\+\_\+copy.cpp File Reference}
+\label{test__copy_8cpp}\index{tests/cpu/test\_copy.cpp@{tests/cpu/test\_copy.cpp}}
+{\ttfamily \#include \char`\"{}traccc/edm/container.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vecmem/memory/host\+\_\+memory\+\_\+resource.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+Include dependency graph for test\+\_\+copy.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dae/test__copy_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test__copy_8cpp_ae4f2213efbbe721424876544cbf4840d}{T\+E\+ST}} (Container\+Copy, Host\+To\+Host)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__copy_8cpp_ae4f2213efbbe721424876544cbf4840d}\label{test__copy_8cpp_ae4f2213efbbe721424876544cbf4840d}} 
+\index{test\_copy.cpp@{test\_copy.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!test\_copy.cpp@{test\_copy.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Container\+Copy}]{,  }\item[{Host\+To\+Host}]{ }\end{DoxyParamCaption})}
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2023 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                 \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{using} test\_container\_types = \mbox{\hyperlink{structtraccc_1_1container__types}{traccc::container\_types<int, int>}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{// Memory resources used by the application.}}
+\DoxyCodeLine{22     vecmem::host\_memory\_resource host\_mr;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{comment}{// Create a host container}}
+\DoxyCodeLine{25     test\_container\_types::host host\_orig\{\&host\_mr\};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Fill the host container}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; ++i) \{}
+\DoxyCodeLine{29         host\_orig.push\_back(}
+\DoxyCodeLine{30             i, test\_container\_types::host::vector\_type<int>\{i, i + 1\});}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Copy the container to the host buffer, and back.}}
+\DoxyCodeLine{34     \textcolor{keyword}{auto} host\_buffer = \mbox{\hyperlink{namespacetraccc_a503d2d50b981602cbc71693ad215b298}{traccc::get\_data}}(host\_orig);}
+\DoxyCodeLine{35     test\_container\_types::device host\_copy\{host\_buffer\};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// Check the copied container}}
+\DoxyCodeLine{38     ASSERT\_EQ(host\_copy.size(), 3u);}
+\DoxyCodeLine{39     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& host\_headers = host\_copy.get\_headers();}
+\DoxyCodeLine{40     ASSERT\_EQ(host\_headers.size(), 3u);}
+\DoxyCodeLine{41     ASSERT\_EQ(host\_headers[0], 0);}
+\DoxyCodeLine{42     ASSERT\_EQ(host\_headers[1], 1);}
+\DoxyCodeLine{43     ASSERT\_EQ(host\_headers[2], 2);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keyword}{const} \textcolor{keyword}{auto}\& host\_items = host\_copy.get\_items();}
+\DoxyCodeLine{46     ASSERT\_EQ(host\_items.size(), 3u);}
+\DoxyCodeLine{47     ASSERT\_EQ(host\_items[0].size(), 2u);}
+\DoxyCodeLine{48     ASSERT\_EQ(host\_items[0][0], 0);}
+\DoxyCodeLine{49     ASSERT\_EQ(host\_items[0][1], 1);}
+\DoxyCodeLine{50     ASSERT\_EQ(host\_items[1].size(), 2u);}
+\DoxyCodeLine{51     ASSERT\_EQ(host\_items[1][0], 1);}
+\DoxyCodeLine{52     ASSERT\_EQ(host\_items[1][1], 2);}
+\DoxyCodeLine{53     ASSERT\_EQ(host\_items[2].size(), 2u);}
+\DoxyCodeLine{54     ASSERT\_EQ(host\_items[2][0], 2);}
+\DoxyCodeLine{55     ASSERT\_EQ(host\_items[2][1], 3);}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::get\+\_\+data().
+

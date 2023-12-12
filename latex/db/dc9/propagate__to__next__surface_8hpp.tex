@@ -1,0 +1,26 @@
+\hypertarget{propagate__to__next__surface_8hpp}{}\doxysection{device/common/include/traccc/finding/device/propagate\+\_\+to\+\_\+next\+\_\+surface.hpp File Reference}
+\label{propagate__to__next__surface_8hpp}\index{device/common/include/traccc/finding/device/propagate\_to\_next\_surface.hpp@{device/common/include/traccc/finding/device/propagate\_to\_next\_surface.hpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/primitives.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/definitions/qualifiers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/measurement.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/track\+\_\+parameters.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/finding/device/impl/propagate\+\_\+to\+\_\+next\+\_\+surface.\+ipp\char`\"{}}\newline
+Include dependency graph for propagate\+\_\+to\+\_\+next\+\_\+surface.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d8a/propagate__to__next__surface_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1device}{traccc\+::device}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename propagator\+\_\+t , typename bfield\+\_\+t , typename config\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a95e1c711b776a8c1d0ece5b492f5a5e6}{T\+R\+A\+C\+C\+C\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{namespacetraccc_1_1device_a5fbc8641d583065ed1ebc98503d01f10}{traccc\+::device\+::propagate\+\_\+to\+\_\+next\+\_\+surface}} (std\+::size\+\_\+t global\+Index, const config\+\_\+t cfg, typename propagator\+\_\+t\+::detector\+\_\+type\+::view\+\_\+type det\+\_\+data, bfield\+\_\+t field\+\_\+data, vecmem\+::data\+::jagged\+\_\+vector\+\_\+view$<$ typename propagator\+\_\+t\+::intersection\+\_\+type $>$ nav\+\_\+candidates\+\_\+buffer, bound\+\_\+track\+\_\+parameters\+\_\+collection\+\_\+types\+::const\+\_\+view in\+\_\+params\+\_\+view, vecmem\+::data\+::vector\+\_\+view$<$ const candidate\+\_\+link $>$ links\+\_\+view, const unsigned int step, const unsigned int \&n\+\_\+in\+\_\+params, bound\+\_\+track\+\_\+parameters\+\_\+collection\+\_\+types\+::view out\+\_\+params\+\_\+view, vecmem\+::data\+::vector\+\_\+view$<$ unsigned int $>$ param\+\_\+to\+\_\+link\+\_\+view, vecmem\+::data\+::vector\+\_\+view$<$ typename candidate\+\_\+link\+::link\+\_\+index\+\_\+type $>$ tips\+\_\+view, unsigned int \&n\+\_\+out\+\_\+params)
+\end{DoxyCompactItemize}

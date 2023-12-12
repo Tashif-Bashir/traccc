@@ -1,0 +1,135 @@
+\hypertarget{structtraccc_1_1kalman__actor}{}\doxysection{traccc\+::kalman\+\_\+actor$<$ algebra\+\_\+t, vector\+\_\+t $>$ Struct Template Reference}
+\label{structtraccc_1_1kalman__actor}\index{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$@{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$}}
+
+
+Detray actor for Kalman filtering.  
+
+
+
+
+{\ttfamily \#include $<$kalman\+\_\+actor.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::kalman\+\_\+actor$<$ algebra\+\_\+t, vector\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d5/d10/structtraccc_1_1kalman__actor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::kalman\+\_\+actor$<$ algebra\+\_\+t, vector\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d2/d3a/structtraccc_1_1kalman__actor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1kalman__actor_1_1state}{state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtraccc_1_1kalman__actor_aa707c8f615159f4e781d3e121ec82bd5}{track\+\_\+state\+\_\+type}} = \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$ algebra\+\_\+t $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename propagator\+\_\+state\+\_\+t $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1kalman__actor_a053b813931a44b8f7fc0a074a4a7ee77}{operator()}} (\mbox{\hyperlink{structtraccc_1_1kalman__actor_1_1state}{state}} \&actor\+\_\+state, propagator\+\_\+state\+\_\+t \&propagation) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename algebra\+\_\+t, template$<$ typename... $>$ class vector\+\_\+t$>$\newline
+struct traccc\+::kalman\+\_\+actor$<$ algebra\+\_\+t, vector\+\_\+t $>$}
+
+Detray actor for Kalman filtering. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtraccc_1_1kalman__actor_aa707c8f615159f4e781d3e121ec82bd5}\label{structtraccc_1_1kalman__actor_aa707c8f615159f4e781d3e121ec82bd5}} 
+\index{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$@{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$}!track\_state\_type@{track\_state\_type}}
+\index{track\_state\_type@{track\_state\_type}!traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$@{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{track\_state\_type}{track\_state\_type}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , template$<$ typename... $>$ class vector\+\_\+t$>$ \\
+using \mbox{\hyperlink{structtraccc_1_1kalman__actor}{traccc\+::kalman\+\_\+actor}}$<$ algebra\+\_\+t, vector\+\_\+t $>$\+::\mbox{\hyperlink{structtraccc_1_1kalman__actor_aa707c8f615159f4e781d3e121ec82bd5}{track\+\_\+state\+\_\+type}} =  \mbox{\hyperlink{structtraccc_1_1track__state}{track\+\_\+state}}$<$algebra\+\_\+t$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1kalman__actor_a053b813931a44b8f7fc0a074a4a7ee77}\label{structtraccc_1_1kalman__actor_a053b813931a44b8f7fc0a074a4a7ee77}} 
+\index{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$@{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$@{traccc::kalman\_actor$<$ algebra\_t, vector\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename algebra\+\_\+t , template$<$ typename... $>$ class vector\+\_\+t$>$ \\
+template$<$typename propagator\+\_\+state\+\_\+t $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{structtraccc_1_1kalman__actor}{traccc\+::kalman\+\_\+actor}}$<$ algebra\+\_\+t, vector\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1kalman__actor_1_1state}{state}} \&}]{actor\+\_\+state,  }\item[{propagator\+\_\+state\+\_\+t \&}]{propagation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Actor operation to perform the Kalman filtering
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor\+\_\+state} & the actor state \\
+\hline
+{\em propagation} & the propagator state \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78                                                                               \{}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \textcolor{keyword}{const} \textcolor{keyword}{auto}\& stepping = propagation.\_stepping;}
+\DoxyCodeLine{81         \textcolor{keyword}{auto}\& navigation = propagation.\_navigation;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         \textcolor{comment}{// If the iterator reaches the end, terminate the propagation}}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (actor\_state.is\_complete()) \{}
+\DoxyCodeLine{85             propagation.\_heartbeat \&= navigation.abort();}
+\DoxyCodeLine{86             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89         \textcolor{comment}{// triggered only for sensitive surfaces}}
+\DoxyCodeLine{90         \textcolor{keywordflow}{if} (navigation.is\_on\_sensitive()) \{}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92             \textcolor{keyword}{auto}\& trk\_state = actor\_state();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94             \textcolor{comment}{// Abort if the propagator fails to find the next measurement}}
+\DoxyCodeLine{95             \textcolor{keywordflow}{if} (navigation.barcode() != trk\_state.surface\_link()) \{}
+\DoxyCodeLine{96                 \textcolor{comment}{// propagation.\_heartbeat \&= navigation.abort();}}
+\DoxyCodeLine{97                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{98             \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100             \textcolor{comment}{// This track state is not a hole}}
+\DoxyCodeLine{101             trk\_state.is\_hole = \textcolor{keyword}{false};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103             \textcolor{comment}{// Set full jacobian}}
+\DoxyCodeLine{104             trk\_state.jacobian() = stepping.\_full\_jacobian;}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106             \textcolor{comment}{// Run Kalman Gain Updater}}
+\DoxyCodeLine{107             \textcolor{keyword}{const} \textcolor{keyword}{auto} sf = navigation.get\_surface();}
+\DoxyCodeLine{108             sf.template visit\_mask<gain\_matrix\_updater<algebra\_t>>(}
+\DoxyCodeLine{109                 trk\_state, propagation.\_stepping.\_bound\_params);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111             \textcolor{comment}{// Update iterator}}
+\DoxyCodeLine{112             actor\_state.next();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114             \textcolor{comment}{// Flag renavigation of the current candidate}}
+\DoxyCodeLine{115             navigation.set\_high\_trust();}
+\DoxyCodeLine{116         \}}
+\DoxyCodeLine{117     \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::kalman\+\_\+actor$<$ algebra\+\_\+t, vector\+\_\+t $>$\+::state\+::is\+\_\+complete(), and traccc\+::kalman\+\_\+actor$<$ algebra\+\_\+t, vector\+\_\+t $>$\+::state\+::next().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/fitting/kalman\+\_\+filter/\mbox{\hyperlink{kalman__actor_8hpp}{kalman\+\_\+actor.\+hpp}}\end{DoxyCompactItemize}

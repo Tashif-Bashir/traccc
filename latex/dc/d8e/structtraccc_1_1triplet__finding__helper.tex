@@ -1,0 +1,158 @@
+\hypertarget{structtraccc_1_1triplet__finding__helper}{}\doxysection{traccc\+::triplet\+\_\+finding\+\_\+helper Struct Reference}
+\label{structtraccc_1_1triplet__finding__helper}\index{traccc::triplet\_finding\_helper@{traccc::triplet\_finding\_helper}}
+
+
+{\ttfamily \#include $<$triplet\+\_\+finding\+\_\+helper.\+hpp$>$}
+
+
+
+Collaboration diagram for traccc\+::triplet\+\_\+finding\+\_\+helper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d1/df4/structtraccc_1_1triplet__finding__helper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool \mbox{\hyperlink{structtraccc_1_1triplet__finding__helper_a2bcf66c0ebe8c89242f0f132e81a76ab}{is\+Compatible}} (const \mbox{\hyperlink{structtraccc_1_1internal__spacepoint}{internal\+\_\+spacepoint}}$<$ \mbox{\hyperlink{structtraccc_1_1spacepoint}{spacepoint}} $>$ \&spM, const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&lb, const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&lt, const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&config, const \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&i\+Sin\+Theta2, const \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&scattering\+In\+Region2, \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&curvature, \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&impact\+\_\+parameter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtraccc_1_1triplet__finding__helper_a2bcf66c0ebe8c89242f0f132e81a76ab}\label{structtraccc_1_1triplet__finding__helper_a2bcf66c0ebe8c89242f0f132e81a76ab}} 
+\index{traccc::triplet\_finding\_helper@{traccc::triplet\_finding\_helper}!isCompatible@{isCompatible}}
+\index{isCompatible@{isCompatible}!traccc::triplet\_finding\_helper@{traccc::triplet\_finding\_helper}}
+\doxysubsubsection{\texorpdfstring{isCompatible()}{isCompatible()}}
+{\footnotesize\ttfamily bool traccc\+::triplet\+\_\+finding\+\_\+helper\+::is\+Compatible (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1internal__spacepoint}{internal\+\_\+spacepoint}}$<$ \mbox{\hyperlink{structtraccc_1_1spacepoint}{spacepoint}} $>$ \&}]{spM,  }\item[{const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&}]{lb,  }\item[{const \mbox{\hyperlink{structtraccc_1_1lin__circle}{lin\+\_\+circle}} \&}]{lt,  }\item[{const \mbox{\hyperlink{structtraccc_1_1seedfinder__config}{seedfinder\+\_\+config}} \&}]{config,  }\item[{const \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&}]{i\+Sin\+Theta2,  }\item[{const \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&}]{scattering\+In\+Region2,  }\item[{\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&}]{curvature,  }\item[{\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} \&}]{impact\+\_\+parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Check if two doublets with common middle spacepoint can form a triplet
+
+
+\begin{DoxyParams}{Parameters}
+{\em spM} & is middle spacepoint \\
+\hline
+{\em lb} & is transformed coordinate of middle-\/bottom doublet \\
+\hline
+{\em lt} & is transformed coordinate of middle-\/top doublet \\
+\hline
+{\em config} & is configuration parameter \\
+\hline
+{\em i\+Sin\+Theta2} & is the square of sin of pitch angle \\
+\hline
+{\em scattering\+In\+Region2} & is the threshold for scattering angle for the lower pT cut \\
+\hline
+{\em curvature} & is curvature of triplet \\
+\hline
+{\em impact\+\_\+parameter} & is impact parameter of triplet\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value for compatibility 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                                  \{}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// add errors of spB-\/spM and spM-\/spT pairs and add the correlation term}}
+\DoxyCodeLine{46     \textcolor{comment}{// for errors on spM}}
+\DoxyCodeLine{47     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} error2 = lt.Er() + lb.Er() +}
+\DoxyCodeLine{48                     \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(2.f) *}
+\DoxyCodeLine{49                         (lb.cotTheta() * lt.cotTheta() * spM.varianceR() +}
+\DoxyCodeLine{50                          spM.varianceZ()) *}
+\DoxyCodeLine{51                         lb.iDeltaR() * lt.iDeltaR();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} deltaCotTheta = lb.cotTheta() -\/ lt.cotTheta();}
+\DoxyCodeLine{54     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} deltaCotTheta2 = deltaCotTheta * deltaCotTheta;}
+\DoxyCodeLine{55     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} error;}
+\DoxyCodeLine{56     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} dCotThetaMinusError2;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{comment}{// if the error is larger than the difference in theta, no need to}}
+\DoxyCodeLine{59     \textcolor{comment}{// compare with scattering}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} (deltaCotTheta2 -\/ error2 > 0) \{}
+\DoxyCodeLine{61         deltaCotTheta = std::abs(deltaCotTheta);}
+\DoxyCodeLine{62         \textcolor{comment}{// if deltaTheta larger than the scattering for the lower pT cut, skip}}
+\DoxyCodeLine{63         error = std::sqrt(error2);}
+\DoxyCodeLine{64         dCotThetaMinusError2 = deltaCotTheta2 + error2 -\/}
+\DoxyCodeLine{65                                \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(2.) * deltaCotTheta * error;}
+\DoxyCodeLine{66         \textcolor{comment}{// avoid taking root of scatteringInRegion}}
+\DoxyCodeLine{67         \textcolor{comment}{// if left side of ">" is positive, both sides of unequality can be}}
+\DoxyCodeLine{68         \textcolor{comment}{// squared}}
+\DoxyCodeLine{69         \textcolor{comment}{// (scattering is always positive)}}
+\DoxyCodeLine{70         \textcolor{keywordflow}{if} (dCotThetaMinusError2 > scatteringInRegion2) \{}
+\DoxyCodeLine{71             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{comment}{// protects against division by 0}}
+\DoxyCodeLine{76     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} dU = lt.U() -\/ lb.U();}
+\DoxyCodeLine{77     \textcolor{keywordflow}{if} (dU == \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(0.)) \{}
+\DoxyCodeLine{78         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{comment}{// A and B are evaluated as a function of the circumference parameters}}
+\DoxyCodeLine{82     \textcolor{comment}{// x\_0 and y\_0}}
+\DoxyCodeLine{83     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} A = (lt.V() -\/ lb.V()) / dU;}
+\DoxyCodeLine{84     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} S2 = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(1.) + A * A;}
+\DoxyCodeLine{85     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} B = lb.V() -\/ A * lb.U();}
+\DoxyCodeLine{86     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} B2 = B * B;}
+\DoxyCodeLine{87     \textcolor{comment}{// sqrt(S2)/B = 2 * helixradius}}
+\DoxyCodeLine{88     \textcolor{comment}{// calculated radius must not be smaller than minimum radius}}
+\DoxyCodeLine{89     \textcolor{keywordflow}{if} (S2 < B2 * config.minHelixDiameter2) \{}
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \textcolor{comment}{// 1/helixradius: (B/sqrt(S2))*2 (we leave everything squared)}}
+\DoxyCodeLine{94     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} iHelixDiameter2 = B2 / S2;}
+\DoxyCodeLine{95     \textcolor{comment}{// calculate scattering for p(T) calculated from seed curvature}}
+\DoxyCodeLine{96     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} pT2scatter =}
+\DoxyCodeLine{97         \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(4.) * iHelixDiameter2 * config.pT2perRadius;}
+\DoxyCodeLine{98     \textcolor{comment}{// if pT > maxPtScattering, calculate allowed scattering angle using}}
+\DoxyCodeLine{99     \textcolor{comment}{// maxPtScattering instead of pt.}}
+\DoxyCodeLine{100     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} pT =}
+\DoxyCodeLine{101         config.pTPerHelixRadius * std::sqrt(S2 / B2) / \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(2.);}
+\DoxyCodeLine{102     \textcolor{keywordflow}{if} (pT > config.maxPtScattering) \{}
+\DoxyCodeLine{103         \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} pTscatter = config.highland / config.maxPtScattering;}
+\DoxyCodeLine{104         pT2scatter = pTscatter * pTscatter;}
+\DoxyCodeLine{105     \}}
+\DoxyCodeLine{106     \textcolor{comment}{// convert p(T) to p scaling by sin\string^2(theta) AND scale by 1/sin\string^4(theta)}}
+\DoxyCodeLine{107     \textcolor{comment}{// from rad to deltaCotTheta}}
+\DoxyCodeLine{108     \mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}} p2scatter = pT2scatter * iSinTheta2;}
+\DoxyCodeLine{109     \textcolor{comment}{// if deltaTheta larger than allowed scattering for calculated pT, skip}}
+\DoxyCodeLine{110     \textcolor{keywordflow}{if} ((deltaCotTheta2 -\/ error2 > \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacetraccc_aab82ddc5db54d9ad84b1215320482993}{scalar}}\textcolor{keyword}{>}(0.)) \&\&}
+\DoxyCodeLine{111         (dCotThetaMinusError2 >}
+\DoxyCodeLine{112          p2scatter * config.sigmaScattering * config.sigmaScattering)) \{}
+\DoxyCodeLine{113         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{114     \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{comment}{// calculate curvature}}
+\DoxyCodeLine{117     curvature = B / std::sqrt(S2);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{comment}{// A and B allow calculation of impact params in U/V plane with linear}}
+\DoxyCodeLine{120     \textcolor{comment}{// function}}
+\DoxyCodeLine{121     \textcolor{comment}{// (in contrast to having to solve a quadratic function in x/y plane)}}
+\DoxyCodeLine{122     impact\_parameter = std::abs((A -\/ B * spM.radius()) * spM.radius());}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordflow}{if} (impact\_parameter > config.impactMax) \{}
+\DoxyCodeLine{125         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+
+
+References traccc\+::lin\+\_\+circle\+::cot\+Theta(), traccc\+::lin\+\_\+circle\+::\+Er(), traccc\+::seedfinder\+\_\+config\+::highland, traccc\+::lin\+\_\+circle\+::i\+Delta\+R(), traccc\+::seedfinder\+\_\+config\+::impact\+Max, traccc\+::seedfinder\+\_\+config\+::max\+Pt\+Scattering, traccc\+::seedfinder\+\_\+config\+::min\+Helix\+Diameter2, traccc\+::seedfinder\+\_\+config\+::p\+T2per\+Radius, traccc\+::seedfinder\+\_\+config\+::p\+T\+Per\+Helix\+Radius, traccc\+::internal\+\_\+spacepoint$<$ spacepoint\+\_\+t $>$\+::radius(), traccc\+::seedfinder\+\_\+config\+::sigma\+Scattering, traccc\+::lin\+\_\+circle\+::\+U(), traccc\+::lin\+\_\+circle\+::\+V(), traccc\+::internal\+\_\+spacepoint$<$ spacepoint\+\_\+t $>$\+::variance\+R(), and traccc\+::internal\+\_\+spacepoint$<$ spacepoint\+\_\+t $>$\+::variance\+Z().
+
+
+
+Referenced by traccc\+::device\+::count\+\_\+triplets(), traccc\+::device\+::find\+\_\+triplets(), and traccc\+::triplet\+\_\+finding\+::operator()().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/seeding/\mbox{\hyperlink{triplet__finding__helper_8hpp}{triplet\+\_\+finding\+\_\+helper.\+hpp}}\end{DoxyCompactItemize}

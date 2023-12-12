@@ -1,0 +1,152 @@
+\hypertarget{classtraccc_1_1clusterization__algorithm}{}\doxysection{traccc\+::clusterization\+\_\+algorithm Class Reference}
+\label{classtraccc_1_1clusterization__algorithm}\index{traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}}
+
+
+{\ttfamily \#include $<$clusterization\+\_\+algorithm.\+hpp$>$}
+
+
+
+Inheritance diagram for traccc\+::clusterization\+\_\+algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{dd/dd1/classtraccc_1_1clusterization__algorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for traccc\+::clusterization\+\_\+algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d51/classtraccc_1_1clusterization__algorithm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_a2c541c53d3577d64c943a4908ecda7b1}{clusterization\+\_\+algorithm}} (vecmem\+::memory\+\_\+resource \&mr)
+\item 
+output\+\_\+type \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_a0150e06088b99d5169909e78cfcff0f6}{operator()}} (const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+collection\+\_\+types\+::host}} \&cells, const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+module\+\_\+collection\+\_\+types\+::host}} \&modules) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::reference\+\_\+wrapper$<$ vecmem\+::memory\+\_\+resource $>$ \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aba7154dd44b74225e7f71f9ab5ae264f}{m\+\_\+mr}}
+\begin{DoxyCompactList}\small\item\em Reference to the host-\/accessible memory resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Sub-\/algorithms used by this algorithm}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtraccc_1_1component__connection}{component\+\_\+connection}} \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aece57fa2a83fb502df5eb007912be8f8}{m\+\_\+cc}}
+\begin{DoxyCompactList}\small\item\em Per-\/module cluster creation algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtraccc_1_1measurement__creation}{measurement\+\_\+creation}} \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aa95da29f98cc8282d45dc5ecd3b06616}{m\+\_\+mc}}
+\begin{DoxyCompactList}\small\item\em Per-\/module measurement creation algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+Clusterization algorithm, creating measurements from cells
+
+This algorithm creates local/2D measurements separately for each detector module from the cells of the modules. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtraccc_1_1clusterization__algorithm_a2c541c53d3577d64c943a4908ecda7b1}\label{classtraccc_1_1clusterization__algorithm_a2c541c53d3577d64c943a4908ecda7b1}} 
+\index{traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}!clusterization\_algorithm@{clusterization\_algorithm}}
+\index{clusterization\_algorithm@{clusterization\_algorithm}!traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{clusterization\_algorithm()}{clusterization\_algorithm()}}
+{\footnotesize\ttfamily traccc\+::clusterization\+\_\+algorithm\+::clusterization\+\_\+algorithm (\begin{DoxyParamCaption}\item[{vecmem\+::memory\+\_\+resource \&}]{mr }\end{DoxyParamCaption})}
+
+Clusterization algorithm constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mr} & The memory resource to use for the result objects \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14     : \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aece57fa2a83fb502df5eb007912be8f8}{m\_cc}}(mr), \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aa95da29f98cc8282d45dc5ecd3b06616}{m\_mc}}(mr), \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aba7154dd44b74225e7f71f9ab5ae264f}{m\_mr}}(mr) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtraccc_1_1clusterization__algorithm_a0150e06088b99d5169909e78cfcff0f6}\label{classtraccc_1_1clusterization__algorithm_a0150e06088b99d5169909e78cfcff0f6}} 
+\index{traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}!operator()@{operator()}}
+\index{operator()@{operator()}!traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily clusterization\+\_\+algorithm\+::output\+\_\+type traccc\+::clusterization\+\_\+algorithm\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+collection\+\_\+types\+::host}} \&}]{cells,  }\item[{const \mbox{\hyperlink{structtraccc_1_1collection__types_ab1b46d2f1f58a16bde873c1aa3f4557d}{cell\+\_\+module\+\_\+collection\+\_\+types\+::host}} \&}]{modules }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Construct measurements for each detector module
+
+
+\begin{DoxyParams}{Parameters}
+{\em cells} & The cells for every detector module in the event \\
+\hline
+{\em modules} & A collection of detector modules \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The measurements reconstructed for every detector module 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                                            \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} \mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aa95da29f98cc8282d45dc5ecd3b06616}{m\_mc}}(\mbox{\hyperlink{classtraccc_1_1clusterization__algorithm_aece57fa2a83fb502df5eb007912be8f8}{m\_cc}}(cells), modules);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+
+
+References m\+\_\+cc, and m\+\_\+mc.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtraccc_1_1clusterization__algorithm_aece57fa2a83fb502df5eb007912be8f8}\label{classtraccc_1_1clusterization__algorithm_aece57fa2a83fb502df5eb007912be8f8}} 
+\index{traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}!m\_cc@{m\_cc}}
+\index{m\_cc@{m\_cc}!traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_cc}{m\_cc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1component__connection}{component\+\_\+connection}} traccc\+::clusterization\+\_\+algorithm\+::m\+\_\+cc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Per-\/module cluster creation algorithm. 
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1clusterization__algorithm_aa95da29f98cc8282d45dc5ecd3b06616}\label{classtraccc_1_1clusterization__algorithm_aa95da29f98cc8282d45dc5ecd3b06616}} 
+\index{traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}!m\_mc@{m\_mc}}
+\index{m\_mc@{m\_mc}!traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_mc}{m\_mc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtraccc_1_1measurement__creation}{measurement\+\_\+creation}} traccc\+::clusterization\+\_\+algorithm\+::m\+\_\+mc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Per-\/module measurement creation algorithm. 
+
+
+
+Referenced by operator()().
+
+\mbox{\Hypertarget{classtraccc_1_1clusterization__algorithm_aba7154dd44b74225e7f71f9ab5ae264f}\label{classtraccc_1_1clusterization__algorithm_aba7154dd44b74225e7f71f9ab5ae264f}} 
+\index{traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}!m\_mr@{m\_mr}}
+\index{m\_mr@{m\_mr}!traccc::clusterization\_algorithm@{traccc::clusterization\_algorithm}}
+\doxysubsubsection{\texorpdfstring{m\_mr}{m\_mr}}
+{\footnotesize\ttfamily std\+::reference\+\_\+wrapper$<$vecmem\+::memory\+\_\+resource$>$ traccc\+::clusterization\+\_\+algorithm\+::m\+\_\+mr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the host-\/accessible memory resource. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+core/include/traccc/clusterization/\mbox{\hyperlink{core_2include_2traccc_2clusterization_2clusterization__algorithm_8hpp}{clusterization\+\_\+algorithm.\+hpp}}\item 
+core/src/clusterization/\mbox{\hyperlink{clusterization__algorithm_8cpp}{clusterization\+\_\+algorithm.\+cpp}}\end{DoxyCompactItemize}

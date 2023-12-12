@@ -1,0 +1,46 @@
+\hypertarget{options_8hpp}{}\doxysection{examples/options/include/traccc/options/options.hpp File Reference}
+\label{options_8hpp}\index{examples/options/include/traccc/options/options.hpp@{examples/options/include/traccc/options/options.hpp}}
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$iosfwd$>$}\newline
+{\ttfamily \#include $<$istream$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for options.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dbd/options_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d19/options_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtraccc_1_1Reals}{traccc\+::\+Reals$<$ scalar\+\_\+t, k\+Size $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\item 
+ \mbox{\hyperlink{namespacetraccc_1_1detail}{traccc\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename value\+\_\+t , typename converter\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacetraccc_1_1detail_ae476db57bbfc32c633d41a484a902d87}{traccc\+::detail\+::parse\+\_\+variable}} (std\+::istream \&is, std\+::vector$<$ value\+\_\+t $>$ \&values, converter\+\_\+t \&\&convert)
+\item 
+{\footnotesize template$<$typename value\+\_\+t , typename converter\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacetraccc_1_1detail_a48fded5eaa22ebec5814eb0ed9e0f93c}{traccc\+::detail\+::parse\+\_\+fixed}} (std\+::istream \&is, size\+\_\+t size, value\+\_\+t $\ast$values, converter\+\_\+t \&\&convert)
+\item 
+{\footnotesize template$<$typename scalar\+\_\+t , size\+\_\+t k\+Size$>$ }\\std\+::istream \& \mbox{\hyperlink{namespacetraccc_af617e5a66ff31683e731c69af5005bbd}{traccc\+::operator$>$$>$}} (std\+::istream \&is, Reals$<$ scalar\+\_\+t, k\+Size $>$ \&values)
+\item 
+{\footnotesize template$<$typename scalar\+\_\+t , size\+\_\+t k\+Size$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacetraccc_a5a898affb233b52e0268ba107e44b176}{traccc\+::operator$<$$<$}} (std\+::ostream \&os, const Reals$<$ scalar\+\_\+t, k\+Size $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Print a fixed number of doubles as {\ttfamily x\+:y\+:z}. \end{DoxyCompactList}\end{DoxyCompactItemize}

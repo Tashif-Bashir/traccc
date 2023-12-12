@@ -1,0 +1,57 @@
+\hypertarget{kokkos__basic_8cpp}{}\doxysection{tests/kokkos/kokkos\+\_\+basic.cpp File Reference}
+\label{kokkos__basic_8cpp}\index{tests/kokkos/kokkos\_basic.cpp@{tests/kokkos/kokkos\_basic.cpp}}
+{\ttfamily \#include $<$Kokkos\+\_\+\+Core.\+hpp$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for kokkos\+\_\+basic.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{d0/dfb/kokkos__basic_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{kokkos__basic_8cpp_a786279bfa3f3e11befa3e2f8edb6e24e}{G\+T\+E\+S\+T\+\_\+\+T\+E\+ST}} (Kokkos\+Basic, Paralle\+For)
+\begin{DoxyCompactList}\small\item\em Trivial test for a host-\/run parallel-\/for. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kokkos__basic_8cpp_a786279bfa3f3e11befa3e2f8edb6e24e}\label{kokkos__basic_8cpp_a786279bfa3f3e11befa3e2f8edb6e24e}} 
+\index{kokkos\_basic.cpp@{kokkos\_basic.cpp}!GTEST\_TEST@{GTEST\_TEST}}
+\index{GTEST\_TEST@{GTEST\_TEST}!kokkos\_basic.cpp@{kokkos\_basic.cpp}}
+\doxysubsubsection{\texorpdfstring{GTEST\_TEST()}{GTEST\_TEST()}}
+{\footnotesize\ttfamily G\+T\+E\+S\+T\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{Kokkos\+Basic}]{,  }\item[{Paralle\+For}]{ }\end{DoxyParamCaption})}
+
+
+
+Trivial test for a host-\/run parallel-\/for. 
+
+T\+R\+A\+C\+CC library, part of the A\+C\+TS project (R\&D line)
+
+(c) 2022 C\+E\+RN for the benefit of the A\+C\+TS project
+
+Mozilla Public License Version 2.\+0 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                     \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{// Allocate an integer vector.}}
+\DoxyCodeLine{22     std::vector<int> test\_vec(100);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int}* test\_vec\_ptr = test\_vec.data();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// Set all elements to some value. Forecfully running serially on the host.}}
+\DoxyCodeLine{26     \textcolor{comment}{// In case the default execution space would be CUDA. (Which would not be}}
+\DoxyCodeLine{27     \textcolor{comment}{// compatible with the host-\/allocated std::vector of course.)}}
+\DoxyCodeLine{28     Kokkos::parallel\_for(}
+\DoxyCodeLine{29         \textcolor{stringliteral}{"test\_vec\_init"},}
+\DoxyCodeLine{30         Kokkos::RangePolicy<Kokkos::Serial>(0, test\_vec.size()),}
+\DoxyCodeLine{31         KOKKOS\_LAMBDA(\textcolor{keywordtype}{int} i) \{ test\_vec\_ptr[i] = 1; \});}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Check that we succeeded.}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} v : test\_vec) \{}
+\DoxyCodeLine{35         EXPECT\_EQ(v, 1);}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}

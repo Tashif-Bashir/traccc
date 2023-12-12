@@ -1,0 +1,4 @@
+<map id="traccc::device::doublet_counter" name="traccc::device::doublet_counter">
+<area shape="rect" id="node1" title="Number of doublets for one specific middle spacepoint." alt="" coords="5,160,175,296"/>
+<area shape="rect" id="node2" href="$d7/dca/structtraccc_1_1sp__location.html" title="location of spacepoint in internal spacepoint container" alt="" coords="19,5,161,97"/>
+</map>

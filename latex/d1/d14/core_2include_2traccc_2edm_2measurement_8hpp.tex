@@ -1,0 +1,52 @@
+\hypertarget{core_2include_2traccc_2edm_2measurement_8hpp}{}\doxysection{core/include/traccc/edm/measurement.hpp File Reference}
+\label{core_2include_2traccc_2edm_2measurement_8hpp}\index{core/include/traccc/edm/measurement.hpp@{core/include/traccc/edm/measurement.hpp}}
+{\ttfamily \#include \char`\"{}traccc/definitions/primitives.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/definitions/qualifiers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/definitions/track\+\_\+parametrization.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/cell.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/edm/container.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}traccc/utils/subspace.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}detray/geometry/barcode.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for measurement.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dd9/core_2include_2traccc_2edm_2measurement_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d72/core_2include_2traccc_2edm_2measurement_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1measurement}{traccc\+::measurement}}
+\item 
+struct \mbox{\hyperlink{structtraccc_1_1measurement__sort__comp}{traccc\+::measurement\+\_\+sort\+\_\+comp}}
+\begin{DoxyCompactList}\small\item\em Comparator based on detray barcode value. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtraccc_1_1measurement__equal__comp}{traccc\+::measurement\+\_\+equal\+\_\+comp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetraccc}{traccc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetraccc_a2c7352870b28d1d1c843db1d13399801}{traccc\+::measurement\+\_\+collection\+\_\+types}} = collection\+\_\+types$<$ measurement $>$
+\begin{DoxyCompactList}\small\item\em Declare all measurement collection types. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacetraccc_a9c4175aad1f2d31b229344a7f9f93213}{traccc\+::measurement\+\_\+container\+\_\+types}} = container\+\_\+types$<$ cell\+\_\+module, measurement $>$
+\begin{DoxyCompactList}\small\item\em Declare all measurement container types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool \mbox{\hyperlink{namespacetraccc_ad5c4b5264c919785b3f5861972da899d}{traccc\+::operator$<$}} (const measurement \&lhs, const measurement \&rhs)
+\begin{DoxyCompactList}\small\item\em Comparison / ordering operator for measurements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} bool \mbox{\hyperlink{namespacetraccc_adaa0246202a0807bc2cf00d5218b1993}{traccc\+::operator==}} (const measurement \&lhs, const measurement \&rhs)
+\begin{DoxyCompactList}\small\item\em Equality operator for measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}

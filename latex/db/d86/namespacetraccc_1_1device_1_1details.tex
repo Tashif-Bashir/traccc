@@ -1,0 +1,67 @@
+\hypertarget{namespacetraccc_1_1device_1_1details}{}\doxysection{traccc\+::device\+::details Namespace Reference}
+\label{namespacetraccc_1_1device_1_1details}\index{traccc::device::details@{traccc::device::details}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Comparator $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} std\+::size\+\_\+t \mbox{\hyperlink{namespacetraccc_1_1device_1_1details_a8f4ac52a914ad8541e79747fe5031ea9}{min\+\_\+elem}} (const \mbox{\hyperlink{structtraccc_1_1triplet}{triplet}} $\ast$arr, const std\+::size\+\_\+t begin\+\_\+idx, const std\+::size\+\_\+t end\+\_\+idx, Comparator comp)
+\item 
+{\footnotesize template$<$typename Comparator $>$ }\\\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void \mbox{\hyperlink{namespacetraccc_1_1device_1_1details_a78a788b16fc4939f7c8ad1db674160d7}{insertion\+Sort}} (\mbox{\hyperlink{structtraccc_1_1triplet}{triplet}} $\ast$arr, const std\+::size\+\_\+t begin\+\_\+idx, const std\+::size\+\_\+t n, Comparator comp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetraccc_1_1device_1_1details_a78a788b16fc4939f7c8ad1db674160d7}\label{namespacetraccc_1_1device_1_1details_a78a788b16fc4939f7c8ad1db674160d7}} 
+\index{traccc::device::details@{traccc::device::details}!insertionSort@{insertionSort}}
+\index{insertionSort@{insertionSort}!traccc::device::details@{traccc::device::details}}
+\doxysubsubsection{\texorpdfstring{insertionSort()}{insertionSort()}}
+{\footnotesize\ttfamily template$<$typename Comparator $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} void traccc\+::device\+::details\+::insertion\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtraccc_1_1triplet}{triplet}} $\ast$}]{arr,  }\item[{const std\+::size\+\_\+t}]{begin\+\_\+idx,  }\item[{const std\+::size\+\_\+t}]{n,  }\item[{Comparator}]{comp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                                                           \{}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} j = 0;}
+\DoxyCodeLine{42     triplet key = arr[begin\_idx];}
+\DoxyCodeLine{43     \textcolor{keywordflow}{for} (std::size\_t i = 0; i < n; ++i) \{}
+\DoxyCodeLine{44         key = arr[begin\_idx + i];}
+\DoxyCodeLine{45         j = i -\/ 1;}
+\DoxyCodeLine{46         \textcolor{keywordflow}{while} (j >= 0 \&\& !comp(arr[begin\_idx + j], key)) \{}
+\DoxyCodeLine{47             arr[begin\_idx + j + 1] = arr[begin\_idx + j];}
+\DoxyCodeLine{48             j = j -\/ 1;}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50         arr[begin\_idx + j + 1] = key;}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::device\+::select\+\_\+seeds().
+
+\mbox{\Hypertarget{namespacetraccc_1_1device_1_1details_a8f4ac52a914ad8541e79747fe5031ea9}\label{namespacetraccc_1_1device_1_1details_a8f4ac52a914ad8541e79747fe5031ea9}} 
+\index{traccc::device::details@{traccc::device::details}!min\_elem@{min\_elem}}
+\index{min\_elem@{min\_elem}!traccc::device::details@{traccc::device::details}}
+\doxysubsubsection{\texorpdfstring{min\_elem()}{min\_elem()}}
+{\footnotesize\ttfamily template$<$typename Comparator $>$ \\
+\mbox{\hyperlink{qualifiers_8hpp_a883f657259ab2dcc9d7b3ffd6165541a}{T\+R\+A\+C\+C\+C\+\_\+\+H\+O\+S\+T\+\_\+\+D\+E\+V\+I\+CE}} std\+::size\+\_\+t traccc\+::device\+::details\+::min\+\_\+elem (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtraccc_1_1triplet}{triplet}} $\ast$}]{arr,  }\item[{const std\+::size\+\_\+t}]{begin\+\_\+idx,  }\item[{const std\+::size\+\_\+t}]{end\+\_\+idx,  }\item[{Comparator}]{comp }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                                          \{}
+\DoxyCodeLine{25     assert(begin\_idx <= end\_idx);}
+\DoxyCodeLine{26     std::size\_t min\_i = begin\_idx;}
+\DoxyCodeLine{27     std::size\_t next = begin\_idx;}
+\DoxyCodeLine{28     \textcolor{keywordflow}{for} (std::size\_t i = begin\_idx + 1; i < end\_idx; ++i) \{}
+\DoxyCodeLine{29         ++next;}
+\DoxyCodeLine{30         \textcolor{keywordflow}{if} (comp(arr[min\_i], arr[next])) \{}
+\DoxyCodeLine{31             min\_i = next;}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} min\_i;}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+Referenced by traccc\+::device\+::select\+\_\+seeds().
+
