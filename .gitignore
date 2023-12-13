@@ -1,3 +1,9 @@
+# Exclude specific folders
+/home/tbashir/traccc/html
+/home/tbashir/traccc/latex
+/home/tbashir/traccc/generate_plantuml.py
+/home/tbashir/traccc/Doxyfile
+
 # Prerequisites
 *.d
 
