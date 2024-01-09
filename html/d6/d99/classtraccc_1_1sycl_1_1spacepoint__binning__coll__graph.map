@@ -1,7 +1,0 @@
-<map id="traccc::sycl::spacepoint_binning" name="traccc::sycl::spacepoint_binning">
-<area shape="rect" id="node1" title="Spacepoing binning executed on a SYCL device." alt="" coords="321,351,495,472"/>
-<area shape="rect" id="node2" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="5,86,181,207"/>
-<area shape="rect" id="node3" href="$dc/db2/structtraccc_1_1memory__resource.html" title=" " alt="" coords="205,101,392,193"/>
-<area shape="rect" id="node4" href="$d8/dda/structtraccc_1_1seedfinder__config.html" title=" " alt="" coords="416,5,619,288"/>
-<area shape="rect" id="node5" href="$d6/d16/classtraccc_1_1sycl_1_1queue__wrapper.html" title=" " alt="" coords="643,57,789,237"/>
-</map>

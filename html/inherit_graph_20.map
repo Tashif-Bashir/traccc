@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="5,17,188,102"/>
-<area shape="rect" id="node2" href="$d3/d1a/classtraccc_1_1cuda_1_1seeding__algorithm.html" title=" " alt="" coords="236,5,395,47"/>
-<area shape="rect" id="node3" href="$d3/d73/classtraccc_1_1sycl_1_1seeding__algorithm.html" title="Main algorithm for performing the track seeding using oneAPI/SYCL." alt="" coords="238,71,393,112"/>
-</map>

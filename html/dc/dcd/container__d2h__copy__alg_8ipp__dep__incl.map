@@ -1,9 +1,0 @@
-<map id="device/common/include/traccc/device/impl/container_d2h_copy_alg.ipp" name="device/common/include/traccc/device/impl/container_d2h_copy_alg.ipp">
-<area shape="rect" id="node1" title=" " alt="" coords="451,5,662,61"/>
-<area shape="rect" id="node2" href="$df/d47/container__d2h__copy__alg_8hpp.html" title=" " alt="" coords="468,109,645,165"/>
-<area shape="rect" id="node3" href="$de/d56/seeding__example__cuda_8cpp.html" title=" " alt="" coords="5,213,207,255"/>
-<area shape="rect" id="node4" href="$d8/df4/truth__finding__example__cuda_8cpp.html" title=" " alt="" coords="231,213,434,255"/>
-<area shape="rect" id="node5" href="$d6/d89/truth__fitting__example__cuda_8cpp.html" title=" " alt="" coords="459,213,655,255"/>
-<area shape="rect" id="node6" href="$de/dfc/cuda_2test__ckf__sparse__tracks__telescope_8cpp.html" title=" " alt="" coords="679,213,895,255"/>
-<area shape="rect" id="node7" href="$d2/d53/cuda_2test__kalman__fitter__telescope_8cpp.html" title=" " alt="" coords="920,213,1095,255"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="examples/options/include/traccc/options/mt_options.hpp" name="examples/options/include/traccc/options/mt_options.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="142,5,365,47"/>
-<area shape="rect" id="node2" href="$d6/db4/mt__options_8cpp.html" title=" " alt="" coords="64,95,243,136"/>
-<area shape="rect" id="node3" href="$d9/ddd/throughput__mt_8ipp.html" title=" " alt="" coords="267,95,439,136"/>
-<area shape="rect" id="node4" href="$d7/ddb/throughput__mt_8hpp.html" title=" " alt="" coords="267,184,439,225"/>
-<area shape="rect" id="node5" href="$d4/d4a/cpu_2throughput__mt_8cpp.html" title=" " alt="" coords="5,273,219,315"/>
-<area shape="rect" id="node6" href="$d2/def/cuda_2throughput__mt_8cpp.html" title=" " alt="" coords="243,273,464,315"/>
-<area shape="rect" id="node7" href="$d1/d7f/sycl_2throughput__mt_8cpp.html" title=" " alt="" coords="488,273,704,315"/>
-</map>
