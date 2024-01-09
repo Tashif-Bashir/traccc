@@ -101,7 +101,7 @@ jobs:
           # build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../traccc-build --clean-first -j $(nproc)
           run: |
             cd ../
-            cd ./traccc-build
+            mkdir traccc-build && cd ./traccc-build
             cmake  -D CUDAToolkit_BIN_DIR=/usr/local/cuda/bin -D CMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc ../traccc
             cd /home/tbashir/actions-runner-traccc/_work/traccc/traccc
             build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../traccc-build --clean-first -j $(nproc)
