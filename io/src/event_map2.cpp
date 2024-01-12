@@ -105,23 +105,30 @@ event_map2::event_map2(std::size_t event, const std::string& measurement_dir,
         // Ex1) 0000010 or 2 -> meas dim = 1 and [loc0] active -> strip or wire
         // Ex2) 0000110 or 6 -> meas dim = 2 and [loc0, loc1] active -> pixel
         // Ex3) 0000100 or 4 -> meas dim = 1 and [loc1] active -> annulus
-        for (unsigned int ipar = 0; ipar < 2u; ++ipar) {
-            if (((csv_meas.local_key) & (1 << (ipar + 1))) != 0) {
+    auto handle_measurement = [&](unsigned int ipar) {
+    switch (ipar) {
+        case e_bound_loc0: {
+            meas.local[0] = csv_meas.local0;
+            meas.variance[0] = csv_meas.var_local0;
+            indices[meas.meas_dim++] = ipar;
+        }; break;
+        case e_bound_loc1: {
+            meas.local[1] = csv_meas.local1;
+            meas.variance[1] = csv_meas.var_local1;
+            indices[meas.meas_dim++] = ipar;
+        }; break;
+        default: {
+            // Handle default case here
+        }; break;
+    }
+};
 
-                switch (ipar) {
-                    case e_bound_loc0: {
-                        meas.local[0] = csv_meas.local0;
-                        meas.variance[0] = csv_meas.var_local0;
-                        indices[meas.meas_dim++] = ipar;
-                    }; break;
-                    case e_bound_loc1: {
-                        meas.local[1] = csv_meas.local1;
-                        meas.variance[1] = csv_meas.var_local1;
-                        indices[meas.meas_dim++] = ipar;
-                    }; break;
-                }
-            }
-        }
+// Iterate over the parameters and apply the lambda function
+for (unsigned int ipar = 0; ipar < 2u; ++ipar) {
+    if (((csv_meas.local_key) & (1 << (ipar + 1))) != 0) {
+        handle_measurement(ipar);
+    }
+}
 
         meas.subs.set_indices(indices);
         meas.surface_link = detray::geometry::barcode{csv_meas.geometry_id};

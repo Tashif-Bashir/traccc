@@ -129,7 +129,7 @@ template <typename item_t>
 struct collection_types {
 
     /// @c item_t must not be a constant type
-    static_assert(std::is_const<item_t>::value == false,
+    static_assert(std::is_const_v<item_t> == false,
                   "The template parameter must not be a constant type");
 
     /// Host collection for @c item_t

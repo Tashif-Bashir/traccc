@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="5,89,181,160"/>
-<area shape="rect" id="node2" href="$d3/df7/classtraccc_1_1alpaka_1_1spacepoint__binning.html" title="Spacepoing binning executed on an Alpaka accelerator." alt="" coords="231,5,423,47"/>
-<area shape="rect" id="node3" href="$d7/d74/classtraccc_1_1cuda_1_1spacepoint__binning.html" title=" " alt="" coords="237,71,416,112"/>
-<area shape="rect" id="node4" href="$df/deb/classtraccc_1_1kokkos_1_1spacepoint__binning.html" title="Spacepoing binning executed on a Kokkos device." alt="" coords="229,136,424,177"/>
-<area shape="rect" id="node5" href="$d9/d89/classtraccc_1_1sycl_1_1spacepoint__binning.html" title="Spacepoing binning executed on a SYCL device." alt="" coords="239,201,414,243"/>
-</map>

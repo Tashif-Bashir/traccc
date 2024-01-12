@@ -1,6 +1,0 @@
-<map id="traccc::cuda::fitting_algorithm&lt; fitter_t &gt;" name="traccc::cuda::fitting_algorithm&lt; fitter_t &gt;">
-<area shape="rect" id="node1" title="Fitting algorithm for a set of tracks." alt="" coords="347,263,512,384"/>
-<area shape="rect" id="node2" href="$d3/d8b/classtraccc_1_1algorithm.html" title=" " alt="" coords="5,5,312,200"/>
-<area shape="rect" id="node3" href="$dc/db2/structtraccc_1_1memory__resource.html" title=" " alt="" coords="336,57,523,149"/>
-<area shape="rect" id="node4" href="$de/df0/classtraccc_1_1cuda_1_1stream.html" title=" " alt="" coords="547,20,701,185"/>
-</map>
